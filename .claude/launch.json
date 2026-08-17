@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "scratchpad-preview",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8792", "--directory", "/private/tmp/claude-501/-Users-sanjaybhat-Desktop-Leetcode/23e285c6-6198-4dcc-835d-09a644da2fa0/scratchpad"],
+      "port": 8792
+    }
+  ]
+}

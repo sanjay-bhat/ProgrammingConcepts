@@ -1,14 +1,10 @@
-<h1 align="center">LeetCode Solutions</h1>
-
 <p align="center">
-  Solutions in <b>C#</b> · <b>Python</b> · <b>Go</b> · <b>Rust</b> — with complexity tables, approach comparisons, and visual infographics for each problem.
+  <img src="assets/banner.png" alt="LeetCode Solutions" width="960">
 </p>
 
 ---
 
 ## Problem Lists
-
-> *Note: The navigation below uses direct file links. GitHub Pages migration is planned to provide a proper tabbed interface.*
 
 <div align="center">
 
@@ -25,20 +21,20 @@
 
 | Serial No. | Problem Title | Data Structure | Time and Space Complexity | Level |
 |------------|---------------|----------------|---------------------------|-------|
-| 1 | [Two Sum](leetcode/0001.ipynb) | Hash Map | Time: O(n), Space: O(n) | Easy |
-| 2 | [Add Two Numbers](leetcode/0002.ipynb) | Linked List | Time: O(max(m, n)), Space: O(max(m, n)) | Medium |
-| 3 | [Longest Substring Without Repeating Characters](leetcode/0003.ipynb) | Sliding Window, Hash Map | Time: O(n), Space: O(min(n, m)) | Medium |
-| 4 | [Median of Two Sorted Arrays](leetcode/0004.ipynb) | Array, Binary Search | Time: O(log(min(m, n))), Space: O(1) | Hard |
-| 5 | [Longest Palindromic Substring](leetcode/0005.ipynb) | Dynamic Programming | Time: O(n^2), Space: O(n^2) | Medium |
-| 6 | [Zigzag Conversion](leetcode/0006.ipynb) | String, Array | Time: O(n), Space: O(n) | Medium |
-| 7 | [Reverse Integer](leetcode/0007.ipynb) | Integer | Time: O(log x), Space: O(1) | Easy |
-| 8 | [String to Integer (atoi)](leetcode/0008.ipynb) | String | Time: O(n), Space: O(1) | Easy |
-| 9 | [Palindrome Number](leetcode/0009.ipynb) | Integer | Time: O(log x), Space: O(1) | Easy |
-| 10 | [Regular Expression Matching](leetcode/0010.ipynb) | Dynamic Programming | Time: O(m * n), Space: O(m * n) | Hard |
-| 11 | [Container With Most Water](leetcode/0011.ipynb) | Two Pointers | Time: O(n), Space: O(1) | Medium |
-| 12 | [Integer to Roman](leetcode/0012.ipynb) | Math | Time: O(1), Space: O(1) | Medium |
-| 13 | [Roman to Integer](leetcode/0013.ipynb) | Math | Time: O(n), Space: O(1) | Easy |
-| 14 | [Longest Common Prefix](leetcode/0014.ipynb) | String | Time: O(n * m), Space: O(1) | Easy |
+| 1 | [📓 Two Sum](leetcode/0001.ipynb) | Hash Map | Time: O(n), Space: O(n) | Easy |
+| 2 | [📓 Add Two Numbers](leetcode/0002.ipynb) | Linked List | Time: O(max(m, n)), Space: O(max(m, n)) | Medium |
+| 3 | [📓 Longest Substring Without Repeating Characters](leetcode/0003.ipynb) | Sliding Window, Hash Map | Time: O(n), Space: O(min(n, m)) | Medium |
+| 4 | [📓 Median of Two Sorted Arrays](leetcode/0004.ipynb) | Array, Binary Search | Time: O(log(min(m, n))), Space: O(1) | Hard |
+| 5 | [📓 Longest Palindromic Substring](leetcode/0005.ipynb) | Dynamic Programming | Time: O(n^2), Space: O(n^2) | Medium |
+| 6 | [📓 Zigzag Conversion](leetcode/0006.ipynb) | String, Array | Time: O(n), Space: O(n) | Medium |
+| 7 | [📓 Reverse Integer](leetcode/0007.ipynb) | Integer | Time: O(log x), Space: O(1) | Easy |
+| 8 | [📓 String to Integer (atoi)](leetcode/0008.ipynb) | String | Time: O(n), Space: O(1) | Easy |
+| 9 | [📓 Palindrome Number](leetcode/0009.ipynb) | Integer | Time: O(log x), Space: O(1) | Easy |
+| 10 | [📓 Regular Expression Matching](leetcode/0010.ipynb) | Dynamic Programming | Time: O(m * n), Space: O(m * n) | Hard |
+| 11 | [📓 Container With Most Water](leetcode/0011.ipynb) | Two Pointers | Time: O(n), Space: O(1) | Medium |
+| 12 | [📓 Integer to Roman](leetcode/0012.ipynb) | Math | Time: O(1), Space: O(1) | Medium |
+| 13 | [📓 Roman to Integer](leetcode/0013.ipynb) | Math | Time: O(n), Space: O(1) | Easy |
+| 14 | [📓 Longest Common Prefix](leetcode/0014.ipynb) | String | Time: O(n * m), Space: O(1) | Easy |
 | 15 | [3Sum](https://leetcode.com/problems/3sum/) | Sorting, Two Pointers | Time: O(n^2), Space: O(1) | Medium |
 | 16 | [3Sum Closest](https://leetcode.com/problems/3sum-closest/) | Sorting, Two Pointers | Time: O(n^2), Space: O(1) | Medium |
 | 17 | [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) | Backtracking | Time: O(4^n), Space: O(n) | Medium |

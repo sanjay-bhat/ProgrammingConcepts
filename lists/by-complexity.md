@@ -434,7 +434,7 @@
 |8 | [📓 String to Integer (atoi)](../leetcode/0008.ipynb)| String| Time: O(n), Space: O(1) | Easy |
 |  13 | [📓 Roman to Integer](../leetcode/0013.ipynb) | Math | Time: O(n), Space: O(1) | Easy |
 |  14 | [📓 Longest Common Prefix](../leetcode/0014.ipynb)| String| Time: O(n * m), Space: O(1)| Easy |
-|  20 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)| Stack| Time: O(n), Space: O(n) | Easy |
+|  20 | [📓 Valid Parentheses](../leetcode/0020.ipynb)| Stack| Time: O(n), Space: O(n) | Easy |
 |  21 | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)  | Linked List| Time: O(m + n), Space: O(1)| Easy |
 |  26 | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)| Array| Time: O(n), Space: O(1) | Easy |
 |  27 | [Remove Element](https://leetcode.com/problems/remove-element/)| Array| Time: O(n), Space: O(1) | Easy |
@@ -703,7 +703,7 @@
 |3 | [📓 Longest Substring Without Repeating Characters](../leetcode/0003.ipynb) | Sliding Window, Hash Map| Time: O(n), Space: O(min(n, m))| Medium  |
 |6 | [📓 Zigzag Conversion](../leetcode/0006.ipynb)| String, Array | Time: O(n), Space: O(n) | Medium  |
 |  11 | [📓 Container With Most Water](../leetcode/0011.ipynb) | Two Pointers  | Time: O(n), Space: O(1) | Medium  |
-|  19 | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)| Linked List| Time: O(n), Space: O(1) | Medium  |
+|  19 | [📓 Remove Nth Node From End of List](../leetcode/0019.ipynb)| Linked List| Time: O(n), Space: O(1) | Medium  |
 |  24 | [Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/) | Linked List| Time: O(n), Space: O(1) | Medium  |
 |  31 | [Next Permutation](https://leetcode.com/problems/next-permutation/) | Array| Time: O(n), Space: O(1) | Medium  |
 |  43 | [Multiply Strings](https://leetcode.com/problems/multiply-strings/) | String| Time: O(m * n), Space: O(m + n)| Medium  |
@@ -1329,7 +1329,7 @@
 | 15 | [📓 3Sum](../leetcode/0015.ipynb) | Sorting, Two Pointers| Time: O(n^2), Space: O(1)| Medium  |
 | 16 | [📓 3Sum Closest](../leetcode/0016.ipynb)| Sorting, Two Pointers| Time: O(n^2), Space: O(1)| Medium  |
 | 17 | [📓 Letter Combinations of a Phone Number](../leetcode/0017.ipynb)| Backtracking | Time: O(4^n), Space: O(n)| Medium  |
-| 18 | [4Sum](https://leetcode.com/problems/4sum/) | Sorting, Two Pointers| Time: O(n^3), Space: O(1)| Medium  |
+| 18 | [📓 4Sum](../leetcode/0018.ipynb) | Sorting + Two Pointers | Time: O(n^3), Space: O(1)| Medium  |
 | 36 | [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/)| Hash Set| Time: O(n^2), Space: O(n^2)| Medium  |
 | 39 | [Combination Sum](https://leetcode.com/problems/combination-sum/) | Backtracking | Time: O(2^n), Space: O(n)| Medium  |
 | 40 | [Combination Sum II](https://leetcode.com/problems/combination-sum-ii/)| Backtracking | Time: O(2^n), Space: O(n)| Medium  |

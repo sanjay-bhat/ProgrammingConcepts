@@ -967,7 +967,7 @@
 |707 | [Design Linked List](https://leetcode.com/problems/design-linked-list/) | Linked List| Time: O(1), Space: O(n)| Easy|
 | 1206 | [Design Linked List](https://leetcode.com/problems/design-linked-list/) | Linked List| O(1) Time, O(1) Space| Easy|
 |2 | [📓 Add Two Numbers](../leetcode/0002.ipynb) | Linked List| Time: O(max(m, n)), Space: O(max(m, n))| Medium|
-| 19 | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | Linked List| Time: O(n), Space: O(1)| Medium|
+| 19 | [📓 Remove Nth Node From End of List](../leetcode/0019.ipynb) | One-Pass Two Pointers | Time: O(n), Space: O(1)| Medium|
 | 24 | [Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/) | Linked List| Time: O(n), Space: O(1)| Medium|
 | 61 | [Rotate List](https://leetcode.com/problems/rotate-list/) | Linked List| Time: O(n), Space: O(1)| Medium|
 | 82 | [Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/) | Linked List| Time: O(n), Space: O(1)| Medium|
@@ -1338,7 +1338,7 @@
 |611 | [Valid Triangle Number](https://leetcode.com/problems/valid-triangle-number/) | Sorting, Two Pointer | Time: O(n^2), Space: O(1)| Medium|
 | 15 | [📓 3Sum](../leetcode/0015.ipynb) | Sorting, Two Pointers| Time: O(n^2), Space: O(1)| Medium|
 | 16 | [📓 3Sum Closest](../leetcode/0016.ipynb) | Sorting, Two Pointers| Time: O(n^2), Space: O(1)| Medium|
-| 18 | [4Sum](https://leetcode.com/problems/4sum/) | Sorting, Two Pointers| Time: O(n^3), Space: O(1)| Medium|
+| 18 | [📓 4Sum](../leetcode/0018.ipynb) | Sorting, Two Pointers| Time: O(n^3), Space: O(1)| Medium|
 | 75 | [Sort Colors](https://leetcode.com/problems/sort-colors/) | Sorting, Two Pointers| Time: O(n), Space: O(1)| Medium|
 |259 | [3Sum Smaller](https://leetcode.com/problems/3sum-smaller/) | Sorting, Two Pointers| Time: O(n^2), Space: O(1)| Medium|
 |280 | [Wiggle Sort](https://leetcode.com/problems/wiggle-sort/) | Sorting, Two Pointers| Time: O(n log n), Space: O(1)| Medium|
@@ -1390,7 +1390,7 @@
 ## Stack
 | Serial No. | Problem Title | Data Structure | Time and Space Complexity | Level |
 | :--- | :--- | :--- | :--- | :--- |
-| 20 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | Stack| Time: O(n), Space: O(n)| Easy|
+| 20 | [📓 Valid Parentheses](../leetcode/0020.ipynb) | Stack| Time: O(n), Space: O(n)| Easy|
 |155 | [Min Stack](https://leetcode.com/problems/min-stack/) | Stack| Time: O(1), Space: O(n)| Easy|
 |232 | [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/) | Stack| Time: O(1), Space: O(n)| Easy|
 |496 | [Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/) | Stack| Time: O(n), Space: O(n)| Easy|

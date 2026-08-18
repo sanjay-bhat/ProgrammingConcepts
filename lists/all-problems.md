@@ -65,7 +65,7 @@
 | 63 | [Unique Paths II](https://leetcode.com/problems/unique-paths-ii/) | Dynamic Programming | Time: O(m * n), Space: O(m * n) | Medium |
 | 64 | [Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/) | Dynamic Programming | Time: O(m * n), Space: O(m * n) | Medium |
 | 65 | [Valid Number](https://leetcode.com/problems/valid-number/) | Math, String | Time: O(n), Space: O(1) | Hard |
-| 66 | [Plus One](https://leetcode.com/problems/plus-one/) | Array | Time: O(n), Space: O(1) | Easy |
+| 66 | [📓 Plus One](../leetcode/0066.ipynb) | Carry Simulation| Time: O(n), Space: O(1) | Easy |
 | 67 | [Add Binary](https://leetcode.com/problems/add-binary/) | String | Time: O(max(m, n)), Space: O(max(m, n)) | Easy |
 | 68 | [Text Justification](https://leetcode.com/problems/text-justification/) | String | Time: O(n), Space: O(n) | Hard |
 | 69 | [Sqrt(x)](https://leetcode.com/problems/sqrtx/) | Math | Time: O(log x), Space: O(1) | Easy |

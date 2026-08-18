@@ -442,7 +442,7 @@
 |  38 | [Count and Say](https://leetcode.com/problems/count-and-say/)  | String| Time: O(n), Space: O(1) | Easy |
 |  53 | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | Dynamic Programming | Time: O(n), Space: O(1) | Easy |
 |  58 | [Length of Last Word](https://leetcode.com/problems/length-of-last-word/) | String| Time: O(n), Space: O(1) | Easy |
-|  66 | [Plus One](https://leetcode.com/problems/plus-one/)| Array| Time: O(n), Space: O(1) | Easy |
+|  66 | [📓 Plus One](../leetcode/0066.ipynb)| Carry Simulation| Time: O(n), Space: O(1) | Easy |
 |  67 | [Add Binary](https://leetcode.com/problems/add-binary/) | String| Time: O(max(m, n)), Space: O(max(m, n)) | Easy |
 |  70 | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)| Dynamic Programming | Time: O(n), Space: O(1) | Easy |
 |  83 | [Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/) | Linked List| Time: O(n), Space: O(1) | Easy |

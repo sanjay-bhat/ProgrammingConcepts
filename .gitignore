@@ -1,18 +1,4 @@
-# Legacy folder (superseded by lists/)
-markdown/
-
-# Root list notebooks (content lives in lists/*.md)
-\#01 Unsorted.ipynb
-\#02 Level Sort.ipynb
-\#03 Complexity Sort.ipynb
-\#04 Data Structure Sort.ipynb
-
-# Scratch file
-leetcode/#copy_paste_here
-
-# macOS
 .DS_Store
-**/.DS_Store
-
-# Jupyter
-**/.ipynb_checkpoints/
+.ipynb_checkpoints/
+__pycache__/
+*.pyc

@@ -23,7 +23,7 @@
 | 66 | [📓 Plus One](0066.ipynb) | Carry Simulation| Time: O(n), Space: O(1)| Easy|
 | 88 | [📓 Merge Sorted Array](0088.ipynb) | Three Pointers (Merge from End)| Time: O(m + n), Space: O(1)| Easy|
 | 118 | [📓 Pascal's Triangle](0118.ipynb) | Row-by-Row Simulation | Time: O(n^2), Space: O(n^2) | Easy |
-|119 | [Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii/)| Array| Time: O(n^2), Space: O(n)| Easy|
+| 119 | [📓 Pascal's Triangle II](0119.ipynb) | Rolling Array | Time: O(k^2), Space: O(k) | Easy |
 |121 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | Array| Time: O(n), Space: O(1)| Easy|
 |189 | [Rotate Array](https://leetcode.com/problems/rotate-array/) | Array| Time: O(n), Space: O(1)| Easy|
 |228 | [Summary Ranges](https://leetcode.com/problems/summary-ranges/) | Array| Time: O(n), Space: O(1)| Easy|

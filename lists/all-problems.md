@@ -227,7 +227,7 @@
 | 225 | [Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/) | Queue, Stack | Time: O(1), Space: O(n) | Easy |
 | 226 | [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) | Tree | Time: O(n), Space: O(h) | Easy |
 | 227 | [Basic Calculator II](https://leetcode.com/problems/basic-calculator-ii/) | Stack | Time: O(n), Space: O(n) | Medium |
-| 228 | [Summary Ranges](https://leetcode.com/problems/summary-ranges/) | Array | Time: O(n), Space: O(1) | Easy |
+| 228 | [📓 Summary Ranges](../leetcode/0228.ipynb) | Linear Scan | Time: O(n), Space: O(1) | Easy |
 | 229 | [Majority Element II](https://leetcode.com/problems/majority-element-ii/) | Boyer-Moore Voting Algorithm | Time: O(n), Space: O(1) | Medium |
 | 230 | [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) | Tree, Inorder Traversal | Time: O(h + k), Space: O(h) | Medium |
 | 231 | [Power of Two](https://leetcode.com/problems/power-of-two/) | Math | Time: O(1), Space: O(1) | Easy |

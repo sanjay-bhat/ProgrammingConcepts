@@ -70,7 +70,7 @@
 | 219 | [Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/)  | Hash Set| Time: O(n), Space: O(n)| Easy |
 | 225 | [Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/) | Queue, Stack  | Time: O(1), Space: O(n)| Easy |
 | 226 | [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)  | Tree | Time: O(n), Space: O(h)| Easy |
-| 228 | [Summary Ranges](https://leetcode.com/problems/summary-ranges/) | Array| Time: O(n), Space: O(1)| Easy |
+| 228 | [📓 Summary Ranges](../leetcode/0228.ipynb) | Linear Scan | Time: O(n), Space: O(1) | Easy |
 | 231 | [Power of Two](https://leetcode.com/problems/power-of-two/)| Math | Time: O(1), Space: O(1)| Easy |
 | 232 | [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/) | Stack| Time: O(1), Space: O(n)| Easy |
 | 234 | [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/)| Linked List, Stack | Time: O(n), Space: O(n)| Easy |

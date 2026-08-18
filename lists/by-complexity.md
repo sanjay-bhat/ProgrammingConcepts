@@ -473,7 +473,7 @@
 | 217 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | Hash Set | Time: O(n), Space: O(n) | Easy |
 | 219 | [Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/)| Hash Set | Time: O(n), Space: O(n) | Easy |
 | 226 | [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) | Tree | Time: O(n), Space: O(h) | Easy |
-| 228 | [Summary Ranges](https://leetcode.com/problems/summary-ranges/)| Array| Time: O(n), Space: O(1) | Easy |
+| 228 | [📓 Summary Ranges](../leetcode/0228.ipynb) | Linear Scan | Time: O(n), Space: O(1) | Easy |
 | 234 | [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/)  | Linked List, Stack| Time: O(n), Space: O(n) | Easy |
 | 242 | [Valid Anagram](https://leetcode.com/problems/valid-anagram/)  | Hash Map | Time: O(n), Space: O(n) | Easy |
 | 243 | [Shortest Word Distance](https://leetcode.com/problems/shortest-word-distance/)  | Array| Time: O(n), Space: O(1) | Easy |

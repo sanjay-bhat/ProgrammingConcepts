@@ -1,7 +1,7 @@
 ## 2D Array
 | Serial No. | Problem Title | Data Structure | Time and Space Complexity | Level |
 | :--- | :--- | :--- | :--- | :--- |
-| 1074 | [Number of Submatrices That Sum to Target](https://leetcode.com/problems/number-of-submatrices-that-sum-to-target/) | 2D Array, Hash Map | Time: O(n^3), Space: O(n^2)| Hard|
+| 1074 | [📓 Number of Submatrices That Sum to Target](../leetcode/1074.ipynb) | 2D Prefix Sum + Hash Map | Time: O(n^3), Space: O(n^2)| Hard|
 | 1033 | [📓 Matrix Block Sum](../leetcode/1033.ipynb) | 2D Prefix Sum | Time: O(m * n), Space: O(m * n)| Medium|
 |723 | [📓 Candy Crush](../leetcode/0723.ipynb) | In-place Marking | Time: O(n * m), Space: O(1)| Medium|
 

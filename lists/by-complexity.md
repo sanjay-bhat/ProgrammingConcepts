@@ -1476,7 +1476,7 @@
 | 1031 | [Find Minimum Number Of Nodes That Can Produce All Distinct Subsets](https://leetcode.com/problems/find-minimum-number-of-nodes-that-can-produce-all-distinct-subsets/)  | DP, Backtracking| Time: O(2^n), Space: O(1)| Hard |
 | 1032 | [Find Minimum Number of Pairs That Can Produce All Distinct Subsets](https://leetcode.com/problems/find-minimum-number-of-pairs-that-can-produce-all-distinct-subsets/)  | DP, Backtracking| Time: O(2^n), Space: O(1)| Hard |
 | 1039 | [Minimum Score Triangulation of Polygon](https://leetcode.com/problems/minimum-score-triangulation-of-polygon/)| DP, Graph  | Time: O(n^3), Space: O(n^2)| Hard |
-| 1074 | [Number of Submatrices That Sum to Target](https://leetcode.com/problems/number-of-submatrices-that-sum-to-target/) | 2D Array, Hash Map| Time: O(n^3), Space: O(n^2)| Hard |
+| 1074 | [📓 Number of Submatrices That Sum to Target](../leetcode/1074.ipynb) | 2D Prefix Sum + Hash Map| Time: O(n^3), Space: O(n^2)| Hard |
 | 1086 | [Largest Palindromic Substring](https://leetcode.com/problems/largest-palindromic-substring/) | DP, String | Time: O(n^2), Space: O(n^2)| Hard |
 | 1092 | [Shortest Path in a Grid with Obstacles Elimination](https://leetcode.com/problems/shortest-path-in-a-grid-with-obstacles-elimination/) | BFS, Graph | Time: O(n^2), Space: O(n^2)| Hard |
 | 1094 | [Shortest Path in a Grid with Obstacles Elimination](https://leetcode.com/problems/shortest-path-in-a-grid-with-obstacles-elimination/) | BFS, Graph | Time: O(n^2), Space: O(n^2)| Hard |

@@ -1094,7 +1094,7 @@
 | 1071 | [Greatest Common Divisor of Strings](https://leetcode.com/problems/greatest-common-divisor-of-strings/) | Math, String   | Time: O(n), Space: O(1)| Easy |
 | 1072 | [Flip Columns For Maximum Number of Equal Rows](https://leetcode.com/problems/flip-columns-for-maximum-number-of-equal-rows/) | Greedy, Hash Map| Time: O(m * n), Space: O(m)| Medium |
 | 1073 | [Adding Two Negabinary Numbers](https://leetcode.com/problems/adding-two-negabinary-numbers/) | Math, Array| Time: O(n), Space: O(n)| Medium |
-| 1074 | [Number of Submatrices That Sum to Target](https://leetcode.com/problems/number-of-submatrices-that-sum-to-target/) | 2D Array, Hash Map   | Time: O(n^3), Space: O(n^2)| Hard |
+| 1074 | [📓 Number of Submatrices That Sum to Target](leetcode/1074.ipynb) | 2D Prefix Sum + Hash Map   | Time: O(n^3), Space: O(n^2)| Hard |
 | 1075 | [Project Employees](https://leetcode.com/problems/project-employees/)   | Simulation, Hash Map | Time: O(n), Space: O(n)| Medium |
 | 1076 | [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) | Backtracking, String | Time: O(3^n), Space: O(1)  | Medium |
 | 1077 | [Project Management](https://leetcode.com/problems/project-management/) | DP, Graph| Time: O(n), Space: O(n)| Hard |

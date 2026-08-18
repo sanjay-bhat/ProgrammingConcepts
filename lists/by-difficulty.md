@@ -31,7 +31,7 @@
 | 112 | [Path Sum](https://leetcode.com/problems/path-sum/)| Tree, DFS | Time: O(n), Space: O(h)| Easy |
 | 118 | [📓 Pascal's Triangle](../leetcode/0118.ipynb) | Row-by-Row Simulation | Time: O(n^2), Space: O(n^2) | Easy |
 | 119 | [📓 Pascal's Triangle II](../leetcode/0119.ipynb) | Rolling Array | Time: O(k^2), Space: O(k) | Easy |
-| 121 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)| Array| Time: O(n), Space: O(1)| Easy |
+| 121 | [📓 Best Time to Buy and Sell Stock](../leetcode/0121.ipynb) | Greedy (One Pass) | Time: O(n), Space: O(1) | Easy |
 | 125 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | String  | Time: O(n), Space: O(1)| Easy |
 | 136 | [Single Number](https://leetcode.com/problems/single-number/) | Bit Manipulation| Time: O(n), Space: O(1)| Easy |
 | 141 | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | Linked List| Time: O(n), Space: O(1)| Easy |

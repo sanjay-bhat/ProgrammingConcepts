@@ -141,7 +141,7 @@
 | 118 | [📓 Pascal's Triangle](leetcode/0118.ipynb) | Row-by-Row Simulation | Time: O(n^2), Space: O(n^2) | Easy |
 | 119 | [📓 Pascal's Triangle II](leetcode/0119.ipynb) | Rolling Array | Time: O(k^2), Space: O(k) | Easy |
 | 120 | [Triangle](https://leetcode.com/problems/triangle/) | Dynamic Programming | Time: O(n^2), Space: O(n^2) | Medium |
-| 121 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | Array | Time: O(n), Space: O(1) | Easy |
+| 121 | [📓 Best Time to Buy and Sell Stock](leetcode/0121.ipynb) | Greedy (One Pass) | Time: O(n), Space: O(1) | Easy |
 | 122 | [Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/) | Greedy | Time: O(n), Space: O(1) | Medium |
 | 123 | [Best Time to Buy and Sell Stock III](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/) | Dynamic Programming | Time: O(n), Space: O(1) | Hard |
 | 124 | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | Tree, DFS | Time: O(n), Space: O(h) | Hard |

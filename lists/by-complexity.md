@@ -455,7 +455,7 @@
 | 110 | [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)  | Tree, DFS| Time: O(n), Space: O(h) | Easy |
 | 111 | [Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/) | Tree, DFS| Time: O(n), Space: O(h) | Easy |
 | 112 | [Path Sum](https://leetcode.com/problems/path-sum/)| Tree, DFS| Time: O(n), Space: O(h) | Easy |
-| 121 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)  | Array| Time: O(n), Space: O(1) | Easy |
+| 121 | [📓 Best Time to Buy and Sell Stock](../leetcode/0121.ipynb) | Greedy (One Pass) | Time: O(n), Space: O(1) | Easy |
 | 125 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | String| Time: O(n), Space: O(1) | Easy |
 | 136 | [Single Number](https://leetcode.com/problems/single-number/)  | Bit Manipulation  | Time: O(n), Space: O(1) | Easy |
 | 141 | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)| Linked List| Time: O(n), Space: O(1) | Easy |

@@ -775,7 +775,7 @@
 | 718 | [Maximum Length of Repeated Subarray](https://leetcode.com/problems/maximum-length-of-repeated-subarray/) | Dynamic Programming| Time: O(m * n), Space: O(m * n)| Medium  |
 | 721 | [Accounts Merge](https://leetcode.com/problems/accounts-merge/) | Graph, DFS| Time: O(n), Space: O(n)| Medium  |
 | 722 | [Remove Comments](https://leetcode.com/problems/remove-comments/)| String  | Time: O(n), Space: O(1)| Medium  |
-| 723 | [Candy Crush](https://leetcode.com/problems/candy-crush/)| 2D Array, Simulation | Time: O(n * m), Space: O(1)  | Medium  |
+| 723 | [📓 Candy Crush](../leetcode/0723.ipynb)| In-place Marking | Time: O(n * m), Space: O(1)  | Medium  |
 | 725 | [Split Linked List in Parts](https://leetcode.com/problems/split-linked-list-in-parts/)| Linked List| Time: O(n), Space: O(1)| Medium  |
 | 729 | [My Calendar I](https://leetcode.com/problems/my-calendar-i/) | Binary Search Tree | Time: O(log n), Space: O(n)  | Medium  |
 | 731 | [My Calendar II](https://leetcode.com/problems/my-calendar-ii/) | Binary Search Tree | Time: O(log n), Space: O(n)  | Medium  |
@@ -923,7 +923,7 @@
 |1020 | [Number of Enclaves](https://leetcode.com/problems/number-of-enclaves/)  | DFS, Graph| Time: O(n^2), Space: O(n)| Medium  |
 |1023 | [Camelcase Matching](https://leetcode.com/problems/camelcase-matching/)  | String, Array | Time: O(n), Space: O(1)| Medium  |
 |1024 | [Video Stitching](https://leetcode.com/problems/video-stitching/)| DP, Greedy| Time: O(n), Space: O(n)| Medium  |
-|1033 | [Matrix Block Sum](https://leetcode.com/problems/matrix-block-sum/) | 2D Array, Prefix Sum | Time: O(m * n), Space: O(m * n)| Medium  |
+|1033 | [📓 Matrix Block Sum](../leetcode/1033.ipynb) | 2D Prefix Sum | Time: O(m * n), Space: O(m * n)| Medium  |
 |1034 | [Edge List to Adj List Conversion](https://leetcode.com/problems/edge-list-to-adj-list-conversion/)  | Graph, Adjacency List| Time: O(E), Space: O(V)| Medium  |
 |1035 | [Uncrossed Lines](https://leetcode.com/problems/uncrossed-lines/)| DP, LCS | Time: O(m * n), Space: O(m * n)| Medium  |
 |1036 | [Escape a Large Maze](https://leetcode.com/problems/escape-a-large-maze/)| Graph, BFS| Time: O(n), Space: O(n)| Medium  |

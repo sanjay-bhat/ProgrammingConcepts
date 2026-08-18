@@ -17,7 +17,7 @@
 
 ## All Problems
 
-> Problem titles link to the **solution notebook** (problems 1–20 are solved). Remaining titles link to the LeetCode problem page.
+> Problem titles link to the **solution notebook** (problems 1–20 and 723 are solved). Remaining titles link to the LeetCode problem page.
 
 | Serial No. | Problem Title | Data Structure | Time and Space Complexity | Level |
 |------------|---------------|----------------|---------------------------|-------|
@@ -1053,7 +1053,7 @@
 | 1030 | [Find Minimum Number of Pairs That Can Produce All Distinct Subsets](https://leetcode.com/problems/find-minimum-number-of-pairs-that-can-produce-all-distinct-subsets/) | DP, Backtracking | Time: O(2^n), Space: O(1) | Hard|
 | 1031 | [Find Minimum Number Of Nodes That Can Produce All Distinct Subsets](https://leetcode.com/problems/find-minimum-number-of-nodes-that-can-produce-all-distinct-subsets/) | DP, Backtracking | Time: O(2^n), Space: O(1)  | Hard |
 | 1032 | [Find Minimum Number of Pairs That Can Produce All Distinct Subsets](https://leetcode.com/problems/find-minimum-number-of-pairs-that-can-produce-all-distinct-subsets/) | DP, Backtracking | Time: O(2^n), Space: O(1)  | Hard |
-| 1033 | [Matrix Block Sum](https://leetcode.com/problems/matrix-block-sum/) | 2D Array, Prefix Sum | Time: O(m * n), Space: O(m * n)  | Medium |
+| 1033 | [📓 Matrix Block Sum](leetcode/1033.ipynb) | 2D Prefix Sum | Time: O(m * n), Space: O(m * n)  | Medium |
 | 1034 | [Edge List to Adj List Conversion](https://leetcode.com/problems/edge-list-to-adj-list-conversion/) | Graph, Adjacency List| Time: O(E), Space: O(V)| Medium |
 | 1035 | [Uncrossed Lines](https://leetcode.com/problems/uncrossed-lines/) | DP, LCS| Time: O(m * n), Space: O(m * n)  | Medium |
 | 1036 | [Escape a Large Maze](https://leetcode.com/problems/escape-a-large-maze/) | Graph, BFS | Time: O(n), Space: O(n)| Medium |

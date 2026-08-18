@@ -722,7 +722,7 @@
 | 720 | [Longest Word in Dictionary](https://leetcode.com/problems/longest-word-in-dictionary/) | Trie | Time: O(n), Space: O(n) | Easy |
 | 721 | [Accounts Merge](https://leetcode.com/problems/accounts-merge/) | Graph, DFS  | Time: O(n), Space: O(n) | Medium |
 | 722 | [Remove Comments](https://leetcode.com/problems/remove-comments/) | String | Time: O(n), Space: O(1) | Medium |
-| 723 | [Candy Crush](https://leetcode.com/problems/candy-crush/) | 2D Array, Simulation| Time: O(n * m), Space: O(1) | Medium |
+| 723 | [📓 Candy Crush](../leetcode/0723.ipynb) | In-place Marking| Time: O(n * m), Space: O(1) | Medium |
 | 724 | [Find Pivot Index](https://leetcode.com/problems/find-pivot-index/) | Array | Time: O(n), Space: O(1) | Easy |
 | 725 | [Split Linked List in Parts](https://leetcode.com/problems/split-linked-list-in-parts/) | Linked List | Time: O(n), Space: O(1) | Medium |
 | 726 | [Number of Atoms](https://leetcode.com/problems/number-of-atoms/) | Hash Map, Stack   | Time: O(n), Space: O(n) | Hard |
@@ -1032,7 +1032,7 @@
 | 1030 | [Find Minimum Number of Pairs That Can Produce All Distinct Subsets](https://leetcode.com/problems/find-minimum-number-of-pairs-that-can-produce-all-distinct-subsets/) | DP, Backtracking | Time: O(2^n), Space: O(1) | Hard|
 | 1031 | [Find Minimum Number Of Nodes That Can Produce All Distinct Subsets](https://leetcode.com/problems/find-minimum-number-of-nodes-that-can-produce-all-distinct-subsets/) | DP, Backtracking | Time: O(2^n), Space: O(1)  | Hard |
 | 1032 | [Find Minimum Number of Pairs That Can Produce All Distinct Subsets](https://leetcode.com/problems/find-minimum-number-of-pairs-that-can-produce-all-distinct-subsets/) | DP, Backtracking | Time: O(2^n), Space: O(1)  | Hard |
-| 1033 | [Matrix Block Sum](https://leetcode.com/problems/matrix-block-sum/) | 2D Array, Prefix Sum | Time: O(m * n), Space: O(m * n)  | Medium |
+| 1033 | [📓 Matrix Block Sum](../leetcode/1033.ipynb) | 2D Prefix Sum | Time: O(m * n), Space: O(m * n)  | Medium |
 | 1034 | [Edge List to Adj List Conversion](https://leetcode.com/problems/edge-list-to-adj-list-conversion/) | Graph, Adjacency List| Time: O(E), Space: O(V)| Medium |
 | 1035 | [Uncrossed Lines](https://leetcode.com/problems/uncrossed-lines/) | DP, LCS| Time: O(m * n), Space: O(m * n)  | Medium |
 | 1036 | [Escape a Large Maze](https://leetcode.com/problems/escape-a-large-maze/) | Graph, BFS | Time: O(n), Space: O(n)| Medium |

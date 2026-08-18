@@ -937,7 +937,7 @@
 | 718 | [Maximum Length of Repeated Subarray](https://leetcode.com/problems/maximum-length-of-repeated-subarray/)| Dynamic Programming | Time: O(m * n), Space: O(m * n)| Medium  |
 | 721 | [Accounts Merge](https://leetcode.com/problems/accounts-merge/)| Graph, DFS | Time: O(n), Space: O(n) | Medium  |
 | 722 | [Remove Comments](https://leetcode.com/problems/remove-comments/)| String| Time: O(n), Space: O(1) | Medium  |
-| 723 | [Candy Crush](https://leetcode.com/problems/candy-crush/)  | 2D Array, Simulation| Time: O(n * m), Space: O(1)| Medium  |
+| 723 | [📓 Candy Crush](../leetcode/0723.ipynb)  | In-place Marking| Time: O(n * m), Space: O(1)| Medium  |
 | 725 | [Split Linked List in Parts](https://leetcode.com/problems/split-linked-list-in-parts/)| Linked List| Time: O(n), Space: O(1) | Medium  |
 | 735 | [Asteroid Collision](https://leetcode.com/problems/asteroid-collision/) | Stack| Time: O(n), Space: O(n) | Medium  |
 | 737 | [Sentence Similarity II](https://leetcode.com/problems/sentence-similarity-ii/)  | Graph, Union-Find | Time: O(n), Space: O(n) | Medium  |
@@ -1020,7 +1020,7 @@
 |1019 | [Next Greater Node In Linked List](https://leetcode.com/problems/next-greater-node-in-linked-list/)| Stack| Time: O(n), Space: O(n) | Medium  |
 |1023 | [Camelcase Matching](https://leetcode.com/problems/camelcase-matching/) | String, Array | Time: O(n), Space: O(1) | Medium  |
 |1024 | [Video Stitching](https://leetcode.com/problems/video-stitching/)| DP, Greedy | Time: O(n), Space: O(n) | Medium  |
-|1033 | [Matrix Block Sum](https://leetcode.com/problems/matrix-block-sum/) | 2D Array, Prefix Sum| Time: O(m * n), Space: O(m * n)| Medium  |
+|1033 | [📓 Matrix Block Sum](../leetcode/1033.ipynb) | 2D Prefix Sum| Time: O(m * n), Space: O(m * n)| Medium  |
 |1035 | [Uncrossed Lines](https://leetcode.com/problems/uncrossed-lines/)| DP, LCS  | Time: O(m * n), Space: O(m * n)| Medium  |
 |1036 | [Escape a Large Maze](https://leetcode.com/problems/escape-a-large-maze/) | Graph, BFS | Time: O(n), Space: O(n) | Medium  |
 |1038 | [Binary Search Tree to Greater Sum Tree](https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree/)  | Tree, DFS| Time: O(n), Space: O(n) | Medium  |

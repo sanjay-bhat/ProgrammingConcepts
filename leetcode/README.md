@@ -21,7 +21,7 @@
 | 26 | [📓 Remove Duplicates from Sorted Array](0026.ipynb) | Two Pointers| Time: O(n), Space: O(1)| Easy|
 | 27 | [📓 Remove Element](0027.ipynb) | Two Pointers| Time: O(n), Space: O(1)| Easy|
 | 66 | [📓 Plus One](0066.ipynb) | Carry Simulation| Time: O(n), Space: O(1)| Easy|
-| 88 | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) | Array| Time: O(m + n), Space: O(1)| Easy|
+| 88 | [📓 Merge Sorted Array](0088.ipynb) | Three Pointers (Merge from End)| Time: O(m + n), Space: O(1)| Easy|
 |118 | [Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/)| Array| Time: O(n^2), Space: O(n^2)| Easy|
 |119 | [Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii/)| Array| Time: O(n^2), Space: O(n)| Easy|
 |121 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | Array| Time: O(n), Space: O(1)| Easy|

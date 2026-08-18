@@ -108,7 +108,7 @@
 | 85 | [Maximal Rectangle](https://leetcode.com/problems/maximal-rectangle/) | Dynamic Programming, Stack | Time: O(m * n), Space: O(n) | Hard |
 | 86 | [Partition List](https://leetcode.com/problems/partition-list/) | Linked List | Time: O(n), Space: O(1) | Medium |
 | 87 | [Scramble String](https://leetcode.com/problems/scramble-string/) | Dynamic Programming | Time: O(n^4), Space: O(n^4) | Hard |
-| 88 | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) | Array | Time: O(m + n), Space: O(1) | Easy |
+| 88 | [📓 Merge Sorted Array](leetcode/0088.ipynb) | Three Pointers (Merge from End)| Time: O(m + n), Space: O(1) | Easy |
 | 89 | [Gray Code](https://leetcode.com/problems/gray-code/) | Bit Manipulation | Time: O(2^n), Space: O(2^n) | Medium |
 | 90 | [Subsets II](https://leetcode.com/problems/subsets-ii/) | Backtracking | Time: O(2^n), Space: O(n) | Medium |
 | 91 | [Decode Ways](https://leetcode.com/problems/decode-ways/) | Dynamic Programming | Time: O(n), Space: O(n) | Medium |

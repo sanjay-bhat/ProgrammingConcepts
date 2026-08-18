@@ -20,7 +20,7 @@
 |69 | [Sqrt(x)](https://leetcode.com/problems/sqrtx/) | Math | Time: O(log x), Space: O(1)  | Easy |
 |70 | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)| Dynamic Programming| Time: O(n), Space: O(1)| Easy |
 |83 | [Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)| Linked List| Time: O(n), Space: O(1)| Easy |
-|88 | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)  | Array| Time: O(m + n), Space: O(1)  | Easy |
+|88 | [📓 Merge Sorted Array](../leetcode/0088.ipynb)  | Three Pointers (Merge from End)| Time: O(m + n), Space: O(1)  | Easy |
 |94 | [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/)  | Tree, Stack| Time: O(n), Space: O(n)| Easy |
 | 100 | [Same Tree](https://leetcode.com/problems/same-tree/)| Tree, DFS | Time: O(n), Space: O(n)| Easy |
 | 101 | [Symmetric Tree](https://leetcode.com/problems/symmetric-tree/) | Tree, DFS | Time: O(n), Space: O(h)| Easy |

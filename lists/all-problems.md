@@ -1,22 +1,22 @@
 | Serial No. | Problem Title | Data Structure | Time and Space Complexity | Level |
 |------------|---------------|----------------|---------------------------|-------|
-| 1 | [Two Sum](https://leetcode.com/problems/two-sum/) | Hash Map | Time: O(n), Space: O(n) | Easy |
-| 2 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | Linked List | Time: O(max(m, n)), Space: O(max(m, n)) | Medium |
-| 3 | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | Sliding Window, Hash Map | Time: O(n), Space: O(min(n, m)) | Medium |
-| 4 | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) | Array, Binary Search | Time: O(log(min(m, n))), Space: O(1) | Hard |
-| 5 | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | Dynamic Programming | Time: O(n^2), Space: O(n^2) | Medium |
-| 6 | [Zigzag Conversion](https://leetcode.com/problems/zigzag-conversion/) | String, Array | Time: O(n), Space: O(n) | Medium |
-| 7 | [Reverse Integer](https://leetcode.com/problems/reverse-integer/) | Integer | Time: O(log x), Space: O(1) | Easy |
-| 8 | [String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/) | String | Time: O(n), Space: O(1) | Easy |
-| 9 | [Palindrome Number](https://leetcode.com/problems/palindrome-number/) | Integer | Time: O(log x), Space: O(1) | Easy |
-| 10 | [Regular Expression Matching](https://leetcode.com/problems/regular-expression-matching/) | Dynamic Programming | Time: O(m * n), Space: O(m * n) | Hard |
-| 11 | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | Two Pointers | Time: O(n), Space: O(1) | Medium |
-| 12 | [Integer to Roman](https://leetcode.com/problems/integer-to-roman/) | Math | Time: O(1), Space: O(1) | Medium |
-| 13 | [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | Math | Time: O(n), Space: O(1) | Easy |
-| 14 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | String | Time: O(n * m), Space: O(1) | Easy |
-| 15 | [3Sum](https://leetcode.com/problems/3sum/) | Sorting, Two Pointers | Time: O(n^2), Space: O(1) | Medium |
-| 16 | [3Sum Closest](https://leetcode.com/problems/3sum-closest/) | Sorting, Two Pointers | Time: O(n^2), Space: O(1) | Medium |
-| 17 | [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) | Backtracking | Time: O(4^n), Space: O(n) | Medium |
+| 1 | [📓 Two Sum](../leetcode/0001.ipynb) | Hash Map | Time: O(n), Space: O(n) | Easy |
+| 2 | [📓 Add Two Numbers](../leetcode/0002.ipynb) | Linked List | Time: O(max(m, n)), Space: O(max(m, n)) | Medium |
+| 3 | [📓 Longest Substring Without Repeating Characters](../leetcode/0003.ipynb) | Sliding Window, Hash Map | Time: O(n), Space: O(min(n, m)) | Medium |
+| 4 | [📓 Median of Two Sorted Arrays](../leetcode/0004.ipynb) | Array, Binary Search | Time: O(log(min(m, n))), Space: O(1) | Hard |
+| 5 | [📓 Longest Palindromic Substring](../leetcode/0005.ipynb) | Dynamic Programming | Time: O(n^2), Space: O(n^2) | Medium |
+| 6 | [📓 Zigzag Conversion](../leetcode/0006.ipynb) | String, Array | Time: O(n), Space: O(n) | Medium |
+| 7 | [📓 Reverse Integer](../leetcode/0007.ipynb) | Integer | Time: O(log x), Space: O(1) | Easy |
+| 8 | [📓 String to Integer (atoi)](../leetcode/0008.ipynb) | String | Time: O(n), Space: O(1) | Easy |
+| 9 | [📓 Palindrome Number](../leetcode/0009.ipynb) | Integer | Time: O(log x), Space: O(1) | Easy |
+| 10 | [📓 Regular Expression Matching](../leetcode/0010.ipynb) | Dynamic Programming | Time: O(m * n), Space: O(m * n) | Hard |
+| 11 | [📓 Container With Most Water](../leetcode/0011.ipynb) | Two Pointers | Time: O(n), Space: O(1) | Medium |
+| 12 | [📓 Integer to Roman](../leetcode/0012.ipynb) | Math | Time: O(1), Space: O(1) | Medium |
+| 13 | [📓 Roman to Integer](../leetcode/0013.ipynb) | Math | Time: O(n), Space: O(1) | Easy |
+| 14 | [📓 Longest Common Prefix](../leetcode/0014.ipynb) | String | Time: O(n * m), Space: O(1) | Easy |
+| 15 | [📓 3Sum](../leetcode/0015.ipynb) | Sorting, Two Pointers | Time: O(n^2), Space: O(1) | Medium |
+| 16 | [📓 3Sum Closest](../leetcode/0016.ipynb) | Sorting, Two Pointers | Time: O(n^2), Space: O(1) | Medium |
+| 17 | [📓 Letter Combinations of a Phone Number](../leetcode/0017.ipynb) | Backtracking | Time: O(4^n), Space: O(n) | Medium |
 | 18 | [4Sum](https://leetcode.com/problems/4sum/) | Sorting, Two Pointers | Time: O(n^3), Space: O(1) | Medium |
 | 19 | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | Linked List | Time: O(n), Space: O(1) | Medium |
 | 20 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | Stack | Time: O(n), Space: O(n) | Easy |

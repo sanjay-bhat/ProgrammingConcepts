@@ -94,7 +94,7 @@
 | 1243 | [Array Transformation](https://leetcode.com/problems/array-transformation/) | Array| O(n) Time, O(1) Space| Medium|
 | 41 | [First Missing Positive](https://leetcode.com/problems/first-missing-positive/) | Array| Time: O(n), Space: O(1)| Hard|
 |782 | [Transform to Chessboard](https://leetcode.com/problems/transform-to-chessboard/) | Array| Time: O(n^2), Space: O(1)| Hard|
-|4 | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) | Array, Binary Search | Time: O(log(min(m, n))), Space: O(1) | Hard|
+|4 | [📓 Median of Two Sorted Arrays](../leetcode/0004.ipynb) | Array, Binary Search | Time: O(log(min(m, n))), Space: O(1) | Hard|
 |268 | [Missing Number](https://leetcode.com/problems/missing-number/) | Array, Bit Manipulation| Time: O(n), Space: O(1)| Easy|
 | 1412 | [Shortest Distance to Target String in a Circular Array](https://leetcode.com/problems/shortest-distance-to-target-string-in-a-circular-array/) | Array, Circular Array| O(n) Time, O(n) Space| Medium|
 |529 | [Minesweeper](https://leetcode.com/problems/minesweeper/) | Array, Depth-First Search (DFS)| Time: O(n), Space: O(n)| Medium|
@@ -183,7 +183,7 @@
 | :--- | :--- | :--- | :--- | :--- |
 |293 | [Flip Game](https://leetcode.com/problems/flip-game/) | Backtracking | Time: O(n), Space: O(n)| Easy|
 |784 | [Letter Case Permutation](https://leetcode.com/problems/letter-case-permutation/) | Backtracking | Time: O(2^n), Space: O(1)| Easy|
-| 17 | [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) | Backtracking | Time: O(4^n), Space: O(n)| Medium|
+| 17 | [📓 Letter Combinations of a Phone Number](../leetcode/0017.ipynb) | Backtracking | Time: O(4^n), Space: O(n)| Medium|
 | 22 | [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) | Backtracking | Time: O(4^n / sqrt(n)), Space: O(n)| Medium|
 | 39 | [Combination Sum](https://leetcode.com/problems/combination-sum/) | Backtracking | Time: O(2^n), Space: O(n)| Medium|
 | 40 | [Combination Sum II](https://leetcode.com/problems/combination-sum-ii/) | Backtracking | Time: O(2^n), Space: O(n)| Medium|
@@ -508,7 +508,7 @@
 | 1086 | [Largest Palindromic Substring](https://leetcode.com/problems/largest-palindromic-substring/) | DP, String | Time: O(n^2), Space: O(n^2)| Hard|
 | 53 | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | Dynamic Programming| Time: O(n), Space: O(1)| Easy|
 | 70 | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | Dynamic Programming| Time: O(n), Space: O(1)| Easy|
-|5 | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | Dynamic Programming| Time: O(n^2), Space: O(n^2)| Medium|
+|5 | [📓 Longest Palindromic Substring](../leetcode/0005.ipynb) | Dynamic Programming| Time: O(n^2), Space: O(n^2)| Medium|
 | 62 | [Unique Paths](https://leetcode.com/problems/unique-paths/) | Dynamic Programming| Time: O(m * n), Space: O(m * n)| Medium|
 | 63 | [Unique Paths II](https://leetcode.com/problems/unique-paths-ii/) | Dynamic Programming| Time: O(m * n), Space: O(m * n)| Medium|
 | 64 | [Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/) | Dynamic Programming| Time: O(m * n), Space: O(m * n)| Medium|
@@ -556,7 +556,7 @@
 |926 | [Flip String to Monotone Increasing](https://leetcode.com/problems/flip-string-to-monotone-increasing/) | Dynamic Programming| Time: O(n), Space: O(1)| Medium|
 |935 | [Knight Dialer](https://leetcode.com/problems/knight-dialer/) | Dynamic Programming| Time: O(n), Space: O(1)| Medium|
 | 1416 | [Restore The Array](https://leetcode.com/problems/restore-the-array/) | Dynamic Programming| O(n) Time, O(n) Space| Medium|
-| 10 | [Regular Expression Matching](https://leetcode.com/problems/regular-expression-matching/) | Dynamic Programming| Time: O(m * n), Space: O(m * n)| Hard|
+| 10 | [📓 Regular Expression Matching](../leetcode/0010.ipynb) | Dynamic Programming| Time: O(m * n), Space: O(m * n)| Hard|
 | 44 | [Wildcard Matching](https://leetcode.com/problems/wildcard-matching/) | Dynamic Programming| Time: O(m * n), Space: O(m * n)| Hard|
 | 72 | [Edit Distance](https://leetcode.com/problems/edit-distance/) | Dynamic Programming| Time: O(m * n), Space: O(m * n)| Hard|
 | 87 | [Scramble String](https://leetcode.com/problems/scramble-string/) | Dynamic Programming| Time: O(n^4), Space: O(n^4)| Hard|
@@ -793,7 +793,7 @@
 ## Hash Map
 | Serial No. | Problem Title | Data Structure | Time and Space Complexity | Level |
 | :--- | :--- | :--- | :--- | :--- |
-|1 | [Two Sum](https://leetcode.com/problems/two-sum/) | Hash Map | Time: O(n), Space: O(n)| Easy|
+|1 | [📓 Two Sum](../leetcode/0001.ipynb) | Hash Map | Time: O(n), Space: O(n)| Easy|
 |170 | [Two Sum III - Data structure design](https://leetcode.com/problems/two-sum-iii-data-structure-design/) | Hash Map | Time: O(1), Space: O(n)| Easy|
 |242 | [Valid Anagram](https://leetcode.com/problems/valid-anagram/) | Hash Map | Time: O(n), Space: O(n)| Easy|
 |266 | [Palindrome Permutation](https://leetcode.com/problems/palindrome-permutation/) | Hash Map | Time: O(n), Space: O(n)| Easy|
@@ -930,8 +930,8 @@
 ## Integer
 | Serial No. | Problem Title | Data Structure | Time and Space Complexity | Level |
 | :--- | :--- | :--- | :--- | :--- |
-|7 | [Reverse Integer](https://leetcode.com/problems/reverse-integer/) | Integer| Time: O(log x), Space: O(1)| Easy|
-|9 | [Palindrome Number](https://leetcode.com/problems/palindrome-number/) | Integer| Time: O(log x), Space: O(1)| Easy|
+|7 | [📓 Reverse Integer](../leetcode/0007.ipynb) | Integer| Time: O(log x), Space: O(1)| Easy|
+|9 | [📓 Palindrome Number](../leetcode/0009.ipynb) | Integer| Time: O(log x), Space: O(1)| Easy|
 | 1185 | [Day of the Week](https://leetcode.com/problems/day-of-the-week/) | Integer| O(1) Time, O(1) Space| Easy|
 | 1154 | [Day of the Year](https://leetcode.com/problems/day-of-the-year/) | Integer, Array | O(1) Time, O(1) Space| Easy|
 
@@ -966,7 +966,7 @@
 |237 | [Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list/) | Linked List| Time: O(1), Space: O(1)| Easy|
 |707 | [Design Linked List](https://leetcode.com/problems/design-linked-list/) | Linked List| Time: O(1), Space: O(n)| Easy|
 | 1206 | [Design Linked List](https://leetcode.com/problems/design-linked-list/) | Linked List| O(1) Time, O(1) Space| Easy|
-|2 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | Linked List| Time: O(max(m, n)), Space: O(max(m, n))| Medium|
+|2 | [📓 Add Two Numbers](../leetcode/0002.ipynb) | Linked List| Time: O(max(m, n)), Space: O(max(m, n))| Medium|
 | 19 | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | Linked List| Time: O(n), Space: O(1)| Medium|
 | 24 | [Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/) | Linked List| Time: O(n), Space: O(1)| Medium|
 | 61 | [Rotate List](https://leetcode.com/problems/rotate-list/) | Linked List| Time: O(n), Space: O(1)| Medium|
@@ -1003,7 +1003,7 @@
 ## Math
 | Serial No. | Problem Title | Data Structure | Time and Space Complexity | Level |
 | :--- | :--- | :--- | :--- | :--- |
-| 13 | [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | Math | Time: O(n), Space: O(1)| Easy|
+| 13 | [📓 Roman to Integer](../leetcode/0013.ipynb) | Math | Time: O(n), Space: O(1)| Easy|
 | 69 | [Sqrt(x)](https://leetcode.com/problems/sqrtx/) | Math | Time: O(log x), Space: O(1)| Easy|
 |168 | [Excel Sheet Column Title](https://leetcode.com/problems/excel-sheet-column-title/) | Math | Time: O(log n), Space: O(1)| Easy|
 |171 | [Excel Sheet Column Number](https://leetcode.com/problems/excel-sheet-column-number/) | Math | Time: O(n), Space: O(1)| Easy|
@@ -1041,7 +1041,7 @@
 | 1360 | [Number of Days Between Two Dates](https://leetcode.com/problems/number-of-days-between-two-dates/) | Math | O(1) Time, O(1) Space| Easy|
 | 1373 | [Maximum Sum of Digits in a String](https://leetcode.com/problems/maximum-sum-of-digits-in-a-string/) | Math | O(n) Time, O(1) Space| Easy|
 | 1393 | [Capital Gain](https://leetcode.com/problems/capital-gain/) | Math | O(n) Time, O(1) Space| Easy|
-| 12 | [Integer to Roman](https://leetcode.com/problems/integer-to-roman/) | Math | Time: O(1), Space: O(1)| Medium|
+| 12 | [📓 Integer to Roman](../leetcode/0012.ipynb) | Math | Time: O(1), Space: O(1)| Medium|
 | 29 | [Divide Two Integers](https://leetcode.com/problems/divide-two-integers/) | Math | Time: O(log n), Space: O(1)| Medium|
 | 50 | [Pow(x, n)](https://leetcode.com/problems/powx-n/)| Math | Time: O(log n), Space: O(1)| Medium|
 |319 | [Bulb Switcher](https://leetcode.com/problems/bulb-switcher/) | Math | Time: O(1), Space: O(1)| Medium|
@@ -1277,7 +1277,7 @@
 | 1242 | [Maximum Sum of Two Non-Overlapping Subarrays](https://leetcode.com/problems/maximum-sum-of-two-non-overlapping-subarrays/) | Sliding Window, Dynamic Programming| O(n) Time, O(1) Space| Medium|
 | 1052 | [Grumpy Bookstore Owner](https://leetcode.com/problems/grumpy-bookstore-owner/) | Sliding Window, Greedy | Time: O(n), Space: O(1)| Medium|
 |798 | [Smallest Rotation with Highest Score](https://leetcode.com/problems/smallest-rotation-with-highest-score/) | Sliding Window, Greedy | Time: O(n), Space: O(n)| Hard|
-|3 | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | Sliding Window, Hash Map | Time: O(n), Space: O(min(n, m))| Medium|
+|3 | [📓 Longest Substring Without Repeating Characters](../leetcode/0003.ipynb) | Sliding Window, Hash Map | Time: O(n), Space: O(min(n, m))| Medium|
 | 1100 | [Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/) | Sliding Window, Hash Map | Time: O(n), Space: O(1)| Medium|
 |992 | [Subarrays with K Different Integers](https://leetcode.com/problems/subarrays-with-k-different-integers/) | Sliding Window, Hash Map | Time: O(n), Space: O(k)| Hard|
 | 1358 | [Number of Substrings Containing All Three Characters](https://leetcode.com/problems/number-of-substrings-containing-all-three-characters/) | Sliding Window, HashMap| O(n) Time, O(1) Space| Medium|
@@ -1336,8 +1336,8 @@
 |937 | [Reorder Data in Log Files](https://leetcode.com/problems/reorder-data-in-log-files/) | Sorting, String| Time: O(n log n), Space: O(1)| Medium|
 | 1433 | [Check If a String Can Break Another String](https://leetcode.com/problems/check-if-a-string-can-break-another-string/) | Sorting, String| O(n log n) Time, O(n) Space| Medium|
 |611 | [Valid Triangle Number](https://leetcode.com/problems/valid-triangle-number/) | Sorting, Two Pointer | Time: O(n^2), Space: O(1)| Medium|
-| 15 | [3Sum](https://leetcode.com/problems/3sum/) | Sorting, Two Pointers| Time: O(n^2), Space: O(1)| Medium|
-| 16 | [3Sum Closest](https://leetcode.com/problems/3sum-closest/) | Sorting, Two Pointers| Time: O(n^2), Space: O(1)| Medium|
+| 15 | [📓 3Sum](../leetcode/0015.ipynb) | Sorting, Two Pointers| Time: O(n^2), Space: O(1)| Medium|
+| 16 | [📓 3Sum Closest](../leetcode/0016.ipynb) | Sorting, Two Pointers| Time: O(n^2), Space: O(1)| Medium|
 | 18 | [4Sum](https://leetcode.com/problems/4sum/) | Sorting, Two Pointers| Time: O(n^3), Space: O(1)| Medium|
 | 75 | [Sort Colors](https://leetcode.com/problems/sort-colors/) | Sorting, Two Pointers| Time: O(n), Space: O(1)| Medium|
 |259 | [3Sum Smaller](https://leetcode.com/problems/3sum-smaller/) | Sorting, Two Pointers| Time: O(n^2), Space: O(1)| Medium|
@@ -1451,8 +1451,8 @@
 ## String
 | Serial No. | Problem Title | Data Structure | Time and Space Complexity | Level |
 | :--- | :--- | :--- | :--- | :--- |
-|8 | [String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/) | String | Time: O(n), Space: O(1)| Easy|
-| 14 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | String | Time: O(n * m), Space: O(1)| Easy|
+|8 | [📓 String to Integer (atoi)](../leetcode/0008.ipynb) | String | Time: O(n), Space: O(1)| Easy|
+| 14 | [📓 Longest Common Prefix](../leetcode/0014.ipynb) | String | Time: O(n * m), Space: O(1)| Easy|
 | 28 | [Implement strStr()](https://leetcode.com/problems/implement-strstr/) | String | Time: O(n), Space: O(1)| Easy|
 | 38 | [Count and Say](https://leetcode.com/problems/count-and-say/) | String | Time: O(n), Space: O(1)| Easy|
 | 58 | [Length of Last Word](https://leetcode.com/problems/length-of-last-word/) | String | Time: O(n), Space: O(1)| Easy|
@@ -1514,7 +1514,7 @@
 |943 | [Shortest Distance to a Character](https://leetcode.com/problems/shortest-distance-to-a-character/) | String, Array| Time: O(n), Space: O(1)| Easy|
 | 1189 | [Maximum Number of Words Found in Sentences](https://leetcode.com/problems/maximum-number-of-words-found-in-sentences/) | String, Array| O(n) Time, O(1) Space| Easy|
 | 1455 | [Check If a Word Occurs As a Prefix of Any Word in a Sentence](https://leetcode.com/problems/check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence/) | String, Array| O(n) Time, O(1) Space| Easy|
-|6 | [Zigzag Conversion](https://leetcode.com/problems/zigzag-conversion/) | String, Array| Time: O(n), Space: O(n)| Medium|
+|6 | [📓 Zigzag Conversion](../leetcode/0006.ipynb) | String, Array| Time: O(n), Space: O(n)| Medium|
 | 1023 | [Camelcase Matching](https://leetcode.com/problems/camelcase-matching/) | String, Array| Time: O(n), Space: O(1)| Medium|
 |306 | [Additive Number](https://leetcode.com/problems/additive-number/) | String, Backtracking | Time: O(n^3), Space: O(1)| Medium|
 | 1316 | [Distinguishable Palindrome](https://leetcode.com/problems/distinguishable-palindrome/) | String, Backtracking | O(n!) Time, O(n) Space | Hard|
@@ -1740,7 +1740,7 @@
 |345 | [Reverse Vowels of a String](https://leetcode.com/problems/reverse-vowels-of-a-string/) | Two Pointers | Time: O(n), Space: O(1)| Easy|
 |392 | [Is Subsequence](https://leetcode.com/problems/is-subsequence/) | Two Pointers | Time: O(n), Space: O(1)| Easy|
 | 1099 | [Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | Two Pointers | Time: O(n), Space: O(1)| Easy|
-| 11 | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | Two Pointers | Time: O(n), Space: O(1)| Medium|
+| 11 | [📓 Container With Most Water](../leetcode/0011.ipynb) | Two Pointers | Time: O(n), Space: O(1)| Medium|
 |977 | [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/) | Two Pointers, Array| Time: O(n), Space: O(1)| Easy|
 | 42 | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | Two Pointers, Dynamic Programming| Time: O(n), Space: O(1)| Hard|
 |978 | [Longest Turbulent Subarray](https://leetcode.com/problems/longest-turbulent-subarray/) | Two Pointers, Sliding Window | Time: O(n), Space: O(1)| Medium|

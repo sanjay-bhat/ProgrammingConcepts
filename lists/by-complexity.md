@@ -1317,7 +1317,7 @@
 | 1434 | [Number of Ways to Wear Different Hats to Each Other](https://leetcode.com/problems/number-of-ways-to-wear-different-hats-to-each-other/)  | HashMap, Array  | O(n * m) Time, O(n * m) Space | Hard |
 | 1444 | [Count Subarrays With Fixed Bounds](https://leetcode.com/problems/count-subarrays-with-fixed-bounds/)| Array, Sliding Window| O(n) Time, O(1) Space | Hard |
 | 1467 | [Probability of a Two Boxes Having the Same Label](https://leetcode.com/problems/probability-of-a-two-boxes-having-the-same-label/)| Math, Simulation| O(n) Time, O(1) Space | Hard |
-|118 | [Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) | Array | Time: O(n^2), Space: O(n^2)| Easy |
+| 118 | [📓 Pascal's Triangle](../leetcode/0118.ipynb) | Row-by-Row Simulation | Time: O(n^2), Space: O(n^2) | Easy |
 |119 | [Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii/)| Array | Time: O(n^2), Space: O(n)| Easy |
 |422 | [Valid Word Square](https://leetcode.com/problems/valid-word-square/)| Matrix| Time: O(n^2), Space: O(1)| Easy |
 |447 | [Number of Boomerangs](https://leetcode.com/problems/number-of-boomerangs/) | Hash Map| Time: O(n^2), Space: O(n)| Easy |

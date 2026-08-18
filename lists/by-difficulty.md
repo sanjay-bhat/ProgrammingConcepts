@@ -29,7 +29,7 @@
 | 110 | [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)| Tree, DFS | Time: O(n), Space: O(h)| Easy |
 | 111 | [Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/) | Tree, DFS | Time: O(n), Space: O(h)| Easy |
 | 112 | [Path Sum](https://leetcode.com/problems/path-sum/)| Tree, DFS | Time: O(n), Space: O(h)| Easy |
-| 118 | [Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/)| Array| Time: O(n^2), Space: O(n^2)  | Easy |
+| 118 | [📓 Pascal's Triangle](../leetcode/0118.ipynb) | Row-by-Row Simulation | Time: O(n^2), Space: O(n^2) | Easy |
 | 119 | [Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii/) | Array| Time: O(n^2), Space: O(n)| Easy |
 | 121 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)| Array| Time: O(n), Space: O(1)| Easy |
 | 125 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | String  | Time: O(n), Space: O(1)| Easy |

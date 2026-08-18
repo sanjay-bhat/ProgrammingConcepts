@@ -6,7 +6,7 @@
 | 9 | [📓 Palindrome Number](../leetcode/0009.ipynb) | Integer | Time: O(log x), Space: O(1)  | Easy |
 |13 | [📓 Roman to Integer](../leetcode/0013.ipynb) | Math | Time: O(n), Space: O(1)| Easy |
 |14 | [📓 Longest Common Prefix](../leetcode/0014.ipynb)  | String  | Time: O(n * m), Space: O(1)  | Easy |
-|20 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | Stack| Time: O(n), Space: O(n)| Easy |
+|20 | [📓 Valid Parentheses](../leetcode/0020.ipynb) | Stack| Time: O(n), Space: O(n)| Easy |
 |21 | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)| Linked List| Time: O(m + n), Space: O(1)  | Easy |
 |26 | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | Array| Time: O(n), Space: O(1)| Easy |
 |27 | [Remove Element](https://leetcode.com/problems/remove-element/) | Array| Time: O(n), Space: O(1)| Easy |
@@ -403,8 +403,8 @@
 |15 | [📓 3Sum](../leetcode/0015.ipynb)| Sorting, Two Pointers| Time: O(n^2), Space: O(1)| Medium  |
 |16 | [📓 3Sum Closest](../leetcode/0016.ipynb)| Sorting, Two Pointers| Time: O(n^2), Space: O(1)| Medium  |
 |17 | [📓 Letter Combinations of a Phone Number](../leetcode/0017.ipynb)| Backtracking  | Time: O(4^n), Space: O(n)| Medium  |
-|18 | [4Sum](https://leetcode.com/problems/4sum/)| Sorting, Two Pointers| Time: O(n^3), Space: O(1)| Medium  |
-|19 | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)  | Linked List| Time: O(n), Space: O(1)| Medium  |
+|18 | [📓 4Sum](../leetcode/0018.ipynb) | Sorting + Two Pointers | Time: O(n^3), Space: O(1)| Medium  |
+|19 | [📓 Remove Nth Node From End of List](../leetcode/0019.ipynb) | One-Pass Two Pointers | Time: O(n), Space: O(1)| Medium  |
 |22 | [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)| Backtracking  | Time: O(4^n / sqrt(n)), Space: O(n) | Medium  |
 |24 | [Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/)| Linked List| Time: O(n), Space: O(1)| Medium  |
 |29 | [Divide Two Integers](https://leetcode.com/problems/divide-two-integers/)| Math | Time: O(log n), Space: O(1)  | Medium  |

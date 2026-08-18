@@ -3,7 +3,7 @@
 | :--- | :--- | :--- | :--- | :--- |
 | 1074 | [Number of Submatrices That Sum to Target](https://leetcode.com/problems/number-of-submatrices-that-sum-to-target/) | 2D Array, Hash Map | Time: O(n^3), Space: O(n^2)| Hard|
 | 1033 | [Matrix Block Sum](https://leetcode.com/problems/matrix-block-sum/) | 2D Array, Prefix Sum | Time: O(m * n), Space: O(m * n)| Medium|
-|723 | [Candy Crush](https://leetcode.com/problems/candy-crush/) | 2D Array, Simulation | Time: O(n * m), Space: O(1)| Medium|
+|723 | [📓 Candy Crush](0723.ipynb) | In-place Marking | Time: O(n * m), Space: O(1)| Medium|
 
 ## 2D Prefix Sum
 | Serial No. | Problem Title | Data Structure | Time and Space Complexity | Level |

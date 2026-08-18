@@ -17,7 +17,7 @@
 
 ## All Problems
 
-> Problem titles link to the **solution notebook** (problems 1–20 are solved). Remaining titles link to the LeetCode problem page.
+> Problem titles link to the **solution notebook** (problems 1–20 and 723 are solved). Remaining titles link to the LeetCode problem page.
 
 | Serial No. | Problem Title | Data Structure | Time and Space Complexity | Level |
 |------------|---------------|----------------|---------------------------|-------|

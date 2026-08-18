@@ -775,7 +775,7 @@
 | 718 | [Maximum Length of Repeated Subarray](https://leetcode.com/problems/maximum-length-of-repeated-subarray/) | Dynamic Programming| Time: O(m * n), Space: O(m * n)| Medium  |
 | 721 | [Accounts Merge](https://leetcode.com/problems/accounts-merge/) | Graph, DFS| Time: O(n), Space: O(n)| Medium  |
 | 722 | [Remove Comments](https://leetcode.com/problems/remove-comments/)| String  | Time: O(n), Space: O(1)| Medium  |
-| 723 | [Candy Crush](https://leetcode.com/problems/candy-crush/)| 2D Array, Simulation | Time: O(n * m), Space: O(1)  | Medium  |
+| 723 | [📓 Candy Crush](../leetcode/0723.ipynb)| In-place Marking | Time: O(n * m), Space: O(1)  | Medium  |
 | 725 | [Split Linked List in Parts](https://leetcode.com/problems/split-linked-list-in-parts/)| Linked List| Time: O(n), Space: O(1)| Medium  |
 | 729 | [My Calendar I](https://leetcode.com/problems/my-calendar-i/) | Binary Search Tree | Time: O(log n), Space: O(n)  | Medium  |
 | 731 | [My Calendar II](https://leetcode.com/problems/my-calendar-ii/) | Binary Search Tree | Time: O(log n), Space: O(n)  | Medium  |

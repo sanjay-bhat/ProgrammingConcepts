@@ -722,7 +722,7 @@
 | 720 | [Longest Word in Dictionary](https://leetcode.com/problems/longest-word-in-dictionary/) | Trie | Time: O(n), Space: O(n) | Easy |
 | 721 | [Accounts Merge](https://leetcode.com/problems/accounts-merge/) | Graph, DFS  | Time: O(n), Space: O(n) | Medium |
 | 722 | [Remove Comments](https://leetcode.com/problems/remove-comments/) | String | Time: O(n), Space: O(1) | Medium |
-| 723 | [Candy Crush](https://leetcode.com/problems/candy-crush/) | 2D Array, Simulation| Time: O(n * m), Space: O(1) | Medium |
+| 723 | [📓 Candy Crush](../leetcode/0723.ipynb) | In-place Marking| Time: O(n * m), Space: O(1) | Medium |
 | 724 | [Find Pivot Index](https://leetcode.com/problems/find-pivot-index/) | Array | Time: O(n), Space: O(1) | Easy |
 | 725 | [Split Linked List in Parts](https://leetcode.com/problems/split-linked-list-in-parts/) | Linked List | Time: O(n), Space: O(1) | Medium |
 | 726 | [Number of Atoms](https://leetcode.com/problems/number-of-atoms/) | Hash Map, Stack   | Time: O(n), Space: O(n) | Hard |

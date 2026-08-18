@@ -466,7 +466,7 @@
 | 167 | [Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)| Two Pointers  | Time: O(n), Space: O(1) | Easy |
 | 169 | [Majority Element](https://leetcode.com/problems/majority-element/) | Hash Map, Sorting | Time: O(n), Space: O(n) | Easy |
 | 171 | [Excel Sheet Column Number](https://leetcode.com/problems/excel-sheet-column-number/) | Math | Time: O(n), Space: O(1) | Easy |
-| 189 | [Rotate Array](https://leetcode.com/problems/rotate-array/)| Array| Time: O(n), Space: O(1) | Easy |
+| 189 | [📓 Rotate Array](../leetcode/0189.ipynb) | Three Reversals | Time: O(n), Space: O(1) | Medium |
 | 203 | [Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/) | Linked List| Time: O(n), Space: O(1) | Easy |
 | 205 | [Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/) | String, Hash Map  | Time: O(n), Space: O(n) | Easy |
 | 206 | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | Linked List| Time: O(n), Space: O(1) | Easy |

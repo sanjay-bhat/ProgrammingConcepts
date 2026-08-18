@@ -188,7 +188,7 @@
 | 186 | [Reverse Words in a String II](https://leetcode.com/problems/reverse-words-in-a-string-ii/) | String | Time: O(n), Space: O(1) | Medium |
 | 187 | [Repeated DNA Sequences](https://leetcode.com/problems/repeated-dna-sequences/) | Hash Set | Time: O(n), Space: O(n) | Medium |
 | 188 | [Best Time to Buy and Sell Stock IV](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/) | Dynamic Programming | Time: O(k * n), Space: O(k * n) | Hard |
-| 189 | [Rotate Array](https://leetcode.com/problems/rotate-array/) | Array | Time: O(n), Space: O(1) | Easy |
+| 189 | [📓 Rotate Array](../leetcode/0189.ipynb) | Three Reversals | Time: O(n), Space: O(1) | Medium |
 | 190 | [Reverse Bits](https://leetcode.com/problems/reverse-bits/) | Bit Manipulation | Time: O(1), Space: O(1) | Easy |
 | 191 | [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) | Bit Manipulation | Time: O(1), Space: O(1) | Easy |
 | 192 | [Word Frequency](https://leetcode.com/problems/word-frequency/) | SQL | Time: O(1), Space: O(1) | Easy |

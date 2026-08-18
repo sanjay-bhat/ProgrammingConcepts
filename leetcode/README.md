@@ -25,7 +25,7 @@
 | 118 | [📓 Pascal's Triangle](0118.ipynb) | Row-by-Row Simulation | Time: O(n^2), Space: O(n^2) | Easy |
 | 119 | [📓 Pascal's Triangle II](0119.ipynb) | Rolling Array | Time: O(k^2), Space: O(k) | Easy |
 | 121 | [📓 Best Time to Buy and Sell Stock](0121.ipynb) | Greedy (One Pass) | Time: O(n), Space: O(1) | Easy |
-|189 | [Rotate Array](https://leetcode.com/problems/rotate-array/) | Array| Time: O(n), Space: O(1)| Easy|
+| 189 | [📓 Rotate Array](0189.ipynb) | Three Reversals | Time: O(n), Space: O(1) | Medium |
 |228 | [Summary Ranges](https://leetcode.com/problems/summary-ranges/) | Array| Time: O(n), Space: O(1)| Easy|
 |243 | [Shortest Word Distance](https://leetcode.com/problems/shortest-word-distance/) | Array| Time: O(n), Space: O(1)| Easy|
 |283 | [Move Zeroes](https://leetcode.com/problems/move-zeroes/) | Array| Time: O(n), Space: O(1)| Easy|

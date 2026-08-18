@@ -52,7 +52,7 @@
 | 182 | [Duplicate Emails](https://leetcode.com/problems/duplicate-emails/) | SQL| Time: O(1), Space: O(1)| Easy |
 | 183 | [Customers Who Never Order](https://leetcode.com/problems/customers-who-never-order/) | SQL| Time: O(1), Space: O(1)| Easy |
 | 184 | [Department Highest Salary](https://leetcode.com/problems/department-highest-salary/) | SQL| Time: O(1), Space: O(1)| Easy |
-| 189 | [Rotate Array](https://leetcode.com/problems/rotate-array/)| Array| Time: O(n), Space: O(1)| Easy |
+| 189 | [📓 Rotate Array](../leetcode/0189.ipynb) | Three Reversals | Time: O(n), Space: O(1) | Medium |
 | 190 | [Reverse Bits](https://leetcode.com/problems/reverse-bits/)| Bit Manipulation| Time: O(1), Space: O(1)| Easy |
 | 191 | [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) | Bit Manipulation| Time: O(1), Space: O(1)| Easy |
 | 192 | [Word Frequency](https://leetcode.com/problems/word-frequency/) | SQL| Time: O(1), Space: O(1)| Easy |

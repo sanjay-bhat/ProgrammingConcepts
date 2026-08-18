@@ -17,7 +17,7 @@
 
 ## All Problems
 
-> Problem titles link to the **solution notebook** (problems 1–15 are solved). Remaining titles link to the LeetCode problem page.
+> Problem titles link to the **solution notebook** (problems 1–17 are solved). Remaining titles link to the LeetCode problem page.
 
 | Serial No. | Problem Title | Data Structure | Time and Space Complexity | Level |
 |------------|---------------|----------------|---------------------------|-------|
@@ -36,8 +36,8 @@
 | 13 | [📓 Roman to Integer](leetcode/0013.ipynb) | Math | Time: O(n), Space: O(1) | Easy |
 | 14 | [📓 Longest Common Prefix](leetcode/0014.ipynb) | String | Time: O(n * m), Space: O(1) | Easy |
 | 15 | [📓 3Sum](leetcode/0015.ipynb) | Sorting, Two Pointers | Time: O(n^2), Space: O(1) | Medium |
-| 16 | [3Sum Closest](https://leetcode.com/problems/3sum-closest/) | Sorting, Two Pointers | Time: O(n^2), Space: O(1) | Medium |
-| 17 | [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) | Backtracking | Time: O(4^n), Space: O(n) | Medium |
+| 16 | [📓 3Sum Closest](leetcode/0016.ipynb) | Sorting, Two Pointers | Time: O(n^2), Space: O(1) | Medium |
+| 17 | [📓 Letter Combinations of a Phone Number](leetcode/0017.ipynb) | Backtracking | Time: O(4^n · n), Space: O(n) | Medium |
 | 18 | [4Sum](https://leetcode.com/problems/4sum/) | Sorting, Two Pointers | Time: O(n^3), Space: O(1) | Medium |
 | 19 | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | Linked List | Time: O(n), Space: O(1) | Medium |
 | 20 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | Stack | Time: O(n), Space: O(n) | Easy |

@@ -8,7 +8,7 @@
 
 <div align="center">
 
-| [📋 All Problems](lists/all-problems.md) | [🎯 By Difficulty](lists/by-difficulty.md) | [⚡ By Complexity](lists/by-complexity.md) | [🏗️ By Data Structure](lists/by-data-structure.md) |
+| [📋 All Problems](lists/all-problems.md) | [🎯 By Difficulty](lists/by-difficulty.md) | [⚡ By Complexity](lists/by-complexity.md) | [🏗️ By Data Structure](lists/) |
 |:---:|:---:|:---:|:---:|
 
 </div>

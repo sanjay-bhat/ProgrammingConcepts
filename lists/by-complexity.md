@@ -1020,7 +1020,7 @@
 |1019 | [Next Greater Node In Linked List](https://leetcode.com/problems/next-greater-node-in-linked-list/)| Stack| Time: O(n), Space: O(n) | Medium  |
 |1023 | [Camelcase Matching](https://leetcode.com/problems/camelcase-matching/) | String, Array | Time: O(n), Space: O(1) | Medium  |
 |1024 | [Video Stitching](https://leetcode.com/problems/video-stitching/)| DP, Greedy | Time: O(n), Space: O(n) | Medium  |
-|1033 | [Matrix Block Sum](https://leetcode.com/problems/matrix-block-sum/) | 2D Array, Prefix Sum| Time: O(m * n), Space: O(m * n)| Medium  |
+|1033 | [📓 Matrix Block Sum](../leetcode/1033.ipynb) | 2D Prefix Sum| Time: O(m * n), Space: O(m * n)| Medium  |
 |1035 | [Uncrossed Lines](https://leetcode.com/problems/uncrossed-lines/)| DP, LCS  | Time: O(m * n), Space: O(m * n)| Medium  |
 |1036 | [Escape a Large Maze](https://leetcode.com/problems/escape-a-large-maze/) | Graph, BFS | Time: O(n), Space: O(n) | Medium  |
 |1038 | [Binary Search Tree to Greater Sum Tree](https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree/)  | Tree, DFS| Time: O(n), Space: O(n) | Medium  |

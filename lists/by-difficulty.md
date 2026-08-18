@@ -923,7 +923,7 @@
 |1020 | [Number of Enclaves](https://leetcode.com/problems/number-of-enclaves/)  | DFS, Graph| Time: O(n^2), Space: O(n)| Medium  |
 |1023 | [Camelcase Matching](https://leetcode.com/problems/camelcase-matching/)  | String, Array | Time: O(n), Space: O(1)| Medium  |
 |1024 | [Video Stitching](https://leetcode.com/problems/video-stitching/)| DP, Greedy| Time: O(n), Space: O(n)| Medium  |
-|1033 | [Matrix Block Sum](https://leetcode.com/problems/matrix-block-sum/) | 2D Array, Prefix Sum | Time: O(m * n), Space: O(m * n)| Medium  |
+|1033 | [📓 Matrix Block Sum](../leetcode/1033.ipynb) | 2D Prefix Sum | Time: O(m * n), Space: O(m * n)| Medium  |
 |1034 | [Edge List to Adj List Conversion](https://leetcode.com/problems/edge-list-to-adj-list-conversion/)  | Graph, Adjacency List| Time: O(E), Space: O(V)| Medium  |
 |1035 | [Uncrossed Lines](https://leetcode.com/problems/uncrossed-lines/)| DP, LCS | Time: O(m * n), Space: O(m * n)| Medium  |
 |1036 | [Escape a Large Maze](https://leetcode.com/problems/escape-a-large-maze/)| Graph, BFS| Time: O(n), Space: O(n)| Medium  |

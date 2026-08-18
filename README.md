@@ -21,22 +21,22 @@
 
 | Serial No. | Problem Title | Data Structure | Time and Space Complexity | Level |
 |------------|---------------|----------------|---------------------------|-------|
-| 1 | [📓 Two Sum](leetcode/0001.ipynb) | Hash Map | Time: O(n), Space: O(n) | Easy |
-| 2 | [📓 Add Two Numbers](leetcode/0002.ipynb) | Linked List | Time: O(max(m, n)), Space: O(max(m, n)) | Medium |
-| 3 | [📓 Longest Substring Without Repeating Characters](leetcode/0003.ipynb) | Sliding Window, Hash Map | Time: O(n), Space: O(min(n, m)) | Medium |
-| 4 | [📓 Median of Two Sorted Arrays](leetcode/0004.ipynb) | Array, Binary Search | Time: O(log(min(m, n))), Space: O(1) | Hard |
-| 5 | [📓 Longest Palindromic Substring](leetcode/0005.ipynb) | Dynamic Programming | Time: O(n^2), Space: O(n^2) | Medium |
-| 6 | [📓 Zigzag Conversion](leetcode/0006.ipynb) | String, Array | Time: O(n), Space: O(n) | Medium |
-| 7 | [📓 Reverse Integer](leetcode/0007.ipynb) | Integer | Time: O(log x), Space: O(1) | Easy |
-| 8 | [📓 String to Integer (atoi)](leetcode/0008.ipynb) | String | Time: O(n), Space: O(1) | Easy |
-| 9 | [📓 Palindrome Number](leetcode/0009.ipynb) | Integer | Time: O(log x), Space: O(1) | Easy |
-| 10 | [📓 Regular Expression Matching](leetcode/0010.ipynb) | Dynamic Programming | Time: O(m * n), Space: O(m * n) | Hard |
+| 1 | [📓 Two Sum](leetcode/0001.ipynb) | One-Pass Hash Map | Time: O(n), Space: O(n) | Easy |
+| 2 | [📓 Add Two Numbers](leetcode/0002.ipynb) | Iterative Addition | Time: O(max(m, n)), Space: O(max(m, n)) | Medium |
+| 3 | [📓 Longest Substring Without Repeating Characters](leetcode/0003.ipynb) | Sliding Window with HashMap | Time: O(n), Space: O(min(n, m)) | Medium |
+| 4 | [📓 Median of Two Sorted Arrays](leetcode/0004.ipynb) | Binary Search on Partitions | Time: O(log(min(m, n))), Space: O(1) | Hard |
+| 5 | [📓 Longest Palindromic Substring](leetcode/0005.ipynb) | Expand Around Center | Time: O(n^2), Space: O(n^2) | Medium |
+| 6 | [📓 Zigzag Conversion](leetcode/0006.ipynb) | Row-by-Row Simulation | Time: O(n), Space: O(n) | Medium |
+| 7 | [📓 Reverse Integer](leetcode/0007.ipynb) | Math Digit Extraction | Time: O(log x), Space: O(1) | Easy |
+| 8 | [📓 String to Integer (atoi)](leetcode/0008.ipynb) | Linear Scanning | Time: O(n), Space: O(1) | Easy |
+| 9 | [📓 Palindrome Number](leetcode/0009.ipynb) | Reverse Half the Number | Time: O(log x), Space: O(1) | Easy |
+| 10 | [📓 Regular Expression Matching](leetcode/0010.ipynb) | Bottom-Up DP | Time: O(m * n), Space: O(m * n) | Hard |
 | 11 | [📓 Container With Most Water](leetcode/0011.ipynb) | Two Pointers | Time: O(n), Space: O(1) | Medium |
-| 12 | [📓 Integer to Roman](leetcode/0012.ipynb) | Math | Time: O(1), Space: O(1) | Medium |
-| 13 | [📓 Roman to Integer](leetcode/0013.ipynb) | Math | Time: O(n), Space: O(1) | Easy |
-| 14 | [📓 Longest Common Prefix](leetcode/0014.ipynb) | String | Time: O(n * m), Space: O(1) | Easy |
-| 15 | [📓 3Sum](leetcode/0015.ipynb) | Sorting, Two Pointers | Time: O(n^2), Space: O(1) | Medium |
-| 16 | [📓 3Sum Closest](leetcode/0016.ipynb) | Sorting, Two Pointers | Time: O(n^2), Space: O(1) | Medium |
+| 12 | [📓 Integer to Roman](leetcode/0012.ipynb) | Greedy Symbol Table | Time: O(1), Space: O(1) | Medium |
+| 13 | [📓 Roman to Integer](leetcode/0013.ipynb) | Left-to-Right Lookahead | Time: O(n), Space: O(1) | Easy |
+| 14 | [📓 Longest Common Prefix](leetcode/0014.ipynb) | Vertical Scanning | Time: O(n * m), Space: O(1) | Easy |
+| 15 | [📓 3Sum](leetcode/0015.ipynb) | Sorting + Two Pointers | Time: O(n^2), Space: O(1) | Medium |
+| 16 | [📓 3Sum Closest](leetcode/0016.ipynb) | Sorting + Two Pointers | Time: O(n^2), Space: O(1) | Medium |
 | 17 | [📓 Letter Combinations of a Phone Number](leetcode/0017.ipynb) | Backtracking | Time: O(4^n · n), Space: O(n) | Medium |
 | 18 | [4Sum](https://leetcode.com/problems/4sum/) | Sorting, Two Pointers | Time: O(n^3), Space: O(1) | Medium |
 | 19 | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | Linked List | Time: O(n), Space: O(1) | Medium |

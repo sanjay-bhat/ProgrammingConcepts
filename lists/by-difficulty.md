@@ -1423,7 +1423,7 @@
 |1044 | [Longest Duplicate Substring](https://leetcode.com/problems/longest-duplicate-substring/) | String, Binary Search, Hashing| Time: O(n log n), Space: O(n)| Hard |
 |1055 | [Shortest Way to Form String](https://leetcode.com/problems/shortest-way-to-form-string/) | DP, String| Time: O(n * m), Space: O(n * m)| Hard |
 |1062 | [Longest Repeating Substring](https://leetcode.com/problems/longest-repeating-substring/) | Binary Search, String| Time: O(n log n), Space: O(n)| Hard |
-|1074 | [Number of Submatrices That Sum to Target](https://leetcode.com/problems/number-of-submatrices-that-sum-to-target/)  | 2D Array, Hash Map | Time: O(n^3), Space: O(n^2)  | Hard |
+|1074 | [📓 Number of Submatrices That Sum to Target](../leetcode/1074.ipynb)  | 2D Prefix Sum + Hash Map | Time: O(n^3), Space: O(n^2)  | Hard |
 |1077 | [Project Management](https://leetcode.com/problems/project-management/)  | DP, Graph | Time: O(n), Space: O(n)| Hard |
 |1086 | [Largest Palindromic Substring](https://leetcode.com/problems/largest-palindromic-substring/)  | DP, String| Time: O(n^2), Space: O(n^2)  | Hard |
 |1092 | [Shortest Path in a Grid with Obstacles Elimination](https://leetcode.com/problems/shortest-path-in-a-grid-with-obstacles-elimination/) | BFS, Graph| Time: O(n^2), Space: O(n^2)  | Hard |

@@ -282,7 +282,7 @@
 | 280 | [Wiggle Sort](https://leetcode.com/problems/wiggle-sort/) | Sorting, Two Pointers | Time: O(n log n), Space: O(1) | Medium |
 | 281 | [Zigzag Iterator](https://leetcode.com/problems/zigzag-iterator/) | Iterator | Time: O(1), Space: O(k) | Medium |
 | 282 | [Expression Add Operators](https://leetcode.com/problems/expression-add-operators/) | Backtracking | Time: O(4^n), Space: O(n) | Hard |
-| 283 | [Move Zeroes](https://leetcode.com/problems/move-zeroes/) | Array | Time: O(n), Space: O(1) | Easy |
+| 283 | [📓 Move Zeroes](../leetcode/0283.ipynb) | Two Pointers (Write + Fill) | Time: O(n), Space: O(1) | Easy |
 | 284 | [Peeking Iterator](https://leetcode.com/problems/peeking-iterator/) | Iterator | Time: O(1), Space: O(1) | Medium |
 | 285 | [Inorder Successor in BST](https://leetcode.com/problems/inorder-successor-in-bst/) | Tree | Time: O(h), Space: O(1) | Medium |
 | 286 | [Walls and Gates](https://leetcode.com/problems/walls-and-gates/) | BFS | Time: O(m * n), Space: O(m * n) | Medium |

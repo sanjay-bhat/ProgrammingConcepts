@@ -28,7 +28,7 @@
 | 189 | [📓 Rotate Array](../leetcode/0189.ipynb) | Three Reversals | Time: O(n), Space: O(1) | Medium |
 | 228 | [📓 Summary Ranges](../leetcode/0228.ipynb) | Linear Scan | Time: O(n), Space: O(1) | Easy |
 | 243 | [📓 Shortest Word Distance](../leetcode/0243.ipynb) | One-Pass Linear Scan | Time: O(n), Space: O(1) | Easy |
-|283 | [Move Zeroes](https://leetcode.com/problems/move-zeroes/) | Array| Time: O(n), Space: O(1)| Easy|
+| 283 | [📓 Move Zeroes](../leetcode/0283.ipynb) | Two Pointers (Write + Fill) | Time: O(n), Space: O(1) | Easy |
 |448 | [Find All Numbers Disappeared in an Array](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/) | Array| Time: O(n), Space: O(1)| Easy|
 |463 | [Island Perimeter](https://leetcode.com/problems/island-perimeter/) | Array| Time: O(n), Space: O(1)| Easy|
 |485 | [Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/) | Array| Time: O(n), Space: O(1)| Easy|

@@ -87,7 +87,7 @@
 | 268 | [Missing Number](https://leetcode.com/problems/missing-number/) | Array, Bit Manipulation  | Time: O(n), Space: O(1)| Easy |
 | 270 | [Closest Binary Search Tree Value](https://leetcode.com/problems/closest-binary-search-tree-value/)  | Tree, Binary Search| Time: O(h), Space: O(1)| Easy |
 | 278 | [First Bad Version](https://leetcode.com/problems/first-bad-version/) | Binary Search | Time: O(log n), Space: O(1)  | Easy |
-| 283 | [Move Zeroes](https://leetcode.com/problems/move-zeroes/)| Array| Time: O(n), Space: O(1)| Easy |
+| 283 | [📓 Move Zeroes](../leetcode/0283.ipynb) | Two Pointers (Write + Fill) | Time: O(n), Space: O(1) | Easy |
 | 290 | [Word Pattern](https://leetcode.com/problems/word-pattern/)| Hash Map| Time: O(n), Space: O(n)| Easy |
 | 292 | [Nim Game](https://leetcode.com/problems/nim-game/)| Game Theory| Time: O(1), Space: O(1)| Easy |
 | 293 | [Flip Game](https://leetcode.com/problems/flip-game/)| Backtracking  | Time: O(n), Space: O(n)| Easy |

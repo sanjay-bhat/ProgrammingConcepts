@@ -481,7 +481,7 @@
 | 257 | [Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/)| Tree, DFS| Time: O(n), Space: O(h) | Easy |
 | 266 | [Palindrome Permutation](https://leetcode.com/problems/palindrome-permutation/)  | Hash Map | Time: O(n), Space: O(n) | Easy |
 | 268 | [Missing Number](https://leetcode.com/problems/missing-number/)| Array, Bit Manipulation| Time: O(n), Space: O(1) | Easy |
-| 283 | [Move Zeroes](https://leetcode.com/problems/move-zeroes/)  | Array| Time: O(n), Space: O(1) | Easy |
+| 283 | [📓 Move Zeroes](../leetcode/0283.ipynb) | Two Pointers (Write + Fill) | Time: O(n), Space: O(1) | Easy |
 | 290 | [Word Pattern](https://leetcode.com/problems/word-pattern/)| Hash Map | Time: O(n), Space: O(n) | Easy |
 | 293 | [Flip Game](https://leetcode.com/problems/flip-game/) | Backtracking  | Time: O(n), Space: O(n) | Easy |
 | 339 | [Nested List Weight Sum](https://leetcode.com/problems/nested-list-weight-sum/)  | DFS, Recursion| Time: O(n), Space: O(h) | Easy |

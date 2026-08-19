@@ -324,7 +324,7 @@
 | 301 | [Remove Invalid Parentheses](https://leetcode.com/problems/remove-invalid-parentheses/) | BFS, Backtracking | Time: O(2^n), Space: O(n) | Hard |
 | 302 | [Smallest Rectangle Enclosing Black Pixels](https://leetcode.com/problems/smallest-rectangle-enclosing-black-pixels/) | Array | Time: O(m + n), Space: O(1) | Medium |
 | 303 | [Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/) | Prefix Sum Array | Time: O(1), Space: O(n) | Easy |
-| 304 | [Range Sum Query 2D - Immutable](https://leetcode.com/problems/range-sum-query-2d-immutable/) | 2D Prefix Sum | Time: O(1), Space: O(m * n) | Medium |
+| 304 | [📓 Range Sum Query 2D - Immutable](leetcode/0304.ipynb) | 2D Prefix Sum | Time: O(1) query, O(m·n) build, Space: O(m·n) | Medium |
 | 305 | [Number of Islands II](https://leetcode.com/problems/number-of-islands-ii/) | Union Find | Time: O(n log n), Space: O(n) | Hard |
 | 306 | [Additive Number](https://leetcode.com/problems/additive-number/) | String, Backtracking | Time: O(n^3), Space: O(1) | Medium |
 | 307 | [Range Sum Query - Mutable](https://leetcode.com/problems/range-sum-query-mutable/) | Segment Tree | Time: O(log n), Space: O(n) | Medium |

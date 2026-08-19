@@ -8,7 +8,7 @@
 ## 2D Prefix Sum
 | Serial No. | Problem Title | Data Structure | Time and Space Complexity | Level |
 | :--- | :--- | :--- | :--- | :--- |
-|304 | [Range Sum Query 2D - Immutable](https://leetcode.com/problems/range-sum-query-2d-immutable/) | 2D Prefix Sum| Time: O(1), Space: O(m * n)| Medium|
+| 304 | [📓 Range Sum Query 2D - Immutable](0304.ipynb) | 2D Prefix Sum | Time: O(1) query, O(m·n) build, Space: O(m·n) | Medium |
 
 ## 2D Segment Tree
 | Serial No. | Problem Title | Data Structure | Time and Space Complexity | Level |

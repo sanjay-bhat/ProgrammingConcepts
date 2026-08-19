@@ -552,7 +552,7 @@
 | 299 | [Bulls and Cows](https://leetcode.com/problems/bulls-and-cows/) | Hash Map| Time: O(n), Space: O(n)| Medium  |
 | 300 | [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)| Dynamic Programming| Time: O(n^2), Space: O(n)| Medium  |
 | 302 | [Smallest Rectangle Enclosing Black Pixels](https://leetcode.com/problems/smallest-rectangle-enclosing-black-pixels/)| Array| Time: O(m + n), Space: O(1)  | Medium  |
-| 304 | [Range Sum Query 2D - Immutable](https://leetcode.com/problems/range-sum-query-2d-immutable/)  | 2D Prefix Sum | Time: O(1), Space: O(m * n)  | Medium  |
+| 304 | [📓 Range Sum Query 2D - Immutable](../leetcode/0304.ipynb) | 2D Prefix Sum | Time: O(1) query, O(m·n) build, Space: O(m·n) | Medium |
 | 306 | [Additive Number](https://leetcode.com/problems/additive-number/)| String, Backtracking | Time: O(n^3), Space: O(1)| Medium  |
 | 307 | [Range Sum Query - Mutable](https://leetcode.com/problems/range-sum-query-mutable/) | Segment Tree  | Time: O(log n), Space: O(n)  | Medium  |
 | 309 | [Best Time to Buy and Sell Stock with Cooldown](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)| Dynamic Programming| Time: O(n), Space: O(n)| Medium  |

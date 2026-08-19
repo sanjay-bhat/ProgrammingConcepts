@@ -86,7 +86,7 @@
 | 281 | [Zigzag Iterator](https://leetcode.com/problems/zigzag-iterator/)| Iterator | Time: O(1), Space: O(k) | Medium  |
 | 284 | [Peeking Iterator](https://leetcode.com/problems/peeking-iterator/) | Iterator | Time: O(1), Space: O(1) | Medium  |
 | 285 | [Inorder Successor in BST](https://leetcode.com/problems/inorder-successor-in-bst/)| Tree | Time: O(h), Space: O(1) | Medium  |
-| 304 | [Range Sum Query 2D - Immutable](https://leetcode.com/problems/range-sum-query-2d-immutable/)  | 2D Prefix Sum | Time: O(1), Space: O(m * n)| Medium  |
+| 304 | [📓 Range Sum Query 2D - Immutable](../leetcode/0304.ipynb) | 2D Prefix Sum | Time: O(1) query, O(m·n) build, Space: O(m·n) | Medium |
 | 319 | [Bulb Switcher](https://leetcode.com/problems/bulb-switcher/)  | Math | Time: O(1), Space: O(1) | Medium  |
 | 323 | [Number of Connected Components in an Undirected Graph](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/)| Graph, DFS/BFS| Time: O(V + E), Space: O(V)| Medium  |
 | 348 | [Design Tic-Tac-Toe](https://leetcode.com/problems/design-tic-tac-toe/) | Array| Time: O(1), Space: O(1) | Medium  |

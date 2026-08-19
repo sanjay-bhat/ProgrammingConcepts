@@ -724,7 +724,7 @@
 | 609 | [Find Duplicate File in System](https://leetcode.com/problems/find-duplicate-file-in-system/)  | Hash Map, String| Time: O(n), Space: O(n)| Medium  |
 | 610 | [Combination Sum III](https://leetcode.com/problems/combination-sum-iii/)| Backtracking  | Time: O(n!), Space: O(n) | Medium  |
 | 611 | [Valid Triangle Number](https://leetcode.com/problems/valid-triangle-number/)  | Sorting, Two Pointer | Time: O(n^2), Space: O(1)| Medium  |
-| 613 | [Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/)| BFS| Time: O(n^2), Space: O(n^2)  | Medium  |
+| 1091 | [📓 Shortest Path in Binary Matrix](../leetcode/1091.ipynb) | BFS (Queue) | Time: $O(n^2)$, Space: $O(n^2)$ | Medium |
 | 614 | [Binary Tree Longest Consecutive Sequence III](https://leetcode.com/problems/binary-tree-longest-consecutive-sequence-iii/)| Tree, DFS | Time: O(n), Space: O(h)| Medium  |
 | 616 | [Add Bold Tag in String](https://leetcode.com/problems/add-bold-tag-in-string/)| String, Dynamic Programming| Time: O(n), Space: O(n)| Medium  |
 | 619 | [Binary Tree Longest Consecutive Sequence IV](https://leetcode.com/problems/binary-tree-longest-consecutive-sequence-iv/)  | Tree, DFS | Time: O(n), Space: O(h)| Medium  |

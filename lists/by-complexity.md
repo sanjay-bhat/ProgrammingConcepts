@@ -1369,7 +1369,7 @@
 |522 | [Longest Uncommon Subsequence II](https://leetcode.com/problems/longest-uncommon-subsequence-ii/)  | String| Time: O(n^2), Space: O(n^2)| Medium  |
 |547 | [Friend Circles](https://leetcode.com/problems/friend-circles/) | Depth-First Search (DFS), Union-Find| Time: O(n^2), Space: O(n)| Medium  |
 |611 | [Valid Triangle Number](https://leetcode.com/problems/valid-triangle-number/)  | Sorting, Two Pointer | Time: O(n^2), Space: O(1)| Medium  |
-|613 | [Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/) | BFS| Time: O(n^2), Space: O(n^2)| Medium  |
+| 1091 | [📓 Shortest Path in Binary Matrix](../leetcode/1091.ipynb) | BFS (Queue) | Time: $O(n^2)$, Space: $O(n^2)$ | Medium |
 |647 | [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/)| Dynamic Programming  | Time: O(n^2), Space: O(n^2)| Medium  |
 |651 | [4 Keys Keyboard](https://leetcode.com/problems/4-keys-keyboard/) | Dynamic Programming  | Time: O(n^2), Space: O(n)| Medium  |
 |673 | [Number of Longest Increasing Subsequence](https://leetcode.com/problems/number-of-longest-increasing-subsequence/) | DP, Segment Tree| Time: O(n^2), Space: O(n)| Medium  |

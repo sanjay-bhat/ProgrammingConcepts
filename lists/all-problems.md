@@ -618,7 +618,7 @@
 | 610 | [Combination Sum III](https://leetcode.com/problems/combination-sum-iii/) | Backtracking| Time: O(n!), Space: O(n) | Medium |
 | 611 | [Valid Triangle Number](https://leetcode.com/problems/valid-triangle-number/) | Sorting, Two Pointer| Time: O(n^2), Space: O(1) | Medium |
 | 612 | [Student Attendance Record III](https://leetcode.com/problems/student-attendance-record-iii/) | Dynamic Programming | Time: O(n), Space: O(n) | Hard |
-| 613 | [Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/) | BFS | Time: O(n^2), Space: O(n^2) | Medium |
+| 1091 | [📓 Shortest Path in Binary Matrix](../leetcode/1091.ipynb) | BFS (Queue) | Time: $O(n^2)$, Space: $O(n^2)$ | Medium |
 | 614 | [Binary Tree Longest Consecutive Sequence III](https://leetcode.com/problems/binary-tree-longest-consecutive-sequence-iii/) | Tree, DFS | Time: O(n), Space: O(h) | Medium |
 | 615 | [Average Salary: Excluding the Minimum and Maximum Salary](https://leetcode.com/problems/average-salary-excluding-the-minimum-and-maximum-salary/) | Array | Time: O(n), Space: O(1) | Easy |
 | 616 | [Add Bold Tag in String](https://leetcode.com/problems/add-bold-tag-in-string/) | String, Dynamic Programming | Time: O(n), Space: O(n) | Medium |

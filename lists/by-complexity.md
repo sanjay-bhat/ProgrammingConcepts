@@ -503,7 +503,7 @@
 | 448 | [📓 Find All Numbers Disappeared in an Array](../leetcode/0448.ipynb) | In-place Negation | Time: O(n), Space: O(1) | Easy |
 | 453 | [Minimum Moves to Equal Array Elements](https://leetcode.com/problems/minimum-moves-to-equal-array-elements/) | Math | Time: O(n), Space: O(1) | Easy |
 | 459 | [Repeated Substring Pattern](https://leetcode.com/problems/repeated-substring-pattern/)| String| Time: O(n), Space: O(1) | Easy |
-| 463 | [Island Perimeter](https://leetcode.com/problems/island-perimeter/) | Array| Time: O(n), Space: O(1) | Easy |
+| 463 | [📓 Island Perimeter](../leetcode/0463.ipynb) | Single Pass (Count + Shared Edges) | Time: O(m·n), Space: O(1) | Easy |
 | 481 | [Magical String](https://leetcode.com/problems/magical-string/)| Math | Time: O(n), Space: O(n) | Easy |
 | 482 | [License Key Formatting](https://leetcode.com/problems/license-key-formatting/)  | String| Time: O(n), Space: O(1) | Easy |
 | 485 | [Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/)  | Array| Time: O(n), Space: O(1) | Easy |

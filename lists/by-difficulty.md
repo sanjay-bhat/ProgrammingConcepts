@@ -127,7 +127,7 @@
 | 455 | [Assign Cookies](https://leetcode.com/problems/assign-cookies/) | Greedy  | Time: O(n log n), Space: O(1)| Easy |
 | 459 | [Repeated Substring Pattern](https://leetcode.com/problems/repeated-substring-pattern/)| String  | Time: O(n), Space: O(1)| Easy |
 | 461 | [Hamming Distance](https://leetcode.com/problems/hamming-distance/) | Bit Manipulation| Time: O(1), Space: O(1)| Easy |
-| 463 | [Island Perimeter](https://leetcode.com/problems/island-perimeter/) | Array| Time: O(n), Space: O(1)| Easy |
+| 463 | [📓 Island Perimeter](../leetcode/0463.ipynb) | Single Pass (Count + Shared Edges) | Time: O(m·n), Space: O(1) | Easy |
 | 475 | [Heaters](https://leetcode.com/problems/heaters/)  | Binary Search | Time: O(n log n), Space: O(1)| Easy |
 | 476 | [Number Complement](https://leetcode.com/problems/number-complement/) | Bit Manipulation| Time: O(1), Space: O(1)| Easy |
 | 481 | [Magical String](https://leetcode.com/problems/magical-string/) | Math | Time: O(n), Space: O(n)| Easy |

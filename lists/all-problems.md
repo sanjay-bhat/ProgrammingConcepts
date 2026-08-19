@@ -462,7 +462,7 @@
 | 460 | [LFU Cache](https://leetcode.com/problems/lfu-cache/) | Hash Map, Double Linked List | Time: O(1), Space: O(n) | Hard |
 | 461 | [Hamming Distance](https://leetcode.com/problems/hamming-distance/) | Bit Manipulation | Time: O(1), Space: O(1) | Easy |
 | 462 | [Minimum Moves to Equal Array Elements II](https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/) | Math | Time: O(n), Space: O(1) | Medium |
-| 463 | [Island Perimeter](https://leetcode.com/problems/island-perimeter/) | Array | Time: O(n), Space: O(1) | Easy |
+| 463 | [📓 Island Perimeter](../leetcode/0463.ipynb) | Single Pass (Count + Shared Edges) | Time: O(m·n), Space: O(1) | Easy |
 | 464 | [Can I Win](https://leetcode.com/problems/can-i-win/) | Dynamic Programming | Time: O(2^n), Space: O(2^n) | Medium |
 | 465 | [Optimal Account Balancing](https://leetcode.com/problems/optimal-account-balancing/) | DFS, Backtracking | Time: O(2^n), Space: O(n) | Hard |
 | 466 | [Count The Repetitions](https://leetcode.com/problems/count-the-repetitions/) | Dynamic Programming | Time: O(n^2), Space: O(n) | Hard |

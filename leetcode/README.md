@@ -272,7 +272,7 @@
 ## Binary Indexed Tree
 | Serial No. | Problem Title | Data Structure | Time and Space Complexity | Level |
 | :--- | :--- | :--- | :--- | :--- |
-|315 | [Count of Smaller Numbers After Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/) | Binary Indexed Tree (BIT), Merge Sort| Time: O(n log n), Space: O(n)| Hard|
+| 315 | [📓 Count of Smaller Numbers After Self](0315.ipynb) | Binary Indexed Tree | Time: $O(n \log n)$, Space: $O(n)$ | Hard |
 
 ## Binary Search
 | Serial No. | Problem Title | Data Structure | Time and Space Complexity | Level |

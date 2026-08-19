@@ -320,7 +320,7 @@
 | 312 | [Burst Balloons](https://leetcode.com/problems/burst-balloons/) | Dynamic Programming | Time: O(n^3), Space: O(n^2) | Hard |
 | 313 | [Super Ugly Number](https://leetcode.com/problems/super-ugly-number/) | Min-Heap | Time: O(k * log k), Space: O(k) | Medium |
 | 314 | [Binary Tree Vertical Order Traversal](https://leetcode.com/problems/binary-tree-vertical-order-traversal/) | Tree, BFS | Time: O(n log n), Space: O(n) | Medium |
-| 315 | [Count of Smaller Numbers After Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/) | Binary Indexed Tree (BIT), Merge Sort | Time: O(n log n), Space: O(n) | Hard |
+| 315 | [📓 Count of Smaller Numbers After Self](../leetcode/0315.ipynb) | Binary Indexed Tree | Time: $O(n \log n)$, Space: $O(n)$ | Hard |
 | 316 | [Remove Duplicate Letters](https://leetcode.com/problems/remove-duplicate-letters/) | Stack, Greedy | Time: O(n), Space: O(n) | Hard |
 | 317 | [Shortest Distance from All Buildings](https://leetcode.com/problems/shortest-distance-from-all-buildings/) | BFS | Time: O(m * n), Space: O(m * n) | Hard |
 | 318 | [Maximum Product of Word Lengths](https://leetcode.com/problems/maximum-product-of-word-lengths/) | Bit Manipulation | Time: O(n^2), Space: O(n) | Medium |

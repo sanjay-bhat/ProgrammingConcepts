@@ -122,7 +122,7 @@
 | 414 | [Third Maximum Number](https://leetcode.com/problems/third-maximum-number/)| Sorting | Time: O(n log n), Space: O(1)| Easy |
 | 415 | [Add Strings](https://leetcode.com/problems/add-strings/)| String  | Time: O(n), Space: O(1)| Easy |
 | 422 | [Valid Word Square](https://leetcode.com/problems/valid-word-square/) | Matrix  | Time: O(n^2), Space: O(1)| Easy |
-| 429 | [N-ary Tree Level Order Traversal](https://leetcode.com/problems/n-ary-tree-level-order-traversal/)  | BFS| Time: O(n), Space: O(n)| Easy |
+| 429 | [📓 N-ary Tree Level Order Traversal](../leetcode/0429.ipynb) | BFS (Queue) | Time: $O(n)$, Space: $O(n)$ | Easy |
 | 434 | [Number of Segments in a String](https://leetcode.com/problems/number-of-segments-in-a-string/)| String  | Time: O(n), Space: O(1)| Easy |
 | 441 | [Arranging Coins](https://leetcode.com/problems/arranging-coins/)| Binary Search | Time: O(log n), Space: O(1)  | Easy |
 | 447 | [Number of Boomerangs](https://leetcode.com/problems/number-of-boomerangs/)| Hash Map| Time: O(n^2), Space: O(n)| Easy |
@@ -546,7 +546,7 @@
 | 281 | [Zigzag Iterator](https://leetcode.com/problems/zigzag-iterator/)| Iterator| Time: O(1), Space: O(k)| Medium  |
 | 284 | [Peeking Iterator](https://leetcode.com/problems/peeking-iterator/) | Iterator| Time: O(1), Space: O(1)| Medium  |
 | 285 | [Inorder Successor in BST](https://leetcode.com/problems/inorder-successor-in-bst/) | Tree | Time: O(h), Space: O(1)| Medium  |
-| 286 | [Walls and Gates](https://leetcode.com/problems/walls-and-gates/)| BFS| Time: O(m * n), Space: O(m * n)| Medium  |
+| 286 | [📓 Walls and Gates](../leetcode/0286.ipynb) | BFS (Queue) | Time: $O(m \cdot n)$, Space: $O(m \cdot n)$ | Medium |
 | 287 | [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) | Array, Floyd's Tortoise and Hare| Time: O(n), Space: O(1)| Medium  |
 | 288 | [Unique Word Abbreviation](https://leetcode.com/problems/unique-word-abbreviation/) | Hash Map| Time: O(n), Space: O(n)| Medium  |
 | 289 | [Game of Life](https://leetcode.com/problems/game-of-life/)| Array| Time: O(m * n), Space: O(1)  | Medium  |
@@ -632,7 +632,7 @@
 | 428 | [Serialize and Deserialize N-ary Tree](https://leetcode.com/problems/serialize-and-deserialize-n-ary-tree/) | Tree, BFS/DFS | Time: O(n), Space: O(n)| Medium  |
 | 430 | [Flatten a Multilevel Doubly Linked List](https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/) | Linked List| Time: O(n), Space: O(1)| Medium  |
 | 431 | [Encode N-ary Tree to Binary Tree](https://leetcode.com/problems/encode-n-ary-tree-to-binary-tree/)  | Tree | Time: O(n), Space: O(n)| Medium  |
-| 433 | [Minimum Genetic Mutation](https://leetcode.com/problems/minimum-genetic-mutation/) | BFS| Time: O(n^2), Space: O(n)| Medium  |
+| 433 | [📓 Minimum Genetic Mutation](../leetcode/0433.ipynb) | BFS (Queue) | Time: $O(N^2 \cdot L)$, Space: $O(N)$ | Medium |
 | 435 | [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/) | Greedy  | Time: O(n log n), Space: O(1)| Medium  |
 | 436 | [Find Right Interval](https://leetcode.com/problems/find-right-interval/)| Binary Search | Time: O(n log n), Space: O(n)| Medium  |
 | 437 | [Path Sum III](https://leetcode.com/problems/path-sum-iii/)| Tree, DFS | Time: O(n), Space: O(h)| Medium  |
@@ -724,7 +724,7 @@
 | 609 | [Find Duplicate File in System](https://leetcode.com/problems/find-duplicate-file-in-system/)  | Hash Map, String| Time: O(n), Space: O(n)| Medium  |
 | 610 | [Combination Sum III](https://leetcode.com/problems/combination-sum-iii/)| Backtracking  | Time: O(n!), Space: O(n) | Medium  |
 | 611 | [Valid Triangle Number](https://leetcode.com/problems/valid-triangle-number/)  | Sorting, Two Pointer | Time: O(n^2), Space: O(1)| Medium  |
-| 613 | [Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/)| BFS| Time: O(n^2), Space: O(n^2)  | Medium  |
+| 1091 | [📓 Shortest Path in Binary Matrix](../leetcode/1091.ipynb) | BFS (Queue) | Time: $O(n^2)$, Space: $O(n^2)$ | Medium |
 | 614 | [Binary Tree Longest Consecutive Sequence III](https://leetcode.com/problems/binary-tree-longest-consecutive-sequence-iii/)| Tree, DFS | Time: O(n), Space: O(h)| Medium  |
 | 616 | [Add Bold Tag in String](https://leetcode.com/problems/add-bold-tag-in-string/)| String, Dynamic Programming| Time: O(n), Space: O(n)| Medium  |
 | 619 | [Binary Tree Longest Consecutive Sequence IV](https://leetcode.com/problems/binary-tree-longest-consecutive-sequence-iv/)  | Tree, DFS | Time: O(n), Space: O(h)| Medium  |
@@ -792,7 +792,7 @@
 | 743 | [Network Delay Time](https://leetcode.com/problems/network-delay-time/)  | Graph, Dijkstra | Time: O(E log V), Space: O(V)| Medium  |
 | 748 | [Shortest Completing Word](https://leetcode.com/problems/shortest-completing-word/) | String, Hash Map| Time: O(n), Space: O(n)| Medium  |
 | 750 | [Number of Corner Rectangles](https://leetcode.com/problems/number-of-corner-rectangles/) | Hash Map| Time: O(n^2), Space: O(n)| Medium  |
-| 752 | [Open the Lock](https://leetcode.com/problems/open-the-lock/) | BFS| Time: O(n), Space: O(n)| Medium  |
+| 752 | [📓 Open the Lock](../leetcode/0752.ipynb) | BFS (Queue) | Time: $O(10^4 + D)$, Space: $O(10^4 + D)$ | Medium |
 | 754 | [Reach a Number](https://leetcode.com/problems/reach-a-number/) | Math | Time: O(sqrt(n)), Space: O(1)| Medium  |
 | 755 | [Pour Water](https://leetcode.com/problems/pour-water/)  | Simulation| Time: O(n^2), Space: O(1)| Medium  |
 | 758 | [Bold Words in String](https://leetcode.com/problems/bold-words-in-string/)| String, Hash Set| Time: O(n), Space: O(n)| Medium  |

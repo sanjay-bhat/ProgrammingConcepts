@@ -502,7 +502,7 @@
 | 409 | [Longest Palindrome](https://leetcode.com/problems/longest-palindrome/) | Hash Map | Time: O(n), Space: O(n) | Easy |
 | 412 | [Fizz Buzz](https://leetcode.com/problems/fizz-buzz/) | Math | Time: O(n), Space: O(1) | Easy |
 | 415 | [Add Strings](https://leetcode.com/problems/add-strings/)  | String| Time: O(n), Space: O(1) | Easy |
-| 429 | [N-ary Tree Level Order Traversal](https://leetcode.com/problems/n-ary-tree-level-order-traversal/)| BFS  | Time: O(n), Space: O(n) | Easy |
+| 429 | [📓 N-ary Tree Level Order Traversal](../leetcode/0429.ipynb) | BFS (Queue) | Time: $O(n)$, Space: $O(n)$ | Easy |
 | 434 | [Number of Segments in a String](https://leetcode.com/problems/number-of-segments-in-a-string/)| String| Time: O(n), Space: O(1) | Easy |
 | 448 | [📓 Find All Numbers Disappeared in an Array](../leetcode/0448.ipynb) | In-place Negation | Time: O(n), Space: O(1) | Easy |
 | 453 | [Minimum Moves to Equal Array Elements](https://leetcode.com/problems/minimum-moves-to-equal-array-elements/) | Math | Time: O(n), Space: O(1) | Easy |
@@ -790,7 +790,7 @@
 | 276 | [Paint Fence](https://leetcode.com/problems/paint-fence/)  | Dynamic Programming | Time: O(n), Space: O(1) | Medium  |
 | 277 | [Find the Celebrity](https://leetcode.com/problems/find-the-celebrity/) | Graph, Two Pointers | Time: O(n), Space: O(1) | Medium  |
 | 279 | [Perfect Squares](https://leetcode.com/problems/perfect-squares/)| Dynamic Programming | Time: O(n√n), Space: O(n)  | Medium  |
-| 286 | [Walls and Gates](https://leetcode.com/problems/walls-and-gates/)| BFS  | Time: O(m * n), Space: O(m * n)| Medium  |
+| 286 | [📓 Walls and Gates](../leetcode/0286.ipynb) | BFS (Queue) | Time: $O(m \cdot n)$, Space: $O(m \cdot n)$ | Medium |
 | 287 | [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) | Array, Floyd's Tortoise and Hare| Time: O(n), Space: O(1) | Medium  |
 | 288 | [Unique Word Abbreviation](https://leetcode.com/problems/unique-word-abbreviation/)| Hash Map | Time: O(n), Space: O(n) | Medium  |
 | 289 | [Game of Life](https://leetcode.com/problems/game-of-life/)| Array| Time: O(m * n), Space: O(1)| Medium  |
@@ -950,7 +950,7 @@
 | 740 | [Delete and Earn](https://leetcode.com/problems/delete-and-earn/)| Dynamic Programming | Time: O(n), Space: O(n) | Medium  |
 | 742 | [Closest Leaf in a Binary Tree](https://leetcode.com/problems/closest-leaf-in-a-binary-tree/)  | Tree, BFS, DFS| Time: O(n), Space: O(n) | Medium  |
 | 748 | [Shortest Completing Word](https://leetcode.com/problems/shortest-completing-word/)| String, Hash Map  | Time: O(n), Space: O(n) | Medium  |
-| 752 | [Open the Lock](https://leetcode.com/problems/open-the-lock/)  | BFS  | Time: O(n), Space: O(n) | Medium  |
+| 752 | [📓 Open the Lock](../leetcode/0752.ipynb) | BFS (Queue) | Time: $O(10^4 + D)$, Space: $O(10^4 + D)$ | Medium |
 | 758 | [Bold Words in String](https://leetcode.com/problems/bold-words-in-string/)  | String, Hash Set  | Time: O(n), Space: O(n) | Medium  |
 | 761 | [Special Binary String](https://leetcode.com/problems/special-binary-string/)| String, Recursion | Time: O(n), Space: O(n) | Medium  |
 | 763 | [Partition Labels](https://leetcode.com/problems/partition-labels/) | Greedy, Hash Map  | Time: O(n), Space: O(n) | Medium  |
@@ -1359,7 +1359,7 @@
 |368 | [Largest Divisible Subset](https://leetcode.com/problems/largest-divisible-subset/) | Dynamic Programming  | Time: O(n^2), Space: O(n)| Medium  |
 |375 | [Guess Number Higher or Lower II](https://leetcode.com/problems/guess-number-higher-or-lower-ii/)  | Dynamic Programming  | Time: O(n^2), Space: O(n^2)| Medium  |
 |406 | [Queue Reconstruction by Height](https://leetcode.com/problems/queue-reconstruction-by-height/) | Greedy| Time: O(n^2), Space: O(n)| Medium  |
-|433 | [Minimum Genetic Mutation](https://leetcode.com/problems/minimum-genetic-mutation/) | BFS| Time: O(n^2), Space: O(n)| Medium  |
+| 433 | [📓 Minimum Genetic Mutation](../leetcode/0433.ipynb) | BFS (Queue) | Time: $O(N^2 \cdot L)$, Space: $O(N)$ | Medium |
 |454 | [4Sum II](https://leetcode.com/problems/4sum-ii/)| Hash Map| Time: O(n^2), Space: O(n^2)| Medium  |
 |464 | [Can I Win](https://leetcode.com/problems/can-i-win/) | Dynamic Programming  | Time: O(2^n), Space: O(2^n)| Medium  |
 |473 | [Matchsticks to Square](https://leetcode.com/problems/matchsticks-to-square/)  | Backtracking, Dynamic Programming| Time: O(4^n), Space: O(n)| Medium  |
@@ -1369,7 +1369,7 @@
 |522 | [Longest Uncommon Subsequence II](https://leetcode.com/problems/longest-uncommon-subsequence-ii/)  | String| Time: O(n^2), Space: O(n^2)| Medium  |
 |547 | [Friend Circles](https://leetcode.com/problems/friend-circles/) | Depth-First Search (DFS), Union-Find| Time: O(n^2), Space: O(n)| Medium  |
 |611 | [Valid Triangle Number](https://leetcode.com/problems/valid-triangle-number/)  | Sorting, Two Pointer | Time: O(n^2), Space: O(1)| Medium  |
-|613 | [Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/) | BFS| Time: O(n^2), Space: O(n^2)| Medium  |
+| 1091 | [📓 Shortest Path in Binary Matrix](../leetcode/1091.ipynb) | BFS (Queue) | Time: $O(n^2)$, Space: $O(n^2)$ | Medium |
 |647 | [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/)| Dynamic Programming  | Time: O(n^2), Space: O(n^2)| Medium  |
 |651 | [4 Keys Keyboard](https://leetcode.com/problems/4-keys-keyboard/) | Dynamic Programming  | Time: O(n^2), Space: O(n)| Medium  |
 |673 | [Number of Longest Increasing Subsequence](https://leetcode.com/problems/number-of-longest-increasing-subsequence/) | DP, Segment Tree| Time: O(n^2), Space: O(n)| Medium  |

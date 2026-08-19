@@ -308,7 +308,7 @@
 | 283 | [📓 Move Zeroes](leetcode/0283.ipynb) | Two Pointers (Write + Fill) | Time: O(n), Space: O(1) | Easy |
 | 284 | [Peeking Iterator](https://leetcode.com/problems/peeking-iterator/) | Iterator | Time: O(1), Space: O(1) | Medium |
 | 285 | [Inorder Successor in BST](https://leetcode.com/problems/inorder-successor-in-bst/) | Tree | Time: O(h), Space: O(1) | Medium |
-| 286 | [Walls and Gates](https://leetcode.com/problems/walls-and-gates/) | BFS | Time: O(m * n), Space: O(m * n) | Medium |
+| 286 | [📓 Walls and Gates](leetcode/0286.ipynb) | BFS (Queue) | Time: $O(m \cdot n)$, Space: $O(m \cdot n)$ | Medium |
 | 287 | [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) | Array, Floyd's Tortoise and Hare | Time: O(n), Space: O(1) | Medium |
 | 288 | [Unique Word Abbreviation](https://leetcode.com/problems/unique-word-abbreviation/) | Hash Map | Time: O(n), Space: O(n) | Medium |
 | 289 | [Game of Life](https://leetcode.com/problems/game-of-life/) | Array | Time: O(m * n), Space: O(1) | Medium |
@@ -455,11 +455,11 @@
 | 426 | [Convert Binary Search Tree to Sorted Doubly Linked List](https://leetcode.com/problems/convert-binary-search-tree-to-sorted-doubly-linked-list/) | Tree, In-order Traversal | Time: O(n), Space: O(h) | Medium |
 | 427 | [Construct Quad Tree](https://leetcode.com/problems/construct-quad-tree/) | Divide and Conquer, Recursion | Time: O(n), Space: O(n) | Medium |
 | 428 | [Serialize and Deserialize N-ary Tree](https://leetcode.com/problems/serialize-and-deserialize-n-ary-tree/) | Tree, BFS/DFS | Time: O(n), Space: O(n) | Medium |
-| 429 | [N-ary Tree Level Order Traversal](https://leetcode.com/problems/n-ary-tree-level-order-traversal/) | BFS | Time: O(n), Space: O(n) | Easy |
+| 429 | [📓 N-ary Tree Level Order Traversal](leetcode/0429.ipynb) | BFS (Queue) | Time: $O(n)$, Space: $O(n)$ | Easy |
 | 430 | [Flatten a Multilevel Doubly Linked List](https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/) | Linked List | Time: O(n), Space: O(1) | Medium |
 | 431 | [Encode N-ary Tree to Binary Tree](https://leetcode.com/problems/encode-n-ary-tree-to-binary-tree/) | Tree | Time: O(n), Space: O(n) | Medium |
 | 432 | [All O`one Data Structure](https://leetcode.com/problems/all-oone-data-structure/) | Doubly Linked List, Hash Map | Time: O(1), Space: O(n) | Hard |
-| 433 | [Minimum Genetic Mutation](https://leetcode.com/problems/minimum-genetic-mutation/) | BFS | Time: O(n^2), Space: O(n) | Medium |
+| 433 | [📓 Minimum Genetic Mutation](leetcode/0433.ipynb) | BFS (Queue) | Time: $O(N^2 \cdot L)$, Space: $O(N)$ | Medium |
 | 434 | [Number of Segments in a String](https://leetcode.com/problems/number-of-segments-in-a-string/) | String | Time: O(n), Space: O(1) | Easy |
 | 435 | [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/) | Greedy | Time: O(n log n), Space: O(1) | Medium |
 | 436 | [Find Right Interval](https://leetcode.com/problems/find-right-interval/) | Binary Search | Time: O(n log n), Space: O(n) | Medium |
@@ -639,7 +639,7 @@
 | 610 | [Combination Sum III](https://leetcode.com/problems/combination-sum-iii/) | Backtracking| Time: O(n!), Space: O(n) | Medium |
 | 611 | [Valid Triangle Number](https://leetcode.com/problems/valid-triangle-number/) | Sorting, Two Pointer| Time: O(n^2), Space: O(1) | Medium |
 | 612 | [Student Attendance Record III](https://leetcode.com/problems/student-attendance-record-iii/) | Dynamic Programming | Time: O(n), Space: O(n) | Hard |
-| 613 | [Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/) | BFS | Time: O(n^2), Space: O(n^2) | Medium |
+| 1091 | [📓 Shortest Path in Binary Matrix](leetcode/1091.ipynb) | BFS (Queue) | Time: $O(n^2)$, Space: $O(n^2)$ | Medium |
 | 614 | [Binary Tree Longest Consecutive Sequence III](https://leetcode.com/problems/binary-tree-longest-consecutive-sequence-iii/) | Tree, DFS | Time: O(n), Space: O(h) | Medium |
 | 615 | [Average Salary: Excluding the Minimum and Maximum Salary](https://leetcode.com/problems/average-salary-excluding-the-minimum-and-maximum-salary/) | Array | Time: O(n), Space: O(1) | Easy |
 | 616 | [Add Bold Tag in String](https://leetcode.com/problems/add-bold-tag-in-string/) | String, Dynamic Programming | Time: O(n), Space: O(n) | Medium |
@@ -778,7 +778,7 @@
 | 749 | [Contain Virus](https://leetcode.com/problems/contain-virus/)   | Graph, BFS   | Time: O(n^2), Space: O(n^2) | Hard |
 | 750 | [Number of Corner Rectangles](https://leetcode.com/problems/number-of-corner-rectangles/) | Hash Map| Time: O(n^2), Space: O(n) | Medium |
 | 751 | [IP to CIDR](https://leetcode.com/problems/ip-to-cidr/)   | Math | Time: O(1), Space: O(1) | Easy |
-| 752 | [Open the Lock](https://leetcode.com/problems/open-the-lock/)   | BFS | Time: O(n), Space: O(n) | Medium |
+| 752 | [📓 Open the Lock](leetcode/0752.ipynb) | BFS (Queue) | Time: $O(10^4 + D)$, Space: $O(10^4 + D)$ | Medium |
 | 753 | [Cracking the Safe](https://leetcode.com/problems/cracking-the-safe/)   | Graph, BFS  | Time: O(n^2), Space: O(n) | Hard |
 | 754 | [Reach a Number](https://leetcode.com/problems/reach-a-number/) | Math | Time: O(sqrt(n)), Space: O(1) | Medium |
 | 755 | [Pour Water](https://leetcode.com/problems/pour-water/)   | Simulation   | Time: O(n^2), Space: O(1) | Medium |

@@ -236,11 +236,11 @@
 ## BFS
 | Serial No. | Problem Title | Data Structure | Time and Space Complexity | Level |
 | :--- | :--- | :--- | :--- | :--- |
-|429 | [N-ary Tree Level Order Traversal](https://leetcode.com/problems/n-ary-tree-level-order-traversal/) | BFS| Time: O(n), Space: O(n)| Easy|
-|286 | [Walls and Gates](https://leetcode.com/problems/walls-and-gates/) | BFS| Time: O(m * n), Space: O(m * n)| Medium|
-|433 | [Minimum Genetic Mutation](https://leetcode.com/problems/minimum-genetic-mutation/) | BFS| Time: O(n^2), Space: O(n)| Medium|
-|613 | [Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/) | BFS| Time: O(n^2), Space: O(n^2)| Medium|
-|752 | [Open the Lock](https://leetcode.com/problems/open-the-lock/) | BFS| Time: O(n), Space: O(n)| Medium|
+| 429 | [📓 N-ary Tree Level Order Traversal](../leetcode/0429.ipynb) | BFS (Queue) | Time: $O(n)$, Space: $O(n)$ | Easy |
+| 286 | [📓 Walls and Gates](../leetcode/0286.ipynb) | BFS (Queue) | Time: $O(m \cdot n)$, Space: $O(m \cdot n)$ | Medium |
+| 433 | [📓 Minimum Genetic Mutation](../leetcode/0433.ipynb) | BFS (Queue) | Time: $O(N^2 \cdot L)$, Space: $O(N)$ | Medium |
+| 1091 | [📓 Shortest Path in Binary Matrix](../leetcode/1091.ipynb) | BFS (Queue) | Time: $O(n^2)$, Space: $O(n^2)$ | Medium |
+| 752 | [📓 Open the Lock](../leetcode/0752.ipynb) | BFS (Queue) | Time: $O(10^4 + D)$, Space: $O(10^4 + D)$ | Medium |
 |909 | [Snakes and Ladders](https://leetcode.com/problems/snakes-and-ladders/) | BFS| Time: O(n^2), Space: O(n)| Medium|
 |317 | [Shortest Distance from All Buildings](https://leetcode.com/problems/shortest-distance-from-all-buildings/) | BFS| Time: O(m * n), Space: O(m * n)| Hard|
 |499 | [The Maze III](https://leetcode.com/problems/the-maze-iii/) | BFS| Time: O(m * n), Space: O(m * n)| Hard|

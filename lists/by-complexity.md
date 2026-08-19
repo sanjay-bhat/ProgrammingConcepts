@@ -358,7 +358,7 @@
 | 295 | [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) | Heap | Time: O(log n), Space: O(n)| Hard |
 | 305 | [Number of Islands II](https://leetcode.com/problems/number-of-islands-ii/)  | Union Find | Time: O(n log n), Space: O(n)  | Hard |
 | 308 | [📓 Range Sum Query 2D - Mutable](../leetcode/0308.ipynb) | 2D Binary Indexed Tree | Time: O(log m · log n) update & query, Space: O(m·n) | Hard |
-| 315 | [Count of Smaller Numbers After Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/)| Binary Indexed Tree (BIT), Merge Sort | Time: O(n log n), Space: O(n)  | Hard |
+| 315 | [📓 Count of Smaller Numbers After Self](../leetcode/0315.ipynb) | Binary Indexed Tree | Time: $O(n \log n)$, Space: $O(n)$ | Hard |
 | 327 | [Count of Range Sum](https://leetcode.com/problems/count-of-range-sum/) | Binary Search, Merge Sort  | Time: O(n log n), Space: O(n)  | Hard |
 | 330 | [Patching Array](https://leetcode.com/problems/patching-array/)| Greedy| Time: O(log n), Space: O(1)| Hard |
 | 352 | [Data Stream as Disjoint Intervals](https://leetcode.com/problems/data-stream-as-disjoint-intervals/)| TreeMap  | Time: O(log n), Space: O(n)| Hard |
@@ -370,7 +370,7 @@
 | 410 | [Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/)| Binary Search, Dynamic Programming  | Time: O(n log m), Space: O(n)  | Hard |
 | 480 | [Sliding Window Median](https://leetcode.com/problems/sliding-window-median/)| Heap | Time: O(n log k), Space: O(k)  | Hard |
 | 483 | [Smallest Good Base](https://leetcode.com/problems/smallest-good-base/) | Math | Time: O(log n), Space: O(1)| Hard |
-| 493 | [Reverse Pairs](https://leetcode.com/problems/reverse-pairs/)  | Merge Sort, Binary Indexed Tree | Time: O(n log n), Space: O(n)  | Hard |
+| 493 | [📓 Reverse Pairs](../leetcode/0493.ipynb) | Binary Indexed Tree | Time: $O(n \log n)$, Space: $O(n)$ | Hard |
 | 502 | [IPO](https://leetcode.com/problems/ipo/)| Heap,Greedy| O(N log N) Time| Hard |
 | 587 | [Erect the Fence](https://leetcode.com/problems/erect-the-fence/)| Geometry | Time: O(n log n), Space: O(n)  | Hard |
 | 630 | [Course Schedule III](https://leetcode.com/problems/course-schedule-iii/) | Greedy, Heap  | Time: O(n log n), Space: O(n)  | Hard |

@@ -1259,7 +1259,7 @@
 | 305 | [Number of Islands II](https://leetcode.com/problems/number-of-islands-ii/)| Union Find| Time: O(n log n), Space: O(n)| Hard |
 | 308 | [📓 Range Sum Query 2D - Mutable](../leetcode/0308.ipynb) | 2D Binary Indexed Tree | Time: O(log m · log n) update & query, Space: O(m·n) | Hard |
 | 312 | [Burst Balloons](https://leetcode.com/problems/burst-balloons/) | Dynamic Programming| Time: O(n^3), Space: O(n^2)  | Hard |
-| 315 | [Count of Smaller Numbers After Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/) | Binary Indexed Tree (BIT), Merge Sort | Time: O(n log n), Space: O(n)| Hard |
+| 315 | [📓 Count of Smaller Numbers After Self](../leetcode/0315.ipynb) | Binary Indexed Tree | Time: $O(n \log n)$, Space: $O(n)$ | Hard |
 | 316 | [Remove Duplicate Letters](https://leetcode.com/problems/remove-duplicate-letters/) | Stack, Greedy | Time: O(n), Space: O(n)| Hard |
 | 317 | [Shortest Distance from All Buildings](https://leetcode.com/problems/shortest-distance-from-all-buildings/) | BFS| Time: O(m * n), Space: O(m * n)| Hard |
 | 321 | [Create Maximum Number](https://leetcode.com/problems/create-maximum-number/)  | Greedy, Stack | Time: O(n), Space: O(n)| Hard |
@@ -1295,7 +1295,7 @@
 | 483 | [Smallest Good Base](https://leetcode.com/problems/smallest-good-base/)  | Math | Time: O(log n), Space: O(1)  | Hard |
 | 488 | [Zuma Game](https://leetcode.com/problems/zuma-game/)| Backtracking  | Time: O(n!), Space: O(n) | Hard |
 | 489 | [Robot Room Cleaner](https://leetcode.com/problems/robot-room-cleaner/)  | Backtracking  | Time: O(4^n), Space: O(n)| Hard |
-| 493 | [Reverse Pairs](https://leetcode.com/problems/reverse-pairs/) | Merge Sort, Binary Indexed Tree | Time: O(n log n), Space: O(n)| Hard |
+| 493 | [📓 Reverse Pairs](../leetcode/0493.ipynb) | Binary Indexed Tree | Time: $O(n \log n)$, Space: $O(n)$ | Hard |
 | 499 | [The Maze III](https://leetcode.com/problems/the-maze-iii/)| BFS| Time: O(m * n), Space: O(m * n)| Hard |
 | 502 | [IPO](https://leetcode.com/problems/ipo/) | Heap,Greedy| O(N log N) Time| Hard |
 | 514 | [Freedom Trail](https://leetcode.com/problems/freedom-trail/) | Dynamic Programming, Binary Search  | Time: O(m * n), Space: O(m * n)| Hard |

@@ -77,7 +77,7 @@
 | 235 | [Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | Tree, Binary Search| Time: O(h), Space: O(1)| Easy |
 | 237 | [Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list/) | Linked List| Time: O(1), Space: O(1)| Easy |
 | 242 | [Valid Anagram](https://leetcode.com/problems/valid-anagram/) | Hash Map| Time: O(n), Space: O(n)| Easy |
-| 243 | [Shortest Word Distance](https://leetcode.com/problems/shortest-word-distance/)| Array| Time: O(n), Space: O(1)| Easy |
+| 243 | [📓 Shortest Word Distance](../leetcode/0243.ipynb) | One-Pass Linear Scan | Time: O(n), Space: O(1) | Easy |
 | 246 | [Strobogrammatic Number](https://leetcode.com/problems/strobogrammatic-number/)| String  | Time: O(n), Space: O(1)| Easy |
 | 252 | [Meeting Rooms](https://leetcode.com/problems/meeting-rooms/) | Greedy  | Time: O(n log n), Space: O(1)| Easy |
 | 257 | [Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/) | Tree, DFS | Time: O(n), Space: O(h)| Easy |

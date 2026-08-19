@@ -476,7 +476,7 @@
 | 228 | [📓 Summary Ranges](../leetcode/0228.ipynb) | Linear Scan | Time: O(n), Space: O(1) | Easy |
 | 234 | [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/)  | Linked List, Stack| Time: O(n), Space: O(n) | Easy |
 | 242 | [Valid Anagram](https://leetcode.com/problems/valid-anagram/)  | Hash Map | Time: O(n), Space: O(n) | Easy |
-| 243 | [Shortest Word Distance](https://leetcode.com/problems/shortest-word-distance/)  | Array| Time: O(n), Space: O(1) | Easy |
+| 243 | [📓 Shortest Word Distance](../leetcode/0243.ipynb) | One-Pass Linear Scan | Time: O(n), Space: O(1) | Easy |
 | 246 | [Strobogrammatic Number](https://leetcode.com/problems/strobogrammatic-number/)  | String| Time: O(n), Space: O(1) | Easy |
 | 257 | [Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/)| Tree, DFS| Time: O(n), Space: O(h) | Easy |
 | 266 | [Palindrome Permutation](https://leetcode.com/problems/palindrome-permutation/)  | Hash Map | Time: O(n), Space: O(n) | Easy |

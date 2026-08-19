@@ -370,7 +370,7 @@
 | 410 | [Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/)| Binary Search, Dynamic Programming  | Time: O(n log m), Space: O(n)  | Hard |
 | 480 | [Sliding Window Median](https://leetcode.com/problems/sliding-window-median/)| Heap | Time: O(n log k), Space: O(k)  | Hard |
 | 483 | [Smallest Good Base](https://leetcode.com/problems/smallest-good-base/) | Math | Time: O(log n), Space: O(1)| Hard |
-| 493 | [Reverse Pairs](https://leetcode.com/problems/reverse-pairs/)  | Merge Sort, Binary Indexed Tree | Time: O(n log n), Space: O(n)  | Hard |
+| 493 | [📓 Reverse Pairs](../leetcode/0493.ipynb) | Binary Indexed Tree | Time: $O(n \log n)$, Space: $O(n)$ | Hard |
 | 502 | [IPO](https://leetcode.com/problems/ipo/)| Heap,Greedy| O(N log N) Time| Hard |
 | 587 | [Erect the Fence](https://leetcode.com/problems/erect-the-fence/)| Geometry | Time: O(n log n), Space: O(n)  | Hard |
 | 630 | [Course Schedule III](https://leetcode.com/problems/course-schedule-iii/) | Greedy, Heap  | Time: O(n log n), Space: O(n)  | Hard |

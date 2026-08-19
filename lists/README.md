@@ -1155,7 +1155,7 @@
 ## Merge Sort
 | Serial No. | Problem Title | Data Structure | Time and Space Complexity | Level |
 | :--- | :--- | :--- | :--- | :--- |
-|493 | [Reverse Pairs](https://leetcode.com/problems/reverse-pairs/) | Merge Sort, Binary Indexed Tree| Time: O(n log n), Space: O(n)| Hard|
+| 493 | [📓 Reverse Pairs](../leetcode/0493.ipynb) | Binary Indexed Tree | Time: $O(n \log n)$, Space: $O(n)$ | Hard |
 
 ## Min-Heap
 | Serial No. | Problem Title | Data Structure | Time and Space Complexity | Level |

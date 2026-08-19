@@ -519,7 +519,7 @@
 | 490 | [The Maze](https://leetcode.com/problems/the-maze/) | BFS, DFS | Time: O(m * n), Space: O(m * n) | Medium |
 | 491 | [Increasing Subsequences](https://leetcode.com/problems/increasing-subsequences/) | Backtracking | Time: O(2^n), Space: O(n) | Medium |
 | 492 | [Construct the Rectangle](https://leetcode.com/problems/construct-the-rectangle/) | Math | Time: O(sqrt(n)), Space: O(1) | Easy |
-| 493 | [Reverse Pairs](https://leetcode.com/problems/reverse-pairs/) | Merge Sort, Binary Indexed Tree | Time: O(n log n), Space: O(n) | Hard |
+| 493 | [📓 Reverse Pairs](leetcode/0493.ipynb) | Binary Indexed Tree | Time: $O(n \log n)$, Space: $O(n)$ | Hard |
 | 494 | [Target Sum](https://leetcode.com/problems/target-sum/) | Dynamic Programming | Time: O(n * sum), Space: O(n * sum) | Medium |
 | 495 | [Teemo Attacking](https://leetcode.com/problems/teemo-attacking/) | Sliding Window | Time: O(n), Space: O(1) | Easy |
 | 496 | [Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/) | Stack | Time: O(n), Space: O(n) | Easy |

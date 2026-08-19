@@ -1295,7 +1295,7 @@
 | 483 | [Smallest Good Base](https://leetcode.com/problems/smallest-good-base/)  | Math | Time: O(log n), Space: O(1)  | Hard |
 | 488 | [Zuma Game](https://leetcode.com/problems/zuma-game/)| Backtracking  | Time: O(n!), Space: O(n) | Hard |
 | 489 | [Robot Room Cleaner](https://leetcode.com/problems/robot-room-cleaner/)  | Backtracking  | Time: O(4^n), Space: O(n)| Hard |
-| 493 | [Reverse Pairs](https://leetcode.com/problems/reverse-pairs/) | Merge Sort, Binary Indexed Tree | Time: O(n log n), Space: O(n)| Hard |
+| 493 | [📓 Reverse Pairs](../leetcode/0493.ipynb) | Binary Indexed Tree | Time: $O(n \log n)$, Space: $O(n)$ | Hard |
 | 499 | [The Maze III](https://leetcode.com/problems/the-maze-iii/)| BFS| Time: O(m * n), Space: O(m * n)| Hard |
 | 502 | [IPO](https://leetcode.com/problems/ipo/) | Heap,Greedy| O(N log N) Time| Hard |
 | 514 | [Freedom Trail](https://leetcode.com/problems/freedom-trail/) | Dynamic Programming, Binary Search  | Time: O(m * n), Space: O(m * n)| Hard |

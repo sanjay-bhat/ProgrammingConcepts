@@ -442,11 +442,11 @@
 |  38 | [Count and Say](https://leetcode.com/problems/count-and-say/)  | String| Time: O(n), Space: O(1) | Easy |
 |  53 | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | Dynamic Programming | Time: O(n), Space: O(1) | Easy |
 |  58 | [Length of Last Word](https://leetcode.com/problems/length-of-last-word/) | String| Time: O(n), Space: O(1) | Easy |
-|  66 | [Plus One](https://leetcode.com/problems/plus-one/)| Array| Time: O(n), Space: O(1) | Easy |
+|  66 | [📓 Plus One](../leetcode/0066.ipynb)| Carry Simulation| Time: O(n), Space: O(1) | Easy |
 |  67 | [Add Binary](https://leetcode.com/problems/add-binary/) | String| Time: O(max(m, n)), Space: O(max(m, n)) | Easy |
 |  70 | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)| Dynamic Programming | Time: O(n), Space: O(1) | Easy |
 |  83 | [Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/) | Linked List| Time: O(n), Space: O(1) | Easy |
-|  88 | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) | Array| Time: O(m + n), Space: O(1)| Easy |
+|  88 | [📓 Merge Sorted Array](../leetcode/0088.ipynb) | Three Pointers (Merge from End)| Time: O(m + n), Space: O(1)| Easy |
 |  94 | [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/)  | Tree, Stack| Time: O(n), Space: O(n) | Easy |
 | 100 | [Same Tree](https://leetcode.com/problems/same-tree/) | Tree, DFS| Time: O(n), Space: O(n) | Easy |
 | 101 | [Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)| Tree, DFS| Time: O(n), Space: O(h) | Easy |
@@ -455,7 +455,7 @@
 | 110 | [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)  | Tree, DFS| Time: O(n), Space: O(h) | Easy |
 | 111 | [Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/) | Tree, DFS| Time: O(n), Space: O(h) | Easy |
 | 112 | [Path Sum](https://leetcode.com/problems/path-sum/)| Tree, DFS| Time: O(n), Space: O(h) | Easy |
-| 121 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)  | Array| Time: O(n), Space: O(1) | Easy |
+| 121 | [📓 Best Time to Buy and Sell Stock](../leetcode/0121.ipynb) | Greedy (One Pass) | Time: O(n), Space: O(1) | Easy |
 | 125 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | String| Time: O(n), Space: O(1) | Easy |
 | 136 | [Single Number](https://leetcode.com/problems/single-number/)  | Bit Manipulation  | Time: O(n), Space: O(1) | Easy |
 | 141 | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)| Linked List| Time: O(n), Space: O(1) | Easy |
@@ -466,22 +466,22 @@
 | 167 | [Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)| Two Pointers  | Time: O(n), Space: O(1) | Easy |
 | 169 | [Majority Element](https://leetcode.com/problems/majority-element/) | Hash Map, Sorting | Time: O(n), Space: O(n) | Easy |
 | 171 | [Excel Sheet Column Number](https://leetcode.com/problems/excel-sheet-column-number/) | Math | Time: O(n), Space: O(1) | Easy |
-| 189 | [Rotate Array](https://leetcode.com/problems/rotate-array/)| Array| Time: O(n), Space: O(1) | Easy |
+| 189 | [📓 Rotate Array](../leetcode/0189.ipynb) | Three Reversals | Time: O(n), Space: O(1) | Medium |
 | 203 | [Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/) | Linked List| Time: O(n), Space: O(1) | Easy |
 | 205 | [Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/) | String, Hash Map  | Time: O(n), Space: O(n) | Easy |
 | 206 | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | Linked List| Time: O(n), Space: O(1) | Easy |
 | 217 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | Hash Set | Time: O(n), Space: O(n) | Easy |
 | 219 | [Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/)| Hash Set | Time: O(n), Space: O(n) | Easy |
 | 226 | [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) | Tree | Time: O(n), Space: O(h) | Easy |
-| 228 | [Summary Ranges](https://leetcode.com/problems/summary-ranges/)| Array| Time: O(n), Space: O(1) | Easy |
+| 228 | [📓 Summary Ranges](../leetcode/0228.ipynb) | Linear Scan | Time: O(n), Space: O(1) | Easy |
 | 234 | [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/)  | Linked List, Stack| Time: O(n), Space: O(n) | Easy |
 | 242 | [Valid Anagram](https://leetcode.com/problems/valid-anagram/)  | Hash Map | Time: O(n), Space: O(n) | Easy |
-| 243 | [Shortest Word Distance](https://leetcode.com/problems/shortest-word-distance/)  | Array| Time: O(n), Space: O(1) | Easy |
+| 243 | [📓 Shortest Word Distance](../leetcode/0243.ipynb) | One-Pass Linear Scan | Time: O(n), Space: O(1) | Easy |
 | 246 | [Strobogrammatic Number](https://leetcode.com/problems/strobogrammatic-number/)  | String| Time: O(n), Space: O(1) | Easy |
 | 257 | [Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/)| Tree, DFS| Time: O(n), Space: O(h) | Easy |
 | 266 | [Palindrome Permutation](https://leetcode.com/problems/palindrome-permutation/)  | Hash Map | Time: O(n), Space: O(n) | Easy |
 | 268 | [Missing Number](https://leetcode.com/problems/missing-number/)| Array, Bit Manipulation| Time: O(n), Space: O(1) | Easy |
-| 283 | [Move Zeroes](https://leetcode.com/problems/move-zeroes/)  | Array| Time: O(n), Space: O(1) | Easy |
+| 283 | [📓 Move Zeroes](../leetcode/0283.ipynb) | Two Pointers (Write + Fill) | Time: O(n), Space: O(1) | Easy |
 | 290 | [Word Pattern](https://leetcode.com/problems/word-pattern/)| Hash Map | Time: O(n), Space: O(n) | Easy |
 | 293 | [Flip Game](https://leetcode.com/problems/flip-game/) | Backtracking  | Time: O(n), Space: O(n) | Easy |
 | 339 | [Nested List Weight Sum](https://leetcode.com/problems/nested-list-weight-sum/)  | DFS, Recursion| Time: O(n), Space: O(h) | Easy |
@@ -1317,8 +1317,8 @@
 | 1434 | [Number of Ways to Wear Different Hats to Each Other](https://leetcode.com/problems/number-of-ways-to-wear-different-hats-to-each-other/)  | HashMap, Array  | O(n * m) Time, O(n * m) Space | Hard |
 | 1444 | [Count Subarrays With Fixed Bounds](https://leetcode.com/problems/count-subarrays-with-fixed-bounds/)| Array, Sliding Window| O(n) Time, O(1) Space | Hard |
 | 1467 | [Probability of a Two Boxes Having the Same Label](https://leetcode.com/problems/probability-of-a-two-boxes-having-the-same-label/)| Math, Simulation| O(n) Time, O(1) Space | Hard |
-|118 | [Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) | Array | Time: O(n^2), Space: O(n^2)| Easy |
-|119 | [Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii/)| Array | Time: O(n^2), Space: O(n)| Easy |
+| 118 | [📓 Pascal's Triangle](../leetcode/0118.ipynb) | Row-by-Row Simulation | Time: O(n^2), Space: O(n^2) | Easy |
+| 119 | [📓 Pascal's Triangle II](../leetcode/0119.ipynb) | Rolling Array | Time: O(k^2), Space: O(k) | Easy |
 |422 | [Valid Word Square](https://leetcode.com/problems/valid-word-square/)| Matrix| Time: O(n^2), Space: O(1)| Easy |
 |447 | [Number of Boomerangs](https://leetcode.com/problems/number-of-boomerangs/) | Hash Map| Time: O(n^2), Space: O(n)| Easy |
 |784 | [Letter Case Permutation](https://leetcode.com/problems/letter-case-permutation/)| Backtracking | Time: O(2^n), Space: O(1)| Easy |

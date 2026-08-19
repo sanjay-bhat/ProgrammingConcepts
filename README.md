@@ -86,7 +86,7 @@
 | 63 | [Unique Paths II](https://leetcode.com/problems/unique-paths-ii/) | Dynamic Programming | Time: O(m * n), Space: O(m * n) | Medium |
 | 64 | [Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/) | Dynamic Programming | Time: O(m * n), Space: O(m * n) | Medium |
 | 65 | [Valid Number](https://leetcode.com/problems/valid-number/) | Math, String | Time: O(n), Space: O(1) | Hard |
-| 66 | [Plus One](https://leetcode.com/problems/plus-one/) | Array | Time: O(n), Space: O(1) | Easy |
+| 66 | [📓 Plus One](leetcode/0066.ipynb) | Carry Simulation| Time: O(n), Space: O(1) | Easy |
 | 67 | [Add Binary](https://leetcode.com/problems/add-binary/) | String | Time: O(max(m, n)), Space: O(max(m, n)) | Easy |
 | 68 | [Text Justification](https://leetcode.com/problems/text-justification/) | String | Time: O(n), Space: O(n) | Hard |
 | 69 | [Sqrt(x)](https://leetcode.com/problems/sqrtx/) | Math | Time: O(log x), Space: O(1) | Easy |
@@ -108,7 +108,7 @@
 | 85 | [Maximal Rectangle](https://leetcode.com/problems/maximal-rectangle/) | Dynamic Programming, Stack | Time: O(m * n), Space: O(n) | Hard |
 | 86 | [Partition List](https://leetcode.com/problems/partition-list/) | Linked List | Time: O(n), Space: O(1) | Medium |
 | 87 | [Scramble String](https://leetcode.com/problems/scramble-string/) | Dynamic Programming | Time: O(n^4), Space: O(n^4) | Hard |
-| 88 | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) | Array | Time: O(m + n), Space: O(1) | Easy |
+| 88 | [📓 Merge Sorted Array](leetcode/0088.ipynb) | Three Pointers (Merge from End)| Time: O(m + n), Space: O(1) | Easy |
 | 89 | [Gray Code](https://leetcode.com/problems/gray-code/) | Bit Manipulation | Time: O(2^n), Space: O(2^n) | Medium |
 | 90 | [Subsets II](https://leetcode.com/problems/subsets-ii/) | Backtracking | Time: O(2^n), Space: O(n) | Medium |
 | 91 | [Decode Ways](https://leetcode.com/problems/decode-ways/) | Dynamic Programming | Time: O(n), Space: O(n) | Medium |
@@ -138,10 +138,10 @@
 | 115 | [Distinct Subsequences](https://leetcode.com/problems/distinct-subsequences/) | Dynamic Programming | Time: O(m * n), Space: O(m * n) | Hard |
 | 116 | [Populating Next Right Pointers in Each Node](https://leetcode.com/problems/populating-next-right-pointers-in-each-node/) | Tree, BFS | Time: O(n), Space: O(1) | Medium |
 | 117 | [Populating Next Right Pointers in Each Node II](https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/) | Tree, BFS | Time: O(n), Space: O(1) | Medium |
-| 118 | [Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) | Array | Time: O(n^2), Space: O(n^2) | Easy |
-| 119 | [Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii/) | Array | Time: O(n^2), Space: O(n) | Easy |
+| 118 | [📓 Pascal's Triangle](leetcode/0118.ipynb) | Row-by-Row Simulation | Time: O(n^2), Space: O(n^2) | Easy |
+| 119 | [📓 Pascal's Triangle II](leetcode/0119.ipynb) | Rolling Array | Time: O(k^2), Space: O(k) | Easy |
 | 120 | [Triangle](https://leetcode.com/problems/triangle/) | Dynamic Programming | Time: O(n^2), Space: O(n^2) | Medium |
-| 121 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | Array | Time: O(n), Space: O(1) | Easy |
+| 121 | [📓 Best Time to Buy and Sell Stock](leetcode/0121.ipynb) | Greedy (One Pass) | Time: O(n), Space: O(1) | Easy |
 | 122 | [Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/) | Greedy | Time: O(n), Space: O(1) | Medium |
 | 123 | [Best Time to Buy and Sell Stock III](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/) | Dynamic Programming | Time: O(n), Space: O(1) | Hard |
 | 124 | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | Tree, DFS | Time: O(n), Space: O(h) | Hard |
@@ -209,7 +209,7 @@
 | 186 | [Reverse Words in a String II](https://leetcode.com/problems/reverse-words-in-a-string-ii/) | String | Time: O(n), Space: O(1) | Medium |
 | 187 | [Repeated DNA Sequences](https://leetcode.com/problems/repeated-dna-sequences/) | Hash Set | Time: O(n), Space: O(n) | Medium |
 | 188 | [Best Time to Buy and Sell Stock IV](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/) | Dynamic Programming | Time: O(k * n), Space: O(k * n) | Hard |
-| 189 | [Rotate Array](https://leetcode.com/problems/rotate-array/) | Array | Time: O(n), Space: O(1) | Easy |
+| 189 | [📓 Rotate Array](leetcode/0189.ipynb) | Three Reversals | Time: O(n), Space: O(1) | Medium |
 | 190 | [Reverse Bits](https://leetcode.com/problems/reverse-bits/) | Bit Manipulation | Time: O(1), Space: O(1) | Easy |
 | 191 | [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) | Bit Manipulation | Time: O(1), Space: O(1) | Easy |
 | 192 | [Word Frequency](https://leetcode.com/problems/word-frequency/) | SQL | Time: O(1), Space: O(1) | Easy |
@@ -248,7 +248,7 @@
 | 225 | [Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/) | Queue, Stack | Time: O(1), Space: O(n) | Easy |
 | 226 | [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) | Tree | Time: O(n), Space: O(h) | Easy |
 | 227 | [Basic Calculator II](https://leetcode.com/problems/basic-calculator-ii/) | Stack | Time: O(n), Space: O(n) | Medium |
-| 228 | [Summary Ranges](https://leetcode.com/problems/summary-ranges/) | Array | Time: O(n), Space: O(1) | Easy |
+| 228 | [📓 Summary Ranges](leetcode/0228.ipynb) | Linear Scan | Time: O(n), Space: O(1) | Easy |
 | 229 | [Majority Element II](https://leetcode.com/problems/majority-element-ii/) | Boyer-Moore Voting Algorithm | Time: O(n), Space: O(1) | Medium |
 | 230 | [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) | Tree, Inorder Traversal | Time: O(h + k), Space: O(h) | Medium |
 | 231 | [Power of Two](https://leetcode.com/problems/power-of-two/) | Math | Time: O(1), Space: O(1) | Easy |
@@ -263,7 +263,7 @@
 | 240 | [Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/) | Binary Search | Time: O(m + n), Space: O(1) | Medium |
 | 241 | [Different Ways to Add Parentheses](https://leetcode.com/problems/different-ways-to-add-parentheses/) | Recursion | Time: O(2^n), Space: O(n) | Medium |
 | 242 | [Valid Anagram](https://leetcode.com/problems/valid-anagram/) | Hash Map | Time: O(n), Space: O(n) | Easy |
-| 243 | [Shortest Word Distance](https://leetcode.com/problems/shortest-word-distance/) | Array | Time: O(n), Space: O(1) | Easy |
+| 243 | [📓 Shortest Word Distance](leetcode/0243.ipynb) | One-Pass Linear Scan | Time: O(n), Space: O(1) | Easy |
 | 244 | [Shortest Word Distance II](https://leetcode.com/problems/shortest-word-distance-ii/) | Hash Map | Time: O(1), Space: O(n) | Medium |
 | 245 | [Shortest Word Distance III](https://leetcode.com/problems/shortest-word-distance-iii/) | Array, Hash Map | Time: O(n), Space: O(1) | Medium |
 | 246 | [Strobogrammatic Number](https://leetcode.com/problems/strobogrammatic-number/) | String | Time: O(n), Space: O(1) | Easy |
@@ -303,7 +303,7 @@
 | 280 | [Wiggle Sort](https://leetcode.com/problems/wiggle-sort/) | Sorting, Two Pointers | Time: O(n log n), Space: O(1) | Medium |
 | 281 | [Zigzag Iterator](https://leetcode.com/problems/zigzag-iterator/) | Iterator | Time: O(1), Space: O(k) | Medium |
 | 282 | [Expression Add Operators](https://leetcode.com/problems/expression-add-operators/) | Backtracking | Time: O(4^n), Space: O(n) | Hard |
-| 283 | [Move Zeroes](https://leetcode.com/problems/move-zeroes/) | Array | Time: O(n), Space: O(1) | Easy |
+| 283 | [📓 Move Zeroes](leetcode/0283.ipynb) | Two Pointers (Write + Fill) | Time: O(n), Space: O(1) | Easy |
 | 284 | [Peeking Iterator](https://leetcode.com/problems/peeking-iterator/) | Iterator | Time: O(1), Space: O(1) | Medium |
 | 285 | [Inorder Successor in BST](https://leetcode.com/problems/inorder-successor-in-bst/) | Tree | Time: O(h), Space: O(1) | Medium |
 | 286 | [Walls and Gates](https://leetcode.com/problems/walls-and-gates/) | BFS | Time: O(m * n), Space: O(m * n) | Medium |

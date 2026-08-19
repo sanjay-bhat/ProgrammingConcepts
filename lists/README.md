@@ -20,15 +20,15 @@
 | :--- | :--- | :--- | :--- | :--- |
 | 26 | [📓 Remove Duplicates from Sorted Array](../leetcode/0026.ipynb) | Two Pointers| Time: O(n), Space: O(1)| Easy|
 | 27 | [📓 Remove Element](../leetcode/0027.ipynb) | Two Pointers| Time: O(n), Space: O(1)| Easy|
-| 66 | [Plus One](https://leetcode.com/problems/plus-one/) | Array| Time: O(n), Space: O(1)| Easy|
-| 88 | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) | Array| Time: O(m + n), Space: O(1)| Easy|
-|118 | [Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/)| Array| Time: O(n^2), Space: O(n^2)| Easy|
-|119 | [Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii/)| Array| Time: O(n^2), Space: O(n)| Easy|
-|121 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | Array| Time: O(n), Space: O(1)| Easy|
-|189 | [Rotate Array](https://leetcode.com/problems/rotate-array/) | Array| Time: O(n), Space: O(1)| Easy|
-|228 | [Summary Ranges](https://leetcode.com/problems/summary-ranges/) | Array| Time: O(n), Space: O(1)| Easy|
-|243 | [Shortest Word Distance](https://leetcode.com/problems/shortest-word-distance/) | Array| Time: O(n), Space: O(1)| Easy|
-|283 | [Move Zeroes](https://leetcode.com/problems/move-zeroes/) | Array| Time: O(n), Space: O(1)| Easy|
+| 66 | [📓 Plus One](../leetcode/0066.ipynb) | Carry Simulation| Time: O(n), Space: O(1)| Easy|
+| 88 | [📓 Merge Sorted Array](../leetcode/0088.ipynb) | Three Pointers (Merge from End)| Time: O(m + n), Space: O(1)| Easy|
+| 118 | [📓 Pascal's Triangle](../leetcode/0118.ipynb) | Row-by-Row Simulation | Time: O(n^2), Space: O(n^2) | Easy |
+| 119 | [📓 Pascal's Triangle II](../leetcode/0119.ipynb) | Rolling Array | Time: O(k^2), Space: O(k) | Easy |
+| 121 | [📓 Best Time to Buy and Sell Stock](../leetcode/0121.ipynb) | Greedy (One Pass) | Time: O(n), Space: O(1) | Easy |
+| 189 | [📓 Rotate Array](../leetcode/0189.ipynb) | Three Reversals | Time: O(n), Space: O(1) | Medium |
+| 228 | [📓 Summary Ranges](../leetcode/0228.ipynb) | Linear Scan | Time: O(n), Space: O(1) | Easy |
+| 243 | [📓 Shortest Word Distance](../leetcode/0243.ipynb) | One-Pass Linear Scan | Time: O(n), Space: O(1) | Easy |
+| 283 | [📓 Move Zeroes](../leetcode/0283.ipynb) | Two Pointers (Write + Fill) | Time: O(n), Space: O(1) | Easy |
 |448 | [Find All Numbers Disappeared in an Array](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/) | Array| Time: O(n), Space: O(1)| Easy|
 |463 | [Island Perimeter](https://leetcode.com/problems/island-perimeter/) | Array| Time: O(n), Space: O(1)| Easy|
 |485 | [Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/) | Array| Time: O(n), Space: O(1)| Easy|

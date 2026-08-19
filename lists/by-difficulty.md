@@ -9,7 +9,7 @@
 |20 | [📓 Valid Parentheses](../leetcode/0020.ipynb) | Stack| Time: O(n), Space: O(n)| Easy |
 |21 | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)| Linked List| Time: O(m + n), Space: O(1)  | Easy |
 |26 | [📓 Remove Duplicates from Sorted Array](../leetcode/0026.ipynb) | Two Pointers| Time: O(n), Space: O(1)| Easy |
-|27 | [Remove Element](https://leetcode.com/problems/remove-element/) | Array| Time: O(n), Space: O(1)| Easy |
+|27 | [📓 Remove Element](../leetcode/0027.ipynb) | Two Pointers| Time: O(n), Space: O(1)| Easy |
 |28 | [Implement strStr()](https://leetcode.com/problems/implement-strstr/) | String  | Time: O(n), Space: O(1)| Easy |
 |35 | [Search Insert Position](https://leetcode.com/problems/search-insert-position/)| Binary Search | Time: O(log n), Space: O(1)  | Easy |
 |38 | [Count and Say](https://leetcode.com/problems/count-and-say/) | String  | Time: O(n), Space: O(1)| Easy |

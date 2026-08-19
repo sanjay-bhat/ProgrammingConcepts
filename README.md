@@ -47,7 +47,7 @@
 | 24 | [Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/) | Linked List | Time: O(n), Space: O(1) | Medium |
 | 25 | [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/) | Linked List | Time: O(n), Space: O(1) | Hard |
 | 26 | [📓 Remove Duplicates from Sorted Array](leetcode/0026.ipynb) | Two Pointers| Time: O(n), Space: O(1) | Easy |
-| 27 | [Remove Element](https://leetcode.com/problems/remove-element/) | Array | Time: O(n), Space: O(1) | Easy |
+| 27 | [📓 Remove Element](leetcode/0027.ipynb) | Two Pointers| Time: O(n), Space: O(1) | Easy |
 | 28 | [Implement strStr()](https://leetcode.com/problems/implement-strstr/) | String | Time: O(n), Space: O(1) | Easy |
 | 29 | [Divide Two Integers](https://leetcode.com/problems/divide-two-integers/) | Math | Time: O(log n), Space: O(1) | Medium |
 | 30 | [Substring with Concatenation of All Words](https://leetcode.com/problems/substring-with-concatenation-of-all-words/) | Hash Map, Sliding Window | Time: O(n * m), Space: O(n) | Hard |

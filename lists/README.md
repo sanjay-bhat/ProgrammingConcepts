@@ -19,7 +19,7 @@
 | Serial No. | Problem Title | Data Structure | Time and Space Complexity | Level |
 | :--- | :--- | :--- | :--- | :--- |
 | 26 | [📓 Remove Duplicates from Sorted Array](../leetcode/0026.ipynb) | Two Pointers| Time: O(n), Space: O(1)| Easy|
-| 27 | [Remove Element](https://leetcode.com/problems/remove-element/) | Array| Time: O(n), Space: O(1)| Easy|
+| 27 | [📓 Remove Element](../leetcode/0027.ipynb) | Two Pointers| Time: O(n), Space: O(1)| Easy|
 | 66 | [Plus One](https://leetcode.com/problems/plus-one/) | Array| Time: O(n), Space: O(1)| Easy|
 | 88 | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) | Array| Time: O(m + n), Space: O(1)| Easy|
 |118 | [Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/)| Array| Time: O(n^2), Space: O(n^2)| Easy|

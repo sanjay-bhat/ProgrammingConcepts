@@ -90,7 +90,7 @@
 | 283 | [📓 Move Zeroes](../leetcode/0283.ipynb) | Two Pointers (Write + Fill) | Time: O(n), Space: O(1) | Easy |
 | 290 | [Word Pattern](https://leetcode.com/problems/word-pattern/)| Hash Map| Time: O(n), Space: O(n)| Easy |
 | 292 | [Nim Game](https://leetcode.com/problems/nim-game/)| Game Theory| Time: O(1), Space: O(1)| Easy |
-| 293 | [Flip Game](https://leetcode.com/problems/flip-game/)| Backtracking  | Time: O(n), Space: O(n)| Easy |
+| 293 | [📓 Flip Game](../leetcode/0293.ipynb) | Single Scan | Time: O(n²), Space: O(n) per result | Easy |
 | 303 | [Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/)| Prefix Sum Array| Time: O(1), Space: O(n)| Easy |
 | 326 | [Power of Three](https://leetcode.com/problems/power-of-three/) | Math | Time: O(log n), Space: O(1)  | Easy |
 | 339 | [Nested List Weight Sum](https://leetcode.com/problems/nested-list-weight-sum/)| DFS, Recursion| Time: O(n), Space: O(h)| Easy |
@@ -1457,7 +1457,7 @@
 |1259 | [Maximal Sum of 4 Non-Overlapping Subarrays](https://leetcode.com/problems/maximal-sum-of-4-non-overlapping-subarrays/)| Dynamic Programming, Sliding Window | O(n) Time, O(n) Space  | Hard |
 |1278 | [Palindrome Partitioning III](https://leetcode.com/problems/palindrome-partitioning-iii/) | Dynamic Programming, String| O(n^2) Time, O(n^2) Space| Hard |
 |1284 | [Minimum Number of Flips to Convert Binary Matrix to Zero Matrix](https://leetcode.com/problems/minimum-number-of-flips-to-convert-binary-matrix-to-zero-matrix/)| BFS, Matrix| O(n * m) Time, O(n * m) Space| Hard |
-|1293 | [Shortest Path in a Grid with Obstacles Elimination](https://leetcode.com/problems/shortest-path-in-a-grid-with-obstacles-elimination/) | BFS, Queue| O(n * m) Time, O(n * m) Space| Hard |
+|1| 293 | [📓 Flip Game](../leetcode/0293.ipynb) | Single Scan | Time: O(n²), Space: O(n) per result | Easy |
 |1296 | [Divide Array in Sets of K Consecutive Numbers](https://leetcode.com/problems/divide-array-in-sets-of-k-consecutive-numbers/)| HashMap, Sorting| O(n log n) Time, O(n) Space  | Hard |
 |1298 | [Maximum Sum of 3 Non-Overlapping Subarrays](https://leetcode.com/problems/maximum-sum-of-3-non-overlapping-subarrays/)| Dynamic Programming, Sliding Window | O(n) Time, O(n) Space  | Hard |
 |1301 | [Number of Paths with Max Score](https://leetcode.com/problems/number-of-paths-with-max-score/)| Dynamic Programming, Graph | O(n * m) Time, O(n * m) Space| Hard |

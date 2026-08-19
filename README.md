@@ -313,7 +313,7 @@
 | 290 | [Word Pattern](https://leetcode.com/problems/word-pattern/) | Hash Map | Time: O(n), Space: O(n) | Easy |
 | 291 | [Word Pattern II](https://leetcode.com/problems/word-pattern-ii/) | Backtracking | Time: O(n!), Space: O(n) | Medium |
 | 292 | [Nim Game](https://leetcode.com/problems/nim-game/) | Game Theory | Time: O(1), Space: O(1) | Easy |
-| 293 | [Flip Game](https://leetcode.com/problems/flip-game/) | Backtracking | Time: O(n), Space: O(n) | Easy |
+| 293 | [📓 Flip Game](leetcode/0293.ipynb) | Single Scan | Time: O(n²), Space: O(n) per result | Easy |
 | 294 | [Flip Game II](https://leetcode.com/problems/flip-game-ii/) | Backtracking | Time: O(n), Space: O(n) | Medium |
 | 295 | [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) | Heap | Time: O(log n), Space: O(n) | Hard |
 | 296 | [Best Meeting Point](https://leetcode.com/problems/best-meeting-point/) | Manhatten Distance | Time: O(m * n), Space: O(1) | Hard |
@@ -1314,7 +1314,7 @@
 | 1290 | [Convert Binary Number in a Linked List to Integer](https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/) | Linked List, Math| O(n) Time, O(1) Space | Easy |
 | 1291 | [Sequential Digits](https://leetcode.com/problems/sequential-digits/)| Math, String   | O(n) Time, O(1) Space | Medium |
 | 1292 | [Maximum Side Length of a Square with Sum Less than or Equal to Threshold](https://leetcode.com/problems/maximum-side-length-of-a-square-with-sum-less-than-or-equal-to-threshold/) | Matrix, Sliding Window | O(n * m) Time, O(1) Space | Medium |
-| 1293 | [Shortest Path in a Grid with Obstacles Elimination](https://leetcode.com/problems/shortest-path-in-a-grid-with-obstacles-elimination/) | BFS, Queue | O(n * m) Time, O(n * m) Space | Hard |
+| 1| 293 | [📓 Flip Game](leetcode/0293.ipynb) | Single Scan | Time: O(n²), Space: O(n) per result | Easy |
 | 1294 | [Combination Sum II](https://leetcode.com/problems/combination-sum-ii/) | Backtracking, Array| O(2^n) Time, O(n) Space   | Medium |
 | 1295 | [Find Numbers with Even Number of Digits](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/) | Math, Array   | O(n) Time, O(1) Space | Easy |
 | 1296 | [Divide Array in Sets of K Consecutive Numbers](https://leetcode.com/problems/divide-array-in-sets-of-k-consecutive-numbers/) | HashMap, Sorting | O(n log n) Time, O(n) Space | Hard |

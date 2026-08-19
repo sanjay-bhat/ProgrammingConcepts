@@ -181,7 +181,7 @@
 ## Backtracking
 | Serial No. | Problem Title | Data Structure | Time and Space Complexity | Level |
 | :--- | :--- | :--- | :--- | :--- |
-|293 | [Flip Game](https://leetcode.com/problems/flip-game/) | Backtracking | Time: O(n), Space: O(n)| Easy|
+| 293 | [📓 Flip Game](../leetcode/0293.ipynb) | Single Scan | Time: O(n²), Space: O(n) per result | Easy |
 |784 | [Letter Case Permutation](https://leetcode.com/problems/letter-case-permutation/) | Backtracking | Time: O(2^n), Space: O(1)| Easy|
 | 17 | [📓 Letter Combinations of a Phone Number](../leetcode/0017.ipynb) | Backtracking | Time: O(4^n), Space: O(n)| Medium|
 | 22 | [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) | Backtracking | Time: O(4^n / sqrt(n)), Space: O(n)| Medium|
@@ -261,7 +261,7 @@
 | 1244 | [Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/) | BFS, Queue | O(n * m) Time, O(n * m) Space| Medium|
 | 1263 | [Minimum Moves to Move a Robot to the Origin](https://leetcode.com/problems/minimum-moves-to-move-a-robot-to-the-origin/) | BFS, Queue | O(n) Time, O(n) Space| Medium|
 | 1210 | [Minimum Moves to Reach Target with Rotations](https://leetcode.com/problems/minimum-moves-to-reach-target-with-rotations/) | BFS, Queue | O(n) Time, O(n) Space| Hard|
-| 1293 | [Shortest Path in a Grid with Obstacles Elimination](https://leetcode.com/problems/shortest-path-in-a-grid-with-obstacles-elimination/) | BFS, Queue | O(n * m) Time, O(n * m) Space| Hard|
+| 1| 293 | [📓 Flip Game](../leetcode/0293.ipynb) | Single Scan | Time: O(n²), Space: O(n) per result | Easy |
 | 1345 | [Jump Game IV](https://leetcode.com/problems/jump-game-iv/) | BFS, Queue | O(n) Time, O(n) Space| Hard|
 |505 | [The Maze II](https://leetcode.com/problems/the-maze-ii/) | Breadth-First Search | O(MN) Time, O(MN) Space| Medium|
 

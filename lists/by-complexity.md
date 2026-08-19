@@ -483,7 +483,8 @@
 | 268 | [Missing Number](https://leetcode.com/problems/missing-number/)| Array, Bit Manipulation| Time: O(n), Space: O(1) | Easy |
 | 283 | [📓 Move Zeroes](../leetcode/0283.ipynb) | Two Pointers (Write + Fill) | Time: O(n), Space: O(1) | Easy |
 | 290 | [Word Pattern](https://leetcode.com/problems/word-pattern/)| Hash Map | Time: O(n), Space: O(n) | Easy |
-| 293 | [Flip Game](https://leetcode.com/problems/flip-game/) | Backtracking  | Time: O(n), Space: O(n) | Easy |
+| 293 | [📓 Flip Game](../leetcode/0293.ipynb) | Single Scan | Time: O(n²), Space: O(n) per result | Easy |
+| 784 | [📓 Letter Case Permutation](../leetcode/0784.ipynb) | Backtracking (DFS) | Time: $O(n \cdot 2^n)$, Space: $O(n)$ | Medium |
 | 339 | [Nested List Weight Sum](https://leetcode.com/problems/nested-list-weight-sum/)  | DFS, Recursion| Time: O(n), Space: O(h) | Easy |
 | 344 | [Reverse String](https://leetcode.com/problems/reverse-string/)| Two Pointers  | Time: O(n), Space: O(1) | Easy |
 | 345 | [Reverse Vowels of a String](https://leetcode.com/problems/reverse-vowels-of-a-string/)| Two Pointers  | Time: O(n), Space: O(1) | Easy |
@@ -1299,7 +1300,7 @@
 | 1240 | [Tiling a Rectangle with the Fewest Squares](https://leetcode.com/problems/tiling-a-rectangle-with-the-fewest-squares/)| Dynamic Programming, Array| O(m * n) Time, O(m * n) Space | Hard |
 | 1259 | [Maximal Sum of 4 Non-Overlapping Subarrays](https://leetcode.com/problems/maximal-sum-of-4-non-overlapping-subarrays/)| Dynamic Programming, Sliding Window | O(n) Time, O(n) Space | Hard |
 | 1284 | [Minimum Number of Flips to Convert Binary Matrix to Zero Matrix](https://leetcode.com/problems/minimum-number-of-flips-to-convert-binary-matrix-to-zero-matrix/)| BFS, Matrix| O(n * m) Time, O(n * m) Space | Hard |
-| 1293 | [Shortest Path in a Grid with Obstacles Elimination](https://leetcode.com/problems/shortest-path-in-a-grid-with-obstacles-elimination/) | BFS, Queue | O(n * m) Time, O(n * m) Space | Hard |
+| 1| 293 | [📓 Flip Game](../leetcode/0293.ipynb) | Single Scan | Time: O(n²), Space: O(n) per result | Easy |
 | 1298 | [Maximum Sum of 3 Non-Overlapping Subarrays](https://leetcode.com/problems/maximum-sum-of-3-non-overlapping-subarrays/)| Dynamic Programming, Sliding Window | O(n) Time, O(n) Space | Hard |
 | 1301 | [Number of Paths with Max Score](https://leetcode.com/problems/number-of-paths-with-max-score/) | Dynamic Programming, Graph| O(n * m) Time, O(n * m) Space | Hard |
 | 1316 | [Distinguishable Palindrome](https://leetcode.com/problems/distinguishable-palindrome/)  | String, Backtracking | O(n!) Time, O(n) Space| Hard |

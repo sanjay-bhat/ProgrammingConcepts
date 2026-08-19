@@ -757,7 +757,7 @@
 | 749 | [Contain Virus](https://leetcode.com/problems/contain-virus/)   | Graph, BFS   | Time: O(n^2), Space: O(n^2) | Hard |
 | 750 | [Number of Corner Rectangles](https://leetcode.com/problems/number-of-corner-rectangles/) | Hash Map| Time: O(n^2), Space: O(n) | Medium |
 | 751 | [IP to CIDR](https://leetcode.com/problems/ip-to-cidr/)   | Math | Time: O(1), Space: O(1) | Easy |
-| 752 | [Open the Lock](https://leetcode.com/problems/open-the-lock/)   | BFS | Time: O(n), Space: O(n) | Medium |
+| 752 | [📓 Open the Lock](../leetcode/0752.ipynb) | BFS (Queue) | Time: $O(10^4 + D)$, Space: $O(10^4 + D)$ | Medium |
 | 753 | [Cracking the Safe](https://leetcode.com/problems/cracking-the-safe/)   | Graph, BFS  | Time: O(n^2), Space: O(n) | Hard |
 | 754 | [Reach a Number](https://leetcode.com/problems/reach-a-number/) | Math | Time: O(sqrt(n)), Space: O(1) | Medium |
 | 755 | [Pour Water](https://leetcode.com/problems/pour-water/)   | Simulation   | Time: O(n^2), Space: O(1) | Medium |

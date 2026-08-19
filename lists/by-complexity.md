@@ -950,7 +950,7 @@
 | 740 | [Delete and Earn](https://leetcode.com/problems/delete-and-earn/)| Dynamic Programming | Time: O(n), Space: O(n) | Medium  |
 | 742 | [Closest Leaf in a Binary Tree](https://leetcode.com/problems/closest-leaf-in-a-binary-tree/)  | Tree, BFS, DFS| Time: O(n), Space: O(n) | Medium  |
 | 748 | [Shortest Completing Word](https://leetcode.com/problems/shortest-completing-word/)| String, Hash Map  | Time: O(n), Space: O(n) | Medium  |
-| 752 | [Open the Lock](https://leetcode.com/problems/open-the-lock/)  | BFS  | Time: O(n), Space: O(n) | Medium  |
+| 752 | [📓 Open the Lock](../leetcode/0752.ipynb) | BFS (Queue) | Time: $O(10^4 + D)$, Space: $O(10^4 + D)$ | Medium |
 | 758 | [Bold Words in String](https://leetcode.com/problems/bold-words-in-string/)  | String, Hash Set  | Time: O(n), Space: O(n) | Medium  |
 | 761 | [Special Binary String](https://leetcode.com/problems/special-binary-string/)| String, Recursion | Time: O(n), Space: O(n) | Medium  |
 | 763 | [Partition Labels](https://leetcode.com/problems/partition-labels/) | Greedy, Hash Map  | Time: O(n), Space: O(n) | Medium  |

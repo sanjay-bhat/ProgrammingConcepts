@@ -314,6 +314,7 @@
 | 291 | [Word Pattern II](https://leetcode.com/problems/word-pattern-ii/) | Backtracking | Time: O(n!), Space: O(n) | Medium |
 | 292 | [Nim Game](https://leetcode.com/problems/nim-game/) | Game Theory | Time: O(1), Space: O(1) | Easy |
 | 293 | [📓 Flip Game](leetcode/0293.ipynb) | Single Scan | Time: O(n²), Space: O(n) per result | Easy |
+| 784 | [📓 Letter Case Permutation](leetcode/0784.ipynb) | Backtracking (DFS) | Time: $O(n \cdot 2^n)$, Space: $O(n)$ | Medium |
 | 294 | [Flip Game II](https://leetcode.com/problems/flip-game-ii/) | Backtracking | Time: O(n), Space: O(n) | Medium |
 | 295 | [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) | Heap | Time: O(log n), Space: O(n) | Hard |
 | 296 | [Best Meeting Point](https://leetcode.com/problems/best-meeting-point/) | Manhatten Distance | Time: O(m * n), Space: O(1) | Hard |

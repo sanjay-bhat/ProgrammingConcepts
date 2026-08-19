@@ -13,7 +13,7 @@
 ## 2D Segment Tree
 | Serial No. | Problem Title | Data Structure | Time and Space Complexity | Level |
 | :--- | :--- | :--- | :--- | :--- |
-|308 | [Range Sum Query 2D - Mutable](https://leetcode.com/problems/range-sum-query-2d-mutable/) | 2D Segment Tree| Time: O(log m * log n), Space: O(m * n)| Hard|
+| 308 | [📓 Range Sum Query 2D - Mutable](../leetcode/0308.ipynb) | 2D Binary Indexed Tree | Time: O(log m · log n) update & query, Space: O(m·n) | Hard |
 
 ## Array
 | Serial No. | Problem Title | Data Structure | Time and Space Complexity | Level |

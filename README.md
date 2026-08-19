@@ -328,7 +328,7 @@
 | 305 | [Number of Islands II](https://leetcode.com/problems/number-of-islands-ii/) | Union Find | Time: O(n log n), Space: O(n) | Hard |
 | 306 | [Additive Number](https://leetcode.com/problems/additive-number/) | String, Backtracking | Time: O(n^3), Space: O(1) | Medium |
 | 307 | [Range Sum Query - Mutable](https://leetcode.com/problems/range-sum-query-mutable/) | Segment Tree | Time: O(log n), Space: O(n) | Medium |
-| 308 | [Range Sum Query 2D - Mutable](https://leetcode.com/problems/range-sum-query-2d-mutable/) | 2D Segment Tree | Time: O(log m * log n), Space: O(m * n) | Hard |
+| 308 | [📓 Range Sum Query 2D - Mutable](leetcode/0308.ipynb) | 2D Binary Indexed Tree | Time: O(log m · log n) update & query, Space: O(m·n) | Hard |
 | 309 | [Best Time to Buy and Sell Stock with Cooldown](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/) | Dynamic Programming | Time: O(n), Space: O(n) | Medium |
 | 310 | [Minimum Height Trees](https://leetcode.com/problems/minimum-height-trees/) | Graph, BFS | Time: O(n), Space: O(n) | Medium |
 | 311 | [Sparse Matrix Multiplication](https://leetcode.com/problems/sparse-matrix-multiplication/) | Array | Time: O(m * n * k), Space: O(m * n) | Medium |

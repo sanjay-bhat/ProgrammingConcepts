@@ -303,11 +303,11 @@
 | 301 | [Remove Invalid Parentheses](https://leetcode.com/problems/remove-invalid-parentheses/) | BFS, Backtracking | Time: O(2^n), Space: O(n) | Hard |
 | 302 | [Smallest Rectangle Enclosing Black Pixels](https://leetcode.com/problems/smallest-rectangle-enclosing-black-pixels/) | Array | Time: O(m + n), Space: O(1) | Medium |
 | 303 | [Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/) | Prefix Sum Array | Time: O(1), Space: O(n) | Easy |
-| 304 | [Range Sum Query 2D - Immutable](https://leetcode.com/problems/range-sum-query-2d-immutable/) | 2D Prefix Sum | Time: O(1), Space: O(m * n) | Medium |
+| 304 | [📓 Range Sum Query 2D - Immutable](../leetcode/0304.ipynb) | 2D Prefix Sum | Time: O(1) query, O(m·n) build, Space: O(m·n) | Medium |
 | 305 | [Number of Islands II](https://leetcode.com/problems/number-of-islands-ii/) | Union Find | Time: O(n log n), Space: O(n) | Hard |
 | 306 | [Additive Number](https://leetcode.com/problems/additive-number/) | String, Backtracking | Time: O(n^3), Space: O(1) | Medium |
 | 307 | [Range Sum Query - Mutable](https://leetcode.com/problems/range-sum-query-mutable/) | Segment Tree | Time: O(log n), Space: O(n) | Medium |
-| 308 | [Range Sum Query 2D - Mutable](https://leetcode.com/problems/range-sum-query-2d-mutable/) | 2D Segment Tree | Time: O(log m * log n), Space: O(m * n) | Hard |
+| 308 | [📓 Range Sum Query 2D - Mutable](../leetcode/0308.ipynb) | 2D Binary Indexed Tree | Time: O(log m · log n) update & query, Space: O(m·n) | Hard |
 | 309 | [Best Time to Buy and Sell Stock with Cooldown](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/) | Dynamic Programming | Time: O(n), Space: O(n) | Medium |
 | 310 | [Minimum Height Trees](https://leetcode.com/problems/minimum-height-trees/) | Graph, BFS | Time: O(n), Space: O(n) | Medium |
 | 311 | [Sparse Matrix Multiplication](https://leetcode.com/problems/sparse-matrix-multiplication/) | Array | Time: O(m * n * k), Space: O(m * n) | Medium |
@@ -447,7 +447,7 @@
 | 445 | [Add Two Numbers II](https://leetcode.com/problems/add-two-numbers-ii/) | Linked List, Stack | Time: O(max(m, n)), Space: O(max(m, n)) | Medium |
 | 446 | [Arithmetic Slices II - Subsequence](https://leetcode.com/problems/arithmetic-slices-ii-subsequence/) | Dynamic Programming | Time: O(n^2), Space: O(n^2) | Hard |
 | 447 | [Number of Boomerangs](https://leetcode.com/problems/number-of-boomerangs/) | Hash Map | Time: O(n^2), Space: O(n) | Easy |
-| 448 | [Find All Numbers Disappeared in an Array](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/) | Array | Time: O(n), Space: O(1) | Easy |
+| 448 | [📓 Find All Numbers Disappeared in an Array](../leetcode/0448.ipynb) | In-place Negation | Time: O(n), Space: O(1) | Easy |
 | 449 | [Serialize and Deserialize BST](https://leetcode.com/problems/serialize-and-deserialize-bst/) | Tree, BFS/DFS | Time: O(n), Space: O(n) | Medium |
 | 450 | [Delete Node in a BST](https://leetcode.com/problems/delete-node-in-a-bst/) | Tree | Time: O(h), Space: O(h) | Medium |
 | 451 | [Sort Characters By Frequency](https://leetcode.com/problems/sort-characters-by-frequency/) | Hash Map, Heap | Time: O(n log n), Space: O(n) | Medium |
@@ -462,7 +462,7 @@
 | 460 | [LFU Cache](https://leetcode.com/problems/lfu-cache/) | Hash Map, Double Linked List | Time: O(1), Space: O(n) | Hard |
 | 461 | [Hamming Distance](https://leetcode.com/problems/hamming-distance/) | Bit Manipulation | Time: O(1), Space: O(1) | Easy |
 | 462 | [Minimum Moves to Equal Array Elements II](https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/) | Math | Time: O(n), Space: O(1) | Medium |
-| 463 | [Island Perimeter](https://leetcode.com/problems/island-perimeter/) | Array | Time: O(n), Space: O(1) | Easy |
+| 463 | [📓 Island Perimeter](../leetcode/0463.ipynb) | Single Pass (Count + Shared Edges) | Time: O(m·n), Space: O(1) | Easy |
 | 464 | [Can I Win](https://leetcode.com/problems/can-i-win/) | Dynamic Programming | Time: O(2^n), Space: O(2^n) | Medium |
 | 465 | [Optimal Account Balancing](https://leetcode.com/problems/optimal-account-balancing/) | DFS, Backtracking | Time: O(2^n), Space: O(n) | Hard |
 | 466 | [Count The Repetitions](https://leetcode.com/problems/count-the-repetitions/) | Dynamic Programming | Time: O(n^2), Space: O(n) | Hard |
@@ -484,7 +484,7 @@
 | 482 | [License Key Formatting](https://leetcode.com/problems/license-key-formatting/) | String | Time: O(n), Space: O(1) | Easy |
 | 483 | [Smallest Good Base](https://leetcode.com/problems/smallest-good-base/) | Math | Time: O(log n), Space: O(1) | Hard |
 | 484 | [Find Permutation](https://leetcode.com/problems/find-permutation/) | Greedy | Time: O(n), Space: O(1) | Medium |
-| 485 | [Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/) | Array | Time: O(n), Space: O(1) | Easy |
+| 485 | [📓 Max Consecutive Ones](../leetcode/0485.ipynb) | Single Pass | Time: O(n), Space: O(1) | Easy |
 | 486 | [Predict the Winner](https://leetcode.com/problems/predict-the-winner/) | Dynamic Programming | Time: O(n^2), Space: O(n^2) | Medium |
 | 487 | [Max Consecutive Ones II](https://leetcode.com/problems/max-consecutive-ones-ii/) | Sliding Window | Time: O(n), Space: O(1) | Medium |
 | 488 | [Zuma Game](https://leetcode.com/problems/zuma-game/) | Backtracking | Time: O(n!), Space: O(n) | Hard |
@@ -1485,7 +1485,7 @@
 | 1482 | [Minimum Number of Days to Make m Bouquets](https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/) | Binary Search | O(n log n) Time, O(1) Space | Medium |
 | 1483 | [Kth Ancestor of a Tree Node](https://leetcode.com/problems/kth-ancestor-of-a-tree-node/) | Tree, Binary Lifting  | O(log n) Time, O(n) Space   | Hard |
 | 1484 | [Group Strings](https://leetcode.com/problems/group-strings/)| Graph, Union-Find | O(n log n) Time, O(n) Space | Medium |
-| 1485 | [Clone Binary Tree With Random Pointer](https://leetcode.com/problems/clone-binary-tree-with-random-pointer/) | Tree, HashMap | O(n) Time, O(n) Space | Medium |
+| 1| 485 | [📓 Max Consecutive Ones](../leetcode/0485.ipynb) | Single Pass | Time: O(n), Space: O(1) | Easy |
 | 1486 | [XOR Operation in an Array](https://leetcode.com/problems/xor-operation-in-an-array/) | Array, XOR| O(n) Time, O(1) Space | Easy |
 | 1487 | [Making File Names Unique](https://leetcode.com/problems/making-file-names-unique/) | HashMap, Set  | O(n) Time, O(n) Space | Medium |
 | 1488 | [Avoid Flood in The City](https://leetcode.com/problems/avoid-flood-in-the-city/) | Heap, HashMap | O(n log n) Time, O(n) Space | Hard |

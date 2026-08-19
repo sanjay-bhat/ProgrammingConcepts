@@ -122,17 +122,17 @@
 | 434 | [Number of Segments in a String](https://leetcode.com/problems/number-of-segments-in-a-string/)| String  | Time: O(n), Space: O(1)| Easy |
 | 441 | [Arranging Coins](https://leetcode.com/problems/arranging-coins/)| Binary Search | Time: O(log n), Space: O(1)  | Easy |
 | 447 | [Number of Boomerangs](https://leetcode.com/problems/number-of-boomerangs/)| Hash Map| Time: O(n^2), Space: O(n)| Easy |
-| 448 | [Find All Numbers Disappeared in an Array](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/)  | Array| Time: O(n), Space: O(1)| Easy |
+| 448 | [📓 Find All Numbers Disappeared in an Array](../leetcode/0448.ipynb) | In-place Negation | Time: O(n), Space: O(1) | Easy |
 | 453 | [Minimum Moves to Equal Array Elements](https://leetcode.com/problems/minimum-moves-to-equal-array-elements/)| Math | Time: O(n), Space: O(1)| Easy |
 | 455 | [Assign Cookies](https://leetcode.com/problems/assign-cookies/) | Greedy  | Time: O(n log n), Space: O(1)| Easy |
 | 459 | [Repeated Substring Pattern](https://leetcode.com/problems/repeated-substring-pattern/)| String  | Time: O(n), Space: O(1)| Easy |
 | 461 | [Hamming Distance](https://leetcode.com/problems/hamming-distance/) | Bit Manipulation| Time: O(1), Space: O(1)| Easy |
-| 463 | [Island Perimeter](https://leetcode.com/problems/island-perimeter/) | Array| Time: O(n), Space: O(1)| Easy |
+| 463 | [📓 Island Perimeter](../leetcode/0463.ipynb) | Single Pass (Count + Shared Edges) | Time: O(m·n), Space: O(1) | Easy |
 | 475 | [Heaters](https://leetcode.com/problems/heaters/)  | Binary Search | Time: O(n log n), Space: O(1)| Easy |
 | 476 | [Number Complement](https://leetcode.com/problems/number-complement/) | Bit Manipulation| Time: O(1), Space: O(1)| Easy |
 | 481 | [Magical String](https://leetcode.com/problems/magical-string/) | Math | Time: O(n), Space: O(n)| Easy |
 | 482 | [License Key Formatting](https://leetcode.com/problems/license-key-formatting/)| String  | Time: O(n), Space: O(1)| Easy |
-| 485 | [Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/)| Array| Time: O(n), Space: O(1)| Easy |
+| 485 | [📓 Max Consecutive Ones](../leetcode/0485.ipynb) | Single Pass | Time: O(n), Space: O(1) | Easy |
 | 492 | [Construct the Rectangle](https://leetcode.com/problems/construct-the-rectangle/)| Math | Time: O(sqrt(n)), Space: O(1)| Easy |
 | 495 | [Teemo Attacking](https://leetcode.com/problems/teemo-attacking/)| Sliding Window| Time: O(n), Space: O(1)| Easy |
 | 496 | [Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/)| Stack| Time: O(n), Space: O(n)| Easy |
@@ -552,7 +552,7 @@
 | 299 | [Bulls and Cows](https://leetcode.com/problems/bulls-and-cows/) | Hash Map| Time: O(n), Space: O(n)| Medium  |
 | 300 | [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)| Dynamic Programming| Time: O(n^2), Space: O(n)| Medium  |
 | 302 | [Smallest Rectangle Enclosing Black Pixels](https://leetcode.com/problems/smallest-rectangle-enclosing-black-pixels/)| Array| Time: O(m + n), Space: O(1)  | Medium  |
-| 304 | [Range Sum Query 2D - Immutable](https://leetcode.com/problems/range-sum-query-2d-immutable/)  | 2D Prefix Sum | Time: O(1), Space: O(m * n)  | Medium  |
+| 304 | [📓 Range Sum Query 2D - Immutable](../leetcode/0304.ipynb) | 2D Prefix Sum | Time: O(1) query, O(m·n) build, Space: O(m·n) | Medium |
 | 306 | [Additive Number](https://leetcode.com/problems/additive-number/)| String, Backtracking | Time: O(n^3), Space: O(1)| Medium  |
 | 307 | [Range Sum Query - Mutable](https://leetcode.com/problems/range-sum-query-mutable/) | Segment Tree  | Time: O(log n), Space: O(n)  | Medium  |
 | 309 | [Best Time to Buy and Sell Stock with Cooldown](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)| Dynamic Programming| Time: O(n), Space: O(n)| Medium  |
@@ -1188,7 +1188,7 @@
 |1481 | [Least Number of Unique Integers after K Removals](https://leetcode.com/problems/least-number-of-unique-integers-after-k-removals/)| HashMap, Min-Heap  | O(n log n) Time, O(n) Space  | Medium  |
 |1482 | [Minimum Number of Days to Make m Bouquets](https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/)| Binary Search | O(n log n) Time, O(1) Space  | Medium  |
 |1484 | [Group Strings](https://leetcode.com/problems/group-strings/) | Graph, Union-Find  | O(n log n) Time, O(n) Space  | Medium  |
-|1485 | [Clone Binary Tree With Random Pointer](https://leetcode.com/problems/clone-binary-tree-with-random-pointer/)| Tree, HashMap | O(n) Time, O(n) Space  | Medium  |
+|1| 485 | [📓 Max Consecutive Ones](../leetcode/0485.ipynb) | Single Pass | Time: O(n), Space: O(1) | Easy |
 |1487 | [Making File Names Unique](https://leetcode.com/problems/making-file-names-unique/) | HashMap, Set  | O(n) Time, O(n) Space  | Medium  |
 |1489 | [Find the Most Competitive Subsequence](https://leetcode.com/problems/find-the-most-competitive-subsequence/)| Stack, Greedy | O(n) Time, O(n) Space  | Medium  |
 |1490 | [Clone N-ary Tree](https://leetcode.com/problems/clone-n-ary-tree/) | Tree, DFS | O(n) Time, O(n) Space  | Medium  |
@@ -1253,7 +1253,7 @@
 | 297 | [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)| Tree, DFS | Time: O(n), Space: O(n)| Hard |
 | 301 | [Remove Invalid Parentheses](https://leetcode.com/problems/remove-invalid-parentheses/)| BFS, Backtracking  | Time: O(2^n), Space: O(n)| Hard |
 | 305 | [Number of Islands II](https://leetcode.com/problems/number-of-islands-ii/)| Union Find| Time: O(n log n), Space: O(n)| Hard |
-| 308 | [Range Sum Query 2D - Mutable](https://leetcode.com/problems/range-sum-query-2d-mutable/) | 2D Segment Tree | Time: O(log m * log n), Space: O(m * n) | Hard |
+| 308 | [📓 Range Sum Query 2D - Mutable](../leetcode/0308.ipynb) | 2D Binary Indexed Tree | Time: O(log m · log n) update & query, Space: O(m·n) | Hard |
 | 312 | [Burst Balloons](https://leetcode.com/problems/burst-balloons/) | Dynamic Programming| Time: O(n^3), Space: O(n^2)  | Hard |
 | 315 | [Count of Smaller Numbers After Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/) | Binary Indexed Tree (BIT), Merge Sort | Time: O(n log n), Space: O(n)| Hard |
 | 316 | [Remove Duplicate Letters](https://leetcode.com/problems/remove-duplicate-letters/) | Stack, Greedy | Time: O(n), Space: O(n)| Hard |

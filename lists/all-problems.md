@@ -22,6 +22,8 @@
 | 20 | [📓 Valid Parentheses](../leetcode/0020.ipynb) | Stack | Time: O(n), Space: O(n) | Easy |
 | 21 | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | Linked List | Time: O(m + n), Space: O(1) | Easy |
 | 22 | [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) | Backtracking | Time: O(4^n / sqrt(n)), Space: O(n) | Medium |
+| 39 | [📓 Combination Sum](../leetcode/0039.ipynb) | Backtracking (DFS) | Time: $O(N^{T/M})$, Space: $O(T/M)$ | Medium |
+| 40 | [📓 Combination Sum II](../leetcode/0040.ipynb) | Backtracking (DFS) | Time: $O(2^N)$, Space: $O(N)$ | Medium |
 | 23 | [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | Heap, Divide and Conquer | Time: O(n log k), Space: O(k) | Hard |
 | 24 | [Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/) | Linked List | Time: O(n), Space: O(1) | Medium |
 | 25 | [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/) | Linked List | Time: O(n), Space: O(1) | Hard |
@@ -294,6 +296,9 @@
 | 292 | [Nim Game](https://leetcode.com/problems/nim-game/) | Game Theory | Time: O(1), Space: O(1) | Easy |
 | 293 | [📓 Flip Game](../leetcode/0293.ipynb) | Single Scan | Time: O(n²), Space: O(n) per result | Easy |
 | 784 | [📓 Letter Case Permutation](../leetcode/0784.ipynb) | Backtracking (DFS) | Time: $O(n \cdot 2^n)$, Space: $O(n)$ | Medium |
+| 22 | [📓 Generate Parentheses](../leetcode/0022.ipynb) | Backtracking (DFS) | Time: $O\left(\frac{4^n}{\sqrt{n}}\right)$, Space: $O(n)$ | Medium |
+| 39 | [📓 Combination Sum](../leetcode/0039.ipynb) | Backtracking (DFS) | Time: $O(N^{T/M})$, Space: $O(T/M)$ | Medium |
+| 40 | [📓 Combination Sum II](../leetcode/0040.ipynb) | Backtracking (DFS) | Time: $O(2^N)$, Space: $O(N)$ | Medium |
 | 294 | [Flip Game II](https://leetcode.com/problems/flip-game-ii/) | Backtracking | Time: O(n), Space: O(n) | Medium |
 | 295 | [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) | Heap | Time: O(log n), Space: O(n) | Hard |
 | 296 | [Best Meeting Point](https://leetcode.com/problems/best-meeting-point/) | Manhatten Distance | Time: O(m * n), Space: O(1) | Hard |

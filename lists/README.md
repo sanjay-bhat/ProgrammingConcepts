@@ -183,6 +183,9 @@
 | :--- | :--- | :--- | :--- | :--- |
 | 293 | [📓 Flip Game](../leetcode/0293.ipynb) | Single Scan | Time: O(n²), Space: O(n) per result | Easy |
 | 784 | [📓 Letter Case Permutation](../leetcode/0784.ipynb) | Backtracking (DFS) | Time: $O(n \cdot 2^n)$, Space: $O(n)$ | Medium |
+| 22 | [📓 Generate Parentheses](../leetcode/0022.ipynb) | Backtracking (DFS) | Time: $O\left(\frac{4^n}{\sqrt{n}}\right)$, Space: $O(n)$ | Medium |
+| 39 | [📓 Combination Sum](../leetcode/0039.ipynb) | Backtracking (DFS) | Time: $O(N^{T/M})$, Space: $O(T/M)$ | Medium |
+| 40 | [📓 Combination Sum II](../leetcode/0040.ipynb) | Backtracking (DFS) | Time: $O(2^N)$, Space: $O(N)$ | Medium |
 |784 | [Letter Case Permutation](https://leetcode.com/problems/letter-case-permutation/) | Backtracking | Time: O(2^n), Space: O(1)| Easy|
 | 17 | [📓 Letter Combinations of a Phone Number](../leetcode/0017.ipynb) | Backtracking | Time: O(4^n), Space: O(n)| Medium|
 | 22 | [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) | Backtracking | Time: O(4^n / sqrt(n)), Space: O(n)| Medium|

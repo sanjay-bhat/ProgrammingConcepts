@@ -546,7 +546,7 @@
 | 281 | [Zigzag Iterator](https://leetcode.com/problems/zigzag-iterator/)| Iterator| Time: O(1), Space: O(k)| Medium  |
 | 284 | [Peeking Iterator](https://leetcode.com/problems/peeking-iterator/) | Iterator| Time: O(1), Space: O(1)| Medium  |
 | 285 | [Inorder Successor in BST](https://leetcode.com/problems/inorder-successor-in-bst/) | Tree | Time: O(h), Space: O(1)| Medium  |
-| 286 | [Walls and Gates](https://leetcode.com/problems/walls-and-gates/)| BFS| Time: O(m * n), Space: O(m * n)| Medium  |
+| 286 | [📓 Walls and Gates](../leetcode/0286.ipynb) | BFS (Queue) | Time: $O(m \cdot n)$, Space: $O(m \cdot n)$ | Medium |
 | 287 | [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) | Array, Floyd's Tortoise and Hare| Time: O(n), Space: O(1)| Medium  |
 | 288 | [Unique Word Abbreviation](https://leetcode.com/problems/unique-word-abbreviation/) | Hash Map| Time: O(n), Space: O(n)| Medium  |
 | 289 | [Game of Life](https://leetcode.com/problems/game-of-life/)| Array| Time: O(m * n), Space: O(1)  | Medium  |

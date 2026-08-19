@@ -790,7 +790,7 @@
 | 276 | [Paint Fence](https://leetcode.com/problems/paint-fence/)  | Dynamic Programming | Time: O(n), Space: O(1) | Medium  |
 | 277 | [Find the Celebrity](https://leetcode.com/problems/find-the-celebrity/) | Graph, Two Pointers | Time: O(n), Space: O(1) | Medium  |
 | 279 | [Perfect Squares](https://leetcode.com/problems/perfect-squares/)| Dynamic Programming | Time: O(n√n), Space: O(n)  | Medium  |
-| 286 | [Walls and Gates](https://leetcode.com/problems/walls-and-gates/)| BFS  | Time: O(m * n), Space: O(m * n)| Medium  |
+| 286 | [📓 Walls and Gates](../leetcode/0286.ipynb) | BFS (Queue) | Time: $O(m \cdot n)$, Space: $O(m \cdot n)$ | Medium |
 | 287 | [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) | Array, Floyd's Tortoise and Hare| Time: O(n), Space: O(1) | Medium  |
 | 288 | [Unique Word Abbreviation](https://leetcode.com/problems/unique-word-abbreviation/)| Hash Map | Time: O(n), Space: O(n) | Medium  |
 | 289 | [Game of Life](https://leetcode.com/problems/game-of-life/)| Array| Time: O(m * n), Space: O(1)| Medium  |

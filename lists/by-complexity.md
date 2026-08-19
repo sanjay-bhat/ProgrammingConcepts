@@ -1359,7 +1359,7 @@
 |368 | [Largest Divisible Subset](https://leetcode.com/problems/largest-divisible-subset/) | Dynamic Programming  | Time: O(n^2), Space: O(n)| Medium  |
 |375 | [Guess Number Higher or Lower II](https://leetcode.com/problems/guess-number-higher-or-lower-ii/)  | Dynamic Programming  | Time: O(n^2), Space: O(n^2)| Medium  |
 |406 | [Queue Reconstruction by Height](https://leetcode.com/problems/queue-reconstruction-by-height/) | Greedy| Time: O(n^2), Space: O(n)| Medium  |
-|433 | [Minimum Genetic Mutation](https://leetcode.com/problems/minimum-genetic-mutation/) | BFS| Time: O(n^2), Space: O(n)| Medium  |
+| 433 | [📓 Minimum Genetic Mutation](../leetcode/0433.ipynb) | BFS (Queue) | Time: $O(N^2 \cdot L)$, Space: $O(N)$ | Medium |
 |454 | [4Sum II](https://leetcode.com/problems/4sum-ii/)| Hash Map| Time: O(n^2), Space: O(n^2)| Medium  |
 |464 | [Can I Win](https://leetcode.com/problems/can-i-win/) | Dynamic Programming  | Time: O(2^n), Space: O(2^n)| Medium  |
 |473 | [Matchsticks to Square](https://leetcode.com/problems/matchsticks-to-square/)  | Backtracking, Dynamic Programming| Time: O(4^n), Space: O(n)| Medium  |

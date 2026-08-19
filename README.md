@@ -459,7 +459,7 @@
 | 430 | [Flatten a Multilevel Doubly Linked List](https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/) | Linked List | Time: O(n), Space: O(1) | Medium |
 | 431 | [Encode N-ary Tree to Binary Tree](https://leetcode.com/problems/encode-n-ary-tree-to-binary-tree/) | Tree | Time: O(n), Space: O(n) | Medium |
 | 432 | [All O`one Data Structure](https://leetcode.com/problems/all-oone-data-structure/) | Doubly Linked List, Hash Map | Time: O(1), Space: O(n) | Hard |
-| 433 | [Minimum Genetic Mutation](https://leetcode.com/problems/minimum-genetic-mutation/) | BFS | Time: O(n^2), Space: O(n) | Medium |
+| 433 | [📓 Minimum Genetic Mutation](leetcode/0433.ipynb) | BFS (Queue) | Time: $O(N^2 \cdot L)$, Space: $O(N)$ | Medium |
 | 434 | [Number of Segments in a String](https://leetcode.com/problems/number-of-segments-in-a-string/) | String | Time: O(n), Space: O(1) | Easy |
 | 435 | [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/) | Greedy | Time: O(n log n), Space: O(1) | Medium |
 | 436 | [Find Right Interval](https://leetcode.com/problems/find-right-interval/) | Binary Search | Time: O(n log n), Space: O(n) | Medium |

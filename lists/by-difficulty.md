@@ -632,7 +632,7 @@
 | 428 | [Serialize and Deserialize N-ary Tree](https://leetcode.com/problems/serialize-and-deserialize-n-ary-tree/) | Tree, BFS/DFS | Time: O(n), Space: O(n)| Medium  |
 | 430 | [Flatten a Multilevel Doubly Linked List](https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/) | Linked List| Time: O(n), Space: O(1)| Medium  |
 | 431 | [Encode N-ary Tree to Binary Tree](https://leetcode.com/problems/encode-n-ary-tree-to-binary-tree/)  | Tree | Time: O(n), Space: O(n)| Medium  |
-| 433 | [Minimum Genetic Mutation](https://leetcode.com/problems/minimum-genetic-mutation/) | BFS| Time: O(n^2), Space: O(n)| Medium  |
+| 433 | [📓 Minimum Genetic Mutation](../leetcode/0433.ipynb) | BFS (Queue) | Time: $O(N^2 \cdot L)$, Space: $O(N)$ | Medium |
 | 435 | [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/) | Greedy  | Time: O(n log n), Space: O(1)| Medium  |
 | 436 | [Find Right Interval](https://leetcode.com/problems/find-right-interval/)| Binary Search | Time: O(n log n), Space: O(n)| Medium  |
 | 437 | [Path Sum III](https://leetcode.com/problems/path-sum-iii/)| Tree, DFS | Time: O(n), Space: O(h)| Medium  |

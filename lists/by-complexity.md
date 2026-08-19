@@ -502,7 +502,7 @@
 | 409 | [Longest Palindrome](https://leetcode.com/problems/longest-palindrome/) | Hash Map | Time: O(n), Space: O(n) | Easy |
 | 412 | [Fizz Buzz](https://leetcode.com/problems/fizz-buzz/) | Math | Time: O(n), Space: O(1) | Easy |
 | 415 | [Add Strings](https://leetcode.com/problems/add-strings/)  | String| Time: O(n), Space: O(1) | Easy |
-| 429 | [N-ary Tree Level Order Traversal](https://leetcode.com/problems/n-ary-tree-level-order-traversal/)| BFS  | Time: O(n), Space: O(n) | Easy |
+| 429 | [📓 N-ary Tree Level Order Traversal](../leetcode/0429.ipynb) | BFS (Queue) | Time: $O(n)$, Space: $O(n)$ | Easy |
 | 434 | [Number of Segments in a String](https://leetcode.com/problems/number-of-segments-in-a-string/)| String| Time: O(n), Space: O(1) | Easy |
 | 448 | [📓 Find All Numbers Disappeared in an Array](../leetcode/0448.ipynb) | In-place Negation | Time: O(n), Space: O(1) | Easy |
 | 453 | [Minimum Moves to Equal Array Elements](https://leetcode.com/problems/minimum-moves-to-equal-array-elements/) | Math | Time: O(n), Space: O(1) | Easy |

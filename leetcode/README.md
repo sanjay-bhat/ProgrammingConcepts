@@ -236,7 +236,7 @@
 ## BFS
 | Serial No. | Problem Title | Data Structure | Time and Space Complexity | Level |
 | :--- | :--- | :--- | :--- | :--- |
-|429 | [N-ary Tree Level Order Traversal](https://leetcode.com/problems/n-ary-tree-level-order-traversal/) | BFS| Time: O(n), Space: O(n)| Easy|
+| 429 | [📓 N-ary Tree Level Order Traversal](0429.ipynb) | BFS (Queue) | Time: $O(n)$, Space: $O(n)$ | Easy |
 |286 | [Walls and Gates](https://leetcode.com/problems/walls-and-gates/) | BFS| Time: O(m * n), Space: O(m * n)| Medium|
 |433 | [Minimum Genetic Mutation](https://leetcode.com/problems/minimum-genetic-mutation/) | BFS| Time: O(n^2), Space: O(n)| Medium|
 |613 | [Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/) | BFS| Time: O(n^2), Space: O(n^2)| Medium|

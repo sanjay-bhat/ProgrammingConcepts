@@ -434,7 +434,7 @@
 | 426 | [Convert Binary Search Tree to Sorted Doubly Linked List](https://leetcode.com/problems/convert-binary-search-tree-to-sorted-doubly-linked-list/) | Tree, In-order Traversal | Time: O(n), Space: O(h) | Medium |
 | 427 | [Construct Quad Tree](https://leetcode.com/problems/construct-quad-tree/) | Divide and Conquer, Recursion | Time: O(n), Space: O(n) | Medium |
 | 428 | [Serialize and Deserialize N-ary Tree](https://leetcode.com/problems/serialize-and-deserialize-n-ary-tree/) | Tree, BFS/DFS | Time: O(n), Space: O(n) | Medium |
-| 429 | [N-ary Tree Level Order Traversal](https://leetcode.com/problems/n-ary-tree-level-order-traversal/) | BFS | Time: O(n), Space: O(n) | Easy |
+| 429 | [📓 N-ary Tree Level Order Traversal](../leetcode/0429.ipynb) | BFS (Queue) | Time: $O(n)$, Space: $O(n)$ | Easy |
 | 430 | [Flatten a Multilevel Doubly Linked List](https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/) | Linked List | Time: O(n), Space: O(1) | Medium |
 | 431 | [Encode N-ary Tree to Binary Tree](https://leetcode.com/problems/encode-n-ary-tree-to-binary-tree/) | Tree | Time: O(n), Space: O(n) | Medium |
 | 432 | [All O`one Data Structure](https://leetcode.com/problems/all-oone-data-structure/) | Doubly Linked List, Hash Map | Time: O(1), Space: O(n) | Hard |

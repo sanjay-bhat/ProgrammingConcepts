@@ -31,7 +31,7 @@
 | 283 | [📓 Move Zeroes](../leetcode/0283.ipynb) | Two Pointers (Write + Fill) | Time: O(n), Space: O(1) | Easy |
 | 448 | [📓 Find All Numbers Disappeared in an Array](../leetcode/0448.ipynb) | In-place Negation | Time: O(n), Space: O(1) | Easy |
 | 463 | [📓 Island Perimeter](../leetcode/0463.ipynb) | Single Pass (Count + Shared Edges) | Time: O(m·n), Space: O(1) | Easy |
-|485 | [Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/) | Array| Time: O(n), Space: O(1)| Easy|
+| 485 | [📓 Max Consecutive Ones](../leetcode/0485.ipynb) | Single Pass | Time: O(n), Space: O(1) | Easy |
 |561 | [Array Partition I](https://leetcode.com/problems/array-partition-i/) | Array| Time: O(n log n), Space: O(1)| Easy|
 |598 | [Range Addition II](https://leetcode.com/problems/range-addition-ii/) | Array| Time: O(1), Space: O(1)| Easy|
 |603 | [Consecutive Available Seats](https://leetcode.com/problems/consecutive-available-seats/) | Array| Time: O(n), Space: O(1)| Easy|
@@ -1684,7 +1684,7 @@
 |690 | [Employee Importance](https://leetcode.com/problems/employee-importance/) | Tree, Hash Map | Time: O(n), Space: O(n)| Easy|
 |652 | [Find Duplicate Subtrees](https://leetcode.com/problems/find-duplicate-subtrees/) | Tree, Hash Map | Time: O(n), Space: O(n)| Medium|
 |653 | [Two Sum IV - Input is a BST](https://leetcode.com/problems/two-sum-iv-input-is-a-bst/) | Tree, Hash Set | Time: O(n), Space: O(n)| Easy|
-| 1485 | [Clone Binary Tree With Random Pointer](https://leetcode.com/problems/clone-binary-tree-with-random-pointer/) | Tree, HashMap| O(n) Time, O(n) Space| Medium|
+| 1| 485 | [📓 Max Consecutive Ones](../leetcode/0485.ipynb) | Single Pass | Time: O(n), Space: O(1) | Easy |
 |426 | [Convert Binary Search Tree to Sorted Doubly Linked List](https://leetcode.com/problems/convert-binary-search-tree-to-sorted-doubly-linked-list/) | Tree, In-order Traversal | Time: O(n), Space: O(h)| Medium|
 |230 | [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) | Tree, Inorder Traversal| Time: O(h + k), Space: O(h)| Medium|
 | 1367 | [Linked List in Binary Tree](https://leetcode.com/problems/linked-list-in-binary-tree/) | Tree, Linked List| O(n) Time, O(n) Space| Medium|

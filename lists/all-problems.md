@@ -484,7 +484,7 @@
 | 482 | [License Key Formatting](https://leetcode.com/problems/license-key-formatting/) | String | Time: O(n), Space: O(1) | Easy |
 | 483 | [Smallest Good Base](https://leetcode.com/problems/smallest-good-base/) | Math | Time: O(log n), Space: O(1) | Hard |
 | 484 | [Find Permutation](https://leetcode.com/problems/find-permutation/) | Greedy | Time: O(n), Space: O(1) | Medium |
-| 485 | [Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/) | Array | Time: O(n), Space: O(1) | Easy |
+| 485 | [📓 Max Consecutive Ones](../leetcode/0485.ipynb) | Single Pass | Time: O(n), Space: O(1) | Easy |
 | 486 | [Predict the Winner](https://leetcode.com/problems/predict-the-winner/) | Dynamic Programming | Time: O(n^2), Space: O(n^2) | Medium |
 | 487 | [Max Consecutive Ones II](https://leetcode.com/problems/max-consecutive-ones-ii/) | Sliding Window | Time: O(n), Space: O(1) | Medium |
 | 488 | [Zuma Game](https://leetcode.com/problems/zuma-game/) | Backtracking | Time: O(n!), Space: O(n) | Hard |
@@ -1485,7 +1485,7 @@
 | 1482 | [Minimum Number of Days to Make m Bouquets](https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/) | Binary Search | O(n log n) Time, O(1) Space | Medium |
 | 1483 | [Kth Ancestor of a Tree Node](https://leetcode.com/problems/kth-ancestor-of-a-tree-node/) | Tree, Binary Lifting  | O(log n) Time, O(n) Space   | Hard |
 | 1484 | [Group Strings](https://leetcode.com/problems/group-strings/)| Graph, Union-Find | O(n log n) Time, O(n) Space | Medium |
-| 1485 | [Clone Binary Tree With Random Pointer](https://leetcode.com/problems/clone-binary-tree-with-random-pointer/) | Tree, HashMap | O(n) Time, O(n) Space | Medium |
+| 1| 485 | [📓 Max Consecutive Ones](../leetcode/0485.ipynb) | Single Pass | Time: O(n), Space: O(1) | Easy |
 | 1486 | [XOR Operation in an Array](https://leetcode.com/problems/xor-operation-in-an-array/) | Array, XOR| O(n) Time, O(1) Space | Easy |
 | 1487 | [Making File Names Unique](https://leetcode.com/problems/making-file-names-unique/) | HashMap, Set  | O(n) Time, O(n) Space | Medium |
 | 1488 | [Avoid Flood in The City](https://leetcode.com/problems/avoid-flood-in-the-city/) | Heap, HashMap | O(n log n) Time, O(n) Space | Hard |

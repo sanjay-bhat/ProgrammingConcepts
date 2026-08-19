@@ -506,7 +506,7 @@
 | 463 | [📓 Island Perimeter](../leetcode/0463.ipynb) | Single Pass (Count + Shared Edges) | Time: O(m·n), Space: O(1) | Easy |
 | 481 | [Magical String](https://leetcode.com/problems/magical-string/)| Math | Time: O(n), Space: O(n) | Easy |
 | 482 | [License Key Formatting](https://leetcode.com/problems/license-key-formatting/)  | String| Time: O(n), Space: O(1) | Easy |
-| 485 | [Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/)  | Array| Time: O(n), Space: O(1) | Easy |
+| 485 | [📓 Max Consecutive Ones](../leetcode/0485.ipynb) | Single Pass | Time: O(n), Space: O(1) | Easy |
 | 495 | [Teemo Attacking](https://leetcode.com/problems/teemo-attacking/)| Sliding Window| Time: O(n), Space: O(1) | Easy |
 | 496 | [Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/)  | Stack| Time: O(n), Space: O(n) | Easy |
 | 500 | [Keyboard Row](https://leetcode.com/problems/keyboard-row/)| String| Time: O(n), Space: O(1) | Easy |
@@ -1178,7 +1178,7 @@
 | 1471 | [The k-th Factor of n](https://leetcode.com/problems/the-k-th-factor-of-n/) | Math, Array| O(n) Time, O(1) Space | Medium  |
 | 1474 | [Delete N Nodes After M Nodes of a Linked List](https://leetcode.com/problems/delete-n-nodes-after-m-nodes-of-a-linked-list/) | Linked List, Simulation| O(n) Time, O(1) Space | Medium  |
 | 1479 | [Maximize Palindrome Length From Subsequences](https://leetcode.com/problems/maximize-palindrome-length-from-subsequences/) | Greedy, DP | O(n) Time, O(n) Space | Medium  |
-| 1485 | [Clone Binary Tree With Random Pointer](https://leetcode.com/problems/clone-binary-tree-with-random-pointer/)| Tree, HashMap| O(n) Time, O(n) Space | Medium  |
+| 1| 485 | [📓 Max Consecutive Ones](../leetcode/0485.ipynb) | Single Pass | Time: O(n), Space: O(1) | Easy |
 | 1487 | [Making File Names Unique](https://leetcode.com/problems/making-file-names-unique/) | HashMap, Set | O(n) Time, O(n) Space | Medium  |
 | 1489 | [Find the Most Competitive Subsequence](https://leetcode.com/problems/find-the-most-competitive-subsequence/)| Stack, Greedy| O(n) Time, O(n) Space | Medium  |
 | 1490 | [Clone N-ary Tree](https://leetcode.com/problems/clone-n-ary-tree/)  | Tree, DFS  | O(n) Time, O(n) Space | Medium  |

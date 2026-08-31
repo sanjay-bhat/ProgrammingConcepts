@@ -1322,7 +1322,7 @@
 | 659 | [Split Array into Consecutive Subsequences](https://leetcode.com/problems/split-array-into-consecutive-subsequences/)| Greedy, Hash Map| Time: O(n), Space: O(n)| Hard |
 | 660 | [Remove 9](https://leetcode.com/problems/remove-9/)| Math | Time: O(log n), Space: O(1)  | Hard |
 | 664 | [Strange Printer](https://leetcode.com/problems/strange-printer/)| Dynamic Programming| Time: O(n^3), Space: O(n^2)  | Hard |
-| 668 | [Kth Smallest Number in Multiplication Table](https://leetcode.com/problems/kth-smallest-number-in-multiplication-table/)  | Binary Search | Time: O(n log m), Space: O(1)| Hard |
+| 668 | [📓 Kth Smallest Number in Multiplication Table](../leetcode/0668.ipynb)  | Binary Search | Time: O(n log m), Space: O(1)| Hard |
 | 675 | [Cut Off Trees for Golf Event](https://leetcode.com/problems/cut-off-trees-for-golf-event/) | BFS, Graph, Priority Queue | Time: O(n log n), Space: O(n)| Hard |
 | 679 | [24 Game](https://leetcode.com/problems/24-game/)  | Backtracking  | Time: O(n!), Space: O(1) | Hard |
 | 683 | [K Empty Slots](https://leetcode.com/problems/k-empty-slots/) | Array, Sliding Window| Time: O(n), Space: O(1)| Hard |

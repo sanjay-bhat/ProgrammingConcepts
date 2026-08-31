@@ -377,7 +377,7 @@
 | 632 | [Smallest Range Covering Elements from K Lists](https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists/) | Heap, Merge| Time: O(n log k), Space: O(k)  | Hard |
 | 644 | [Maximum Average Subarray II](https://leetcode.com/problems/maximum-average-subarray-ii/) | Dynamic Programming | Time: O(n log n), Space: O(1)  | Hard |
 | 660 | [Remove 9](https://leetcode.com/problems/remove-9/)| Math | Time: O(log n), Space: O(1)| Hard |
-| 668 | [Kth Smallest Number in Multiplication Table](https://leetcode.com/problems/kth-smallest-number-in-multiplication-table/) | Binary Search | Time: O(n log m), Space: O(1)  | Hard |
+| 668 | [📓 Kth Smallest Number in Multiplication Table](../leetcode/0668.ipynb) | Binary Search | Time: O(n log m), Space: O(1)  | Hard |
 | 675 | [Cut Off Trees for Golf Event](https://leetcode.com/problems/cut-off-trees-for-golf-event/) | BFS, Graph, Priority Queue | Time: O(n log n), Space: O(n)  | Hard |
 | 699 | [Falling Squares](https://leetcode.com/problems/falling-squares/)| Segment Tree  | Time: O(n log n), Space: O(n)  | Hard |
 | 719 | [Find K-th Smallest Pair Distance](https://leetcode.com/problems/find-k-th-smallest-pair-distance/)| Binary Search, Two Pointer | Time: O(n log n), Space: O(1)  | Hard |

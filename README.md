@@ -694,7 +694,7 @@
 | 665 | [Non-decreasing Array](https://leetcode.com/problems/non-decreasing-array/) | Array | Time: O(n), Space: O(1) | Medium |
 | 666 | [Path Sum IV](https://leetcode.com/problems/path-sum-iv/) | Tree | Time: O(n), Space: O(n) | Medium |
 | 667 | [Beautiful Arrangement II](https://leetcode.com/problems/beautiful-arrangement-ii/) | Greedy, Array | Time: O(n), Space: O(1) | Medium |
-| 668 | [Kth Smallest Number in Multiplication Table](https://leetcode.com/problems/kth-smallest-number-in-multiplication-table/) | Binary Search | Time: O(n log m), Space: O(1) | Hard |
+| 668 | [📓 Kth Smallest Number in Multiplication Table](leetcode/0668.ipynb) | Binary Search | Time: O(n log m), Space: O(1) | Hard |
 | 669 | [Trim a Binary Search Tree](https://leetcode.com/problems/trim-a-binary-search-tree/) | Tree | Time: O(n), Space: O(h) | Medium |
 | 670 | [Maximum Swap](https://leetcode.com/problems/maximum-swap/) | Array, Greedy | Time: O(n), Space: O(n) | Medium |
 | 671 | [Second Minimum Node In a Binary Tree](https://leetcode.com/problems/second-minimum-node-in-a-binary-tree/) | Tree | Time: O(n), Space: O(n) | Medium |

@@ -325,7 +325,7 @@
 | Serial No. | Problem Title | Data Structure | Time and Space Complexity | Level |
 | :--- | :--- | :--- | :--- | :--- |
 | 700 | [📓 Search in a Binary Search Tree](0700.ipynb) | Iterative (BST property) | Time: $O(h)$, Space: $O(1)$ | Easy |
-|701 | [Insert into a Binary Search Tree](https://leetcode.com/problems/insert-into-a-binary-search-tree/) | Binary Search Tree | Time: O(h), Space: O(1)| Easy|
+|701 | [📓 Insert into a Binary Search Tree](0701.ipynb) | Binary Search Tree | Time: O(h), Space: O(1)| Easy|
 |729 | [My Calendar I](https://leetcode.com/problems/my-calendar-i/) | Binary Search Tree | Time: O(log n), Space: O(n)| Medium|
 |731 | [My Calendar II](https://leetcode.com/problems/my-calendar-ii/) | Binary Search Tree | Time: O(log n), Space: O(n)| Medium|
 |538 | [Convert BST to Greater Tree](https://leetcode.com/problems/convert-bst-to-greater-tree/) | Binary Search Tree (BST) | Time: O(n), Space: O(h)| Easy|

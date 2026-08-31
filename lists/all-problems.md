@@ -706,7 +706,7 @@
 | 698 | [Partition to K Equal Sum Subsets](https://leetcode.com/problems/partition-to-k-equal-sum-subsets/) | Backtracking, DP  | Time: O(2^n), Space: O(n) | Hard |
 | 699 | [Falling Squares](https://leetcode.com/problems/falling-squares/) | Segment Tree | Time: O(n log n), Space: O(n) | Hard |
 | 700 | [📓 Search in a Binary Search Tree](../leetcode/0700.ipynb) | Iterative (BST property) | Time: $O(h)$, Space: $O(1)$ | Easy |
-| 701 | [Insert into a Binary Search Tree](https://leetcode.com/problems/insert-into-a-binary-search-tree/) | Binary Search Tree | Time: O(h), Space: O(1) | Easy |
+| 701 | [📓 Insert into a Binary Search Tree](../leetcode/0701.ipynb) | Binary Search Tree | Time: O(h), Space: O(1) | Easy |
 | 702 | [📓 Search in a Sorted Array of Unknown Size](../leetcode/0702.ipynb) | Exponential Search + Binary Search | Time: O(log n), Space: O(1) | Medium |
 | 703 | [Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/) | Heap | Time: O(log k), Space: O(k) | Easy |
 | 704 | [📓 Binary Search](../leetcode/0704.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |

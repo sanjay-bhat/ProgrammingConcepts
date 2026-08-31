@@ -203,7 +203,7 @@
 | 693 | [Binary Number with Alternating Bits](https://leetcode.com/problems/binary-number-with-alternating-bits/) | Math | Time: O(1), Space: O(1)| Easy |
 | 697 | [Degree of an Array](https://leetcode.com/problems/degree-of-an-array/)  | Hash Map| Time: O(n), Space: O(n)| Easy |
 | 700 | [📓 Search in a Binary Search Tree](../leetcode/0700.ipynb) | Iterative (BST property) | Time: $O(h)$, Space: $O(1)$ | Easy |
-| 701 | [Insert into a Binary Search Tree](https://leetcode.com/problems/insert-into-a-binary-search-tree/)  | Binary Search Tree | Time: O(h), Space: O(1)| Easy |
+| 701 | [📓 Insert into a Binary Search Tree](../leetcode/0701.ipynb)  | Binary Search Tree | Time: O(h), Space: O(1)| Easy |
 | 703 | [Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/)| Heap | Time: O(log k), Space: O(k)  | Easy |
 | 704 | [📓 Binary Search](../leetcode/0704.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
 | 705 | [Design HashSet](https://leetcode.com/problems/design-hashset/) | Hash Set| Time: O(1), Space: O(n)| Easy |

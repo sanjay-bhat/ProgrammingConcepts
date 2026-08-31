@@ -40,7 +40,7 @@
 | 604 | [Design Compressed String Iterator](https://leetcode.com/problems/design-compressed-string-iterator/)| String, Iterator  | Time: O(1), Space: O(1) | Easy |
 | 627 | [Swap Salary](https://leetcode.com/problems/swap-salary/)  | SQL  | Time: O(1), Space: O(1) | Easy |
 | 693 | [Binary Number with Alternating Bits](https://leetcode.com/problems/binary-number-with-alternating-bits/)| Math | Time: O(1), Space: O(1) | Easy |
-| 701 | [Insert into a Binary Search Tree](https://leetcode.com/problems/insert-into-a-binary-search-tree/)| Binary Search Tree| Time: O(h), Space: O(1) | Easy |
+| 701 | [📓 Insert into a Binary Search Tree](../leetcode/0701.ipynb)| Binary Search Tree| Time: O(h), Space: O(1) | Easy |
 | 705 | [Design HashSet](https://leetcode.com/problems/design-hashset/)| Hash Set | Time: O(1), Space: O(n) | Easy |
 | 706 | [Design HashMap](https://leetcode.com/problems/design-hashmap/)| Hash Map | Time: O(1), Space: O(n) | Easy |
 | 707 | [Design Linked List](https://leetcode.com/problems/design-linked-list/) | Linked List| Time: O(1), Space: O(n) | Easy |

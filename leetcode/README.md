@@ -342,25 +342,25 @@
 |623 | [📓 Add One Row to Tree](0623.ipynb) | Binary Tree| Time: O(n), Space: O(h)| Medium|
 |637 | [📓 Average of Levels in Binary Tree](0637.ipynb) | Binary Tree (BFS)| Time: O(n), Space: O(n)| Easy|
 |563 | [📓 Binary Tree Tilt](0563.ipynb) | Binary Tree (DFS)| Time: O(n), Space: O(h)| Easy|
-|549 | [Binary Tree Longest Consecutive Sequence II](https://leetcode.com/problems/binary-tree-longest-consecutive-sequence-ii/) | Binary Tree (DFS)| Time: O(n), Space: O(h)| Medium|
-|545 | [Boundary of Binary Tree](https://leetcode.com/problems/boundary-of-binary-tree/) | Binary Tree (DFS, BFS) | Time: O(n), Space: O(h)| Medium|
-|513 | [Find Bottom Left Tree Value](https://leetcode.com/problems/find-bottom-left-tree-value/) | Binary Tree (Level Order Traversal)| Time: O(n), Space: O(n)| Medium|
-|515 | [Find Largest Value in Each Tree Row](https://leetcode.com/problems/find-largest-value-in-each-tree-row/) | Binary Tree (Level Order Traversal)| Time: O(n), Space: O(n)| Medium|
-|536 | [Construct Binary Tree from String](https://leetcode.com/problems/construct-binary-tree-from-string/) | Binary Tree (Recursive)| Time: O(n), Space: O(n)| Medium|
-| 1161 | [Maximum Level Sum of a Binary Tree](https://leetcode.com/problems/maximum-level-sum-of-a-binary-tree/) | Binary Tree, Queue | O(n) Time, O(n) Space| Medium|
-|606 | [Construct String from Binary Tree](https://leetcode.com/problems/construct-string-from-binary-tree/) | Binary Tree, String| Time: O(n), Space: O(n)| Easy|
+| 549 | [📓 Binary Tree Longest Consecutive Sequence II](0549.ipynb) | DFS Post-order | Time: O(n), Space: O(h) | Medium |
+| 545 | [📓 Boundary of Binary Tree](0545.ipynb) | DFS Three-pass Boundary | Time: O(n), Space: O(h) | Medium |
+| 513 | [📓 Find Bottom Left Tree Value](0513.ipynb) | BFS Level Order | Time: O(n), Space: O(n) | Medium |
+| 515 | [📓 Find Largest Value in Each Tree Row](0515.ipynb) | BFS Level Order | Time: O(n), Space: O(n) | Medium |
+| 536 | [📓 Construct Binary Tree from String](0536.ipynb) | Recursive Parsing | Time: O(n), Space: O(n) | Medium |
+| 1161 | [📓 Maximum Level Sum of a Binary Tree](1161.ipynb) | BFS Level Order | Time: O(n), Space: O(n) | Medium |
+| 606 | [📓 Construct String from Binary Tree](0606.ipynb) | DFS Pre-order with Parentheses | Time: O(n), Space: O(n) | Easy |
 
 ## Bit Manipulation
 | Serial No. | Problem Title | Data Structure | Time and Space Complexity | Level |
 | :--- | :--- | :--- | :--- | :--- |
-|136 | [Single Number](https://leetcode.com/problems/single-number/) | Bit Manipulation | Time: O(n), Space: O(1)| Easy|
-|190 | [Reverse Bits](https://leetcode.com/problems/reverse-bits/) | Bit Manipulation | Time: O(1), Space: O(1)| Easy|
-|191 | [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) | Bit Manipulation | Time: O(1), Space: O(1)| Easy|
-|371 | [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/) | Bit Manipulation | Time: O(1), Space: O(1)| Easy|
-|401 | [Binary Watch](https://leetcode.com/problems/binary-watch/) | Bit Manipulation | Time: O(1), Space: O(1)| Easy|
-|461 | [Hamming Distance](https://leetcode.com/problems/hamming-distance/) | Bit Manipulation | Time: O(1), Space: O(1)| Easy|
-|476 | [Number Complement](https://leetcode.com/problems/number-complement/) | Bit Manipulation | Time: O(1), Space: O(1)| Easy|
-|762 | [Prime Number of Set Bits in Binary Representation](https://leetcode.com/problems/prime-number-of-set-bits-in-binary-representation/) | Bit Manipulation | Time: O(n), Space: O(1)| Easy|
+| 136 | [📓 Single Number](0136.ipynb) | XOR | Time: O(n), Space: O(1) | Easy |
+| 190 | [📓 Reverse Bits](0190.ipynb) | Bit-by-bit Reversal | Time: O(1), Space: O(1) | Easy |
+| 191 | [📓 Number of 1 Bits](0191.ipynb) | Brian Kernighan's Algorithm | Time: O(k), Space: O(1) | Easy |
+| 371 | [📓 Sum of Two Integers](0371.ipynb) | Bit Manipulation (carry simulation) | Time: O(1), Space: O(1) | Easy |
+| 401 | [📓 Binary Watch](0401.ipynb) | Bit Manipulation (enumerate all times) | Time: O(1), Space: O(1) | Easy |
+| 461 | [📓 Hamming Distance](0461.ipynb) | XOR + Popcount | Time: O(1), Space: O(1) | Easy |
+| 476 | [📓 Number Complement](0476.ipynb) | Bit Mask Flip | Time: O(log n), Space: O(1) | Easy |
+| 762 | [📓 Prime Number of Set Bits in Binary Representation](0762.ipynb) | Bit Manipulation + Prime Mask | Time: O(n), Space: O(1) | Easy |
 | 1404 | [Number of Steps to Reduce a Number in Binary Representation to One](https://leetcode.com/problems/number-of-steps-to-reduce-a-number-in-binary-representation-to-one/) | Bit Manipulation | O(log n) Time, O(1) Space| Easy|
 | 89 | [Gray Code](https://leetcode.com/problems/gray-code/) | Bit Manipulation | Time: O(2^n), Space: O(2^n)| Medium|
 |137 | [Single Number II](https://leetcode.com/problems/single-number-ii/) | Bit Manipulation | Time: O(n), Space: O(1)| Medium|

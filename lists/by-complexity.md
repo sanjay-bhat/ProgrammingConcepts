@@ -385,7 +385,7 @@
 | 757 | [Set Intersection Size At Least Two](https://leetcode.com/problems/set-intersection-size-at-least-two/) | Greedy, Sorting| Time: O(n log n), Space: O(n)  | Hard |
 | 759 | [Employee Free Time](https://leetcode.com/problems/employee-free-time/) | Interval, Priority Queue| Time: O(n log n), Space: O(n)  | Hard |
 | 765 | [Couples Holding Hands](https://leetcode.com/problems/couples-holding-hands/)| Greedy, Union-Find| Time: O(n log n), Space: O(n)  | Hard |
-| 774 | [Minimize Max Distance to Gas Station](https://leetcode.com/problems/minimize-max-distance-to-gas-station/) | Binary Search | Time: O(n log m), Space: O(1)  | Hard |
+| 774 | [📓 Minimize Max Distance to Gas Station](../leetcode/0774.ipynb) | Binary Search | Time: O(n log m), Space: O(1)  | Hard |
 | 778 | [Swim in Rising Water](https://leetcode.com/problems/swim-in-rising-water/)  | BFS, Priority Queue | Time: O(n log n), Space: O(n)  | Hard |
 | 780 | [Reaching Points](https://leetcode.com/problems/reaching-points/)| Math | Time: O(log n), Space: O(1)| Hard |
 | 786 | [K-th Smallest Prime Fraction](https://leetcode.com/problems/k-th-smallest-prime-fraction/) | Heap, Binary Search | Time: O(n log n), Space: O(n)  | Hard |

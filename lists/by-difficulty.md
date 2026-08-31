@@ -1353,7 +1353,7 @@
 | 770 | [Basic Calculator IV](https://leetcode.com/problems/basic-calculator-iv/)| Stack, Recursion| Time: O(n), Space: O(n)| Hard |
 | 772 | [Basic Calculator III](https://leetcode.com/problems/basic-calculator-iii/)| Stack, Recursion| Time: O(n), Space: O(n)| Hard |
 | 773 | [Sliding Puzzle](https://leetcode.com/problems/sliding-puzzle/) | BFS| Time: O(n^2), Space: O(n^2)  | Hard |
-| 774 | [Minimize Max Distance to Gas Station](https://leetcode.com/problems/minimize-max-distance-to-gas-station/) | Binary Search | Time: O(n log m), Space: O(1)| Hard |
+| 774 | [📓 Minimize Max Distance to Gas Station](../leetcode/0774.ipynb) | Binary Search | Time: O(n log m), Space: O(1)| Hard |
 | 778 | [Swim in Rising Water](https://leetcode.com/problems/swim-in-rising-water/)| BFS, Priority Queue| Time: O(n log n), Space: O(n)| Hard |
 | 780 | [Reaching Points](https://leetcode.com/problems/reaching-points/)| Math | Time: O(log n), Space: O(1)  | Hard |
 | 782 | [Transform to Chessboard](https://leetcode.com/problems/transform-to-chessboard/)| Array| Time: O(n^2), Space: O(1)| Hard |

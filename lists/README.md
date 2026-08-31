@@ -303,7 +303,7 @@
 | 1264 | [Page Completion](https://leetcode.com/problems/page-completion/) | Binary Search| O(log n) Time, O(1) Space| Medium|
 | 1482 | [📓 Minimum Number of Days to Make m Bouquets](../leetcode/1482.ipynb) | Binary Search| O(n log n) Time, O(1) Space| Medium|
 |668 | [📓 Kth Smallest Number in Multiplication Table](../leetcode/0668.ipynb) | Binary Search| Time: O(n log m), Space: O(1)| Hard|
-|774 | [Minimize Max Distance to Gas Station](https://leetcode.com/problems/minimize-max-distance-to-gas-station/) | Binary Search| Time: O(n log m), Space: O(1)| Hard|
+|774 | [📓 Minimize Max Distance to Gas Station](../leetcode/0774.ipynb) | Binary Search| Time: O(n log m), Space: O(1)| Hard|
 |793 | [Preimage Size of Factorial Zeroes Function](https://leetcode.com/problems/preimage-size-of-factorial-zeroes-function/) | Binary Search| Time: O(log n), Space: O(1)| Hard|
 | 1419 | [Minimize the Maximum of Two Arrays](https://leetcode.com/problems/minimize-the-maximum-of-two-arrays/) | Binary Search| O(n log n) Time, O(1) Space| Hard|
 | 852 | [📓 Peak Index in a Mountain Array](../leetcode/0852.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Medium |

@@ -779,7 +779,7 @@
 | 771 | [Jewels and Stones](https://leetcode.com/problems/jewels-and-stones/)   | Hash Map| Time: O(n), Space: O(n) | Easy |
 | 772 | [Basic Calculator III](https://leetcode.com/problems/basic-calculator-iii/)   | Stack, Recursion  | Time: O(n), Space: O(n) | Hard |
 | 773 | [Sliding Puzzle](https://leetcode.com/problems/sliding-puzzle/) | BFS | Time: O(n^2), Space: O(n^2) | Hard |
-| 774 | [Minimize Max Distance to Gas Station](https://leetcode.com/problems/minimize-max-distance-to-gas-station/) | Binary Search | Time: O(n log m), Space: O(1) | Hard |
+| 774 | [📓 Minimize Max Distance to Gas Station](../leetcode/0774.ipynb) | Binary Search | Time: O(n log m), Space: O(1) | Hard |
 | 775 | [Global and Local Inversions](https://leetcode.com/problems/global-and-local-inversions/) | Array, Sorting| Time: O(n log n), Space: O(n) | Medium |
 | 776 | [Split BST](https://leetcode.com/problems/split-bst/) | Tree | Time: O(h), Space: O(h) | Medium |
 | 777 | [Swap Adjacent in LR String](https://leetcode.com/problems/swap-adjacent-in-lr-string/) | Two Pointer | Time: O(n), Space: O(1) | Medium |

@@ -1084,7 +1084,7 @@
 |1279 | [Frog Jump II](https://leetcode.com/problems/frog-jump-ii/)| DP, Array | O(n) Time, O(n) Space  | Medium  |
 |1280 | [Interval List Intersections](https://leetcode.com/problems/interval-list-intersections/) | Two-pointer, Array | O(n + m) Time, O(n + m) Space| Medium  |
 |1282 | [Group People Given the Group Size They Belong To](https://leetcode.com/problems/group-people-given-the-group-size-they-belong-to/)| HashMap, Array| O(n) Time, O(n) Space  | Medium  |
-|1283 | [Find the Smallest Divisor Given a Threshold](https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold/)  | Binary Search, Math| O(n log m) Time, O(1) Space  | Medium  |
+|1283 | [📓 Find the Smallest Divisor Given a Threshold](../leetcode/1283.ipynb)  | Binary Search, Math| O(n log m) Time, O(1) Space  | Medium  |
 |1285 | [Find the Right Interval](https://leetcode.com/problems/find-the-right-interval/)| Binary Search, Array | O(n log n) Time, O(n) Space  | Medium  |
 |1286 | [Iterator for Combination](https://leetcode.com/problems/iterator-for-combination/) | Backtracking, Array| O(1) Time, O(n) Space  | Medium  |
 |1288 | [Remove Covered Intervals](https://leetcode.com/problems/remove-covered-intervals/) | Sorting, Array| O(n log n) Time, O(n) Space  | Medium  |

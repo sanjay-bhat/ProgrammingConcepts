@@ -317,7 +317,7 @@
 |1233 | [📓 Remove Sub-Folders from the Filesystem](../leetcode/1233.ipynb)| Binary Search, Array| O(n log n) Time, O(n) Space| Medium  |
 |1258 | [Synonym, Sort](https://leetcode.com/problems/synonym-sort/)| String, Sorting| O(n log n) Time, O(n) Space| Medium  |
 |1264 | [Page Completion](https://leetcode.com/problems/page-completion/)| Binary Search | O(log n) Time, O(1) Space  | Medium  |
-|1283 | [Find the Smallest Divisor Given a Threshold](https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold/) | Binary Search, Math | O(n log m) Time, O(1) Space| Medium  |
+|1283 | [📓 Find the Smallest Divisor Given a Threshold](../leetcode/1283.ipynb) | Binary Search, Math | O(n log m) Time, O(1) Space| Medium  |
 |1285 | [Find the Right Interval](https://leetcode.com/problems/find-the-right-interval/)| Binary Search, Array| O(n log n) Time, O(n) Space| Medium  |
 |1288 | [Remove Covered Intervals](https://leetcode.com/problems/remove-covered-intervals/)| Sorting, Array| O(n log n) Time, O(n) Space| Medium  |
 |1300 | [📓 Sum of Mutated Array Closest to Target](../leetcode/1300.ipynb)  | Binary Search, Array| O(n log n) Time, O(1) Space| Medium  |

@@ -1093,7 +1093,7 @@
 |1292 | [Maximum Side Length of a Square with Sum Less than or Equal to Threshold](https://leetcode.com/problems/maximum-side-length-of-a-square-with-sum-less-than-or-equal-to-threshold/) | Matrix, Sliding Window| O(n * m) Time, O(1) Space| Medium  |
 |1294 | [Combination Sum II](https://leetcode.com/problems/combination-sum-ii/)  | Backtracking, Array| O(2^n) Time, O(n) Space| Medium  |
 |1297 | [Maximum Number of Occurrences of a Substring](https://leetcode.com/problems/maximum-number-of-occurrences-of-a-substring/)| HashMap, Sliding Window  | O(n) Time, O(n) Space  | Medium  |
-|1300 | [Sum of Mutated Array Closest to Target](https://leetcode.com/problems/sum-of-mutated-array-closest-to-target/) | Binary Search, Array | O(n log n) Time, O(1) Space  | Medium  |
+|1300 | [📓 Sum of Mutated Array Closest to Target](../leetcode/1300.ipynb) | Binary Search, Array | O(n log n) Time, O(1) Space  | Medium  |
 |1302 | [Deepest Leaves Sum](https://leetcode.com/problems/deepest-leaves-sum/)  | Tree, BFS | O(n) Time, O(n) Space  | Medium  |
 |1303 | [Find the Team Size](https://leetcode.com/problems/find-the-team-size/)  | Array, Sorting| O(n log n) Time, O(n) Space  | Medium  |
 |1305 | [All Elements in Two Binary Search Trees](https://leetcode.com/problems/all-elements-in-two-binary-search-trees/) | Tree, Sorting, Merge | O(n + m) Time, O(n + m) Space| Medium  |

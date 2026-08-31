@@ -309,7 +309,7 @@
 | 852 | [📓 Peak Index in a Mountain Array](../leetcode/0852.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Medium |
 | 1233 | [📓 Remove Sub-Folders from the Filesystem](../leetcode/1233.ipynb) | Binary Search, Array | O(n log n) Time, O(n) Space| Medium|
 | 1285 | [Find the Right Interval](https://leetcode.com/problems/find-the-right-interval/) | Binary Search, Array | O(n log n) Time, O(n) Space| Medium|
-| 1300 | [Sum of Mutated Array Closest to Target](https://leetcode.com/problems/sum-of-mutated-array-closest-to-target/) | Binary Search, Array | O(n log n) Time, O(1) Space| Medium|
+| 1300 | [📓 Sum of Mutated Array Closest to Target](../leetcode/1300.ipynb) | Binary Search, Array | O(n log n) Time, O(1) Space| Medium|
 | 1459 | [Find the Start and End of the Range](https://leetcode.com/problems/find-the-start-and-end-of-the-range/) | Binary Search, Array | O(log n) Time, O(1) Space| Medium|
 | 1231 | [Divide Chocolate II](https://leetcode.com/problems/divide-chocolate-ii/) | Binary Search, Dynamic Programming | O(n log n) Time, O(1) Space| Medium|
 |410 | [Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/) | Binary Search, Dynamic Programming | Time: O(n log m), Space: O(n)| Hard|

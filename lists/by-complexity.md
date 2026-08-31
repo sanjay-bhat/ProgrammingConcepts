@@ -179,7 +179,7 @@
 | 204 | [Count Primes](https://leetcode.com/problems/count-primes/)| Sieve of Eratosthenes  | Time: O(n log log n), Space: O(n)| Easy |
 | 252 | [Meeting Rooms](https://leetcode.com/problems/meeting-rooms/)  | Greedy| Time: O(n log n), Space: O(1)  | Easy |
 | 263 | [Ugly Number](https://leetcode.com/problems/ugly-number/)  | Math | Time: O(log n), Space: O(1)| Easy |
-| 278 | [First Bad Version](https://leetcode.com/problems/first-bad-version/)| Binary Search | Time: O(log n), Space: O(1)| Easy |
+| 278 | [📓 First Bad Version](../leetcode/0278.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
 | 326 | [Power of Three](https://leetcode.com/problems/power-of-three/)| Math | Time: O(log n), Space: O(1)| Easy |
 | 367 | [Valid Perfect Square](https://leetcode.com/problems/valid-perfect-square/)  | Binary Search | Time: O(log n), Space: O(1)| Easy |
 | 374 | [Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/) | Binary Search | Time: O(log n), Space: O(1)| Easy |

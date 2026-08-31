@@ -300,7 +300,7 @@
 | 275 | [H-Index II](https://leetcode.com/problems/h-index-ii/) | Binary Search | Time: O(log n), Space: O(1) | Medium |
 | 276 | [Paint Fence](https://leetcode.com/problems/paint-fence/) | Dynamic Programming | Time: O(n), Space: O(1) | Medium |
 | 277 | [Find the Celebrity](https://leetcode.com/problems/find-the-celebrity/) | Graph, Two Pointers | Time: O(n), Space: O(1) | Medium |
-| 278 | [First Bad Version](https://leetcode.com/problems/first-bad-version/) | Binary Search | Time: O(log n), Space: O(1) | Easy |
+| 278 | [📓 First Bad Version](leetcode/0278.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
 | 279 | [Perfect Squares](https://leetcode.com/problems/perfect-squares/) | Dynamic Programming | Time: O(n√n), Space: O(n) | Medium |
 | 280 | [Wiggle Sort](https://leetcode.com/problems/wiggle-sort/) | Sorting, Two Pointers | Time: O(n log n), Space: O(1) | Medium |
 | 281 | [Zigzag Iterator](https://leetcode.com/problems/zigzag-iterator/) | Iterator | Time: O(1), Space: O(k) | Medium |

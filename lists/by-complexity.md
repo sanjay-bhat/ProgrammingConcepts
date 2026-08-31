@@ -314,7 +314,7 @@
 |1211 | [Divide Chocolate](https://leetcode.com/problems/divide-chocolate/) | Binary Search, Math | O(n log n) Time, O(1) Space| Medium  |
 |1229 | [Meeting Scheduler](https://leetcode.com/problems/meeting-scheduler/)| Interval, Sorting | O(n log n) Time, O(1) Space| Medium  |
 |1231 | [Divide Chocolate II](https://leetcode.com/problems/divide-chocolate-ii/) | Binary Search, Dynamic Programming  | O(n log n) Time, O(1) Space| Medium  |
-|1233 | [Find the Right Interval](https://leetcode.com/problems/find-the-right-interval/)| Binary Search, Array| O(n log n) Time, O(n) Space| Medium  |
+|1233 | [📓 Remove Sub-Folders from the Filesystem](../leetcode/1233.ipynb)| Binary Search, Array| O(n log n) Time, O(n) Space| Medium  |
 |1258 | [Synonym, Sort](https://leetcode.com/problems/synonym-sort/)| String, Sorting| O(n log n) Time, O(n) Space| Medium  |
 |1264 | [Page Completion](https://leetcode.com/problems/page-completion/)| Binary Search | O(log n) Time, O(1) Space  | Medium  |
 |1283 | [Find the Smallest Divisor Given a Threshold](https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold/) | Binary Search, Math | O(n log m) Time, O(1) Space| Medium  |

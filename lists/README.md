@@ -307,7 +307,7 @@
 |793 | [📓 Preimage Size of Factorial Zeroes Function](../leetcode/0793.ipynb) | Binary Search| Time: O(log n), Space: O(1)| Hard|
 | 1419 | [Minimize the Maximum of Two Arrays](https://leetcode.com/problems/minimize-the-maximum-of-two-arrays/) | Binary Search| O(n log n) Time, O(1) Space| Hard|
 | 852 | [📓 Peak Index in a Mountain Array](../leetcode/0852.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Medium |
-| 1233 | [Find the Right Interval](https://leetcode.com/problems/find-the-right-interval/) | Binary Search, Array | O(n log n) Time, O(n) Space| Medium|
+| 1233 | [📓 Remove Sub-Folders from the Filesystem](../leetcode/1233.ipynb) | Binary Search, Array | O(n log n) Time, O(n) Space| Medium|
 | 1285 | [Find the Right Interval](https://leetcode.com/problems/find-the-right-interval/) | Binary Search, Array | O(n log n) Time, O(n) Space| Medium|
 | 1300 | [Sum of Mutated Array Closest to Target](https://leetcode.com/problems/sum-of-mutated-array-closest-to-target/) | Binary Search, Array | O(n log n) Time, O(1) Space| Medium|
 | 1459 | [Find the Start and End of the Range](https://leetcode.com/problems/find-the-start-and-end-of-the-range/) | Binary Search, Array | O(log n) Time, O(1) Space| Medium|

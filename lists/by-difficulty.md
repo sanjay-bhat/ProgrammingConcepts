@@ -1046,7 +1046,7 @@
 |1228 | [Missing Number in Arithmetic Progression](https://leetcode.com/problems/missing-number-in-arithmetic-progression/)  | Math | O(n) Time, O(1) Space  | Medium  |
 |1229 | [Meeting Scheduler](https://leetcode.com/problems/meeting-scheduler/) | Interval, Sorting  | O(n log n) Time, O(1) Space  | Medium  |
 |1231 | [Divide Chocolate II](https://leetcode.com/problems/divide-chocolate-ii/)| Binary Search, Dynamic Programming  | O(n log n) Time, O(1) Space  | Medium  |
-|1233 | [Find the Right Interval](https://leetcode.com/problems/find-the-right-interval/)| Binary Search, Array | O(n log n) Time, O(n) Space  | Medium  |
+|1233 | [📓 Remove Sub-Folders from the Filesystem](../leetcode/1233.ipynb)| Binary Search, Array | O(n log n) Time, O(n) Space  | Medium  |
 |1234 | [Replace the Substring for Balanced String](https://leetcode.com/problems/replace-the-substring-for-balanced-string/)| Sliding Window, String| O(n) Time, O(1) Space  | Medium  |
 |1237 | [Rotate Function](https://leetcode.com/problems/rotate-function/)| Math, Array| O(n) Time, O(n) Space  | Medium  |
 |1238 | [Circular Permutation in Binary Representation](https://leetcode.com/problems/circular-permutation-in-binary-representation/)| Bit Manipulation, Array  | O(n) Time, O(1) Space  | Medium  |

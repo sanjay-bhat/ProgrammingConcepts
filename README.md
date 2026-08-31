@@ -1260,7 +1260,7 @@
 | 1230 | [Toss Strange Coins](https://leetcode.com/problems/toss-strange-coins/)| Dynamic Programming, Probability | O(n) Time, O(1) Space | Hard |
 | 1231 | [Divide Chocolate II](https://leetcode.com/problems/divide-chocolate-ii/)| Binary Search, Dynamic Programming | O(n log n) Time, O(1) Space | Medium |
 | 1232 | [Check If It Is a Straight Line](https://leetcode.com/problems/check-if-it-is-a-straight-line/) | Geometry, Math | O(n) Time, O(1) Space | Easy |
-| 1233 | [Find the Right Interval](https://leetcode.com/problems/find-the-right-interval/) | Binary Search, Array| O(n log n) Time, O(n) Space | Medium |
+| 1233 | [📓 Remove Sub-Folders from the Filesystem](leetcode/1233.ipynb) | Binary Search, Array| O(n log n) Time, O(n) Space | Medium |
 | 1234 | [Replace the Substring for Balanced String](https://leetcode.com/problems/replace-the-substring-for-balanced-string/) | Sliding Window, String  | O(n) Time, O(1) Space | Medium |
 | 1235 | [Job Scheduler](https://leetcode.com/problems/job-scheduler/)  | Dynamic Programming, Array| O(n^2) Time, O(n^2) Space | Hard |
 | 1236 | [String Compression II](https://leetcode.com/problems/string-compression-ii/) | String, Dynamic Programming| O(n) Time, O(n) Space | Hard |

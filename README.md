@@ -1258,7 +1258,7 @@
 | 1228 | [Missing Number in Arithmetic Progression](https://leetcode.com/problems/missing-number-in-arithmetic-progression/) | Math | O(n) Time, O(1) Space | Medium |
 | 1229 | [Meeting Scheduler](https://leetcode.com/problems/meeting-scheduler/)  | Interval, Sorting | O(n log n) Time, O(1) Space | Medium |
 | 1230 | [Toss Strange Coins](https://leetcode.com/problems/toss-strange-coins/)| Dynamic Programming, Probability | O(n) Time, O(1) Space | Hard |
-| 1231 | [Divide Chocolate II](https://leetcode.com/problems/divide-chocolate-ii/)| Binary Search, Dynamic Programming | O(n log n) Time, O(1) Space | Medium |
+| 1231 | [📓 Divide Chocolate](leetcode/1231.ipynb)| Binary Search, Dynamic Programming | O(n log n) Time, O(1) Space | Medium |
 | 1232 | [Check If It Is a Straight Line](https://leetcode.com/problems/check-if-it-is-a-straight-line/) | Geometry, Math | O(n) Time, O(1) Space | Easy |
 | 1233 | [📓 Remove Sub-Folders from the Filesystem](leetcode/1233.ipynb) | Binary Search, Array| O(n log n) Time, O(n) Space | Medium |
 | 1234 | [Replace the Substring for Balanced String](https://leetcode.com/problems/replace-the-substring-for-balanced-string/) | Sliding Window, String  | O(n) Time, O(1) Space | Medium |

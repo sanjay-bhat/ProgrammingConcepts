@@ -313,7 +313,7 @@
 |1205 | [Google Question](https://leetcode.com/problems/google-question/)| Array, Sorting| O(n log n) Time, O(1) Space| Medium  |
 |1211 | [Divide Chocolate](https://leetcode.com/problems/divide-chocolate/) | Binary Search, Math | O(n log n) Time, O(1) Space| Medium  |
 |1229 | [Meeting Scheduler](https://leetcode.com/problems/meeting-scheduler/)| Interval, Sorting | O(n log n) Time, O(1) Space| Medium  |
-|1231 | [Divide Chocolate II](https://leetcode.com/problems/divide-chocolate-ii/) | Binary Search, Dynamic Programming  | O(n log n) Time, O(1) Space| Medium  |
+|1231 | [📓 Divide Chocolate](../leetcode/1231.ipynb) | Binary Search, Dynamic Programming  | O(n log n) Time, O(1) Space| Medium  |
 |1233 | [📓 Remove Sub-Folders from the Filesystem](../leetcode/1233.ipynb)| Binary Search, Array| O(n log n) Time, O(n) Space| Medium  |
 |1258 | [Synonym, Sort](https://leetcode.com/problems/synonym-sort/)| String, Sorting| O(n log n) Time, O(n) Space| Medium  |
 |1264 | [Page Completion](https://leetcode.com/problems/page-completion/)| Binary Search | O(log n) Time, O(1) Space  | Medium  |

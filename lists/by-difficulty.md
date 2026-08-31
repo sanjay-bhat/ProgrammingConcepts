@@ -1045,7 +1045,7 @@
 |1227 | [Airplane Seat Assignment Probability](https://leetcode.com/problems/airplane-seat-assignment-probability/) | Probability, Simulation  | O(1) Time, O(1) Space  | Medium  |
 |1228 | [Missing Number in Arithmetic Progression](https://leetcode.com/problems/missing-number-in-arithmetic-progression/)  | Math | O(n) Time, O(1) Space  | Medium  |
 |1229 | [Meeting Scheduler](https://leetcode.com/problems/meeting-scheduler/) | Interval, Sorting  | O(n log n) Time, O(1) Space  | Medium  |
-|1231 | [Divide Chocolate II](https://leetcode.com/problems/divide-chocolate-ii/)| Binary Search, Dynamic Programming  | O(n log n) Time, O(1) Space  | Medium  |
+|1231 | [📓 Divide Chocolate](../leetcode/1231.ipynb)| Binary Search, Dynamic Programming  | O(n log n) Time, O(1) Space  | Medium  |
 |1233 | [📓 Remove Sub-Folders from the Filesystem](../leetcode/1233.ipynb)| Binary Search, Array | O(n log n) Time, O(n) Space  | Medium  |
 |1234 | [Replace the Substring for Balanced String](https://leetcode.com/problems/replace-the-substring-for-balanced-string/)| Sliding Window, String| O(n) Time, O(1) Space  | Medium  |
 |1237 | [Rotate Function](https://leetcode.com/problems/rotate-function/)| Math, Array| O(n) Time, O(n) Space  | Medium  |

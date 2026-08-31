@@ -412,7 +412,7 @@
 |1330 | [Super Egg Drop](https://leetcode.com/problems/super-egg-drop/)| Dynamic Programming | O(k * log n) Time, O(k * log n) Space| Hard |
 |1354 | [Construct Target Array With Multiple Sums](https://leetcode.com/problems/construct-target-array-with-multiple-sums/)| Priority Queue, Greedy | O(n log n) Time, O(n) Space| Hard |
 |1383 | [Maximum Performance of a Team](https://leetcode.com/problems/maximum-performance-of-a-team/)  | Greedy, Heap  | O(n log n) Time, O(n) Space| Hard |
-|1419 | [Minimize the Maximum of Two Arrays](https://leetcode.com/problems/minimize-the-maximum-of-two-arrays/) | Binary Search | O(n log n) Time, O(1) Space| Hard |
+|1419 | [📓 Minimum Number of Frogs Croaking](../leetcode/1419.ipynb) | Binary Search | O(n log n) Time, O(1) Space| Hard |
 |1425 | [Constrained Subset Sum](https://leetcode.com/problems/constrained-subset-sum/)  | Dynamic Programming, Queue | O(n log n) Time, O(n) Space| Hard |
 |1439 | [Find the Kth Smallest Sum of a Matrix with Sorted Rows](https://leetcode.com/problems/find-the-kth-smallest-sum-of-a-matrix-with-sorted-rows/) | Heap, Matrix  | O(k log n) Time, O(n) Space| Hard |
 |1478 | [Max Sum of Rectangle No Larger Than K](https://leetcode.com/problems/max-sum-of-rectangle-no-larger-than-k/) | DP, Binary Search | O(n^2 log n) Time, O(n) Space  | Hard |

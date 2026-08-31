@@ -305,7 +305,7 @@
 |668 | [📓 Kth Smallest Number in Multiplication Table](0668.ipynb) | Binary Search| Time: O(n log m), Space: O(1)| Hard|
 |774 | [📓 Minimize Max Distance to Gas Station](0774.ipynb) | Binary Search| Time: O(n log m), Space: O(1)| Hard|
 |793 | [📓 Preimage Size of Factorial Zeroes Function](0793.ipynb) | Binary Search| Time: O(log n), Space: O(1)| Hard|
-| 1419 | [Minimize the Maximum of Two Arrays](https://leetcode.com/problems/minimize-the-maximum-of-two-arrays/) | Binary Search| O(n log n) Time, O(1) Space| Hard|
+| 1419 | [📓 Minimum Number of Frogs Croaking](1419.ipynb) | Binary Search| O(n log n) Time, O(1) Space| Hard|
 | 852 | [📓 Peak Index in a Mountain Array](0852.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Medium |
 | 1233 | [📓 Remove Sub-Folders from the Filesystem](1233.ipynb) | Binary Search, Array | O(n log n) Time, O(n) Space| Medium|
 | 1285 | [Find the Right Interval](https://leetcode.com/problems/find-the-right-interval/) | Binary Search, Array | O(n log n) Time, O(n) Space| Medium|

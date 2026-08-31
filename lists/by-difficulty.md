@@ -1485,7 +1485,7 @@
 |1402 | [Redundant Connection II](https://leetcode.com/problems/redundant-connection-ii/)| Graph, Union-Find  | O(n) Time, O(n) Space  | Hard |
 |1406 | [Stone Game III](https://leetcode.com/problems/stone-game-iii/) | Dynamic Programming, DP  | O(n) Time, O(n) Space  | Hard |
 |1411 | [Number of Ways to Paint N × 3 Grid](https://leetcode.com/problems/number-of-ways-to-paint-n-3-grid/)| DP, Combinatorics  | O(n) Time, O(1) Space  | Hard |
-|1419 | [Minimize the Maximum of Two Arrays](https://leetcode.com/problems/minimize-the-maximum-of-two-arrays/)| Binary Search | O(n log n) Time, O(1) Space  | Hard |
+|1419 | [📓 Minimum Number of Frogs Croaking](../leetcode/1419.ipynb)| Binary Search | O(n log n) Time, O(1) Space  | Hard |
 |1421 | [N-Queens II](https://leetcode.com/problems/n-queens-ii/)| Backtracking  | O(n!) Time, O(n) Space | Hard |
 |1425 | [Constrained Subset Sum](https://leetcode.com/problems/constrained-subset-sum/)| Dynamic Programming, Queue | O(n log n) Time, O(n) Space  | Hard |
 |1434 | [Number of Ways to Wear Different Hats to Each Other](https://leetcode.com/problems/number-of-ways-to-wear-different-hats-to-each-other/)  | HashMap, Array| O(n * m) Time, O(n * m) Space| Hard |

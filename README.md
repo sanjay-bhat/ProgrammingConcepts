@@ -1446,7 +1446,7 @@
 | 1416 | [Restore The Array](https://leetcode.com/problems/restore-the-array/)| Dynamic Programming| O(n) Time, O(n) Space | Medium |
 | 1417 | [Rearrange the Array to Maximize Prefix Score](https://leetcode.com/problems/rearrange-the-array-to-maximize-prefix-score/) | Sorting, Greedy | O(n log n) Time, O(n) Space | Medium |
 | 1418 | [Display Table of Food Orders in a Restaurant](https://leetcode.com/problems/display-table-of-food-orders-in-a-restaurant/) | HashMap, Sorting| O(n log n) Time, O(n) Space | Medium |
-| 1419 | [Minimize the Maximum of Two Arrays](https://leetcode.com/problems/minimize-the-maximum-of-two-arrays/) | Binary Search | O(n log n) Time, O(1) Space | Hard |
+| 1419 | [📓 Minimum Number of Frogs Croaking](leetcode/1419.ipynb) | Binary Search | O(n log n) Time, O(1) Space | Hard |
 | 1420 | [Find Good Days to Rob the Bank](https://leetcode.com/problems/find-good-days-to-rob-the-bank/) | Dynamic Programming, Array  | O(n) Time, O(n) Space | Medium |
 | 1421 | [N-Queens II](https://leetcode.com/problems/n-queens-ii/) | Backtracking  | O(n!) Time, O(n) Space | Hard |
 | 1422 | [Maximum Score After Splitting a String](https://leetcode.com/problems/maximum-score-after-splitting-a-string/) | String, Greedy| O(n) Time, O(1) Space | Easy |

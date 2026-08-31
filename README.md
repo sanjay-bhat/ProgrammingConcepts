@@ -57,7 +57,7 @@
 | 32 | [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/) | Stack, Dynamic Programming | Time: O(n), Space: O(n) | Hard |
 | 33 | [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | Binary Search | Time: O(log n), Space: O(1) | Medium |
 | 34 | [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | Binary Search | Time: O(log n), Space: O(1) | Medium |
-| 35 | [Search Insert Position](https://leetcode.com/problems/search-insert-position/) | Binary Search | Time: O(log n), Space: O(1) | Easy |
+| 35 | [📓 Search Insert Position](leetcode/0035.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
 | 36 | [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/) | Hash Set | Time: O(n^2), Space: O(n^2) | Medium |
 | 37 | [Sudoku Solver](https://leetcode.com/problems/sudoku-solver/) | Backtracking | Time: O(9^81), Space: O(1) | Hard |
 | 38 | [Count and Say](https://leetcode.com/problems/count-and-say/) | String | Time: O(n), Space: O(1) | Easy |

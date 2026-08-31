@@ -11,7 +11,7 @@
 |26 | [📓 Remove Duplicates from Sorted Array](../leetcode/0026.ipynb) | Two Pointers| Time: O(n), Space: O(1)| Easy |
 |27 | [📓 Remove Element](../leetcode/0027.ipynb) | Two Pointers| Time: O(n), Space: O(1)| Easy |
 |28 | [Implement strStr()](https://leetcode.com/problems/implement-strstr/) | String  | Time: O(n), Space: O(1)| Easy |
-|35 | [Search Insert Position](https://leetcode.com/problems/search-insert-position/)| Binary Search | Time: O(log n), Space: O(1)  | Easy |
+| 35 | [📓 Search Insert Position](../leetcode/0035.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
 |38 | [Count and Say](https://leetcode.com/problems/count-and-say/) | String  | Time: O(n), Space: O(1)| Easy |
 |53 | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | Dynamic Programming| Time: O(n), Space: O(1)| Easy |
 |58 | [Length of Last Word](https://leetcode.com/problems/length-of-last-word/)| String  | Time: O(n), Space: O(1)| Easy |

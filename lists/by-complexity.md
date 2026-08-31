@@ -171,7 +171,7 @@
 |1449 | [Form Largest Integer With Digits That Add up to Target](https://leetcode.com/problems/form-largest-integer-with-digits-that-add-up-to-target/) | DP, Greedy | O(target^2) Time, O(target) Space| Hard |
 |7 | [📓 Reverse Integer](../leetcode/0007.ipynb)| Integer  | Time: O(log x), Space: O(1)| Easy |
 |9 | [📓 Palindrome Number](../leetcode/0009.ipynb)| Integer  | Time: O(log x), Space: O(1)| Easy |
-|  35 | [Search Insert Position](https://leetcode.com/problems/search-insert-position/)  | Binary Search | Time: O(log n), Space: O(1)| Easy |
+| 35 | [📓 Search Insert Position](../leetcode/0035.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
 |  69 | [Sqrt(x)](https://leetcode.com/problems/sqrtx/)| Math | Time: O(log x), Space: O(1)| Easy |
 | 168 | [Excel Sheet Column Title](https://leetcode.com/problems/excel-sheet-column-title/)| Math | Time: O(log n), Space: O(1)| Easy |
 | 172 | [Factorial Trailing Zeroes](https://leetcode.com/problems/factorial-trailing-zeroes/) | Math | Time: O(log n), Space: O(1)| Easy |

@@ -318,7 +318,7 @@
 | 1283 | [📓 Find the Smallest Divisor Given a Threshold](../leetcode/1283.ipynb) | Binary Search, Math| O(n log m) Time, O(1) Space| Medium|
 |327 | [📓 Count of Range Sum](../leetcode/0327.ipynb) | Binary Search, Merge Sort| Time: O(n log n), Space: O(n)| Hard|
 | 1498 | [📓 Number of Subsequences That Satisfy the Given Sum Condition](../leetcode/1498.ipynb) | Binary Search, Sorting | O(n log n) Time, O(n) Space| Medium|
-| 1062 | [Longest Repeating Substring](https://leetcode.com/problems/longest-repeating-substring/) | Binary Search, String| Time: O(n log n), Space: O(n)| Hard|
+| 1062 | [📓 Longest Repeating Substring](../leetcode/1062.ipynb) | Binary Search, String| Time: O(n log n), Space: O(n)| Hard|
 |719 | [📓 Find K-th Smallest Pair Distance](../leetcode/0719.ipynb) | Binary Search, Two Pointer | Time: O(n log n), Space: O(1)| Hard|
 
 ## Binary Search Tree

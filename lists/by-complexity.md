@@ -404,7 +404,7 @@
 |1012 | [Numbers With Repeated Digits](https://leetcode.com/problems/numbers-with-repeated-digits/) | Math | Time: O(log n), Space: O(1)| Hard |
 |1015 | [Swim in Rising Water](https://leetcode.com/problems/swim-in-rising-water/)  | DFS, Graph, Binary Search  | Time: O(n log n), Space: O(n)  | Hard |
 |1044 | [Longest Duplicate Substring](https://leetcode.com/problems/longest-duplicate-substring/) | String, Binary Search, Hashing  | Time: O(n log n), Space: O(n)  | Hard |
-|1062 | [Longest Repeating Substring](https://leetcode.com/problems/longest-repeating-substring/) | Binary Search, String  | Time: O(n log n), Space: O(n)  | Hard |
+|1062 | [📓 Longest Repeating Substring](../leetcode/1062.ipynb) | Binary Search, String  | Time: O(n log n), Space: O(n)  | Hard |
 |1150 | [Split Array into Consecutive Subsequences](https://leetcode.com/problems/split-array-into-consecutive-subsequences/)| Greedy, Heap  | Time: O(n log n), Space: O(n)  | Hard |
 |1168 | [Optimize Water Distribution in a Village](https://leetcode.com/problems/optimize-water-distribution-in-a-village/)  | Union-Find, Graph | O(n log n) Time, O(n) Space| Hard |
 |1172 | [Dinner Plate Stacks](https://leetcode.com/problems/dinner-plate-stacks/) | Stack, Priority Queue  | O(log n) Time, O(n) Space  | Hard |

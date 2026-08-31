@@ -1088,7 +1088,7 @@
 | 1059 | [The K Weakest Rows in a Matrix](https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix/)| Sorting| Time: O(m log m), Space: O(1)| Easy |
 | 1060 | [📓 Missing Element in Sorted Array](leetcode/1060.ipynb) | Binary Search on Missing Count | Time: O(log n), Space: O(1) | Medium |
 | 1061 | [Lexicographically Smallest Equivalent String](https://leetcode.com/problems/lexicographically-smallest-equivalent-string/) | Union Find   | Time: O(n), Space: O(n)| Medium |
-| 1062 | [Longest Repeating Substring](https://leetcode.com/problems/longest-repeating-substring/) | Binary Search, String| Time: O(n log n), Space: O(n)| Hard |
+| 1062 | [📓 Longest Repeating Substring](leetcode/1062.ipynb) | Binary Search, String| Time: O(n log n), Space: O(n)| Hard |
 | 1063 | [Valid Triangles](https://leetcode.com/problems/valid-triangles/) | Array, Math| Time: O(n^3), Space: O(1)  | Medium |
 | 1064 | [Number of Ways to Split a String](https://leetcode.com/problems/number-of-ways-to-split-a-string/) | DP, String | Time: O(n), Space: O(n)| Medium |
 | 1065 | [Train System](https://leetcode.com/problems/train-system/)| Graph, BFS | Time: O(n^2), Space: O(n)  | Medium |

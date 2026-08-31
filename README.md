@@ -55,7 +55,7 @@
 | 30 | [Substring with Concatenation of All Words](https://leetcode.com/problems/substring-with-concatenation-of-all-words/) | Hash Map, Sliding Window | Time: O(n * m), Space: O(n) | Hard |
 | 31 | [Next Permutation](https://leetcode.com/problems/next-permutation/) | Array | Time: O(n), Space: O(1) | Medium |
 | 32 | [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/) | Stack, Dynamic Programming | Time: O(n), Space: O(n) | Hard |
-| 33 | [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | Binary Search | Time: O(log n), Space: O(1) | Medium |
+| 33 | [📓 Search in Rotated Sorted Array](leetcode/0033.ipynb) | Binary Search with Pivot Detection | Time: O(log n), Space: O(1) | Medium |
 | 34 | [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | Binary Search | Time: O(log n), Space: O(1) | Medium |
 | 35 | [📓 Search Insert Position](leetcode/0035.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
 | 36 | [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/) | Hash Set | Time: O(n^2), Space: O(n^2) | Medium |

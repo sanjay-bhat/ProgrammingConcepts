@@ -217,7 +217,7 @@
 |1464 | [Max Product of Two Elements in an Array](https://leetcode.com/problems/max-product-of-two-elements-in-an-array/)| Sorting, Array| O(n log n) Time, O(1) Space| Easy |
 |1491 | [Average Salary Excluding the Minimum and Maximum Salary](https://leetcode.com/problems/average-salary-excluding-the-minimum-and-maximum-salary/) | Array, Sorting| O(n log n) Time, O(1) Space| Easy |
 |  29 | [Divide Two Integers](https://leetcode.com/problems/divide-two-integers/) | Math | Time: O(log n), Space: O(1)| Medium  |
-|  33 | [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)| Binary Search | Time: O(log n), Space: O(1)| Medium  |
+| 33 | [📓 Search in Rotated Sorted Array](../leetcode/0033.ipynb) | Binary Search with Pivot Detection | Time: O(log n), Space: O(1) | Medium |
 |  34 | [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | Binary Search | Time: O(log n), Space: O(1)| Medium  |
 |  50 | [Pow(x, n)](https://leetcode.com/problems/powx-n/)| Math | Time: O(log n), Space: O(1)| Medium  |
 |  56 | [Merge Intervals](https://leetcode.com/problems/merge-intervals/)| Sorting  | Time: O(n log n), Space: O(1)  | Medium  |

@@ -413,7 +413,7 @@
 |24 | [Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/)| Linked List| Time: O(n), Space: O(1)| Medium  |
 |29 | [Divide Two Integers](https://leetcode.com/problems/divide-two-integers/)| Math | Time: O(log n), Space: O(1)  | Medium  |
 |31 | [Next Permutation](https://leetcode.com/problems/next-permutation/) | Array| Time: O(n), Space: O(1)| Medium  |
-|33 | [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)| Binary Search | Time: O(log n), Space: O(1)  | Medium  |
+| 33 | [📓 Search in Rotated Sorted Array](../leetcode/0033.ipynb) | Binary Search with Pivot Detection | Time: O(log n), Space: O(1) | Medium |
 |34 | [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)| Binary Search | Time: O(log n), Space: O(1)  | Medium  |
 |36 | [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/)| Hash Set| Time: O(n^2), Space: O(n^2)  | Medium  |
 |39 | [Combination Sum](https://leetcode.com/problems/combination-sum/)| Backtracking  | Time: O(2^n), Space: O(n)| Medium  |

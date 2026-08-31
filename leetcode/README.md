@@ -285,7 +285,7 @@
 | 475 | [📓 Heaters](0475.ipynb) | Binary Search | Time: $O(n \log n)$, Space: $O(1)$ | Easy |
 | 704 | [📓 Binary Search](0704.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
 | 744 | [📓 Find Smallest Letter Greater Than Target](0744.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
-| 33 | [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | Binary Search| Time: O(log n), Space: O(1)| Medium|
+| 33 | [📓 Search in Rotated Sorted Array](0033.ipynb) | Binary Search with Pivot Detection | Time: O(log n), Space: O(1) | Medium |
 | 34 | [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | Binary Search| Time: O(log n), Space: O(1)| Medium|
 | 74 | [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) | Binary Search| Time: O(log(m * n)), Space: O(1) | Medium|
 | 81 | [Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/) | Binary Search| Time: O(n), Space: O(1)| Medium|

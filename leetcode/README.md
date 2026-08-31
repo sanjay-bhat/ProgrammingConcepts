@@ -282,9 +282,9 @@
 | 367 | [📓 Valid Perfect Square](0367.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
 | 374 | [📓 Guess Number Higher or Lower](0374.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
 | 441 | [📓 Arranging Coins](0441.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
-|475 | [Heaters](https://leetcode.com/problems/heaters/) | Binary Search| Time: O(n log n), Space: O(1)| Easy|
-|704 | [Binary Search](https://leetcode.com/problems/binary-search/) | Binary Search| Time: O(log n), Space: O(1)| Easy|
-|744 | [Find Smallest Letter Greater Than Target](https://leetcode.com/problems/find-smallest-letter-greater-than-target/) | Binary Search| Time: O(log n), Space: O(1)| Easy|
+| 475 | [📓 Heaters](0475.ipynb) | Binary Search | Time: $O(n \log n)$, Space: $O(1)$ | Easy |
+| 704 | [📓 Binary Search](0704.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
+| 744 | [📓 Find Smallest Letter Greater Than Target](0744.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
 | 33 | [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | Binary Search| Time: O(log n), Space: O(1)| Medium|
 | 34 | [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | Binary Search| Time: O(log n), Space: O(1)| Medium|
 | 74 | [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) | Binary Search| Time: O(log(m * n)), Space: O(1) | Medium|
@@ -306,7 +306,7 @@
 |774 | [Minimize Max Distance to Gas Station](https://leetcode.com/problems/minimize-max-distance-to-gas-station/) | Binary Search| Time: O(n log m), Space: O(1)| Hard|
 |793 | [Preimage Size of Factorial Zeroes Function](https://leetcode.com/problems/preimage-size-of-factorial-zeroes-function/) | Binary Search| Time: O(log n), Space: O(1)| Hard|
 | 1419 | [Minimize the Maximum of Two Arrays](https://leetcode.com/problems/minimize-the-maximum-of-two-arrays/) | Binary Search| O(n log n) Time, O(1) Space| Hard|
-|852 | [Peak Index in a Mountain Array](https://leetcode.com/problems/peak-index-in-a-mountain-array/) | Binary Search, Array | Time: O(log n), Space: O(1)| Easy|
+| 852 | [📓 Peak Index in a Mountain Array](0852.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Medium |
 | 1233 | [Find the Right Interval](https://leetcode.com/problems/find-the-right-interval/) | Binary Search, Array | O(n log n) Time, O(n) Space| Medium|
 | 1285 | [Find the Right Interval](https://leetcode.com/problems/find-the-right-interval/) | Binary Search, Array | O(n log n) Time, O(n) Space| Medium|
 | 1300 | [Sum of Mutated Array Closest to Target](https://leetcode.com/problems/sum-of-mutated-array-closest-to-target/) | Binary Search, Array | O(n log n) Time, O(1) Space| Medium|
@@ -324,7 +324,7 @@
 ## Binary Search Tree
 | Serial No. | Problem Title | Data Structure | Time and Space Complexity | Level |
 | :--- | :--- | :--- | :--- | :--- |
-|700 | [Search in a Binary Search Tree](https://leetcode.com/problems/search-in-a-binary-search-tree/) | Binary Search Tree | Time: O(log n), Space: O(1)| Easy|
+| 700 | [📓 Search in a Binary Search Tree](0700.ipynb) | Iterative (BST property) | Time: $O(h)$, Space: $O(1)$ | Easy |
 |701 | [Insert into a Binary Search Tree](https://leetcode.com/problems/insert-into-a-binary-search-tree/) | Binary Search Tree | Time: O(h), Space: O(1)| Easy|
 |729 | [My Calendar I](https://leetcode.com/problems/my-calendar-i/) | Binary Search Tree | Time: O(log n), Space: O(n)| Medium|
 |731 | [My Calendar II](https://leetcode.com/problems/my-calendar-ii/) | Binary Search Tree | Time: O(log n), Space: O(n)| Medium|

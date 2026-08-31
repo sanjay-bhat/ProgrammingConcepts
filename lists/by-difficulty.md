@@ -132,7 +132,7 @@
 | 459 | [Repeated Substring Pattern](https://leetcode.com/problems/repeated-substring-pattern/)| String  | Time: O(n), Space: O(1)| Easy |
 | 461 | [Hamming Distance](https://leetcode.com/problems/hamming-distance/) | Bit Manipulation| Time: O(1), Space: O(1)| Easy |
 | 463 | [📓 Island Perimeter](../leetcode/0463.ipynb) | Single Pass (Count + Shared Edges) | Time: O(m·n), Space: O(1) | Easy |
-| 475 | [Heaters](https://leetcode.com/problems/heaters/)  | Binary Search | Time: O(n log n), Space: O(1)| Easy |
+| 475 | [📓 Heaters](../leetcode/0475.ipynb) | Binary Search | Time: $O(n \log n)$, Space: $O(1)$ | Easy |
 | 476 | [Number Complement](https://leetcode.com/problems/number-complement/) | Bit Manipulation| Time: O(1), Space: O(1)| Easy |
 | 481 | [Magical String](https://leetcode.com/problems/magical-string/) | Math | Time: O(n), Space: O(n)| Easy |
 | 482 | [License Key Formatting](https://leetcode.com/problems/license-key-formatting/)| String  | Time: O(n), Space: O(1)| Easy |
@@ -202,10 +202,10 @@
 | 690 | [Employee Importance](https://leetcode.com/problems/employee-importance/)| Tree, Hash Map| Time: O(n), Space: O(n)| Easy |
 | 693 | [Binary Number with Alternating Bits](https://leetcode.com/problems/binary-number-with-alternating-bits/) | Math | Time: O(1), Space: O(1)| Easy |
 | 697 | [Degree of an Array](https://leetcode.com/problems/degree-of-an-array/)  | Hash Map| Time: O(n), Space: O(n)| Easy |
-| 700 | [Search in a Binary Search Tree](https://leetcode.com/problems/search-in-a-binary-search-tree/)| Binary Search Tree | Time: O(log n), Space: O(1)  | Easy |
+| 700 | [📓 Search in a Binary Search Tree](../leetcode/0700.ipynb) | Iterative (BST property) | Time: $O(h)$, Space: $O(1)$ | Easy |
 | 701 | [Insert into a Binary Search Tree](https://leetcode.com/problems/insert-into-a-binary-search-tree/)  | Binary Search Tree | Time: O(h), Space: O(1)| Easy |
 | 703 | [Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/)| Heap | Time: O(log k), Space: O(k)  | Easy |
-| 704 | [Binary Search](https://leetcode.com/problems/binary-search/) | Binary Search | Time: O(log n), Space: O(1)  | Easy |
+| 704 | [📓 Binary Search](../leetcode/0704.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
 | 705 | [Design HashSet](https://leetcode.com/problems/design-hashset/) | Hash Set| Time: O(1), Space: O(n)| Easy |
 | 706 | [Design HashMap](https://leetcode.com/problems/design-hashmap/) | Hash Map| Time: O(1), Space: O(n)| Easy |
 | 707 | [Design Linked List](https://leetcode.com/problems/design-linked-list/)  | Linked List| Time: O(1), Space: O(n)| Easy |
@@ -216,7 +216,7 @@
 | 728 | [Self Dividing Numbers](https://leetcode.com/problems/self-dividing-numbers/)  | Math | Time: O(n), Space: O(1)| Easy |
 | 733 | [Flood Fill](https://leetcode.com/problems/flood-fill/)  | DFS, BFS| Time: O(n), Space: O(n)| Easy |
 | 734 | [Sentence Similarity](https://leetcode.com/problems/sentence-similarity/)| Graph, Hash Map | Time: O(n), Space: O(n)| Easy |
-| 744 | [Find Smallest Letter Greater Than Target](https://leetcode.com/problems/find-smallest-letter-greater-than-target/)  | Binary Search | Time: O(log n), Space: O(1)  | Easy |
+| 744 | [📓 Find Smallest Letter Greater Than Target](../leetcode/0744.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
 | 746 | [Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs/) | DP | Time: O(n), Space: O(n)| Easy |
 | 747 | [Largest Number At Least Twice of Others](https://leetcode.com/problems/largest-number-at-least-twice-of-others/) | Array| Time: O(n), Space: O(1)| Easy |
 | 751 | [IP to CIDR](https://leetcode.com/problems/ip-to-cidr/)  | Math | Time: O(1), Space: O(1)| Easy |
@@ -241,7 +241,7 @@
 | 836 | [Rectangle Overlap](https://leetcode.com/problems/rectangle-overlap/) | Geometry, Math| Time: O(1), Space: O(1)| Easy |
 | 844 | [Backspace String Compare](https://leetcode.com/problems/backspace-string-compare/) | Stack, String | Time: O(n), Space: O(n)| Easy |
 | 849 | [Maximize Distance to Closest Person](https://leetcode.com/problems/maximize-distance-to-closest-person/) | Array, Simulation  | Time: O(n), Space: O(1)| Easy |
-| 852 | [Peak Index in a Mountain Array](https://leetcode.com/problems/peak-index-in-a-mountain-array/)| Binary Search, Array | Time: O(log n), Space: O(1)  | Easy |
+| 852 | [📓 Peak Index in a Mountain Array](../leetcode/0852.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Medium |
 | 859 | [Buddy Strings](https://leetcode.com/problems/buddy-strings/) | String, Hash Set| Time: O(n), Space: O(n)| Easy |
 | 860 | [Lemonade Change](https://leetcode.com/problems/lemonade-change/)| Greedy  | Time: O(n), Space: O(1)| Easy |
 | 867 | [Transpose Matrix](https://leetcode.com/problems/transpose-matrix/) | Array| Time: O(n * m), Space: O(1)  | Easy |

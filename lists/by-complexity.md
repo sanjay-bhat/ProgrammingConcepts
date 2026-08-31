@@ -359,7 +359,7 @@
 | 305 | [Number of Islands II](https://leetcode.com/problems/number-of-islands-ii/)  | Union Find | Time: O(n log n), Space: O(n)  | Hard |
 | 308 | [📓 Range Sum Query 2D - Mutable](../leetcode/0308.ipynb) | 2D Binary Indexed Tree | Time: O(log m · log n) update & query, Space: O(m·n) | Hard |
 | 315 | [📓 Count of Smaller Numbers After Self](../leetcode/0315.ipynb) | Binary Indexed Tree | Time: $O(n \log n)$, Space: $O(n)$ | Hard |
-| 327 | [Count of Range Sum](https://leetcode.com/problems/count-of-range-sum/) | Binary Search, Merge Sort  | Time: O(n log n), Space: O(n)  | Hard |
+| 327 | [📓 Count of Range Sum](../leetcode/0327.ipynb) | Binary Search, Merge Sort  | Time: O(n log n), Space: O(n)  | Hard |
 | 330 | [Patching Array](https://leetcode.com/problems/patching-array/)| Greedy| Time: O(log n), Space: O(1)| Hard |
 | 352 | [Data Stream as Disjoint Intervals](https://leetcode.com/problems/data-stream-as-disjoint-intervals/)| TreeMap  | Time: O(log n), Space: O(n)| Hard |
 | 354 | [Russian Doll Envelopes](https://leetcode.com/problems/russian-doll-envelopes/)  | Sorting, Binary Search | Time: O(n log n), Space: O(n)  | Hard |

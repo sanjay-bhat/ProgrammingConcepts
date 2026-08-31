@@ -1263,7 +1263,7 @@
 | 316 | [Remove Duplicate Letters](https://leetcode.com/problems/remove-duplicate-letters/) | Stack, Greedy | Time: O(n), Space: O(n)| Hard |
 | 317 | [Shortest Distance from All Buildings](https://leetcode.com/problems/shortest-distance-from-all-buildings/) | BFS| Time: O(m * n), Space: O(m * n)| Hard |
 | 321 | [Create Maximum Number](https://leetcode.com/problems/create-maximum-number/)  | Greedy, Stack | Time: O(n), Space: O(n)| Hard |
-| 327 | [Count of Range Sum](https://leetcode.com/problems/count-of-range-sum/)  | Binary Search, Merge Sort| Time: O(n log n), Space: O(n)| Hard |
+| 327 | [📓 Count of Range Sum](../leetcode/0327.ipynb)  | Binary Search, Merge Sort| Time: O(n log n), Space: O(n)| Hard |
 | 329 | [Longest Increasing Path in a Matrix](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/) | DFS, Topological Sort| Time: O(m * n), Space: O(m * n)| Hard |
 | 330 | [Patching Array](https://leetcode.com/problems/patching-array/) | Greedy  | Time: O(log n), Space: O(1)  | Hard |
 | 335 | [Self Crossing](https://leetcode.com/problems/self-crossing/) | Geometry| Time: O(n), Space: O(1)| Hard |

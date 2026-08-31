@@ -316,7 +316,7 @@
 | 1011 | [📓 Capacity To Ship Packages Within D Days](../leetcode/1011.ipynb) | Binary Search, Greedy| Time: O(n log m), Space: O(1)| Medium|
 | 1211 | [Divide Chocolate](https://leetcode.com/problems/divide-chocolate/) | Binary Search, Math| O(n log n) Time, O(1) Space| Medium|
 | 1283 | [📓 Find the Smallest Divisor Given a Threshold](../leetcode/1283.ipynb) | Binary Search, Math| O(n log m) Time, O(1) Space| Medium|
-|327 | [Count of Range Sum](https://leetcode.com/problems/count-of-range-sum/) | Binary Search, Merge Sort| Time: O(n log n), Space: O(n)| Hard|
+|327 | [📓 Count of Range Sum](../leetcode/0327.ipynb) | Binary Search, Merge Sort| Time: O(n log n), Space: O(n)| Hard|
 | 1498 | [Number of Subsequences That Satisfy the Given Sum Condition](https://leetcode.com/problems/number-of-subsequences-that-satisfy-the-given-sum-condition/) | Binary Search, Sorting | O(n log n) Time, O(n) Space| Medium|
 | 1062 | [Longest Repeating Substring](https://leetcode.com/problems/longest-repeating-substring/) | Binary Search, String| Time: O(n log n), Space: O(n)| Hard|
 |719 | [Find K-th Smallest Pair Distance](https://leetcode.com/problems/find-k-th-smallest-pair-distance/) | Binary Search, Two Pointer | Time: O(n log n), Space: O(1)| Hard|

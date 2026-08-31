@@ -353,7 +353,7 @@
 | 324 | [Wiggle Sort II](https://leetcode.com/problems/wiggle-sort-ii/) | Sorting, Two Pointers | Time: O(n log n), Space: O(n) | Medium |
 | 325 | [Maximum Size Subarray Sum Equals k](https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/) | Hash Map | Time: O(n), Space: O(n) | Medium |
 | 326 | [Power of Three](https://leetcode.com/problems/power-of-three/) | Math | Time: O(log n), Space: O(1) | Easy |
-| 327 | [Count of Range Sum](https://leetcode.com/problems/count-of-range-sum/) | Binary Search, Merge Sort | Time: O(n log n), Space: O(n) | Hard |
+| 327 | [📓 Count of Range Sum](leetcode/0327.ipynb) | Binary Search, Merge Sort | Time: O(n log n), Space: O(n) | Hard |
 | 328 | [Odd Even Linked List](https://leetcode.com/problems/odd-even-linked-list/) | Linked List | Time: O(n), Space: O(1) | Medium |
 | 329 | [Longest Increasing Path in a Matrix](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/) | DFS, Topological Sort | Time: O(m * n), Space: O(m * n) | Hard |
 | 330 | [Patching Array](https://leetcode.com/problems/patching-array/) | Greedy | Time: O(log n), Space: O(1) | Hard |

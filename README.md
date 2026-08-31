@@ -501,7 +501,7 @@
 | 472 | [Concatenated Words](https://leetcode.com/problems/concatenated-words/) | Trie, Hash Set | Time: O(n * m^2), Space: O(n * m) | Hard |
 | 473 | [Matchsticks to Square](https://leetcode.com/problems/matchsticks-to-square/) | Backtracking, Dynamic Programming | Time: O(4^n), Space: O(n) | Medium |
 | 474 | [Ones and Zeroes](https://leetcode.com/problems/ones-and-zeroes/) | Dynamic Programming | Time: O(m * n * max), Space: O(m * n * max) | Medium |
-| 475 | [Heaters](https://leetcode.com/problems/heaters/) | Binary Search | Time: O(n log n), Space: O(1) | Easy |
+| 475 | [📓 Heaters](leetcode/0475.ipynb) | Binary Search | Time: $O(n \log n)$, Space: $O(1)$ | Easy |
 | 476 | [Number Complement](https://leetcode.com/problems/number-complement/) | Bit Manipulation | Time: O(1), Space: O(1) | Easy |
 | 477 | [Total Hamming Distance](https://leetcode.com/problems/total-hamming-distance/) | Bit Manipulation | Time: O(n), Space: O(1) | Medium |
 | 478 | [Generate Random Point in a Circle](https://leetcode.com/problems/generate-random-point-in-a-circle/) | Geometry, Math | Time: O(1), Space: O(1) | Medium |

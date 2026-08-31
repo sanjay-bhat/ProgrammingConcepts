@@ -187,7 +187,7 @@
 | 414 | [Third Maximum Number](https://leetcode.com/problems/third-maximum-number/)  | Sorting  | Time: O(n log n), Space: O(1)  | Easy |
 | 441 | [📓 Arranging Coins](../leetcode/0441.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
 | 455 | [Assign Cookies](https://leetcode.com/problems/assign-cookies/)| Greedy| Time: O(n log n), Space: O(1)  | Easy |
-| 475 | [Heaters](https://leetcode.com/problems/heaters/) | Binary Search | Time: O(n log n), Space: O(1)  | Easy |
+| 475 | [📓 Heaters](../leetcode/0475.ipynb) | Binary Search | Time: $O(n \log n)$, Space: $O(1)$ | Easy |
 | 504 | [Base 7](https://leetcode.com/problems/base-7/)| Math | O(log N) Time| Easy |
 | 506 | [Relative Ranks](https://leetcode.com/problems/relative-ranks/)| Sorting  | O(N log N) Time| Easy |
 | 561 | [Array Partition I](https://leetcode.com/problems/array-partition-i/)| Array| Time: O(n log n), Space: O(1)  | Easy |

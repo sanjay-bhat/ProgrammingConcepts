@@ -182,7 +182,7 @@
 | 278 | [📓 First Bad Version](../leetcode/0278.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
 | 326 | [Power of Three](https://leetcode.com/problems/power-of-three/)| Math | Time: O(log n), Space: O(1)| Easy |
 | 367 | [📓 Valid Perfect Square](../leetcode/0367.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
-| 374 | [Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/) | Binary Search | Time: O(log n), Space: O(1)| Easy |
+| 374 | [📓 Guess Number Higher or Lower](../leetcode/0374.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
 | 400 | [Nth Digit](https://leetcode.com/problems/nth-digit/) | Math | Time: O(log n), Space: O(1)| Easy |
 | 414 | [Third Maximum Number](https://leetcode.com/problems/third-maximum-number/)  | Sorting  | Time: O(n log n), Space: O(1)  | Easy |
 | 441 | [Arranging Coins](https://leetcode.com/problems/arranging-coins/)| Binary Search | Time: O(log n), Space: O(1)| Easy |

@@ -107,7 +107,7 @@
 | 359 | [Logger Rate Limiter](https://leetcode.com/problems/logger-rate-limiter/)| Hash Map| Time: O(1), Space: O(n)| Easy |
 | 367 | [📓 Valid Perfect Square](../leetcode/0367.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
 | 371 | [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/)| Bit Manipulation| Time: O(1), Space: O(1)| Easy |
-| 374 | [Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/) | Binary Search | Time: O(log n), Space: O(1)  | Easy |
+| 374 | [📓 Guess Number Higher or Lower](../leetcode/0374.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
 | 383 | [Ransom Note](https://leetcode.com/problems/ransom-note/)| Hash Map| Time: O(n), Space: O(n)| Easy |
 | 387 | [First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/)| Hash Map| Time: O(n), Space: O(n)| Easy |
 | 389 | [Find the Difference](https://leetcode.com/problems/find-the-difference/)| Hash Map| Time: O(n), Space: O(n)| Easy |

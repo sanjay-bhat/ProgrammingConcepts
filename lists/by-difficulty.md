@@ -518,7 +518,7 @@
 | 230 | [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)  | Tree, Inorder Traversal  | Time: O(h + k), Space: O(h)  | Medium  |
 | 236 | [Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/) | Tree, DFS | Time: O(n), Space: O(h)| Medium  |
 | 238 | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | Array| Time: O(n), Space: O(1)| Medium  |
-| 240 | [Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/)  | Binary Search | Time: O(m + n), Space: O(1)  | Medium  |
+| 240 | [📓 Search a 2D Matrix II](../leetcode/0240.ipynb) | Staircase Search | Time: O(m + n), Space: O(1) | Medium |
 | 241 | [Different Ways to Add Parentheses](https://leetcode.com/problems/different-ways-to-add-parentheses/)| Recursion | Time: O(2^n), Space: O(n)| Medium  |
 | 244 | [Shortest Word Distance II](https://leetcode.com/problems/shortest-word-distance-ii/) | Hash Map| Time: O(1), Space: O(n)| Medium  |
 | 245 | [Shortest Word Distance III](https://leetcode.com/problems/shortest-word-distance-iii/)| Array, Hash Map | Time: O(n), Space: O(1)| Medium  |
@@ -538,7 +538,7 @@
 | 267 | [Palindrome Permutation II](https://leetcode.com/problems/palindrome-permutation-ii/) | Backtracking  | Time: O(n!), Space: O(n) | Medium  |
 | 271 | [Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings/) | String  | Time: O(n), Space: O(n)| Medium  |
 | 274 | [H-Index](https://leetcode.com/problems/h-index/)  | Sorting | Time: O(n log n), Space: O(1)| Medium  |
-| 275 | [H-Index II](https://leetcode.com/problems/h-index-ii/)  | Binary Search | Time: O(log n), Space: O(1)  | Medium  |
+| 275 | [📓 H-Index II](../leetcode/0275.ipynb) | Binary Search on Answer | Time: O(log n), Space: O(1) | Medium |
 | 276 | [Paint Fence](https://leetcode.com/problems/paint-fence/)| Dynamic Programming| Time: O(n), Space: O(1)| Medium  |
 | 277 | [Find the Celebrity](https://leetcode.com/problems/find-the-celebrity/)  | Graph, Two Pointers| Time: O(n), Space: O(1)| Medium  |
 | 279 | [Perfect Squares](https://leetcode.com/problems/perfect-squares/)| Dynamic Programming| Time: O(n√n), Space: O(n)| Medium  |
@@ -634,7 +634,7 @@
 | 431 | [Encode N-ary Tree to Binary Tree](https://leetcode.com/problems/encode-n-ary-tree-to-binary-tree/)  | Tree | Time: O(n), Space: O(n)| Medium  |
 | 433 | [📓 Minimum Genetic Mutation](../leetcode/0433.ipynb) | BFS (Queue) | Time: $O(N^2 \cdot L)$, Space: $O(N)$ | Medium |
 | 435 | [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/) | Greedy  | Time: O(n log n), Space: O(1)| Medium  |
-| 436 | [Find Right Interval](https://leetcode.com/problems/find-right-interval/)| Binary Search | Time: O(n log n), Space: O(n)| Medium  |
+| 436 | [📓 Find Right Interval](../leetcode/0436.ipynb) | Binary Search on Sorted Starts | Time: O(n log n), Space: O(n) | Medium |
 | 437 | [Path Sum III](https://leetcode.com/problems/path-sum-iii/)| Tree, DFS | Time: O(n), Space: O(h)| Medium  |
 | 438 | [Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/)  | Sliding Window| Time: O(n), Space: O(1)| Medium  |
 | 439 | [Ternary Expression Parser](https://leetcode.com/problems/ternary-expression-parser/) | Stack| Time: O(n), Space: O(n)| Medium  |
@@ -691,7 +691,7 @@
 | 536 | [Construct Binary Tree from String](https://leetcode.com/problems/construct-binary-tree-from-string/)| Binary Tree (Recursive)  | Time: O(n), Space: O(n)| Medium  |
 | 537 | [Complex Number Multiplication](https://leetcode.com/problems/complex-number-multiplication/)  | String  | Time: O(1), Space: O(1)| Medium  |
 | 539 | [Minimum Time Difference](https://leetcode.com/problems/minimum-time-difference/)| Array, Hash Map | Time: O(n), Space: O(n)| Medium  |
-| 540 | [Single Element in a Sorted Array](https://leetcode.com/problems/single-element-in-a-sorted-array/)  | Binary Search | Time: O(log n), Space: O(1)  | Medium  |
+| 540 | [📓 Single Element in a Sorted Array](../leetcode/0540.ipynb) | Binary Search on Parity | Time: O(log n), Space: O(1) | Medium |
 | 542 | [01 Matrix](https://leetcode.com/problems/01-matrix/)| Dynamic Programming, BFS | Time: O(m * n), Space: O(m * n)| Medium  |
 | 544 | [Output Contest Matches](https://leetcode.com/problems/output-contest-matches/)| String  | Time: O(n log n), Space: O(n)| Medium  |
 | 545 | [Boundary of Binary Tree](https://leetcode.com/problems/boundary-of-binary-tree/)| Binary Tree (DFS, BFS)| Time: O(n), Space: O(h)| Medium  |
@@ -771,7 +771,7 @@
 | 694 | [Number of Distinct Islands](https://leetcode.com/problems/number-of-distinct-islands/)| DFS, Hash Set | Time: O(n), Space: O(n)| Medium  |
 | 695 | [Max Area of Island](https://leetcode.com/problems/max-area-of-island/)  | DFS| Time: O(n), Space: O(n)| Medium  |
 | 696 | [Count Binary Substrings](https://leetcode.com/problems/count-binary-substrings/)| String, Counting| Time: O(n), Space: O(1)| Medium  |
-| 702 | [Search in a Sorted Array of Unknown Size](https://leetcode.com/problems/search-in-a-sorted-array-of-unknown-size/)  | Binary Search | Time: O(log n), Space: O(1)  | Medium  |
+| 702 | [📓 Search in a Sorted Array of Unknown Size](../leetcode/0702.ipynb) | Exponential Search + Binary Search | Time: O(log n), Space: O(1) | Medium |
 | 708 | [Insert into a Sorted Circular Linked List](https://leetcode.com/problems/insert-into-a-sorted-circular-linked-list/)| Linked List| Time: O(n), Space: O(1)| Medium  |
 | 712 | [Minimum ASCII Delete Sum for Two Strings](https://leetcode.com/problems/minimum-ascii-delete-sum-for-two-strings/)  | Dynamic Programming| Time: O(m * n), Space: O(m * n)| Medium  |
 | 713 | [Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k/) | Two Pointer, Sliding Window| Time: O(n), Space: O(1)| Medium  |
@@ -850,7 +850,7 @@
 | 866 | [Prime Palindrome](https://leetcode.com/problems/prime-palindrome/) | Math, Prime| Time: O(n), Space: O(1)| Medium  |
 | 869 | [Reordered Power of 2](https://leetcode.com/problems/reordered-power-of-2/)| Math | Time: O(n), Space: O(1)| Medium  |
 | 873 | [Length of Longest Fibonacci Subsequence](https://leetcode.com/problems/length-of-longest-fibonacci-subsequence/) | DP, Hash Map  | Time: O(n^2), Space: O(n)| Medium  |
-| 875 | [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/)| Binary Search | Time: O(n log m), Space: O(1)| Medium  |
+| 875 | [📓 Koko Eating Bananas](../leetcode/0875.ipynb) | Binary Search on Eating Speed | Time: O(n log m), Space: O(1) | Medium |
 | 877 | [Stone Game](https://leetcode.com/problems/stone-game/)  | Dynamic Programming, DP Table | Time: O(n^2), Space: O(n^2)  | Medium  |
 | 880 | [Decoded String at Index](https://leetcode.com/problems/decoded-string-at-index/)| String, Simulation | Time: O(n), Space: O(1)| Medium  |
 | 881 | [Boats to Save People](https://leetcode.com/problems/boats-to-save-people/)| Greedy, Two Pointers | Time: O(n log n), Space: O(1)| Medium  |
@@ -944,7 +944,7 @@
 |1054 | [Distant Barcodes](https://leetcode.com/problems/distant-barcodes/) | Greedy, Sorting | Time: O(n log n), Space: O(n)| Medium  |
 |1057 | [Campus Bikes](https://leetcode.com/problems/campus-bikes/)| Greedy  | Time: O(n log n), Space: O(1)| Medium  |
 |1058 | [Minimize Rounding Errors](https://leetcode.com/problems/minimize-rounding-errors/) | Math, Simulation| Time: O(n), Space: O(1)| Medium  |
-|1060 | [Missing Element in Sorted Array](https://leetcode.com/problems/missing-element-in-sorted-array/)| Binary Search | Time: O(log n), Space: O(1)  | Medium  |
+| 1060 | [📓 Missing Element in Sorted Array](../leetcode/1060.ipynb) | Binary Search on Missing Count | Time: O(log n), Space: O(1) | Medium |
 |1061 | [Lexicographically Smallest Equivalent String](https://leetcode.com/problems/lexicographically-smallest-equivalent-string/)| Union Find| Time: O(n), Space: O(n)| Medium  |
 |1063 | [Valid Triangles](https://leetcode.com/problems/valid-triangles/)| Array, Math| Time: O(n^3), Space: O(1)| Medium  |
 |1064 | [Number of Ways to Split a String](https://leetcode.com/problems/number-of-ways-to-split-a-string/)  | DP, String| Time: O(n), Space: O(n)| Medium  |
@@ -965,7 +965,7 @@
 |1088 | [Validate IP Address](https://leetcode.com/problems/validate-ip-address/)| String  | Time: O(1), Space: O(1)| Medium  |
 |1091 | [Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/)| BFS, Graph| Time: O(n^2), Space: O(n^2)  | Medium  |
 |1093 | [Car Pooling](https://leetcode.com/problems/car-pooling/)| Greedy, Simulation | Time: O(n), Space: O(1)| Medium  |
-|1095 | [Find in Mountain Array](https://leetcode.com/problems/find-in-mountain-array/)| Binary Search | Time: O(log n), Space: O(1)  | Medium  |
+| 1095 | [📓 Find in Mountain Array](../leetcode/1095.ipynb) | Three Binary Searches | Time: O(log n), Space: O(1) | Medium |
 |1097 | [Game of Life](https://leetcode.com/problems/game-of-life/)| Simulation| Time: O(n * m), Space: O(1)  | Medium  |
 |1098 | [Sort the Matrix Diagonally](https://leetcode.com/problems/sort-the-matrix-diagonally/)| Array| Time: O(n^2 log n), Space: O(n^2) | Medium  |
 |1100 | [Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/)  | Sliding Window, Hash Map | Time: O(n), Space: O(1)| Medium  |

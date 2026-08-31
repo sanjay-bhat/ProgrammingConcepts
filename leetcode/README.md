@@ -292,14 +292,14 @@
 | 153 | [📓 Find Minimum in Rotated Sorted Array](0153.ipynb) | Binary Search on Rotation Pivot | Time: O(log n), Space: O(1) | Medium |
 | 154 | [📓 Find Minimum in Rotated Sorted Array II](0154.ipynb) | Binary Search with Duplicate Shrinking | Time: O(n) worst, O(log n) avg, Space: O(1) | Medium |
 | 162 | [📓 Find Peak Element](0162.ipynb) | Binary Search on Gradient | Time: O(log n), Space: O(1) | Medium |
-|240 | [Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/) | Binary Search| Time: O(m + n), Space: O(1)| Medium|
-|275 | [H-Index II](https://leetcode.com/problems/h-index-ii/) | Binary Search| Time: O(log n), Space: O(1)| Medium|
-|436 | [Find Right Interval](https://leetcode.com/problems/find-right-interval/) | Binary Search| Time: O(n log n), Space: O(n)| Medium|
-|540 | [Single Element in a Sorted Array](https://leetcode.com/problems/single-element-in-a-sorted-array/) | Binary Search| Time: O(log n), Space: O(1)| Medium|
-|702 | [Search in a Sorted Array of Unknown Size](https://leetcode.com/problems/search-in-a-sorted-array-of-unknown-size/) | Binary Search| Time: O(log n), Space: O(1)| Medium|
-|875 | [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/) | Binary Search| Time: O(n log m), Space: O(1)| Medium|
-| 1060 | [Missing Element in Sorted Array](https://leetcode.com/problems/missing-element-in-sorted-array/) | Binary Search| Time: O(log n), Space: O(1)| Medium|
-| 1095 | [Find in Mountain Array](https://leetcode.com/problems/find-in-mountain-array/) | Binary Search| Time: O(log n), Space: O(1)| Medium|
+| 240 | [📓 Search a 2D Matrix II](0240.ipynb) | Staircase Search | Time: O(m + n), Space: O(1) | Medium |
+| 275 | [📓 H-Index II](0275.ipynb) | Binary Search on Answer | Time: O(log n), Space: O(1) | Medium |
+| 436 | [📓 Find Right Interval](0436.ipynb) | Binary Search on Sorted Starts | Time: O(n log n), Space: O(n) | Medium |
+| 540 | [📓 Single Element in a Sorted Array](0540.ipynb) | Binary Search on Parity | Time: O(log n), Space: O(1) | Medium |
+| 702 | [📓 Search in a Sorted Array of Unknown Size](0702.ipynb) | Exponential Search + Binary Search | Time: O(log n), Space: O(1) | Medium |
+| 875 | [📓 Koko Eating Bananas](0875.ipynb) | Binary Search on Eating Speed | Time: O(n log m), Space: O(1) | Medium |
+| 1060 | [📓 Missing Element in Sorted Array](1060.ipynb) | Binary Search on Missing Count | Time: O(log n), Space: O(1) | Medium |
+| 1095 | [📓 Find in Mountain Array](1095.ipynb) | Three Binary Searches | Time: O(log n), Space: O(1) | Medium |
 | 1264 | [Page Completion](https://leetcode.com/problems/page-completion/) | Binary Search| O(log n) Time, O(1) Space| Medium|
 | 1482 | [Minimum Number of Days to Make m Bouquets](https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/) | Binary Search| O(n log n) Time, O(1) Space| Medium|
 |668 | [Kth Smallest Number in Multiplication Table](https://leetcode.com/problems/kth-smallest-number-in-multiplication-table/) | Binary Search| Time: O(n log m), Space: O(1)| Hard|

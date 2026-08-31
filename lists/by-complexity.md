@@ -171,7 +171,7 @@
 |1449 | [Form Largest Integer With Digits That Add up to Target](https://leetcode.com/problems/form-largest-integer-with-digits-that-add-up-to-target/) | DP, Greedy | O(target^2) Time, O(target) Space| Hard |
 |7 | [📓 Reverse Integer](../leetcode/0007.ipynb)| Integer  | Time: O(log x), Space: O(1)| Easy |
 |9 | [📓 Palindrome Number](../leetcode/0009.ipynb)| Integer  | Time: O(log x), Space: O(1)| Easy |
-|  35 | [Search Insert Position](https://leetcode.com/problems/search-insert-position/)  | Binary Search | Time: O(log n), Space: O(1)| Easy |
+| 35 | [📓 Search Insert Position](../leetcode/0035.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
 |  69 | [Sqrt(x)](https://leetcode.com/problems/sqrtx/)| Math | Time: O(log x), Space: O(1)| Easy |
 | 168 | [Excel Sheet Column Title](https://leetcode.com/problems/excel-sheet-column-title/)| Math | Time: O(log n), Space: O(1)| Easy |
 | 172 | [Factorial Trailing Zeroes](https://leetcode.com/problems/factorial-trailing-zeroes/) | Math | Time: O(log n), Space: O(1)| Easy |
@@ -179,13 +179,13 @@
 | 204 | [Count Primes](https://leetcode.com/problems/count-primes/)| Sieve of Eratosthenes  | Time: O(n log log n), Space: O(n)| Easy |
 | 252 | [Meeting Rooms](https://leetcode.com/problems/meeting-rooms/)  | Greedy| Time: O(n log n), Space: O(1)  | Easy |
 | 263 | [Ugly Number](https://leetcode.com/problems/ugly-number/)  | Math | Time: O(log n), Space: O(1)| Easy |
-| 278 | [First Bad Version](https://leetcode.com/problems/first-bad-version/)| Binary Search | Time: O(log n), Space: O(1)| Easy |
+| 278 | [📓 First Bad Version](../leetcode/0278.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
 | 326 | [Power of Three](https://leetcode.com/problems/power-of-three/)| Math | Time: O(log n), Space: O(1)| Easy |
-| 367 | [Valid Perfect Square](https://leetcode.com/problems/valid-perfect-square/)  | Binary Search | Time: O(log n), Space: O(1)| Easy |
-| 374 | [Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/) | Binary Search | Time: O(log n), Space: O(1)| Easy |
+| 367 | [📓 Valid Perfect Square](../leetcode/0367.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
+| 374 | [📓 Guess Number Higher or Lower](../leetcode/0374.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
 | 400 | [Nth Digit](https://leetcode.com/problems/nth-digit/) | Math | Time: O(log n), Space: O(1)| Easy |
 | 414 | [Third Maximum Number](https://leetcode.com/problems/third-maximum-number/)  | Sorting  | Time: O(n log n), Space: O(1)  | Easy |
-| 441 | [Arranging Coins](https://leetcode.com/problems/arranging-coins/)| Binary Search | Time: O(log n), Space: O(1)| Easy |
+| 441 | [📓 Arranging Coins](../leetcode/0441.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
 | 455 | [Assign Cookies](https://leetcode.com/problems/assign-cookies/)| Greedy| Time: O(n log n), Space: O(1)  | Easy |
 | 475 | [Heaters](https://leetcode.com/problems/heaters/) | Binary Search | Time: O(n log n), Space: O(1)  | Easy |
 | 504 | [Base 7](https://leetcode.com/problems/base-7/)| Math | O(log N) Time| Easy |

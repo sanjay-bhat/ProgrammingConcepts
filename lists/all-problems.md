@@ -36,7 +36,7 @@
 | 32 | [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/) | Stack, Dynamic Programming | Time: O(n), Space: O(n) | Hard |
 | 33 | [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | Binary Search | Time: O(log n), Space: O(1) | Medium |
 | 34 | [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | Binary Search | Time: O(log n), Space: O(1) | Medium |
-| 35 | [Search Insert Position](https://leetcode.com/problems/search-insert-position/) | Binary Search | Time: O(log n), Space: O(1) | Easy |
+| 35 | [📓 Search Insert Position](../leetcode/0035.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
 | 36 | [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/) | Hash Set | Time: O(n^2), Space: O(n^2) | Medium |
 | 37 | [Sudoku Solver](https://leetcode.com/problems/sudoku-solver/) | Backtracking | Time: O(9^81), Space: O(1) | Hard |
 | 38 | [Count and Say](https://leetcode.com/problems/count-and-say/) | String | Time: O(n), Space: O(1) | Easy |
@@ -279,7 +279,7 @@
 | 275 | [H-Index II](https://leetcode.com/problems/h-index-ii/) | Binary Search | Time: O(log n), Space: O(1) | Medium |
 | 276 | [Paint Fence](https://leetcode.com/problems/paint-fence/) | Dynamic Programming | Time: O(n), Space: O(1) | Medium |
 | 277 | [Find the Celebrity](https://leetcode.com/problems/find-the-celebrity/) | Graph, Two Pointers | Time: O(n), Space: O(1) | Medium |
-| 278 | [First Bad Version](https://leetcode.com/problems/first-bad-version/) | Binary Search | Time: O(log n), Space: O(1) | Easy |
+| 278 | [📓 First Bad Version](../leetcode/0278.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
 | 279 | [Perfect Squares](https://leetcode.com/problems/perfect-squares/) | Dynamic Programming | Time: O(n√n), Space: O(n) | Medium |
 | 280 | [Wiggle Sort](https://leetcode.com/problems/wiggle-sort/) | Sorting, Two Pointers | Time: O(n log n), Space: O(1) | Medium |
 | 281 | [Zigzag Iterator](https://leetcode.com/problems/zigzag-iterator/) | Iterator | Time: O(1), Space: O(k) | Medium |
@@ -372,14 +372,14 @@
 | 364 | [Nested List Weight Sum II](https://leetcode.com/problems/nested-list-weight-sum-ii/) | DFS, Recursion | Time: O(n), Space: O(h) | Medium |
 | 365 | [Water and Jug Problem](https://leetcode.com/problems/water-and-jug-problem/) | Math, BFS | Time: O(max(a, b)), Space: O(max(a, b)) | Medium |
 | 366 | [Find Leaves of Binary Tree](https://leetcode.com/problems/find-leaves-of-binary-tree/) | Tree, DFS | Time: O(n), Space: O(h) | Medium |
-| 367 | [Valid Perfect Square](https://leetcode.com/problems/valid-perfect-square/) | Binary Search | Time: O(log n), Space: O(1) | Easy |
+| 367 | [📓 Valid Perfect Square](../leetcode/0367.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
 | 368 | [Largest Divisible Subset](https://leetcode.com/problems/largest-divisible-subset/) | Dynamic Programming | Time: O(n^2), Space: O(n) | Medium |
 | 369 | [Plus One Linked List](https://leetcode.com/problems/plus-one-linked-list/) | Linked List | Time: O(n), Space: O(1) | Medium |
 | 370 | [Range Addition](https://leetcode.com/problems/range-addition/) | Difference Array | Time: O(n), Space: O(n) | Medium |
 | 371 | [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/) | Bit Manipulation | Time: O(1), Space: O(1) | Easy |
 | 372 | [Super Pow](https://leetcode.com/problems/super-pow/) | Divide and Conquer | Time: O(log k), Space: O(1) | Medium |
 | 373 | [Find K Pairs with Smallest Sums](https://leetcode.com/problems/find-k-pairs-with-smallest-sums/) | Min-Heap | Time: O(k log k), Space: O(k) | Medium |
-| 374 | [Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/) | Binary Search | Time: O(log n), Space: O(1) | Easy |
+| 374 | [📓 Guess Number Higher or Lower](../leetcode/0374.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
 | 375 | [Guess Number Higher or Lower II](https://leetcode.com/problems/guess-number-higher-or-lower-ii/) | Dynamic Programming | Time: O(n^2), Space: O(n^2) | Medium |
 | 376 | [Wiggle Subsequence](https://leetcode.com/problems/wiggle-subsequence/) | Dynamic Programming | Time: O(n), Space: O(n) | Medium |
 | 377 | [Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/) | Dynamic Programming | Time: O(n * target), Space: O(target) | Medium |
@@ -446,7 +446,7 @@
 | 438 | [Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/) | Sliding Window | Time: O(n), Space: O(1) | Medium |
 | 439 | [Ternary Expression Parser](https://leetcode.com/problems/ternary-expression-parser/) | Stack | Time: O(n), Space: O(n) | Medium |
 | 440 | [K-th Smallest in Lexicographical Order](https://leetcode.com/problems/k-th-smallest-in-lexicographical-order/) | Backtracking | Time: O(n), Space: O(1) | Hard |
-| 441 | [Arranging Coins](https://leetcode.com/problems/arranging-coins/) | Binary Search | Time: O(log n), Space: O(1) | Easy |
+| 441 | [📓 Arranging Coins](../leetcode/0441.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
 | 442 | [Find All Duplicates in an Array](https://leetcode.com/problems/find-all-duplicates-in-an-array/) | Array, Hash Set | Time: O(n), Space: O(n) | Medium |
 | 443 | [String Compression](https://leetcode.com/problems/string-compression/) | Array | Time: O(n), Space: O(1) | Medium |
 | 444 | [Sequence Reconstruction](https://leetcode.com/problems/sequence-reconstruction/) | Topological Sort | Time: O(n), Space: O(n) | Medium |

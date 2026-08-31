@@ -11,7 +11,7 @@
 |26 | [📓 Remove Duplicates from Sorted Array](../leetcode/0026.ipynb) | Two Pointers| Time: O(n), Space: O(1)| Easy |
 |27 | [📓 Remove Element](../leetcode/0027.ipynb) | Two Pointers| Time: O(n), Space: O(1)| Easy |
 |28 | [Implement strStr()](https://leetcode.com/problems/implement-strstr/) | String  | Time: O(n), Space: O(1)| Easy |
-|35 | [Search Insert Position](https://leetcode.com/problems/search-insert-position/)| Binary Search | Time: O(log n), Space: O(1)  | Easy |
+| 35 | [📓 Search Insert Position](../leetcode/0035.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
 |38 | [Count and Say](https://leetcode.com/problems/count-and-say/) | String  | Time: O(n), Space: O(1)| Easy |
 |53 | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | Dynamic Programming| Time: O(n), Space: O(1)| Easy |
 |58 | [Length of Last Word](https://leetcode.com/problems/length-of-last-word/)| String  | Time: O(n), Space: O(1)| Easy |
@@ -86,7 +86,7 @@
 | 266 | [Palindrome Permutation](https://leetcode.com/problems/palindrome-permutation/)| Hash Map| Time: O(n), Space: O(n)| Easy |
 | 268 | [Missing Number](https://leetcode.com/problems/missing-number/) | Array, Bit Manipulation  | Time: O(n), Space: O(1)| Easy |
 | 270 | [Closest Binary Search Tree Value](https://leetcode.com/problems/closest-binary-search-tree-value/)  | Tree, Binary Search| Time: O(h), Space: O(1)| Easy |
-| 278 | [First Bad Version](https://leetcode.com/problems/first-bad-version/) | Binary Search | Time: O(log n), Space: O(1)  | Easy |
+| 278 | [📓 First Bad Version](../leetcode/0278.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
 | 283 | [📓 Move Zeroes](../leetcode/0283.ipynb) | Two Pointers (Write + Fill) | Time: O(n), Space: O(1) | Easy |
 | 290 | [Word Pattern](https://leetcode.com/problems/word-pattern/)| Hash Map| Time: O(n), Space: O(n)| Easy |
 | 292 | [Nim Game](https://leetcode.com/problems/nim-game/)| Game Theory| Time: O(1), Space: O(1)| Easy |
@@ -105,9 +105,9 @@
 | 349 | [Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/)| Hash Set| Time: O(n), Space: O(n)| Easy |
 | 350 | [Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii/)  | Hash Map| Time: O(n), Space: O(n)| Easy |
 | 359 | [Logger Rate Limiter](https://leetcode.com/problems/logger-rate-limiter/)| Hash Map| Time: O(1), Space: O(n)| Easy |
-| 367 | [Valid Perfect Square](https://leetcode.com/problems/valid-perfect-square/)| Binary Search | Time: O(log n), Space: O(1)  | Easy |
+| 367 | [📓 Valid Perfect Square](../leetcode/0367.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
 | 371 | [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/)| Bit Manipulation| Time: O(1), Space: O(1)| Easy |
-| 374 | [Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/) | Binary Search | Time: O(log n), Space: O(1)  | Easy |
+| 374 | [📓 Guess Number Higher or Lower](../leetcode/0374.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
 | 383 | [Ransom Note](https://leetcode.com/problems/ransom-note/)| Hash Map| Time: O(n), Space: O(n)| Easy |
 | 387 | [First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/)| Hash Map| Time: O(n), Space: O(n)| Easy |
 | 389 | [Find the Difference](https://leetcode.com/problems/find-the-difference/)| Hash Map| Time: O(n), Space: O(n)| Easy |
@@ -124,7 +124,7 @@
 | 422 | [Valid Word Square](https://leetcode.com/problems/valid-word-square/) | Matrix  | Time: O(n^2), Space: O(1)| Easy |
 | 429 | [📓 N-ary Tree Level Order Traversal](../leetcode/0429.ipynb) | BFS (Queue) | Time: $O(n)$, Space: $O(n)$ | Easy |
 | 434 | [Number of Segments in a String](https://leetcode.com/problems/number-of-segments-in-a-string/)| String  | Time: O(n), Space: O(1)| Easy |
-| 441 | [Arranging Coins](https://leetcode.com/problems/arranging-coins/)| Binary Search | Time: O(log n), Space: O(1)  | Easy |
+| 441 | [📓 Arranging Coins](../leetcode/0441.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
 | 447 | [Number of Boomerangs](https://leetcode.com/problems/number-of-boomerangs/)| Hash Map| Time: O(n^2), Space: O(n)| Easy |
 | 448 | [📓 Find All Numbers Disappeared in an Array](../leetcode/0448.ipynb) | In-place Negation | Time: O(n), Space: O(1) | Easy |
 | 453 | [Minimum Moves to Equal Array Elements](https://leetcode.com/problems/minimum-moves-to-equal-array-elements/)| Math | Time: O(n), Space: O(1)| Easy |

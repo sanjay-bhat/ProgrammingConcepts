@@ -326,22 +326,22 @@
 | :--- | :--- | :--- | :--- | :--- |
 | 700 | [📓 Search in a Binary Search Tree](../leetcode/0700.ipynb) | Iterative (BST property) | Time: $O(h)$, Space: $O(1)$ | Easy |
 |701 | [📓 Insert into a Binary Search Tree](../leetcode/0701.ipynb) | Binary Search Tree | Time: O(h), Space: O(1)| Easy|
-|729 | [My Calendar I](https://leetcode.com/problems/my-calendar-i/) | Binary Search Tree | Time: O(log n), Space: O(n)| Medium|
-|731 | [My Calendar II](https://leetcode.com/problems/my-calendar-ii/) | Binary Search Tree | Time: O(log n), Space: O(n)| Medium|
-|538 | [Convert BST to Greater Tree](https://leetcode.com/problems/convert-bst-to-greater-tree/) | Binary Search Tree (BST) | Time: O(n), Space: O(h)| Easy|
-|510 | [Inorder Successor in BST II](https://leetcode.com/problems/inorder-successor-in-bst-ii/) | Binary Search Tree (BST) | Time: O(h), Space: O(1)| Medium|
-|519 | [Random Flip Matrix](https://leetcode.com/problems/random-flip-matrix/) | Binary Search Tree (BST) | Time: O(log n), Space: O(n)| Medium|
-|528 | [Random Pick with Weight](https://leetcode.com/problems/random-pick-with-weight/) | Binary Search Tree (BST) | Time: O(log n), Space: O(n)| Medium|
-|530 | [Minimum Absolute Difference in BST](https://leetcode.com/problems/minimum-absolute-difference-in-bst/) | Binary Search Tree (BST) | Time: O(n), Space: O(h)| Medium|
+|729 | [📓 My Calendar I](../leetcode/0729.ipynb) | Binary Search Tree | Time: O(log n), Space: O(n)| Medium|
+|731 | [📓 My Calendar II](../leetcode/0731.ipynb) | Binary Search Tree | Time: O(log n), Space: O(n)| Medium|
+|538 | [📓 Convert BST to Greater Tree](../leetcode/0538.ipynb) | Binary Search Tree (BST) | Time: O(n), Space: O(h)| Easy|
+|510 | [📓 Inorder Successor in BST II](../leetcode/0510.ipynb) | Binary Search Tree (BST) | Time: O(h), Space: O(1)| Medium|
+|519 | [📓 Random Flip Matrix](../leetcode/0519.ipynb) | Binary Search Tree (BST) | Time: O(log n), Space: O(n)| Medium|
+|528 | [📓 Random Pick with Weight](../leetcode/0528.ipynb) | Binary Search Tree (BST) | Time: O(log n), Space: O(n)| Medium|
+|530 | [📓 Minimum Absolute Difference in BST](../leetcode/0530.ipynb) | Binary Search Tree (BST) | Time: O(n), Space: O(h)| Medium|
 
 ## Binary Tree
 | Serial No. | Problem Title | Data Structure | Time and Space Complexity | Level |
 | :--- | :--- | :--- | :--- | :--- |
-|543 | [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/) | Binary Tree| Time: O(n), Space: O(h)| Easy|
-|617 | [Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees/) | Binary Tree| Time: O(n), Space: O(h)| Easy|
-|623 | [Add One Row to Tree](https://leetcode.com/problems/add-one-row-to-tree/) | Binary Tree| Time: O(n), Space: O(h)| Medium|
-|637 | [Average of Levels in Binary Tree](https://leetcode.com/problems/average-of-levels-in-binary-tree/) | Binary Tree (BFS)| Time: O(n), Space: O(n)| Easy|
-|563 | [Binary Tree Tilt](https://leetcode.com/problems/binary-tree-tilt/) | Binary Tree (DFS)| Time: O(n), Space: O(h)| Easy|
+|543 | [📓 Diameter of Binary Tree](../leetcode/0543.ipynb) | Binary Tree| Time: O(n), Space: O(h)| Easy|
+|617 | [📓 Merge Two Binary Trees](../leetcode/0617.ipynb) | Binary Tree| Time: O(n), Space: O(h)| Easy|
+|623 | [📓 Add One Row to Tree](../leetcode/0623.ipynb) | Binary Tree| Time: O(n), Space: O(h)| Medium|
+|637 | [📓 Average of Levels in Binary Tree](../leetcode/0637.ipynb) | Binary Tree (BFS)| Time: O(n), Space: O(n)| Easy|
+|563 | [📓 Binary Tree Tilt](../leetcode/0563.ipynb) | Binary Tree (DFS)| Time: O(n), Space: O(h)| Easy|
 |549 | [Binary Tree Longest Consecutive Sequence II](https://leetcode.com/problems/binary-tree-longest-consecutive-sequence-ii/) | Binary Tree (DFS)| Time: O(n), Space: O(h)| Medium|
 |545 | [Boundary of Binary Tree](https://leetcode.com/problems/boundary-of-binary-tree/) | Binary Tree (DFS, BFS) | Time: O(n), Space: O(h)| Medium|
 |513 | [Find Bottom Left Tree Value](https://leetcode.com/problems/find-bottom-left-tree-value/) | Binary Tree (Level Order Traversal)| Time: O(n), Space: O(n)| Medium|

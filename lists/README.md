@@ -279,7 +279,7 @@
 | :--- | :--- | :--- | :--- | :--- |
 | 35 | [📓 Search Insert Position](../leetcode/0035.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
 | 278 | [📓 First Bad Version](../leetcode/0278.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
-|367 | [Valid Perfect Square](https://leetcode.com/problems/valid-perfect-square/) | Binary Search| Time: O(log n), Space: O(1)| Easy|
+| 367 | [📓 Valid Perfect Square](../leetcode/0367.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
 |374 | [Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/) | Binary Search| Time: O(log n), Space: O(1)| Easy|
 |441 | [Arranging Coins](https://leetcode.com/problems/arranging-coins/) | Binary Search| Time: O(log n), Space: O(1)| Easy|
 |475 | [Heaters](https://leetcode.com/problems/heaters/) | Binary Search| Time: O(n log n), Space: O(1)| Easy|

@@ -105,7 +105,7 @@
 | 349 | [Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/)| Hash Set| Time: O(n), Space: O(n)| Easy |
 | 350 | [Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii/)  | Hash Map| Time: O(n), Space: O(n)| Easy |
 | 359 | [Logger Rate Limiter](https://leetcode.com/problems/logger-rate-limiter/)| Hash Map| Time: O(1), Space: O(n)| Easy |
-| 367 | [Valid Perfect Square](https://leetcode.com/problems/valid-perfect-square/)| Binary Search | Time: O(log n), Space: O(1)  | Easy |
+| 367 | [📓 Valid Perfect Square](../leetcode/0367.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
 | 371 | [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/)| Bit Manipulation| Time: O(1), Space: O(1)| Easy |
 | 374 | [Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/) | Binary Search | Time: O(log n), Space: O(1)  | Easy |
 | 383 | [Ransom Note](https://leetcode.com/problems/ransom-note/)| Hash Map| Time: O(n), Space: O(n)| Easy |

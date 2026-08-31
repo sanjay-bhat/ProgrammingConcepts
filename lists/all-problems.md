@@ -372,7 +372,7 @@
 | 364 | [Nested List Weight Sum II](https://leetcode.com/problems/nested-list-weight-sum-ii/) | DFS, Recursion | Time: O(n), Space: O(h) | Medium |
 | 365 | [Water and Jug Problem](https://leetcode.com/problems/water-and-jug-problem/) | Math, BFS | Time: O(max(a, b)), Space: O(max(a, b)) | Medium |
 | 366 | [Find Leaves of Binary Tree](https://leetcode.com/problems/find-leaves-of-binary-tree/) | Tree, DFS | Time: O(n), Space: O(h) | Medium |
-| 367 | [Valid Perfect Square](https://leetcode.com/problems/valid-perfect-square/) | Binary Search | Time: O(log n), Space: O(1) | Easy |
+| 367 | [📓 Valid Perfect Square](../leetcode/0367.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
 | 368 | [Largest Divisible Subset](https://leetcode.com/problems/largest-divisible-subset/) | Dynamic Programming | Time: O(n^2), Space: O(n) | Medium |
 | 369 | [Plus One Linked List](https://leetcode.com/problems/plus-one-linked-list/) | Linked List | Time: O(n), Space: O(1) | Medium |
 | 370 | [Range Addition](https://leetcode.com/problems/range-addition/) | Difference Array | Time: O(n), Space: O(n) | Medium |

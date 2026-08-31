@@ -367,7 +367,7 @@
 | 363 | [Max Sum of Rectangle No Larger Than K](https://leetcode.com/problems/max-sum-of-rectangle-no-larger-than-k/) | Segment Tree, Binary Search| Time: O(n^2 log n), Space: O(n)| Hard |
 | 391 | [Perfect Rectangle](https://leetcode.com/problems/perfect-rectangle/)| Sweep Line | Time: O(n log n), Space: O(n)  | Hard |
 | 407 | [Trapping Rain Water II](https://leetcode.com/problems/trapping-rain-water-ii/)  | Min-Heap, BFS | Time: O(n * m * log(n * m)), Space: O(n * m) | Hard |
-| 410 | [Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/)| Binary Search, Dynamic Programming  | Time: O(n log m), Space: O(n)  | Hard |
+| 410 | [📓 Split Array Largest Sum](../leetcode/0410.ipynb)| Binary Search, Dynamic Programming  | Time: O(n log m), Space: O(n)  | Hard |
 | 480 | [Sliding Window Median](https://leetcode.com/problems/sliding-window-median/)| Heap | Time: O(n log k), Space: O(k)  | Hard |
 | 483 | [Smallest Good Base](https://leetcode.com/problems/smallest-good-base/) | Math | Time: O(log n), Space: O(1)| Hard |
 | 493 | [📓 Reverse Pairs](../leetcode/0493.ipynb) | Binary Indexed Tree | Time: $O(n \log n)$, Space: $O(n)$ | Hard |

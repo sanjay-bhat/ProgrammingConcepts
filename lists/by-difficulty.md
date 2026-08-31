@@ -1276,7 +1276,7 @@
 | 391 | [Perfect Rectangle](https://leetcode.com/problems/perfect-rectangle/) | Sweep Line| Time: O(n log n), Space: O(n)| Hard |
 | 403 | [Frog Jump](https://leetcode.com/problems/frog-jump/)| Dynamic Programming| Time: O(n^2), Space: O(n)| Hard |
 | 407 | [Trapping Rain Water II](https://leetcode.com/problems/trapping-rain-water-ii/)| Min-Heap, BFS | Time: O(n * m * log(n * m)), Space: O(n * m) | Hard |
-| 410 | [Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/)| Binary Search, Dynamic Programming  | Time: O(n log m), Space: O(n)| Hard |
+| 410 | [📓 Split Array Largest Sum](../leetcode/0410.ipynb)| Binary Search, Dynamic Programming  | Time: O(n log m), Space: O(n)| Hard |
 | 411 | [Minimum Unique Word Abbreviation](https://leetcode.com/problems/minimum-unique-word-abbreviation/)  | Greedy  | Time: O(n^2), Space: O(n)| Hard |
 | 418 | [Sentence Screen Fitting](https://leetcode.com/problems/sentence-screen-fitting/)| Dynamic Programming| Time: O(n * m), Space: O(1)  | Hard |
 | 420 | [Strong Password Checker](https://leetcode.com/problems/strong-password-checker/)| Greedy  | Time: O(n), Space: O(1)| Hard |

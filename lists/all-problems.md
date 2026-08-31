@@ -415,7 +415,7 @@
 | 407 | [Trapping Rain Water II](https://leetcode.com/problems/trapping-rain-water-ii/) | Min-Heap, BFS | Time: O(n * m * log(n * m)), Space: O(n * m) | Hard |
 | 408 | [Valid Word Abbreviation](https://leetcode.com/problems/valid-word-abbreviation/) | String | Time: O(n), Space: O(1) | Easy |
 | 409 | [Longest Palindrome](https://leetcode.com/problems/longest-palindrome/) | Hash Map | Time: O(n), Space: O(n) | Easy |
-| 410 | [Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/) | Binary Search, Dynamic Programming | Time: O(n log m), Space: O(n) | Hard |
+| 410 | [📓 Split Array Largest Sum](../leetcode/0410.ipynb) | Binary Search, Dynamic Programming | Time: O(n log m), Space: O(n) | Hard |
 | 411 | [Minimum Unique Word Abbreviation](https://leetcode.com/problems/minimum-unique-word-abbreviation/) | Greedy | Time: O(n^2), Space: O(n) | Hard |
 | 412 | [Fizz Buzz](https://leetcode.com/problems/fizz-buzz/) | Math | Time: O(n), Space: O(1) | Easy |
 | 413 | [Arithmetic Slices](https://leetcode.com/problems/arithmetic-slices/) | Dynamic Programming | Time: O(n), Space: O(1) | Medium |

@@ -301,25 +301,25 @@
 | 1060 | [📓 Missing Element in Sorted Array](../leetcode/1060.ipynb) | Binary Search on Missing Count | Time: O(log n), Space: O(1) | Medium |
 | 1095 | [📓 Find in Mountain Array](../leetcode/1095.ipynb) | Three Binary Searches | Time: O(log n), Space: O(1) | Medium |
 | 1264 | [Page Completion](https://leetcode.com/problems/page-completion/) | Binary Search| O(log n) Time, O(1) Space| Medium|
-| 1482 | [Minimum Number of Days to Make m Bouquets](https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/) | Binary Search| O(n log n) Time, O(1) Space| Medium|
-|668 | [Kth Smallest Number in Multiplication Table](https://leetcode.com/problems/kth-smallest-number-in-multiplication-table/) | Binary Search| Time: O(n log m), Space: O(1)| Hard|
-|774 | [Minimize Max Distance to Gas Station](https://leetcode.com/problems/minimize-max-distance-to-gas-station/) | Binary Search| Time: O(n log m), Space: O(1)| Hard|
-|793 | [Preimage Size of Factorial Zeroes Function](https://leetcode.com/problems/preimage-size-of-factorial-zeroes-function/) | Binary Search| Time: O(log n), Space: O(1)| Hard|
+| 1482 | [📓 Minimum Number of Days to Make m Bouquets](../leetcode/1482.ipynb) | Binary Search| O(n log n) Time, O(1) Space| Medium|
+|668 | [📓 Kth Smallest Number in Multiplication Table](../leetcode/0668.ipynb) | Binary Search| Time: O(n log m), Space: O(1)| Hard|
+|774 | [📓 Minimize Max Distance to Gas Station](../leetcode/0774.ipynb) | Binary Search| Time: O(n log m), Space: O(1)| Hard|
+|793 | [📓 Preimage Size of Factorial Zeroes Function](../leetcode/0793.ipynb) | Binary Search| Time: O(log n), Space: O(1)| Hard|
 | 1419 | [Minimize the Maximum of Two Arrays](https://leetcode.com/problems/minimize-the-maximum-of-two-arrays/) | Binary Search| O(n log n) Time, O(1) Space| Hard|
 | 852 | [📓 Peak Index in a Mountain Array](../leetcode/0852.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Medium |
-| 1233 | [Find the Right Interval](https://leetcode.com/problems/find-the-right-interval/) | Binary Search, Array | O(n log n) Time, O(n) Space| Medium|
+| 1233 | [📓 Remove Sub-Folders from the Filesystem](../leetcode/1233.ipynb) | Binary Search, Array | O(n log n) Time, O(n) Space| Medium|
 | 1285 | [Find the Right Interval](https://leetcode.com/problems/find-the-right-interval/) | Binary Search, Array | O(n log n) Time, O(n) Space| Medium|
-| 1300 | [Sum of Mutated Array Closest to Target](https://leetcode.com/problems/sum-of-mutated-array-closest-to-target/) | Binary Search, Array | O(n log n) Time, O(1) Space| Medium|
+| 1300 | [📓 Sum of Mutated Array Closest to Target](../leetcode/1300.ipynb) | Binary Search, Array | O(n log n) Time, O(1) Space| Medium|
 | 1459 | [Find the Start and End of the Range](https://leetcode.com/problems/find-the-start-and-end-of-the-range/) | Binary Search, Array | O(log n) Time, O(1) Space| Medium|
-| 1231 | [Divide Chocolate II](https://leetcode.com/problems/divide-chocolate-ii/) | Binary Search, Dynamic Programming | O(n log n) Time, O(1) Space| Medium|
-|410 | [Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/) | Binary Search, Dynamic Programming | Time: O(n log m), Space: O(n)| Hard|
-| 1011 | [Capacity To Ship Packages Within D Days](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/) | Binary Search, Greedy| Time: O(n log m), Space: O(1)| Medium|
+| 1231 | [📓 Divide Chocolate](../leetcode/1231.ipynb) | Binary Search, Dynamic Programming | O(n log n) Time, O(1) Space| Medium|
+|410 | [📓 Split Array Largest Sum](../leetcode/0410.ipynb) | Binary Search, Dynamic Programming | Time: O(n log m), Space: O(n)| Hard|
+| 1011 | [📓 Capacity To Ship Packages Within D Days](../leetcode/1011.ipynb) | Binary Search, Greedy| Time: O(n log m), Space: O(1)| Medium|
 | 1211 | [Divide Chocolate](https://leetcode.com/problems/divide-chocolate/) | Binary Search, Math| O(n log n) Time, O(1) Space| Medium|
-| 1283 | [Find the Smallest Divisor Given a Threshold](https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold/) | Binary Search, Math| O(n log m) Time, O(1) Space| Medium|
-|327 | [Count of Range Sum](https://leetcode.com/problems/count-of-range-sum/) | Binary Search, Merge Sort| Time: O(n log n), Space: O(n)| Hard|
-| 1498 | [Number of Subsequences That Satisfy the Given Sum Condition](https://leetcode.com/problems/number-of-subsequences-that-satisfy-the-given-sum-condition/) | Binary Search, Sorting | O(n log n) Time, O(n) Space| Medium|
+| 1283 | [📓 Find the Smallest Divisor Given a Threshold](../leetcode/1283.ipynb) | Binary Search, Math| O(n log m) Time, O(1) Space| Medium|
+|327 | [📓 Count of Range Sum](../leetcode/0327.ipynb) | Binary Search, Merge Sort| Time: O(n log n), Space: O(n)| Hard|
+| 1498 | [📓 Number of Subsequences That Satisfy the Given Sum Condition](../leetcode/1498.ipynb) | Binary Search, Sorting | O(n log n) Time, O(n) Space| Medium|
 | 1062 | [Longest Repeating Substring](https://leetcode.com/problems/longest-repeating-substring/) | Binary Search, String| Time: O(n log n), Space: O(n)| Hard|
-|719 | [Find K-th Smallest Pair Distance](https://leetcode.com/problems/find-k-th-smallest-pair-distance/) | Binary Search, Two Pointer | Time: O(n log n), Space: O(1)| Hard|
+|719 | [📓 Find K-th Smallest Pair Distance](../leetcode/0719.ipynb) | Binary Search, Two Pointer | Time: O(n log n), Space: O(1)| Hard|
 
 ## Binary Search Tree
 | Serial No. | Problem Title | Data Structure | Time and Space Complexity | Level |

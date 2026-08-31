@@ -185,7 +185,7 @@
 | 374 | [📓 Guess Number Higher or Lower](../leetcode/0374.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
 | 400 | [Nth Digit](https://leetcode.com/problems/nth-digit/) | Math | Time: O(log n), Space: O(1)| Easy |
 | 414 | [Third Maximum Number](https://leetcode.com/problems/third-maximum-number/)  | Sorting  | Time: O(n log n), Space: O(1)  | Easy |
-| 441 | [Arranging Coins](https://leetcode.com/problems/arranging-coins/)| Binary Search | Time: O(log n), Space: O(1)| Easy |
+| 441 | [📓 Arranging Coins](../leetcode/0441.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
 | 455 | [Assign Cookies](https://leetcode.com/problems/assign-cookies/)| Greedy| Time: O(n log n), Space: O(1)  | Easy |
 | 475 | [Heaters](https://leetcode.com/problems/heaters/) | Binary Search | Time: O(n log n), Space: O(1)  | Easy |
 | 504 | [Base 7](https://leetcode.com/problems/base-7/)| Math | O(log N) Time| Easy |

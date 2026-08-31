@@ -124,7 +124,7 @@
 | 422 | [Valid Word Square](https://leetcode.com/problems/valid-word-square/) | Matrix  | Time: O(n^2), Space: O(1)| Easy |
 | 429 | [📓 N-ary Tree Level Order Traversal](../leetcode/0429.ipynb) | BFS (Queue) | Time: $O(n)$, Space: $O(n)$ | Easy |
 | 434 | [Number of Segments in a String](https://leetcode.com/problems/number-of-segments-in-a-string/)| String  | Time: O(n), Space: O(1)| Easy |
-| 441 | [Arranging Coins](https://leetcode.com/problems/arranging-coins/)| Binary Search | Time: O(log n), Space: O(1)  | Easy |
+| 441 | [📓 Arranging Coins](../leetcode/0441.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
 | 447 | [Number of Boomerangs](https://leetcode.com/problems/number-of-boomerangs/)| Hash Map| Time: O(n^2), Space: O(n)| Easy |
 | 448 | [📓 Find All Numbers Disappeared in an Array](../leetcode/0448.ipynb) | In-place Negation | Time: O(n), Space: O(1) | Easy |
 | 453 | [Minimum Moves to Equal Array Elements](https://leetcode.com/problems/minimum-moves-to-equal-array-elements/)| Math | Time: O(n), Space: O(1)| Easy |

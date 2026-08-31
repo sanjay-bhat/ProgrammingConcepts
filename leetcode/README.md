@@ -281,7 +281,7 @@
 | 278 | [📓 First Bad Version](0278.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
 | 367 | [📓 Valid Perfect Square](0367.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
 | 374 | [📓 Guess Number Higher or Lower](0374.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
-|441 | [Arranging Coins](https://leetcode.com/problems/arranging-coins/) | Binary Search| Time: O(log n), Space: O(1)| Easy|
+| 441 | [📓 Arranging Coins](0441.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
 |475 | [Heaters](https://leetcode.com/problems/heaters/) | Binary Search| Time: O(n log n), Space: O(1)| Easy|
 |704 | [Binary Search](https://leetcode.com/problems/binary-search/) | Binary Search| Time: O(log n), Space: O(1)| Easy|
 |744 | [Find Smallest Letter Greater Than Target](https://leetcode.com/problems/find-smallest-letter-greater-than-target/) | Binary Search| Time: O(log n), Space: O(1)| Easy|

@@ -467,7 +467,7 @@
 | 438 | [Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/) | Sliding Window | Time: O(n), Space: O(1) | Medium |
 | 439 | [Ternary Expression Parser](https://leetcode.com/problems/ternary-expression-parser/) | Stack | Time: O(n), Space: O(n) | Medium |
 | 440 | [K-th Smallest in Lexicographical Order](https://leetcode.com/problems/k-th-smallest-in-lexicographical-order/) | Backtracking | Time: O(n), Space: O(1) | Hard |
-| 441 | [Arranging Coins](https://leetcode.com/problems/arranging-coins/) | Binary Search | Time: O(log n), Space: O(1) | Easy |
+| 441 | [📓 Arranging Coins](leetcode/0441.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
 | 442 | [Find All Duplicates in an Array](https://leetcode.com/problems/find-all-duplicates-in-an-array/) | Array, Hash Set | Time: O(n), Space: O(n) | Medium |
 | 443 | [String Compression](https://leetcode.com/problems/string-compression/) | Array | Time: O(n), Space: O(1) | Medium |
 | 444 | [Sequence Reconstruction](https://leetcode.com/problems/sequence-reconstruction/) | Topological Sort | Time: O(n), Space: O(n) | Medium |

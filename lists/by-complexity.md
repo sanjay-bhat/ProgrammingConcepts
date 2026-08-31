@@ -346,7 +346,7 @@
 |1459 | [Find the Start and End of the Range](https://leetcode.com/problems/find-the-start-and-end-of-the-range/)| Binary Search, Array| O(log n) Time, O(1) Space  | Medium  |
 |1465 | [Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts](https://leetcode.com/problems/maximum-area-of-a-piece-of-cake-after-horizontal-and-vertical-cuts/)| Sorting, Math | O(n log n) Time, O(1) Space| Medium  |
 |1481 | [Least Number of Unique Integers after K Removals](https://leetcode.com/problems/least-number-of-unique-integers-after-k-removals/)| HashMap, Min-Heap | O(n log n) Time, O(n) Space| Medium  |
-|1482 | [Minimum Number of Days to Make m Bouquets](https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/)| Binary Search | O(n log n) Time, O(1) Space| Medium  |
+|1482 | [📓 Minimum Number of Days to Make m Bouquets](../leetcode/1482.ipynb)| Binary Search | O(n log n) Time, O(1) Space| Medium  |
 |1484 | [Group Strings](https://leetcode.com/problems/group-strings/)  | Graph, Union-Find | O(n log n) Time, O(n) Space| Medium  |
 |1495 | [Least Number of Unique Integers After K Removals](https://leetcode.com/problems/least-number-of-unique-integers-after-k-removals/)| HashMap, Min-Heap | O(n log n) Time, O(n) Space| Medium  |
 |1498 | [Number of Subsequences That Satisfy the Given Sum Condition](https://leetcode.com/problems/number-of-subsequences-that-satisfy-the-given-sum-condition/)| Binary Search, Sorting | O(n log n) Time, O(n) Space| Medium  |

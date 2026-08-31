@@ -1190,7 +1190,7 @@
 |1476 | [Subrectangle Query](https://leetcode.com/problems/subrectangle-query/)  | Matrix, Array | O(1) Time, O(m*n) Space| Medium  |
 |1479 | [Maximize Palindrome Length From Subsequences](https://leetcode.com/problems/maximize-palindrome-length-from-subsequences/)| Greedy, DP| O(n) Time, O(n) Space  | Medium  |
 |1481 | [Least Number of Unique Integers after K Removals](https://leetcode.com/problems/least-number-of-unique-integers-after-k-removals/)| HashMap, Min-Heap  | O(n log n) Time, O(n) Space  | Medium  |
-|1482 | [Minimum Number of Days to Make m Bouquets](https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/)| Binary Search | O(n log n) Time, O(1) Space  | Medium  |
+|1482 | [📓 Minimum Number of Days to Make m Bouquets](../leetcode/1482.ipynb)| Binary Search | O(n log n) Time, O(1) Space  | Medium  |
 |1484 | [Group Strings](https://leetcode.com/problems/group-strings/) | Graph, Union-Find  | O(n log n) Time, O(n) Space  | Medium  |
 |1| 485 | [📓 Max Consecutive Ones](../leetcode/0485.ipynb) | Single Pass | Time: O(n), Space: O(1) | Easy |
 |1487 | [Making File Names Unique](https://leetcode.com/problems/making-file-names-unique/) | HashMap, Set  | O(n) Time, O(n) Space  | Medium  |

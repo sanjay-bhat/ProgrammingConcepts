@@ -301,7 +301,7 @@
 | 1060 | [📓 Missing Element in Sorted Array](1060.ipynb) | Binary Search on Missing Count | Time: O(log n), Space: O(1) | Medium |
 | 1095 | [📓 Find in Mountain Array](1095.ipynb) | Three Binary Searches | Time: O(log n), Space: O(1) | Medium |
 | 1264 | [Page Completion](https://leetcode.com/problems/page-completion/) | Binary Search| O(log n) Time, O(1) Space| Medium|
-| 1482 | [Minimum Number of Days to Make m Bouquets](https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/) | Binary Search| O(n log n) Time, O(1) Space| Medium|
+| 1482 | [📓 Minimum Number of Days to Make m Bouquets](1482.ipynb) | Binary Search| O(n log n) Time, O(1) Space| Medium|
 |668 | [Kth Smallest Number in Multiplication Table](https://leetcode.com/problems/kth-smallest-number-in-multiplication-table/) | Binary Search| Time: O(n log m), Space: O(1)| Hard|
 |774 | [Minimize Max Distance to Gas Station](https://leetcode.com/problems/minimize-max-distance-to-gas-station/) | Binary Search| Time: O(n log m), Space: O(1)| Hard|
 |793 | [Preimage Size of Factorial Zeroes Function](https://leetcode.com/problems/preimage-size-of-factorial-zeroes-function/) | Binary Search| Time: O(log n), Space: O(1)| Hard|

@@ -1488,7 +1488,7 @@
 | 1479 | [Maximize Palindrome Length From Subsequences](https://leetcode.com/problems/maximize-palindrome-length-from-subsequences/) | Greedy, DP| O(n) Time, O(n) Space | Medium |
 | 1480 | [Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/) | Array   | O(n) Time, O(n) Space | Easy |
 | 1481 | [Least Number of Unique Integers after K Removals](https://leetcode.com/problems/least-number-of-unique-integers-after-k-removals/) | HashMap, Min-Heap | O(n log n) Time, O(n) Space | Medium |
-| 1482 | [Minimum Number of Days to Make m Bouquets](https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/) | Binary Search | O(n log n) Time, O(1) Space | Medium |
+| 1482 | [📓 Minimum Number of Days to Make m Bouquets](../leetcode/1482.ipynb) | Binary Search | O(n log n) Time, O(1) Space | Medium |
 | 1483 | [Kth Ancestor of a Tree Node](https://leetcode.com/problems/kth-ancestor-of-a-tree-node/) | Tree, Binary Lifting  | O(log n) Time, O(n) Space   | Hard |
 | 1484 | [Group Strings](https://leetcode.com/problems/group-strings/)| Graph, Union-Find | O(n log n) Time, O(n) Space | Medium |
 | 1| 485 | [📓 Max Consecutive Ones](../leetcode/0485.ipynb) | Single Pass | Time: O(n), Space: O(1) | Easy |

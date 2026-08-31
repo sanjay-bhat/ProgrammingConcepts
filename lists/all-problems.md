@@ -705,11 +705,11 @@
 | 697 | [Degree of an Array](https://leetcode.com/problems/degree-of-an-array/) | Hash Map| Time: O(n), Space: O(n) | Easy |
 | 698 | [Partition to K Equal Sum Subsets](https://leetcode.com/problems/partition-to-k-equal-sum-subsets/) | Backtracking, DP  | Time: O(2^n), Space: O(n) | Hard |
 | 699 | [Falling Squares](https://leetcode.com/problems/falling-squares/) | Segment Tree | Time: O(n log n), Space: O(n) | Hard |
-| 700 | [Search in a Binary Search Tree](https://leetcode.com/problems/search-in-a-binary-search-tree/) | Binary Search Tree | Time: O(log n), Space: O(1) | Easy |
+| 700 | [📓 Search in a Binary Search Tree](../leetcode/0700.ipynb) | Iterative (BST property) | Time: $O(h)$, Space: $O(1)$ | Easy |
 | 701 | [Insert into a Binary Search Tree](https://leetcode.com/problems/insert-into-a-binary-search-tree/) | Binary Search Tree | Time: O(h), Space: O(1) | Easy |
 | 702 | [Search in a Sorted Array of Unknown Size](https://leetcode.com/problems/search-in-a-sorted-array-of-unknown-size/) | Binary Search | Time: O(log n), Space: O(1) | Medium |
 | 703 | [Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/) | Heap | Time: O(log k), Space: O(k) | Easy |
-| 704 | [Binary Search](https://leetcode.com/problems/binary-search/)   | Binary Search | Time: O(log n), Space: O(1) | Easy |
+| 704 | [📓 Binary Search](../leetcode/0704.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
 | 705 | [Design HashSet](https://leetcode.com/problems/design-hashset/) | Hash Set | Time: O(1), Space: O(n) | Easy |
 | 706 | [Design HashMap](https://leetcode.com/problems/design-hashmap/) | Hash Map| Time: O(1), Space: O(n) | Easy |
 | 707 | [Design Linked List](https://leetcode.com/problems/design-linked-list/) | Linked List | Time: O(1), Space: O(n) | Easy |
@@ -749,7 +749,7 @@
 | 741 | [Cherry Pickup](https://leetcode.com/problems/cherry-pickup/)   | Dynamic Programming, DP Table| Time: O(n^2), Space: O(n^2) | Hard |
 | 742 | [Closest Leaf in a Binary Tree](https://leetcode.com/problems/closest-leaf-in-a-binary-tree/) | Tree, BFS, DFS | Time: O(n), Space: O(n) | Medium |
 | 743 | [Network Delay Time](https://leetcode.com/problems/network-delay-time/) | Graph, Dijkstra   | Time: O(E log V), Space: O(V) | Medium |
-| 744 | [Find Smallest Letter Greater Than Target](https://leetcode.com/problems/find-smallest-letter-greater-than-target/) | Binary Search | Time: O(log n), Space: O(1) | Easy |
+| 744 | [📓 Find Smallest Letter Greater Than Target](../leetcode/0744.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
 | 745 | [Prefix and Suffix Search](https://leetcode.com/problems/prefix-and-suffix-search/) | Trie | Time: O(n), Space: O(n) | Hard |
 | 746 | [Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs/) | DP  | Time: O(n), Space: O(n) | Easy |
 | 747 | [Largest Number At Least Twice of Others](https://leetcode.com/problems/largest-number-at-least-twice-of-others/) | Array | Time: O(n), Space: O(1) | Easy |
@@ -857,7 +857,7 @@
 | 849 | [Maximize Distance to Closest Person](https://leetcode.com/problems/maximize-distance-to-closest-person/) | Array, Simulation | Time: O(n), Space: O(1) | Easy |
 | 850 | [Rectangle Area II](https://leetcode.com/problems/rectangle-area-ii/)   | Segment Tree, Geometry | Time: O(n log n), Space: O(n) | Hard |
 | 851 | [Loud and Rich](https://leetcode.com/problems/loud-and-rich/)   | Graph, Topological Sort| Time: O(n + m), Space: O(n + m) | Medium |
-| 852 | [Peak Index in a Mountain Array](https://leetcode.com/problems/peak-index-in-a-mountain-array/) | Binary Search, Array | Time: O(log n), Space: O(1) | Easy |
+| 852 | [📓 Peak Index in a Mountain Array](../leetcode/0852.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Medium |
 | 853 | [Car Fleet](https://leetcode.com/problems/car-fleet/) | Sorting, Stack| Time: O(n log n), Space: O(n) | Medium |
 | 854 | [K-Similar Strings](https://leetcode.com/problems/k-similar-strings/)   | BFS | Time: O(n * n!), Space: O(n!) | Hard |
 | 855 | [Exam Room](https://leetcode.com/problems/exam-room/) | Priority Queue, Heap | Time: O(log n), Space: O(n) | Medium |

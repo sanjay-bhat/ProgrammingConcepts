@@ -192,11 +192,11 @@
 | 506 | [Relative Ranks](https://leetcode.com/problems/relative-ranks/)| Sorting  | O(N log N) Time| Easy |
 | 561 | [Array Partition I](https://leetcode.com/problems/array-partition-i/)| Array| Time: O(n log n), Space: O(1)  | Easy |
 | 628 | [Maximum Product of Three Numbers](https://leetcode.com/problems/maximum-product-of-three-numbers/)| Array| Time: O(n log n), Space: O(1)  | Easy |
-| 700 | [Search in a Binary Search Tree](https://leetcode.com/problems/search-in-a-binary-search-tree/)| Binary Search Tree| Time: O(log n), Space: O(1)| Easy |
+| 700 | [📓 Search in a Binary Search Tree](../leetcode/0700.ipynb) | Iterative (BST property) | Time: $O(h)$, Space: $O(1)$ | Easy |
 | 703 | [Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/)  | Heap | Time: O(log k), Space: O(k)| Easy |
-| 704 | [Binary Search](https://leetcode.com/problems/binary-search/)  | Binary Search | Time: O(log n), Space: O(1)| Easy |
-| 744 | [Find Smallest Letter Greater Than Target](https://leetcode.com/problems/find-smallest-letter-greater-than-target/)  | Binary Search | Time: O(log n), Space: O(1)| Easy |
-| 852 | [Peak Index in a Mountain Array](https://leetcode.com/problems/peak-index-in-a-mountain-array/)| Binary Search, Array| Time: O(log n), Space: O(1)| Easy |
+| 704 | [📓 Binary Search](../leetcode/0704.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
+| 744 | [📓 Find Smallest Letter Greater Than Target](../leetcode/0744.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
+| 852 | [📓 Peak Index in a Mountain Array](../leetcode/0852.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Medium |
 | 976 | [Largest Perimeter Triangle](https://leetcode.com/problems/largest-perimeter-triangle/)| Array, Sorting| Time: O(n log n), Space: O(1)  | Easy |
 |1009 | [Complement of Base 10 Integer](https://leetcode.com/problems/complement-of-base-10-integer/)  | Math | Time: O(log n), Space: O(1)| Easy |
 |1025 | [Divisor Game](https://leetcode.com/problems/divisor-game/)| Math | Time: O(log n), Space: O(1)| Easy |

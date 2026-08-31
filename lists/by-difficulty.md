@@ -435,13 +435,13 @@
 |64 | [Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/) | Dynamic Programming| Time: O(m * n), Space: O(m * n)| Medium  |
 |71 | [Simplify Path](https://leetcode.com/problems/simplify-path/) | Stack| Time: O(n), Space: O(n)| Medium  |
 |73 | [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/) | Array| Time: O(m * n), Space: O(1)  | Medium  |
-|74 | [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)  | Binary Search | Time: O(log(m * n)), Space: O(1)  | Medium  |
+| 74 | [📓 Search a 2D Matrix](../leetcode/0074.ipynb) | Binary Search on Flattened Index | Time: O(log(m * n)), Space: O(1) | Medium |
 |75 | [Sort Colors](https://leetcode.com/problems/sort-colors/)| Sorting, Two Pointers| Time: O(n), Space: O(1)| Medium  |
 |77 | [Combinations](https://leetcode.com/problems/combinations/)| Backtracking  | Time: O(n! / (k! * (n-k)!)), Space: O(k)| Medium  |
 |78 | [Subsets](https://leetcode.com/problems/subsets/)  | Backtracking  | Time: O(2^n), Space: O(n)| Medium  |
 |79 | [Word Search](https://leetcode.com/problems/word-search/)| Backtracking  | Time: O(m * n * 4^l), Space: O(m * n)| Medium  |
 |80 | [Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/) | Array| Time: O(n), Space: O(1)| Medium  |
-|81 | [Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)| Binary Search | Time: O(n), Space: O(1)| Medium  |
+| 81 | [📓 Search in Rotated Sorted Array II](../leetcode/0081.ipynb) | Binary Search with Duplicate Handling | Time: O(n) worst, O(log n) avg, Space: O(1) | Medium |
 |82 | [Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/)| Linked List| Time: O(n), Space: O(1)| Medium  |
 |86 | [Partition List](https://leetcode.com/problems/partition-list/) | Linked List| Time: O(n), Space: O(1)| Medium  |
 |89 | [Gray Code](https://leetcode.com/problems/gray-code/)| Bit Manipulation| Time: O(2^n), Space: O(2^n)  | Medium  |
@@ -480,13 +480,13 @@
 | 150 | [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/)  | Stack| Time: O(n), Space: O(n)| Medium  |
 | 151 | [Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string/) | String  | Time: O(n), Space: O(1)| Medium  |
 | 152 | [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) | Dynamic Programming| Time: O(n), Space: O(1)| Medium  |
-| 153 | [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | Binary Search | Time: O(log n), Space: O(1)  | Medium  |
-| 154 | [Find Minimum in Rotated Sorted Array II](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/) | Binary Search | Time: O(n), Space: O(1)| Medium  |
+| 153 | [📓 Find Minimum in Rotated Sorted Array](../leetcode/0153.ipynb) | Binary Search on Rotation Pivot | Time: O(log n), Space: O(1) | Medium |
+| 154 | [📓 Find Minimum in Rotated Sorted Array II](../leetcode/0154.ipynb) | Binary Search with Duplicate Shrinking | Time: O(n) worst, O(log n) avg, Space: O(1) | Medium |
 | 156 | [Binary Tree Upside Down](https://leetcode.com/problems/binary-tree-upside-down/)| Tree, Recursion | Time: O(n), Space: O(h)| Medium  |
 | 158 | [Read N Characters Given Read4 II - Call multiple times](https://leetcode.com/problems/read-n-characters-given-read4-ii-call-multiple-times/)| String  | Time: O(n), Space: O(1)| Medium  |
 | 159 | [Longest Substring with At Most Two Distinct Characters](https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/)  | Sliding Window| Time: O(n), Space: O(1)| Medium  |
 | 161 | [One Edit Distance](https://leetcode.com/problems/one-edit-distance/) | String  | Time: O(m * n), Space: O(1)  | Medium  |
-| 162 | [Find Peak Element](https://leetcode.com/problems/find-peak-element/) | Binary Search | Time: O(log n), Space: O(1)  | Medium  |
+| 162 | [📓 Find Peak Element](../leetcode/0162.ipynb) | Binary Search on Gradient | Time: O(log n), Space: O(1) | Medium |
 | 163 | [Missing Ranges](https://leetcode.com/problems/missing-ranges/) | Array| Time: O(n), Space: O(1)| Medium  |
 | 165 | [Compare Version Numbers](https://leetcode.com/problems/compare-version-numbers/)| String  | Time: O(n), Space: O(1)| Medium  |
 | 166 | [Fraction to Recurring Decimal](https://leetcode.com/problems/fraction-to-recurring-decimal/)  | Math, String  | Time: O(n), Space: O(n)| Medium  |

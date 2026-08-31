@@ -287,11 +287,11 @@
 | 744 | [📓 Find Smallest Letter Greater Than Target](../leetcode/0744.ipynb) | Binary Search | Time: $O(\log n)$, Space: $O(1)$ | Easy |
 | 33 | [📓 Search in Rotated Sorted Array](../leetcode/0033.ipynb) | Binary Search with Pivot Detection | Time: O(log n), Space: O(1) | Medium |
 | 34 | [📓 Find First and Last Position of Element in Sorted Array](../leetcode/0034.ipynb) | Two Binary Searches | Time: O(log n), Space: O(1) | Medium |
-| 74 | [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) | Binary Search| Time: O(log(m * n)), Space: O(1) | Medium|
-| 81 | [Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/) | Binary Search| Time: O(n), Space: O(1)| Medium|
-|153 | [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | Binary Search| Time: O(log n), Space: O(1)| Medium|
-|154 | [Find Minimum in Rotated Sorted Array II](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/) | Binary Search| Time: O(n), Space: O(1)| Medium|
-|162 | [Find Peak Element](https://leetcode.com/problems/find-peak-element/) | Binary Search| Time: O(log n), Space: O(1)| Medium|
+| 74 | [📓 Search a 2D Matrix](../leetcode/0074.ipynb) | Binary Search on Flattened Index | Time: O(log(m * n)), Space: O(1) | Medium |
+| 81 | [📓 Search in Rotated Sorted Array II](../leetcode/0081.ipynb) | Binary Search with Duplicate Handling | Time: O(n) worst, O(log n) avg, Space: O(1) | Medium |
+| 153 | [📓 Find Minimum in Rotated Sorted Array](../leetcode/0153.ipynb) | Binary Search on Rotation Pivot | Time: O(log n), Space: O(1) | Medium |
+| 154 | [📓 Find Minimum in Rotated Sorted Array II](../leetcode/0154.ipynb) | Binary Search with Duplicate Shrinking | Time: O(n) worst, O(log n) avg, Space: O(1) | Medium |
+| 162 | [📓 Find Peak Element](../leetcode/0162.ipynb) | Binary Search on Gradient | Time: O(log n), Space: O(1) | Medium |
 |240 | [Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/) | Binary Search| Time: O(m + n), Space: O(1)| Medium|
 |275 | [H-Index II](https://leetcode.com/problems/h-index-ii/) | Binary Search| Time: O(log n), Space: O(1)| Medium|
 |436 | [Find Right Interval](https://leetcode.com/problems/find-right-interval/) | Binary Search| Time: O(n log n), Space: O(n)| Medium|

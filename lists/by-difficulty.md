@@ -1335,7 +1335,7 @@
 | 711 | [Number of Distinct Islands II](https://leetcode.com/problems/number-of-distinct-islands-ii/)  | DFS, Union-Find | Time: O(n), Space: O(n)| Hard |
 | 715 | [Range Module](https://leetcode.com/problems/range-module/)| Interval| Time: O(n), Space: O(n)| Hard |
 | 716 | [Max Stack](https://leetcode.com/problems/max-stack/)| Stack| Time: O(1), Space: O(n)| Hard |
-| 719 | [Find K-th Smallest Pair Distance](https://leetcode.com/problems/find-k-th-smallest-pair-distance/)  | Binary Search, Two Pointer | Time: O(n log n), Space: O(1)| Hard |
+| 719 | [📓 Find K-th Smallest Pair Distance](../leetcode/0719.ipynb)  | Binary Search, Two Pointer | Time: O(n log n), Space: O(1)| Hard |
 | 726 | [Number of Atoms](https://leetcode.com/problems/number-of-atoms/)| Hash Map, Stack | Time: O(n), Space: O(n)| Hard |
 | 727 | [Minimum Window Subsequence](https://leetcode.com/problems/minimum-window-subsequence/)| Sliding Window, Two Pointer| Time: O(n), Space: O(1)| Hard |
 | 730 | [Count Different Palindromes](https://leetcode.com/problems/count-different-palindromes/) | DP | Time: O(n^2), Space: O(n^2)  | Hard |

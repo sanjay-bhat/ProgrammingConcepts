@@ -745,7 +745,7 @@
 | 716 | [Max Stack](https://leetcode.com/problems/max-stack/) | Stack| Time: O(1), Space: O(n) | Hard |
 | 717 | [1-bit and 2-bit Characters](https://leetcode.com/problems/1-bit-and-2-bit-characters/) | Array | Time: O(n), Space: O(1) | Easy |
 | 718 | [Maximum Length of Repeated Subarray](https://leetcode.com/problems/maximum-length-of-repeated-subarray/) | Dynamic Programming| Time: O(m * n), Space: O(m * n) | Medium |
-| 719 | [Find K-th Smallest Pair Distance](https://leetcode.com/problems/find-k-th-smallest-pair-distance/) | Binary Search, Two Pointer | Time: O(n log n), Space: O(1) | Hard |
+| 719 | [📓 Find K-th Smallest Pair Distance](leetcode/0719.ipynb) | Binary Search, Two Pointer | Time: O(n log n), Space: O(1) | Hard |
 | 720 | [Longest Word in Dictionary](https://leetcode.com/problems/longest-word-in-dictionary/) | Trie | Time: O(n), Space: O(n) | Easy |
 | 721 | [Accounts Merge](https://leetcode.com/problems/accounts-merge/) | Graph, DFS  | Time: O(n), Space: O(n) | Medium |
 | 722 | [Remove Comments](https://leetcode.com/problems/remove-comments/) | String | Time: O(n), Space: O(1) | Medium |

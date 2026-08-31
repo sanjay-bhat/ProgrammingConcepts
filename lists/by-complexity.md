@@ -380,7 +380,7 @@
 | 668 | [📓 Kth Smallest Number in Multiplication Table](../leetcode/0668.ipynb) | Binary Search | Time: O(n log m), Space: O(1)  | Hard |
 | 675 | [Cut Off Trees for Golf Event](https://leetcode.com/problems/cut-off-trees-for-golf-event/) | BFS, Graph, Priority Queue | Time: O(n log n), Space: O(n)  | Hard |
 | 699 | [Falling Squares](https://leetcode.com/problems/falling-squares/)| Segment Tree  | Time: O(n log n), Space: O(n)  | Hard |
-| 719 | [Find K-th Smallest Pair Distance](https://leetcode.com/problems/find-k-th-smallest-pair-distance/)| Binary Search, Two Pointer | Time: O(n log n), Space: O(1)  | Hard |
+| 719 | [📓 Find K-th Smallest Pair Distance](../leetcode/0719.ipynb)| Binary Search, Two Pointer | Time: O(n log n), Space: O(1)  | Hard |
 | 732 | [My Calendar III](https://leetcode.com/problems/my-calendar-iii/)| Segment Tree  | Time: O(log n), Space: O(n)| Hard |
 | 757 | [Set Intersection Size At Least Two](https://leetcode.com/problems/set-intersection-size-at-least-two/) | Greedy, Sorting| Time: O(n log n), Space: O(n)  | Hard |
 | 759 | [Employee Free Time](https://leetcode.com/problems/employee-free-time/) | Interval, Priority Queue| Time: O(n log n), Space: O(n)  | Hard |

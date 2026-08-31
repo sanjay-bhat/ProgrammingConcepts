@@ -313,7 +313,7 @@
 | 1459 | [Find the Start and End of the Range](https://leetcode.com/problems/find-the-start-and-end-of-the-range/) | Binary Search, Array | O(log n) Time, O(1) Space| Medium|
 | 1231 | [📓 Divide Chocolate](1231.ipynb) | Binary Search, Dynamic Programming | O(n log n) Time, O(1) Space| Medium|
 |410 | [📓 Split Array Largest Sum](0410.ipynb) | Binary Search, Dynamic Programming | Time: O(n log m), Space: O(n)| Hard|
-| 1011 | [Capacity To Ship Packages Within D Days](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/) | Binary Search, Greedy| Time: O(n log m), Space: O(1)| Medium|
+| 1011 | [📓 Capacity To Ship Packages Within D Days](1011.ipynb) | Binary Search, Greedy| Time: O(n log m), Space: O(1)| Medium|
 | 1211 | [Divide Chocolate](https://leetcode.com/problems/divide-chocolate/) | Binary Search, Math| O(n log n) Time, O(1) Space| Medium|
 | 1283 | [Find the Smallest Divisor Given a Threshold](https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold/) | Binary Search, Math| O(n log m) Time, O(1) Space| Medium|
 |327 | [Count of Range Sum](https://leetcode.com/problems/count-of-range-sum/) | Binary Search, Merge Sort| Time: O(n log n), Space: O(n)| Hard|

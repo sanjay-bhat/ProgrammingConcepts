@@ -1037,7 +1037,7 @@
 | 1008 | [Construct Binary Search Tree from Preorder Traversal](https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/) | Tree, BST| Time: O(n), Space: O(n) | Medium |
 | 1009 | [Complement of Base 10 Integer](https://leetcode.com/problems/complement-of-base-10-integer/) | Math | Time: O(log n), Space: O(1) | Easy |
 | 1010 | [Pairs of Songs With Total Durations Divisible by 60](https://leetcode.com/problems/pairs-of-songs-with-total-durations-divisible-by-60/) | Hash Map| Time: O(n), Space: O(n) | Medium |
-| 1011 | [Capacity To Ship Packages Within D Days](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/) | Binary Search, Greedy| Time: O(n log m), Space: O(1) | Medium |
+| 1011 | [📓 Capacity To Ship Packages Within D Days](leetcode/1011.ipynb) | Binary Search, Greedy| Time: O(n log m), Space: O(1) | Medium |
 | 1012 | [Numbers With Repeated Digits](https://leetcode.com/problems/numbers-with-repeated-digits/) | Math | Time: O(log n), Space: O(1) | Hard |
 | 1013 | [Partition Array Into Three Parts With Equal Sum](https://leetcode.com/problems/partition-array-into-three-parts-with-equal-sum/) | Array, Prefix Sum | Time: O(n), Space: O(1) | Medium |
 | 1014 | [Best Sightseeing Pair](https://leetcode.com/problems/best-sightseeing-pair/)  | Sliding Window, Two Pointers | Time: O(n), Space: O(1) | Medium |

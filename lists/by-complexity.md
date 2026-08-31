@@ -293,7 +293,7 @@
 | 991 | [Broken Calculator](https://leetcode.com/problems/broken-calculator/)| Math | Time: O(log n), Space: O(1)| Medium  |
 |1005 | [Maximize Sum of Array After K Negations](https://leetcode.com/problems/maximize-sum-of-array-after-k-negations/)| Greedy| Time: O(n log n), Space: O(1)  | Medium  |
 |1006 | [Clumsy Factorial](https://leetcode.com/problems/clumsy-factorial/) | Math | Time: O(log n), Space: O(1)| Medium  |
-|1011 | [Capacity To Ship Packages Within D Days](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/)| Binary Search, Greedy  | Time: O(n log m), Space: O(1)  | Medium  |
+|1011 | [📓 Capacity To Ship Packages Within D Days](../leetcode/1011.ipynb)| Binary Search, Greedy  | Time: O(n log m), Space: O(1)  | Medium  |
 |1017 | [Convert to Base -2](https://leetcode.com/problems/convert-to-base-2/)  | Math | Time: O(log n), Space: O(1)| Medium  |
 |1042 | [Friendship Requests I: Individual Contributions](https://leetcode.com/problems/friendship-requests-i-individual-contributions/)| Graph, Union Find | Time: O(n * log n), Space: O(n)| Medium  |
 |1054 | [Distant Barcodes](https://leetcode.com/problems/distant-barcodes/) | Greedy, Sorting| Time: O(n log n), Space: O(n)  | Medium  |

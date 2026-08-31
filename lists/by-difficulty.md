@@ -918,7 +918,7 @@
 |1007 | [Minimum Domino Rotations For Equal Row](https://leetcode.com/problems/minimum-domino-rotations-for-equal-row/) | Greedy, Sorting | Time: O(n), Space: O(1)| Medium  |
 |1008 | [Construct Binary Search Tree from Preorder Traversal](https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/)| Tree, BST | Time: O(n), Space: O(n)| Medium  |
 |1010 | [Pairs of Songs With Total Durations Divisible by 60](https://leetcode.com/problems/pairs-of-songs-with-total-durations-divisible-by-60/)  | Hash Map| Time: O(n), Space: O(n)| Medium  |
-|1011 | [Capacity To Ship Packages Within D Days](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/) | Binary Search, Greedy| Time: O(n log m), Space: O(1)| Medium  |
+|1011 | [📓 Capacity To Ship Packages Within D Days](../leetcode/1011.ipynb) | Binary Search, Greedy| Time: O(n log m), Space: O(1)| Medium  |
 |1013 | [Partition Array Into Three Parts With Equal Sum](https://leetcode.com/problems/partition-array-into-three-parts-with-equal-sum/) | Array, Prefix Sum  | Time: O(n), Space: O(1)| Medium  |
 |1014 | [Best Sightseeing Pair](https://leetcode.com/problems/best-sightseeing-pair/)  | Sliding Window, Two Pointers  | Time: O(n), Space: O(1)| Medium  |
 |1017 | [Convert to Base -2](https://leetcode.com/problems/convert-to-base-2/)| Math | Time: O(log n), Space: O(1)  | Medium  |

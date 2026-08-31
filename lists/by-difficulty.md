@@ -1358,7 +1358,7 @@
 | 780 | [Reaching Points](https://leetcode.com/problems/reaching-points/)| Math | Time: O(log n), Space: O(1)  | Hard |
 | 782 | [Transform to Chessboard](https://leetcode.com/problems/transform-to-chessboard/)| Array| Time: O(n^2), Space: O(1)| Hard |
 | 786 | [K-th Smallest Prime Fraction](https://leetcode.com/problems/k-th-smallest-prime-fraction/) | Heap, Binary Search| Time: O(n log n), Space: O(n)| Hard |
-| 793 | [Preimage Size of Factorial Zeroes Function](https://leetcode.com/problems/preimage-size-of-factorial-zeroes-function/)| Binary Search | Time: O(log n), Space: O(1)  | Hard |
+| 793 | [📓 Preimage Size of Factorial Zeroes Function](../leetcode/0793.ipynb)| Binary Search | Time: O(log n), Space: O(1)  | Hard |
 | 798 | [Smallest Rotation with Highest Score](https://leetcode.com/problems/smallest-rotation-with-highest-score/) | Sliding Window, Greedy| Time: O(n), Space: O(n)| Hard |
 | 801 | [Minimum Swaps To Make Sequences Increasing](https://leetcode.com/problems/minimum-swaps-to-make-sequences-increasing/)| Dynamic Programming, DP Table | Time: O(n^2), Space: O(n)| Hard |
 | 803 | [Bricks Falling When Hit](https://leetcode.com/problems/bricks-falling-when-hit/)| Union-Find, Graph  | Time: O(n * m), Space: O(n * m)| Hard |

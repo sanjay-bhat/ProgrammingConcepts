@@ -389,7 +389,7 @@
 | 778 | [Swim in Rising Water](https://leetcode.com/problems/swim-in-rising-water/)  | BFS, Priority Queue | Time: O(n log n), Space: O(n)  | Hard |
 | 780 | [Reaching Points](https://leetcode.com/problems/reaching-points/)| Math | Time: O(log n), Space: O(1)| Hard |
 | 786 | [K-th Smallest Prime Fraction](https://leetcode.com/problems/k-th-smallest-prime-fraction/) | Heap, Binary Search | Time: O(n log n), Space: O(n)  | Hard |
-| 793 | [Preimage Size of Factorial Zeroes Function](https://leetcode.com/problems/preimage-size-of-factorial-zeroes-function/)| Binary Search | Time: O(log n), Space: O(1)| Hard |
+| 793 | [📓 Preimage Size of Factorial Zeroes Function](../leetcode/0793.ipynb)| Binary Search | Time: O(log n), Space: O(1)| Hard |
 | 850 | [Rectangle Area II](https://leetcode.com/problems/rectangle-area-ii/)| Segment Tree, Geometry | Time: O(n log n), Space: O(n)  | Hard |
 | 857 | [Minimum Cost to Hire K Workers](https://leetcode.com/problems/minimum-cost-to-hire-k-workers/)| Sorting, Greedy| Time: O(n log n), Space: O(n)  | Hard |
 | 870 | [Advantage Shuffle](https://leetcode.com/problems/advantage-shuffle/)| Sorting, Two Pointers  | Time: O(n log n), Space: O(n)  | Hard |

@@ -798,7 +798,7 @@
 | 790 | [Domino and Tromino Tiling](https://leetcode.com/problems/domino-and-tromino-tiling/) | Dynamic Programming| Time: O(n), Space: O(n) | Medium |
 | 791 | [Custom Sort String](https://leetcode.com/problems/custom-sort-string/) | Sorting, Hash Map | Time: O(n log n), Space: O(n) | Medium |
 | 792 | [Number of Matching Subsequences](https://leetcode.com/problems/number-of-matching-subsequences/) | Hash Map| Time: O(n), Space: O(n) | Medium |
-| 793 | [Preimage Size of Factorial Zeroes Function](https://leetcode.com/problems/preimage-size-of-factorial-zeroes-function/) | Binary Search | Time: O(log n), Space: O(1) | Hard |
+| 793 | [📓 Preimage Size of Factorial Zeroes Function](../leetcode/0793.ipynb) | Binary Search | Time: O(log n), Space: O(1) | Hard |
 | 794 | [Valid Tic-Tac-Toe State](https://leetcode.com/problems/valid-tic-tac-toe-state/) | Simulation   | Time: O(1), Space: O(1) | Medium |
 | 795 | [Number of Subarrays with Bounded Maximum](https://leetcode.com/problems/number-of-subarrays-with-bounded-maximum/) | Sliding Window, Two Pointers| Time: O(n), Space: O(1) | Medium |
 | 796 | [Rotate String](https://leetcode.com/problems/rotate-string/)   | String, Array | Time: O(n), Space: O(1) | Easy |

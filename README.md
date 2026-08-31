@@ -1525,6 +1525,6 @@
 | 1495 | [Least Number of Unique Integers After K Removals](https://leetcode.com/problems/least-number-of-unique-integers-after-k-removals/) | HashMap, Min-Heap | O(n log n) Time, O(n) Space | Medium |
 | 1496 | [Path Crossing](https://leetcode.com/problems/path-crossing/)   | Set, Array| O(n) Time, O(n) Space | Medium |
 | 1497 | [Check If Array Pairs Are Divisible by K](https://leetcode.com/problems/check-if-array-pairs-are-divisible-by-k/) | HashMap, Array| O(n) Time, O(n) Space | Medium |
-| 1498 | [Number of Subsequences That Satisfy the Given Sum Condition](https://leetcode.com/problems/number-of-subsequences-that-satisfy-the-given-sum-condition/) | Binary Search, Sorting| O(n log n) Time, O(n) Space | Medium |
+| 1498 | [📓 Number of Subsequences That Satisfy the Given Sum Condition](leetcode/1498.ipynb) | Binary Search, Sorting| O(n log n) Time, O(n) Space | Medium |
 | 1499 | [Max Value of Equation](https://leetcode.com/problems/max-value-of-equation/) | Stack, Sliding Window | O(n) Time, O(n) Space | Medium |
 | 1500 | [Find the Median of a Data Stream](https://leetcode.com/problems/find-the-median-of-a-data-stream/) | Heap, Priority Queue  | O(log n) Time, O(n) Space   | Hard |

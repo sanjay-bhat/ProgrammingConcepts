@@ -349,7 +349,7 @@
 |1482 | [📓 Minimum Number of Days to Make m Bouquets](../leetcode/1482.ipynb)| Binary Search | O(n log n) Time, O(1) Space| Medium  |
 |1484 | [Group Strings](https://leetcode.com/problems/group-strings/)  | Graph, Union-Find | O(n log n) Time, O(n) Space| Medium  |
 |1495 | [Least Number of Unique Integers After K Removals](https://leetcode.com/problems/least-number-of-unique-integers-after-k-removals/)| HashMap, Min-Heap | O(n log n) Time, O(n) Space| Medium  |
-|1498 | [Number of Subsequences That Satisfy the Given Sum Condition](https://leetcode.com/problems/number-of-subsequences-that-satisfy-the-given-sum-condition/)| Binary Search, Sorting | O(n log n) Time, O(n) Space| Medium  |
+|1498 | [📓 Number of Subsequences That Satisfy the Given Sum Condition](../leetcode/1498.ipynb)| Binary Search, Sorting | O(n log n) Time, O(n) Space| Medium  |
 |4 | [📓 Median of Two Sorted Arrays](../leetcode/0004.ipynb) | Array, Binary Search| Time: O(log(min(m, n))), Space: O(1)| Hard |
 |  23 | [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)  | Heap, Divide and Conquer| Time: O(n log k), Space: O(k)  | Hard |
 | 164 | [Maximum Gap](https://leetcode.com/problems/maximum-gap/)  | Sorting  | Time: O(n log n), Space: O(n)  | Hard |

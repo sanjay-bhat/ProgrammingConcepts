@@ -1201,7 +1201,7 @@
 |1495 | [Least Number of Unique Integers After K Removals](https://leetcode.com/problems/least-number-of-unique-integers-after-k-removals/)| HashMap, Min-Heap  | O(n log n) Time, O(n) Space  | Medium  |
 |1496 | [Path Crossing](https://leetcode.com/problems/path-crossing/) | Set, Array| O(n) Time, O(n) Space  | Medium  |
 |1497 | [Check If Array Pairs Are Divisible by K](https://leetcode.com/problems/check-if-array-pairs-are-divisible-by-k/) | HashMap, Array| O(n) Time, O(n) Space  | Medium  |
-|1498 | [Number of Subsequences That Satisfy the Given Sum Condition](https://leetcode.com/problems/number-of-subsequences-that-satisfy-the-given-sum-condition/)| Binary Search, Sorting| O(n log n) Time, O(n) Space  | Medium  |
+|1498 | [📓 Number of Subsequences That Satisfy the Given Sum Condition](../leetcode/1498.ipynb)| Binary Search, Sorting| O(n log n) Time, O(n) Space  | Medium  |
 |1499 | [Max Value of Equation](https://leetcode.com/problems/max-value-of-equation/)  | Stack, Sliding Window| O(n) Time, O(n) Space  | Medium  |
 | 4 | [📓 Median of Two Sorted Arrays](../leetcode/0004.ipynb) | Array, Binary Search | Time: O(log(min(m, n))), Space: O(1)| Hard |
 |10 | [📓 Regular Expression Matching](../leetcode/0010.ipynb) | Dynamic Programming| Time: O(m * n), Space: O(m * n)| Hard |

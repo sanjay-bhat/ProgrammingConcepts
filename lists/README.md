@@ -419,16 +419,16 @@
 | 1270 | [All Paths from Source Lead to Destination](https://leetcode.com/problems/all-paths-from-source-lead-to-destination/) | DFS, Graph | O(n * m) Time, O(n * m) Space| Medium|
 | 1015 | [📓 Swim in Rising Water](1015.ipynb) | <span title="Use a min-heap to greedily expand the lowest-elevation unvisited cell; track the running max elevation to reach (n-1,n-1).">Dijkstra (Min-Heap)</span> | Time: O(n^2 log n), Space: O(n^2)| Hard|
 |694 | [Number of Distinct Islands](https://leetcode.com/problems/number-of-distinct-islands/) | DFS, Hash Set| Time: O(n), Space: O(n)| Medium|
-| 1219 | [Path with Maximum Gold](https://leetcode.com/problems/path-with-maximum-gold/) | DFS, Matrix| O(n * m) Time, O(n * m) Space| Medium|
-| 1254 | [Number of Closed Islands](https://leetcode.com/problems/number-of-closed-islands/) | DFS, Matrix| O(n * m) Time, O(n * m) Space| Medium|
+| 1219 | [📓 Path with Maximum Gold](../leetcode/1219.ipynb) | <span title="Mark visited cells as 0 during DFS and restore them after backtracking, trying every non-zero starting cell to find the maximum gold path.">DFS Backtracking</span> | O(m*n*4^k) Time, O(m*n) Space | Medium |
+| 1254 | [📓 Number of Closed Islands](../leetcode/1254.ipynb) | <span title="Drown all border-connected land first, then count remaining enclosed land components in a single sweep.">DFS Flood Fill</span> | O(m*n) Time, O(m*n) Space | Medium |
 | 1114 | [Print in Order](https://leetcode.com/problems/print-in-order/) | DFS, Multi-threading | Time: O(1), Space: O(1)| Easy|
 | 1115 | [Print Foo Bar Alternately](https://leetcode.com/problems/print-foo-bar-alternately/) | DFS, Multi-threading | Time: O(1), Space: O(1)| Medium|
 |339 | [Nested List Weight Sum](https://leetcode.com/problems/nested-list-weight-sum/) | DFS, Recursion | Time: O(n), Space: O(h)| Easy|
 |364 | [Nested List Weight Sum II](https://leetcode.com/problems/nested-list-weight-sum-ii/) | DFS, Recursion | Time: O(n), Space: O(h)| Medium|
-| 1066 | [Building a Castle](https://leetcode.com/problems/building-a-castle/) | DFS, Simulation| Time: O(n), Space: O(n)| Easy|
+| 1066 | [📓 Campus Bikes II](../leetcode/1066.ipynb) | <span title="Represent assigned bikes as a bitmask; the set-bit count determines the next worker, so each state transitions to m new states in one pass.">Bitmask DP</span> | O(2^m * m) Time, O(2^m) Space | Hard |
 |329 | [Longest Increasing Path in a Matrix](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/) | DFS, Topological Sort| Time: O(m * n), Space: O(m * n)| Hard|
-| 1144 | [Binary Tree Coloring Game](https://leetcode.com/problems/binary-tree-coloring-game/) | DFS, Tree| Time: O(n), Space: O(n)| Medium|
-| 1145 | [Binary Tree Coloring Game II](https://leetcode.com/problems/binary-tree-coloring-game-ii/) | DFS, Tree| Time: O(n), Space: O(n)| Hard|
+| 1144 | [📓 Decrease Elements To Make Array Zigzag](../leetcode/1144.ipynb) | <span title="For each of two valley-parity choices, sum the minimum decrements needed to push each valley strictly below both neighbors.">Greedy Per-Parity</span> | O(n) Time, O(1) Space | Medium |
+| 1145 | [📓 Binary Tree Coloring Game](../leetcode/1145.ipynb) | <span title="One DFS counts left and right subtree sizes of x; the parent component is n minus those two minus one; player 2 wins if any component exceeds n/2.">DFS Subtree Count</span> | O(n) Time, O(h) Space | Medium |
 |711 | [Number of Distinct Islands II](https://leetcode.com/problems/number-of-distinct-islands-ii/) | DFS, Union-Find| Time: O(n), Space: O(n)| Hard|
 |547 | [Friend Circles](https://leetcode.com/problems/friend-circles/) | Depth-First Search (DFS), Union-Find | Time: O(n^2), Space: O(n)| Medium|
 
@@ -459,16 +459,16 @@
 | Serial No. | Problem Title | Data Structure | Time and Space Complexity | Level |
 | :--- | :--- | :--- | :--- | :--- |
 |746 | [Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs/) | DP | Time: O(n), Space: O(n)| Easy|
-| 1137 | [Nth Tribonacci Number](https://leetcode.com/problems/nth-tribonacci-number/) | DP | Time: O(n), Space: O(1)| Easy|
-| 1043 | [Partition Array for Maximum Sum](https://leetcode.com/problems/partition-array-for-maximum-sum/) | DP | Time: O(n^2), Space: O(n)| Medium|
-| 1080 | [Largest Sum of Averages](https://leetcode.com/problems/largest-sum-of-averages/) | DP | Time: O(n^2), Space: O(n^2)| Medium|
-| 1135 | [Cutting a Rod](https://leetcode.com/problems/cutting-a-rod/) | DP | Time: O(n^2), Space: O(n)| Medium|
-| 1140 | [Stone Game II](https://leetcode.com/problems/stone-game-ii/) | DP | Time: O(n^2), Space: O(n^2)| Medium|
-| 1143 | [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) | DP | Time: O(m * n), Space: O(m * n)| Medium|
+| 1137 | [📓 N-th Tribonacci Number](../leetcode/1137.ipynb) | <span title="Keep only the three most recent Tribonacci values and slide them forward each step, discarding the oldest.">Iterative Rolling Variables</span> | O(n) Time, O(1) Space | Easy |
+| 1043 | [📓 Partition Array for Maximum Sum](../leetcode/1043.ipynb) | <span title="Slide a window of up to k elements backward from each position, filling it with its maximum, and carry the best prefix total forward.">1-D DP</span> | O(n*k) Time, O(n) Space | Medium |
+| 1080 | [📓 Insufficient Nodes in Root to Leaf Paths](../leetcode/1080.ipynb) | <span title="Subtract each node's value from the limit as DFS descends, then prune leaves and childless internals that can never satisfy the threshold.">DFS Post-Order Pruning</span> | O(n) Time, O(h) Space | Medium |
+| 1135 | [📓 Connecting Cities With Minimum Cost](../leetcode/1135.ipynb) | <span title="Sort edges by cost and greedily union components; stop as soon as n-1 edges span all cities or declare disconnected.">Kruskal's MST (Union-Find)</span> | O(E log E) Time, O(V) Space | Medium |
+| 1140 | [📓 Stone Game II](../leetcode/1140.ipynb) | <span title="Precompute suffix sums so any range total is O(1); dp[i][m] encodes the minimax gain as the max-of-remainder after the opponent plays optimally.">DP with Suffix Sums</span> | O(n^2) Time, O(n^2) Space | Medium |
+| 1143 | [📓 Longest Common Subsequence](../leetcode/1143.ipynb) | <span title="Fill a table where matching characters extend the diagonal and mismatches propagate the best of skipping one character from either string.">2-D DP Table</span> | O(m*n) Time, O(m*n) Space | Medium |
 |689 | [Maximum Sum of 3 Non-Overlapping Subarrays](https://leetcode.com/problems/maximum-sum-of-3-non-overlapping-subarrays/) | DP | Time: O(n), Space: O(n)| Hard|
 |730 | [Count Different Palindromes](https://leetcode.com/problems/count-different-palindromes/) | DP | Time: O(n^2), Space: O(n^2)| Hard|
 |756 | [Pyramid Transition Matrix](https://leetcode.com/problems/pyramid-transition-matrix/) | DP | Time: O(n^3), Space: O(n^2)| Hard|
-| 1000 | [Merge Stones](https://leetcode.com/problems/merge-stones/) | DP | Time: O(n^2), Space: O(n^2)| Hard|
+| 1000 | [📓 Minimum Cost to Merge Stones](../leetcode/1000.ipynb) | <span title="Split intervals at every k-1 step and use prefix sums to accumulate merge costs in a bottom-up DP table.">Interval DP</span> | O(n^3/k) Time, O(n^2) Space | Hard |
 |764 | [Largest Plus Sign](https://leetcode.com/problems/largest-plus-sign/) | DP, 2D Array | Time: O(n^2), Space: O(n^2)| Medium|
 |983 | [Minimum Cost For Tickets](https://leetcode.com/problems/minimum-cost-for-tickets/) | DP, Array| Time: O(n), Space: O(n)| Medium|
 | 1279 | [Frog Jump II](https://leetcode.com/problems/frog-jump-ii/) | DP, Array| O(n) Time, O(n) Space| Medium|

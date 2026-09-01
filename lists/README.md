@@ -210,8 +210,8 @@
 |610 | [Combination Sum III](https://leetcode.com/problems/combination-sum-iii/) | Backtracking | Time: O(n!), Space: O(n) | Medium|
 | 1109 | [📓 Corporate Flight Bookings](../leetcode/1109.ipynb) | <span title="Mark +seats at booking start and -seats one past the end; a single prefix-sum pass yields per-flight counts.">Difference Array</span> | Time: $O(n + m)$, Space: $O(1)$ | Medium |
 | 37 | [📓 Sudoku Solver](../leetcode/0037.ipynb) | <span title="Try digits 1-9 in each empty cell; validate row, column, and 3×3 box; backtrack on failure.">Backtracking</span> | Time: $O(9^m)$, Space: $O(m)$ | Hard |
-| 51 | [N-Queens](https://leetcode.com/problems/n-queens/) | Backtracking | Time: O(n!), Space: O(n) | Hard|
-| 52 | [N-Queens II](https://leetcode.com/problems/n-queens-ii/) | Backtracking | Time: O(n!), Space: O(n) | Hard|
+| 51 | [📓 N-Queens](../leetcode/0051.ipynb) | <span title="Recurse row by row with three bitmasks tracking attacked columns and diagonals; prune invalid states in O(1).">Backtracking (Bitmask)</span> | Time: $O(n!)$, Space: $O(n)$ | Hard |
+| 52 | [📓 N-Queens II](../leetcode/0052.ipynb) | <span title="Count valid N-Queens placements using bitmask backtracking without reconstructing boards.">Backtracking (Bitmask)</span> | Time: $O(n!)$, Space: $O(n)$ | Hard |
 |282 | [Expression Add Operators](https://leetcode.com/problems/expression-add-operators/) | Backtracking | Time: O(4^n), Space: O(n)| Hard|
 |425 | [Word Squares](https://leetcode.com/problems/word-squares/) | Backtracking | Time: O(n^4), Space: O(n^2)| Hard|
 |440 | [K-th Smallest in Lexicographical Order](https://leetcode.com/problems/k-th-smallest-in-lexicographical-order/) | Backtracking | Time: O(n), Space: O(1)| Hard|
@@ -219,19 +219,19 @@
 |489 | [Robot Room Cleaner](https://leetcode.com/problems/robot-room-cleaner/) | Backtracking | Time: O(4^n), Space: O(n)| Hard|
 |679 | [24 Game](https://leetcode.com/problems/24-game/) | Backtracking | Time: O(n!), Space: O(1) | Hard|
 |996 | [Number of Squareful Arrays](https://leetcode.com/problems/number-of-squareful-arrays/) | Backtracking | Time: O(n!), Space: O(n) | Hard|
-| 1421 | [N-Queens II](https://leetcode.com/problems/n-queens-ii/) | Backtracking | O(n!) Time, O(n) Space | Hard|
-| 1286 | [Iterator for Combination](https://leetcode.com/problems/iterator-for-combination/) | Backtracking, Array| O(1) Time, O(n) Space| Medium|
-| 1294 | [Combination Sum II](https://leetcode.com/problems/combination-sum-ii/) | Backtracking, Array| O(2^n) Time, O(n) Space| Medium|
-| 1415 | [The k-th Lexicographical String of All Happy Strings of Length n](https://leetcode.com/problems/the-k-th-lexicographical-string-of-all-happy-strings-of-length-n/) | Backtracking, DFS| O(3^n) Time, O(n) Space| Medium|
+| 1421 | [📓 Finding the Users Active Minutes](../leetcode/1421.ipynb) | <span title="Map each user to a set of unique active minutes for automatic deduplication, then tally set sizes.">Hash Map of Sets</span> | Time: $O(n)$, Space: $O(n)$ | Medium |
+| 1286 | [📓 Iterator for Combination](../leetcode/1286.ipynb) | <span title="Advance a k-size index array like a mixed-radix counter to yield combinations on demand in O(k) per call.">Index Array (On-Demand)</span> | Time: $O(k)$ per call, Space: $O(k)$ | Medium |
+| 1294 | [📓 Weather Type in Each Country](../leetcode/1294.ipynb) | <span title="Join Countries with November Day rows, average weather_state per country, then classify by threshold.">Aggregation JOIN</span> | Time: $O(n + m)$, Space: $O(n)$ | Easy |
+| 1415 | [📓 The k-th Lexicographical String of All Happy Strings of Length n](../leetcode/1415.ipynb) | <span title="Skip subtrees of size 2^(n-1-pos) to locate the k-th happy string character by character in O(n).">DFS (Mathematical Skip)</span> | Time: $O(n)$, Space: $O(n)$ | Medium |
 |902 | [Numbers At Most N Given Digit Set](https://leetcode.com/problems/numbers-at-most-n-given-digit-set/) | Backtracking, DFS| Time: O(n), Space: O(1)| Hard|
 |980 | [Unique Paths III](https://leetcode.com/problems/unique-paths-iii/) | Backtracking, DFS| Time: O(n^2), Space: O(n^2)| Hard|
 |698 | [Partition to K Equal Sum Subsets](https://leetcode.com/problems/partition-to-k-equal-sum-subsets/) | Backtracking, DP | Time: O(2^n), Space: O(n)| Hard|
 |473 | [Matchsticks to Square](https://leetcode.com/problems/matchsticks-to-square/) | Backtracking, Dynamic Programming| Time: O(4^n), Space: O(n)| Medium|
 |526 | [Beautiful Arrangement](https://leetcode.com/problems/beautiful-arrangement/) | Backtracking, Dynamic Programming| Time: O(n!), Space: O(n) | Medium|
-| 60 | [Permutation Sequence](https://leetcode.com/problems/permutation-sequence/) | Backtracking, Math | Time: O(n^2), Space: O(n)| Hard|
+| 60 | [📓 Permutation Sequence](../leetcode/0060.ipynb) | <span title="Decode k into the k-th permutation one digit at a time using factorial number system quotients.">Factorial Number System</span> | Time: $O(n^2)$, Space: $O(n)$ | Hard |
 |842 | [Split Array into Fibonacci Sequence](https://leetcode.com/problems/split-array-into-fibonacci-sequence/) | Backtracking, Recursion| Time: O(n), Space: O(n)| Medium|
-| 1076 | [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) | Backtracking, String | Time: O(3^n), Space: O(1)| Medium|
-| 1307 | [Verbal Arithmetic Puzzle](https://leetcode.com/problems/verbal-arithmetic-puzzle/) | Backtracking, String | O(10!) Time, O(10) Space | Hard|
+| 1076 | [📓 Project Employees II](../leetcode/1076.ipynb) | <span title="Group employees by project, find the maximum count, then return all projects tied at that count.">Aggregation JOIN</span> | Time: $O(n \log n)$, Space: $O(n)$ | Easy |
+| 1307 | [📓 Verbal Arithmetic Puzzle](../leetcode/1307.ipynb) | <span title="Assign digits to letters with backtracking using net coefficient sums to prune invalid partial assignments.">Backtracking</span> | Time: $O(10!)$, Space: $O(10)$ | Hard |
 
 ## BFS
 | Serial No. | Problem Title | Data Structure | Time and Space Complexity | Level |
@@ -252,13 +252,13 @@
 |934 | [Shortest Bridge](https://leetcode.com/problems/shortest-bridge/) | BFS, DFS | Time: O(n^2), Space: O(n)| Medium|
 |127 | [Word Ladder](https://leetcode.com/problems/word-ladder/) | BFS, Graph | Time: O(n^2), Space: O(n)| Medium|
 | 1091 | [Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/) | BFS, Graph | Time: O(n^2), Space: O(n^2)| Medium|
-| 1129 | [Shortest Path with Alternating Colors](https://leetcode.com/problems/shortest-path-with-alternating-colors/) | BFS, Graph | Time: O(n), Space: O(n)| Medium|
+| 1129 | [📓 Shortest Path with Alternating Colors](../leetcode/1129.ipynb) | <span title="BFS over (node, last-color) states to find the shortest alternating-color path from node 0.">BFS (Color State)</span> | Time: $O(n + e)$, Space: $O(n + e)$ | Medium |
 |126 | [Word Ladder II](https://leetcode.com/problems/word-ladder-ii/) | BFS, Graph | Time: O(n^2), Space: O(n)| Hard|
-| 1092 | [Shortest Path in a Grid with Obstacles Elimination](https://leetcode.com/problems/shortest-path-in-a-grid-with-obstacles-elimination/) | BFS, Graph | Time: O(n^2), Space: O(n^2)| Hard|
-| 1094 | [Shortest Path in a Grid with Obstacles Elimination](https://leetcode.com/problems/shortest-path-in-a-grid-with-obstacles-elimination/) | BFS, Graph | Time: O(n^2), Space: O(n^2)| Hard|
+| 1092 | [📓 Shortest Common Supersequence](../leetcode/1092.ipynb) | <span title="Build LCS DP table then traceback to merge both strings around LCS characters into the shortest supersequence.">DP (LCS)</span> | Time: $O(m \cdot n)$, Space: $O(m \cdot n)$ | Hard |
+| 1094 | [📓 Car Pooling](../leetcode/1094.ipynb) | <span title="Apply passenger deltas at trip endpoints in a difference array; prefix-sum scan detects capacity violations.">Difference Array</span> | Time: $O(n)$, Space: $O(1)$ | Medium |
 |675 | [Cut Off Trees for Golf Event](https://leetcode.com/problems/cut-off-trees-for-golf-event/) | BFS, Graph, Priority Queue | Time: O(n log n), Space: O(n)| Hard|
-| 1306 | [Jump Game III](https://leetcode.com/problems/jump-game-iii/) | BFS, Graph, Queue| O(n) Time, O(n) Space| Medium|
-| 1284 | [Minimum Number of Flips to Convert Binary Matrix to Zero Matrix](https://leetcode.com/problems/minimum-number-of-flips-to-convert-binary-matrix-to-zero-matrix/) | BFS, Matrix| O(n * m) Time, O(n * m) Space| Hard|
+| 1306 | [📓 Jump Game III](../leetcode/1306.ipynb) | <span title="BFS from start index trying both jump directions; first reach of a zero-valued index is the answer.">BFS (Visited Set)</span> | Time: $O(n)$, Space: $O(n)$ | Medium |
+| 1284 | [📓 Minimum Number of Flips to Convert Binary Matrix to Zero Matrix](../leetcode/1284.ipynb) | <span title="Encode the matrix as a bitmask and BFS; the first time zero state is reached is the minimum flips.">BFS (Bitmask State)</span> | Time: $O(2^{nm} \cdot nm)$, Space: $O(2^{nm})$ | Hard |
 |778 | [Swim in Rising Water](https://leetcode.com/problems/swim-in-rising-water/) | BFS, Priority Queue| Time: O(n log n), Space: O(n)| Hard|
 |994 | [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/) | BFS, Queue | Time: O(n^2), Space: O(n)| Medium|
 | 1197 | [Minimum Knight Moves](https://leetcode.com/problems/minimum-knight-moves/) | BFS, Queue | O(n) Time, O(n) Space| Medium|

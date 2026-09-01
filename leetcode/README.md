@@ -173,10 +173,10 @@
 | 1395 | [📓 Count Number of Teams](1395.ipynb) | <span title="Fix each element as the middle soldier and count smaller/larger elements on each side to multiply valid triplet counts.">Array, Sorting</span> | O(n^2) Time, O(n) Space| Medium|
 | 1308 | [📓 Run-Length Encoding II](1308.ipynb) | <span title="Process encoded runs directly without decoding, splitting the targeted run and merging adjacent same-character runs.">Array, String</span>| O(n) Time, O(n) Space| Medium|
 |821 | [Shortest Distance to a Character](https://leetcode.com/problems/shortest-distance-to-a-character/) | Array, Two Pointers| Time: O(n), Space: O(1)| Easy|
-| 1113 | [Intersection of Three Sorted Arrays](https://leetcode.com/problems/intersection-of-three-sorted-arrays/) | Array, Two Pointers| Time: O(n), Space: O(1)| Easy|
+| 1113 | [📓 Intersection of Three Sorted Arrays](1113.ipynb) | <span title="Advance the pointer pointing at the smallest value; record and advance all three when they agree.">Three Pointers</span> | Time: $O(n)$, Space: $O(1)$ | Easy |
 |845 | [Longest Mountain in Array](https://leetcode.com/problems/longest-mountain-in-array/) | Array, Two Pointers| Time: O(n), Space: O(1)| Medium|
-| 1327 | [Sort Array by Parity III](https://leetcode.com/problems/sort-array-by-parity-iii/) | Array, Two Pointers| O(n) Time, O(n) Space| Medium|
-| 1486 | [XOR Operation in an Array](https://leetcode.com/problems/xor-operation-in-an-array/) | Array, XOR | O(n) Time, O(1) Space| Easy|
+| 1327 | [📓 Sort Array by Parity](1327.ipynb) | <span title="Advance left past evens and right past odds; swap when left holds an odd and right holds an even.">Two Pointers</span> | Time: $O(n)$, Space: $O(1)$ | Medium |
+| 1486 | [📓 XOR Operation in an Array](1486.ipynb) | <span title="Compute start+2*i on the fly and XOR into a running accumulator without building the array.">XOR Scan</span> | Time: $O(n)$, Space: $O(1)$ | Easy |
 
 ## Backtracking
 | Serial No. | Problem Title | Data Structure | Time and Space Complexity | Level |
@@ -188,16 +188,16 @@
 | 40 | [📓 Combination Sum II](0040.ipynb) | <span title="DFS with explicit undo steps; prune branches early when constraints are already violated.">Backtracking (DFS)</span> | Time: $O(2^N)$, Space: $O(N)$ | Medium |
 |784 | [Letter Case Permutation](https://leetcode.com/problems/letter-case-permutation/) | Backtracking | Time: O(2^n), Space: O(1)| Easy|
 | 17 | [📓 Letter Combinations of a Phone Number](0017.ipynb) | <span title="Explore all candidates recursively; undo (backtrack) a choice when it leads to a dead end.">Backtracking</span> | Time: O(4^n), Space: O(n)| Medium|
-| 22 | [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) | Backtracking | Time: O(4^n / sqrt(n)), Space: O(n)| Medium|
-| 39 | [Combination Sum](https://leetcode.com/problems/combination-sum/) | Backtracking | Time: O(2^n), Space: O(n)| Medium|
-| 40 | [Combination Sum II](https://leetcode.com/problems/combination-sum-ii/) | Backtracking | Time: O(2^n), Space: O(n)| Medium|
-| 46 | [Permutations](https://leetcode.com/problems/permutations/) | Backtracking | Time: O(n!), Space: O(n) | Medium|
-| 47 | [Permutations II](https://leetcode.com/problems/permutations-ii/) | Backtracking | Time: O(n!), Space: O(n) | Medium|
-| 77 | [Combinations](https://leetcode.com/problems/combinations/) | Backtracking | Time: O(n! / (k! * (n-k)!)), Space: O(k) | Medium|
-| 78 | [Subsets](https://leetcode.com/problems/subsets/) | Backtracking | Time: O(2^n), Space: O(n)| Medium|
-| 79 | [Word Search](https://leetcode.com/problems/word-search/) | Backtracking | Time: O(m * n * 4^l), Space: O(m * n)| Medium|
-| 90 | [Subsets II](https://leetcode.com/problems/subsets-ii/) | Backtracking | Time: O(2^n), Space: O(n)| Medium|
-| 93 | [Restore IP Addresses](https://leetcode.com/problems/restore-ip-addresses/) | Backtracking | Time: O(3^4), Space: O(1)| Medium|
+| 22 | [📓 Generate Parentheses](0022.ipynb) | <span title="Use open/close counters as constraints; only add ( when opens < n and ) when closes < opens.">Backtracking (DFS)</span> | Time: $O\!\left(\frac{4^n}{\sqrt{n}}\right)$, Space: $O(n)$ | Medium |
+| 39 | [📓 Combination Sum](0039.ipynb) | <span title="DFS with explicit undo steps; prune branches early when constraints are already violated.">Backtracking (DFS)</span> | Time: $O(N^{T/M})$, Space: $O(T/M)$ | Medium |
+| 40 | [📓 Combination Sum II](0040.ipynb) | <span title="DFS with explicit undo steps; prune branches early when constraints are already violated.">Backtracking (DFS)</span> | Time: $O(2^N)$, Space: $O(N)$ | Medium |
+| 46 | [📓 Permutations](0046.ipynb) | <span title="Swap each element to the current position, recurse on the suffix, then swap back to restore order.">Backtracking (Swap)</span> | Time: $O(n \times n!)$, Space: $O(n)$ | Medium |
+| 47 | [📓 Permutations II](0047.ipynb) | <span title="Sort first, then skip duplicate elements at the same recursion depth to avoid repeated permutations.">Backtracking + Dedup</span> | Time: $O(n \times n!)$, Space: $O(n)$ | Medium |
+| 77 | [📓 Combinations](0077.ipynb) | <span title="Fix a start index and recurse forward; prune branches where remaining elements cannot fill the combination.">Backtracking</span> | Time: $O\!\left(\binom{n}{k} \cdot k\right)$, Space: $O(k)$ | Medium |
+| 78 | [📓 Subsets](0078.ipynb) | <span title="Record the running path at every step, then recurse from index+1 to generate all 2^n subsets.">Backtracking</span> | Time: $O(2^n \cdot n)$, Space: $O(n)$ | Medium |
+| 79 | [📓 Word Search](0079.ipynb) | <span title="Mark each visited cell with a sentinel character in-place; restore it after the recursive call returns.">DFS + Backtracking</span> | Time: $O(m \cdot n \cdot 4^L)$, Space: $O(L)$ | Medium |
+| 90 | [📓 Subsets II](0090.ipynb) | <span title="Sort first, then skip duplicate elements at the same recursion depth to avoid repeated subsets.">Backtracking + Dedup</span> | Time: $O(2^n \cdot n)$, Space: $O(n)$ | Medium |
+| 93 | [📓 Restore IP Addresses](0093.ipynb) | <span title="Try 1-3 digit segments at each of 4 boundaries; prune segments outside 0-255 or with leading zeros.">Backtracking</span> | Time: $O(1)$, Space: $O(1)$ | Medium |
 |131 | [Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/) | Backtracking | Time: O(2^n), Space: O(n)| Medium|
 |216 | [Combination Sum III](https://leetcode.com/problems/combination-sum-iii/) | Backtracking | Time: O(2^n), Space: O(n)| Medium|
 |254 | [Factor Combinations](https://leetcode.com/problems/factor-combinations/) | Backtracking | Time: O(n log n), Space: O(n)| Medium|
@@ -208,8 +208,8 @@
 |351 | [Android Unlock Patterns](https://leetcode.com/problems/android-unlock-patterns/) | Backtracking | Time: O(n), Space: O(1)| Medium|
 |491 | [Increasing Subsequences](https://leetcode.com/problems/increasing-subsequences/) | Backtracking | Time: O(2^n), Space: O(n)| Medium|
 |610 | [Combination Sum III](https://leetcode.com/problems/combination-sum-iii/) | Backtracking | Time: O(n!), Space: O(n) | Medium|
-| 1109 | [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) | Backtracking | Time: O(4^n / sqrt(n)), Space: O(1)| Medium|
-| 37 | [Sudoku Solver](https://leetcode.com/problems/sudoku-solver/) | Backtracking | Time: O(9^81), Space: O(1) | Hard|
+| 1109 | [📓 Corporate Flight Bookings](1109.ipynb) | <span title="Mark +seats at booking start and -seats one past the end; a single prefix-sum pass yields per-flight counts.">Difference Array</span> | Time: $O(n + m)$, Space: $O(1)$ | Medium |
+| 37 | [📓 Sudoku Solver](0037.ipynb) | <span title="Try digits 1-9 in each empty cell; validate row, column, and 3×3 box; backtrack on failure.">Backtracking</span> | Time: $O(9^m)$, Space: $O(m)$ | Hard |
 | 51 | [N-Queens](https://leetcode.com/problems/n-queens/) | Backtracking | Time: O(n!), Space: O(n) | Hard|
 | 52 | [N-Queens II](https://leetcode.com/problems/n-queens-ii/) | Backtracking | Time: O(n!), Space: O(n) | Hard|
 |282 | [Expression Add Operators](https://leetcode.com/problems/expression-add-operators/) | Backtracking | Time: O(4^n), Space: O(n)| Hard|

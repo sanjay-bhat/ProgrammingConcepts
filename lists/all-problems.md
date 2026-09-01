@@ -21,7 +21,7 @@
 | 19 | [📓 Remove Nth Node From End of List](../leetcode/0019.ipynb) | <span title="Single left-to-right scan with two pointers; no second pass needed.">One-Pass Two Pointers</span> | Time: O(n), Space: O(1) | Medium |
 | 20 | [📓 Valid Parentheses](../leetcode/0020.ipynb) | <span title="LIFO structure; push on open events, pop and process on close events.">Stack</span> | Time: O(n), Space: O(n) | Easy |
 | 21 | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | Linked List | Time: O(m + n), Space: O(1) | Easy |
-| 22 | [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) | Backtracking | Time: O(4^n / sqrt(n)), Space: O(n) | Medium |
+| 22 | [📓 Generate Parentheses](../leetcode/0022.ipynb) | <span title="Use open/close counters as constraints; only add ( when opens < n and ) when closes < opens.">Backtracking (DFS)</span> | Time: $O\!\left(\frac{4^n}{\sqrt{n}}\right)$, Space: $O(n)$ | Medium |
 | 39 | [📓 Combination Sum](../leetcode/0039.ipynb) | <span title="DFS with explicit undo steps; prune branches early when constraints are already violated.">Backtracking (DFS)</span> | Time: $O(N^{T/M})$, Space: $O(T/M)$ | Medium |
 | 40 | [📓 Combination Sum II](../leetcode/0040.ipynb) | <span title="DFS with explicit undo steps; prune branches early when constraints are already violated.">Backtracking (DFS)</span> | Time: $O(2^N)$, Space: $O(N)$ | Medium |
 | 23 | [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | Heap, Divide and Conquer | Time: O(n log k), Space: O(k) | Hard |
@@ -38,17 +38,17 @@
 | 34 | [📓 Find First and Last Position of Element in Sorted Array](../leetcode/0034.ipynb) | <span title="Two separate binary searches: one for the leftmost index, one for the rightmost index.">Two Binary Searches</span> | Time: O(log n), Space: O(1) | Medium |
 | 35 | [📓 Search Insert Position](../leetcode/0035.ipynb) | <span title="Halve the search space each step by comparing the midpoint to a monotone predicate.">Binary Search</span> | Time: $O(\log n)$, Space: $O(1)$ | Easy |
 | 36 | [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/) | Hash Set | Time: O(n^2), Space: O(n^2) | Medium |
-| 37 | [Sudoku Solver](https://leetcode.com/problems/sudoku-solver/) | Backtracking | Time: O(9^81), Space: O(1) | Hard |
+| 37 | [📓 Sudoku Solver](../leetcode/0037.ipynb) | <span title="Try digits 1-9 in each empty cell; validate row, column, and 3×3 box; backtrack on failure.">Backtracking</span> | Time: $O(9^m)$, Space: $O(m)$ | Hard |
 | 38 | [Count and Say](https://leetcode.com/problems/count-and-say/) | String | Time: O(n), Space: O(1) | Easy |
-| 39 | [Combination Sum](https://leetcode.com/problems/combination-sum/) | Backtracking | Time: O(2^n), Space: O(n) | Medium |
-| 40 | [Combination Sum II](https://leetcode.com/problems/combination-sum-ii/) | Backtracking | Time: O(2^n), Space: O(n) | Medium |
+| 39 | [📓 Combination Sum](../leetcode/0039.ipynb) | <span title="DFS with explicit undo steps; prune branches early when constraints are already violated.">Backtracking (DFS)</span> | Time: $O(N^{T/M})$, Space: $O(T/M)$ | Medium |
+| 40 | [📓 Combination Sum II](../leetcode/0040.ipynb) | <span title="DFS with explicit undo steps; prune branches early when constraints are already violated.">Backtracking (DFS)</span> | Time: $O(2^N)$, Space: $O(N)$ | Medium |
 | 41 | [📓 First Missing Positive](../leetcode/0041.ipynb) | <span title="Negate nums[val-1] to stamp which values are present, then scan for the first positive slot.">In-place Index Negation</span>| Time: O(n), Space: O(1) | Hard |
 | 42 | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | Two Pointers, Dynamic Programming | Time: O(n), Space: O(1) | Hard |
 | 43 | [Multiply Strings](https://leetcode.com/problems/multiply-strings/) | String | Time: O(m * n), Space: O(m + n) | Medium |
 | 44 | [Wildcard Matching](https://leetcode.com/problems/wildcard-matching/) | Dynamic Programming | Time: O(m * n), Space: O(m * n) | Hard |
 | 45 | [Jump Game II](https://leetcode.com/problems/jump-game-ii/) | Greedy | Time: O(n), Space: O(1) | Hard |
-| 46 | [Permutations](https://leetcode.com/problems/permutations/) | Backtracking | Time: O(n!), Space: O(n) | Medium |
-| 47 | [Permutations II](https://leetcode.com/problems/permutations-ii/) | Backtracking | Time: O(n!), Space: O(n) | Medium |
+| 46 | [📓 Permutations](../leetcode/0046.ipynb) | <span title="Swap each element to the current position, recurse on the suffix, then swap back to restore order.">Backtracking (Swap)</span> | Time: $O(n \times n!)$, Space: $O(n)$ | Medium |
+| 47 | [📓 Permutations II](../leetcode/0047.ipynb) | <span title="Sort first, then skip duplicate elements at the same recursion depth to avoid repeated permutations.">Backtracking + Dedup</span> | Time: $O(n \times n!)$, Space: $O(n)$ | Medium |
 | 48 | [📓 Rotate Image](../leetcode/0048.ipynb) | <span title="Transpose the matrix across the main diagonal, then reverse each row to achieve a 90 degree clockwise rotation.">Transpose + Row Reverse</span>| Time: O(n^2), Space: O(1) | Medium |
 | 49 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) | Hash Map | Time: O(n * k), Space: O(n * k) | Medium |
 | 50 | [Pow(x, n)](https://leetcode.com/problems/powx-n/) | Math | Time: O(log n), Space: O(1) | Medium |
@@ -78,9 +78,9 @@
 | 74 | [📓 Search a 2D Matrix](../leetcode/0074.ipynb) | <span title="Treat the 2D matrix as a 1D array; map flat index → (row, col) with mid/cols and mid%cols.">Binary Search on Flattened Index</span> | Time: O(log(m * n)), Space: O(1) | Medium |
 | 75 | [Sort Colors](https://leetcode.com/problems/sort-colors/) | Sorting, Two Pointers | Time: O(n), Space: O(1) | Medium |
 | 76 | [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) | Hash Map, Sliding Window | Time: O(n), Space: O(n) | Hard |
-| 77 | [Combinations](https://leetcode.com/problems/combinations/) | Backtracking | Time: O(n! / (k! * (n-k)!)), Space: O(k) | Medium |
-| 78 | [Subsets](https://leetcode.com/problems/subsets/) | Backtracking | Time: O(2^n), Space: O(n) | Medium |
-| 79 | [Word Search](https://leetcode.com/problems/word-search/) | Backtracking | Time: O(m * n * 4^l), Space: O(m * n) | Medium |
+| 77 | [📓 Combinations](../leetcode/0077.ipynb) | <span title="Fix a start index and recurse forward; prune branches where remaining elements cannot fill the combination.">Backtracking</span> | Time: $O\!\left(\binom{n}{k} \cdot k\right)$, Space: $O(k)$ | Medium |
+| 78 | [📓 Subsets](../leetcode/0078.ipynb) | <span title="Record the running path at every step, then recurse from index+1 to generate all 2^n subsets.">Backtracking</span> | Time: $O(2^n \cdot n)$, Space: $O(n)$ | Medium |
+| 79 | [📓 Word Search](../leetcode/0079.ipynb) | <span title="Mark each visited cell with a sentinel character in-place; restore it after the recursive call returns.">DFS + Backtracking</span> | Time: $O(m \cdot n \cdot 4^L)$, Space: $O(L)$ | Medium |
 | 80 | [📓 Remove Duplicates from Sorted Array II](../leetcode/0080.ipynb) | <span title="Advance a write pointer, admitting each element only if it differs from the value two slots behind the write head.">Two Pointers</span>| Time: O(n), Space: O(1) | Medium |
 | 81 | [📓 Search in Rotated Sorted Array II](../leetcode/0081.ipynb) | <span title="When arr[lo] == arr[mid], can't determine sorted half — increment lo to skip the duplicate.">Binary Search with Duplicate Handling</span> | Time: O(n) worst, O(log n) avg, Space: O(1) | Medium |
 | 82 | [Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/) | Linked List | Time: O(n), Space: O(1) | Medium |
@@ -91,10 +91,10 @@
 | 87 | [Scramble String](https://leetcode.com/problems/scramble-string/) | Dynamic Programming | Time: O(n^4), Space: O(n^4) | Hard |
 | 88 | [📓 Merge Sorted Array](../leetcode/0088.ipynb) | <span title="Merge two sorted arrays in-place from the back using three index pointers.">Three Pointers (Merge from End)</span> | Time: O(m + n), Space: O(1) | Easy |
 | 89 | [📓 Gray Code](../leetcode/0089.ipynb) | <span title="Generate each Gray code as i XOR (i >> 1) for all i in [0, 2^n) — O(1) per element.">Binary-Reflected XOR Formula</span> | Time: O(2^n), Space: O(2^n) | Medium |
-| 90 | [Subsets II](https://leetcode.com/problems/subsets-ii/) | Backtracking | Time: O(2^n), Space: O(n) | Medium |
+| 90 | [📓 Subsets II](../leetcode/0090.ipynb) | <span title="Sort first, then skip duplicate elements at the same recursion depth to avoid repeated subsets.">Backtracking + Dedup</span> | Time: $O(2^n \cdot n)$, Space: $O(n)$ | Medium |
 | 91 | [Decode Ways](https://leetcode.com/problems/decode-ways/) | Dynamic Programming | Time: O(n), Space: O(n) | Medium |
 | 92 | [Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/) | Linked List | Time: O(n), Space: O(1) | Medium |
-| 93 | [Restore IP Addresses](https://leetcode.com/problems/restore-ip-addresses/) | Backtracking | Time: O(3^4), Space: O(1) | Medium |
+| 93 | [📓 Restore IP Addresses](../leetcode/0093.ipynb) | <span title="Try 1-3 digit segments at each of 4 boundaries; prune segments outside 0-255 or with leading zeros.">Backtracking</span> | Time: $O(1)$, Space: $O(1)$ | Medium |
 | 94 | [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) | Tree, Stack | Time: O(n), Space: O(n) | Easy |
 | 95 | [Unique Binary Search Trees II](https://leetcode.com/problems/unique-binary-search-trees-ii/) | Tree, Dynamic Programming | Time: O(4^n / sqrt(n)), Space: O(n) | Medium |
 | 96 | [Unique Binary Search Trees](https://leetcode.com/problems/unique-binary-search-trees/) | Dynamic Programming | Time: O(n^2), Space: O(n) | Medium |
@@ -1114,11 +1114,11 @@
 | 1106 | [Parsing A Boolean Expression](https://leetcode.com/problems/parsing-a-boolean-expression/)   | Stack, String  | Time: O(n), Space: O(n)| Medium |
 | 1107 | [Gift Card Purchase](https://leetcode.com/problems/gift-card-purchase/) | DP, Knapsack   | Time: O(n^2), Space: O(n)  | Medium |
 | 1108 | [📓 IP Address to CIDR](../leetcode/1108.ipynb) | <span title="Greedily take the largest power-of-two-aligned CIDR block fitting the current IP and count.">Greedy Largest Aligned Block</span> | Time: O(1), Space: O(1)| Medium |
-| 1109 | [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) | Backtracking   | Time: O(4^n / sqrt(n)), Space: O(1) | Medium |
+| 1109 | [📓 Corporate Flight Bookings](../leetcode/1109.ipynb) | <span title="Mark +seats at booking start and -seats one past the end; a single prefix-sum pass yields per-flight counts.">Difference Array</span> | Time: $O(n + m)$, Space: $O(1)$ | Medium |
 | 1110 | [Delete Node in a BST](https://leetcode.com/problems/delete-node-in-a-bst/) | Tree, BST| Time: O(log n), Space: O(1)| Medium |
 | 1111 | [Delete Node in a BST](https://leetcode.com/problems/delete-node-in-a-bst/) | Tree, BST  | Time: O(log n), Space: O(1)| Medium |
 | 1112 | [Smallest Subtree with all the Deepest Nodes](https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/) | Tree, DFS  | Time: O(n), Space: O(n)| Medium |
-| 1113 | [Intersection of Three Sorted Arrays](https://leetcode.com/problems/intersection-of-three-sorted-arrays/) | Array, Two Pointers| Time: O(n), Space: O(1)| Easy |
+| 1113 | [📓 Intersection of Three Sorted Arrays](../leetcode/1113.ipynb) | <span title="Advance the pointer pointing at the smallest value; record and advance all three when they agree.">Three Pointers</span> | Time: $O(n)$, Space: $O(1)$ | Easy |
 | 1114 | [Print in Order](https://leetcode.com/problems/print-in-order/) | DFS, Multi-threading | Time: O(1), Space: O(1)| Easy |
 | 1115 | [Print Foo Bar Alternately](https://leetcode.com/problems/print-foo-bar-alternately/) | DFS, Multi-threading | Time: O(1), Space: O(1)| Medium |
 | 1116 | [Print Zero Even Odd](https://leetcode.com/problems/print-zero-even-odd/)   | Multi-threading | Time: O(1), Space: O(1)| Medium |
@@ -1333,7 +1333,7 @@
 | 1324 | [Print Words Vertically](https://leetcode.com/problems/print-words-vertically/) | String   | O(n) Time, O(n) Space | Medium |
 | 1325 | [Delete Leaves with a Given Value](https://leetcode.com/problems/delete-leaves-with-a-given-value/) | Tree, DFS | O(n) Time, O(n) Space | Medium |
 | 1326 | [Minimum Cost to Move Chips to the Same Position](https://leetcode.com/problems/minimum-cost-to-move-chips-to-the-same-position/) | Math, Array   | O(n) Time, O(1) Space | Easy |
-| 1327 | [Sort Array by Parity III](https://leetcode.com/problems/sort-array-by-parity-iii/) | Array, Two Pointers   | O(n) Time, O(n) Space | Medium |
+| 1327 | [📓 Sort Array by Parity](../leetcode/1327.ipynb) | <span title="Advance left past evens and right past odds; swap when left holds an odd and right holds an even.">Two Pointers</span> | Time: $O(n)$, Space: $O(1)$ | Medium |
 | 1328 | [Break a Palindrome](https://leetcode.com/problems/break-a-palindrome/)| String   | O(n) Time, O(n) Space | Medium |
 | 1329 | [Sort Matrix Diagonally](https://leetcode.com/problems/sort-matrix-diagonally/) | Matrix, Sorting | O(n * m log n) Time, O(n * m) Space | Medium |
 | 1330 | [Super Egg Drop](https://leetcode.com/problems/super-egg-drop/)| Dynamic Programming| O(k * log n) Time, O(k * log n) Space | Hard |
@@ -1492,7 +1492,7 @@
 | 1483 | [Kth Ancestor of a Tree Node](https://leetcode.com/problems/kth-ancestor-of-a-tree-node/) | Tree, Binary Lifting  | O(log n) Time, O(n) Space   | Hard |
 | 1484 | [Group Strings](https://leetcode.com/problems/group-strings/)| Graph, Union-Find | O(n log n) Time, O(n) Space | Medium |
 | 1| 485 | [📓 Max Consecutive Ones](../leetcode/0485.ipynb) | <span title="Process each element exactly once; maintain running state to build the result.">Single Pass</span> | Time: O(n), Space: O(1) | Easy |
-| 1486 | [XOR Operation in an Array](https://leetcode.com/problems/xor-operation-in-an-array/) | Array, XOR| O(n) Time, O(1) Space | Easy |
+| 1486 | [📓 XOR Operation in an Array](../leetcode/1486.ipynb) | <span title="Compute start+2*i on the fly and XOR into a running accumulator without building the array.">XOR Scan</span> | Time: $O(n)$, Space: $O(1)$ | Easy |
 | 1487 | [Making File Names Unique](https://leetcode.com/problems/making-file-names-unique/) | HashMap, Set  | O(n) Time, O(n) Space | Medium |
 | 1488 | [Avoid Flood in The City](https://leetcode.com/problems/avoid-flood-in-the-city/) | Heap, HashMap | O(n log n) Time, O(n) Space | Hard |
 | 1489 | [Find the Most Competitive Subsequence](https://leetcode.com/problems/find-the-most-competitive-subsequence/) | Stack, Greedy | O(n) Time, O(n) Space | Medium |

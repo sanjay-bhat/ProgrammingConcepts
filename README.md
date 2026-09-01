@@ -1079,7 +1079,7 @@
 | 1050 | [Animals in a Zoo](https://leetcode.com/problems/animals-in-a-zoo/) | Simulation | Time: O(1), Space: O(1)| Easy |
 | 1051 | [Height Checker](https://leetcode.com/problems/height-checker/)| Sorting| Time: O(n log n), Space: O(1)| Easy |
 | 1052 | [Grumpy Bookstore Owner](https://leetcode.com/problems/grumpy-bookstore-owner/) | Sliding Window, Greedy | Time: O(n), Space: O(1)| Medium |
-| 1053 | [Previous Permutation With One Swap](https://leetcode.com/problems/previous-permutation-with-one-swap/) | Array, Sorting| Time: O(n), Space: O(1)| Medium |
+| 1053 | [📓 Previous Permutation With One Swap](leetcode/1053.ipynb) | <span title="Scan from the right for the first descent, then swap with the leftmost occurrence of the largest valid smaller element.">Array, Sorting</span>| Time: O(n), Space: O(1)| Medium |
 | 1054 | [Distant Barcodes](https://leetcode.com/problems/distant-barcodes/) | Greedy, Sorting| Time: O(n log n), Space: O(n)| Medium |
 | 1055 | [Shortest Way to Form String](https://leetcode.com/problems/shortest-way-to-form-string/) | DP, String | Time: O(n * m), Space: O(n * m)  | Hard |
 | 1056 | [Confusing Number](https://leetcode.com/problems/confusing-number/)| Math, Simulation | Time: O(1), Space: O(1)| Easy |
@@ -1113,7 +1113,7 @@
 | 1084 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/)   | Hash Map, String | Time: O(n * k log k), Space: O(n) | Medium |
 | 1085 | [Sum of Digits in the Minimum Number](https://leetcode.com/problems/sum-of-digits-in-the-minimum-number/) | Math, String| Time: O(1), Space: O(1)| Easy |
 | 1086 | [Largest Palindromic Substring](https://leetcode.com/problems/largest-palindromic-substring/) | DP, String | Time: O(n^2), Space: O(n^2)| Hard |
-| 1087 | [Design Tic-Tac-Toe](https://leetcode.com/problems/design-tic-tac-toe/) | Array, Simulation| Time: O(1), Space: O(1)| Easy |
+| 1087 | [📓 Design Tic-Tac-Toe](leetcode/1087.ipynb) | <span title="Use per-row, per-column, and diagonal integer counters to detect wins in O(1) per move.">Array, Simulation</span>| Time: O(1), Space: O(1)| Easy |
 | 1088 | [Validate IP Address](https://leetcode.com/problems/validate-ip-address/) | String | Time: O(1), Space: O(1)| Medium |
 | 1089 | [📓 Duplicate Zeros](leetcode/1089.ipynb) | <span title="Count zeros first, then fill backwards from right using a virtual extended index to duplicate each zero in-place.">Two-Pass In-Place</span>| Time: O(n), Space: O(1)| Easy |
 | 1090 | [📓 Largest Element in an Array](leetcode/1090.ipynb) | <span title="Scan the array once tracking the running maximum, updating whenever a larger element is found.">Single Pass</span>| Time: O(n), Space: O(1)| Easy |
@@ -1213,7 +1213,7 @@
 | 1184 | [📓 Distance Between Bus Stops](leetcode/1184.ipynb) | <span title="Sum the clockwise arc from source to destination and return the minimum of that and the total-minus-clockwise distance.">Array, Math</span> | O(n) Time, O(1) Space | Easy |
 | 1185 | [Day of the Week](https://leetcode.com/problems/day-of-the-week/) | Integer | O(1) Time, O(1) Space | Easy |
 | 1186 | [Maximum Subarray Sum with One Deletion](https://leetcode.com/problems/maximum-subarray-sum-with-one-deletion/) | Dynamic Programming, Array| O(n) Time, O(n) Space | Medium |
-| 1187 | [Make Two Arrays Equal by Reversing Subarrays](https://leetcode.com/problems/make-two-arrays-equal-by-reversing-subarrays/) | Array, Sorting | O(n log n) Time, O(n) Space | Easy |
+| 1187 | [📓 Make Two Arrays Equal by Reversing Subarrays](leetcode/1187.ipynb) | <span title="Sort both arrays; any permutation is reachable via reversals, so equality of sorted forms implies transformability.">Array, Sorting</span> | O(n log n) Time, O(n) Space | Easy |
 | 1188 | [Design a Stack With Increment Operation](https://leetcode.com/problems/design-a-stack-with-increment-operation/) | Stack, Array   | O(1) Time, O(n) Space | Medium |
 | 1189 | [Maximum Number of Words Found in Sentences](https://leetcode.com/problems/maximum-number-of-words-found-in-sentences/) | String, Array  | O(n) Time, O(1) Space | Easy |
 | 1190 | [Reverse Substrings Between Each Pair of Parentheses](https://leetcode.com/problems/reverse-substrings-between-each-pair-of-parentheses/) | Stack, String  | O(n) Time, O(n) Space | Medium |
@@ -1232,7 +1232,7 @@
 | 1202 | [Smallest String With Swaps](https://leetcode.com/problems/smallest-string-with-swaps/) | Union-Find, Graph | O(n log n) Time, O(n) Space | Medium |
 | 1203 | [Sort Items by Groups Respecting Dependencies](https://leetcode.com/problems/sort-items-by-groups-respecting-dependencies/) | Graph, Topological Sort| O(n + m) Time, O(n + m) Space | Hard |
 | 1204 | [📓 Design Hit Counter](leetcode/1204.ipynb) | <span title="Fixed 300 slots indexed by timestamp % 300; overwrite stale slots on hit() and sum valid slots on getHits().">Circular Buffer</span>| O(1) Time, O(k) Space | Medium |
-| 1205 | [Google Question](https://leetcode.com/problems/google-question/)| Array, Sorting | O(n log n) Time, O(1) Space | Medium |
+| 1205 | [📓 Google Question](leetcode/1205.ipynb)| <span title="Sort meeting start and end times independently, then greedily reuse rooms with a two-pointer sweep.">Array, Sorting</span> | O(n log n) Time, O(1) Space | Medium |
 | 1206 | [Design Linked List](https://leetcode.com/problems/design-linked-list/)| Linked List| O(1) Time, O(1) Space | Easy |
 | 1207 | [Unique Number of Occurrences](https://leetcode.com/problems/unique-number-of-occurrences/) | HashMap, Set   | O(n) Time, O(n) Space | Easy |
 | 1208 | [Get Equal Substrings Within Budget](https://leetcode.com/problems/get-equal-substrings-within-budget/) | Sliding Window, String | O(n) Time, O(1) Space | Medium |
@@ -1330,12 +1330,12 @@
 | 1300 | [📓 Sum of Mutated Array Closest to Target](leetcode/1300.ipynb) | <span title="Sort the array then binary search; or sort + two-pointer sweep after the search.">Binary Search, Array</span> | O(n log n) Time, O(1) Space | Medium |
 | 1301 | [Number of Paths with Max Score](https://leetcode.com/problems/number-of-paths-with-max-score/) | Dynamic Programming, Graph  | O(n * m) Time, O(n * m) Space | Hard |
 | 1302 | [Deepest Leaves Sum](https://leetcode.com/problems/deepest-leaves-sum/) | Tree, BFS | O(n) Time, O(n) Space | Medium |
-| 1303 | [Find the Team Size](https://leetcode.com/problems/find-the-team-size/) | Array, Sorting| O(n log n) Time, O(n) Space | Medium |
+| 1303 | [📓 Find the Team Size](leetcode/1303.ipynb) | <span title="Build a frequency map of team sizes in one pass, then look up each employee's team count directly.">Array, Sorting</span>| O(n log n) Time, O(n) Space | Medium |
 | 1304 | [📓 Find N Unique Integers Sum up to Zero](leetcode/1304.ipynb) | <span title="Fill slots with 1 through n-1, then set the last element to their negated sum to guarantee a total of zero.">Direct Construction</span> | O(n) Time, O(n) Space | Easy |
 | 1305 | [All Elements in Two Binary Search Trees](https://leetcode.com/problems/all-elements-in-two-binary-search-trees/) | Tree, Sorting, Merge  | O(n + m) Time, O(n + m) Space | Medium |
 | 1306 | [Jump Game III](https://leetcode.com/problems/jump-game-iii/)   | BFS, Graph, Queue | O(n) Time, O(n) Space | Medium |
 | 1307 | [Verbal Arithmetic Puzzle](https://leetcode.com/problems/verbal-arithmetic-puzzle/) | Backtracking, String  | O(10!) Time, O(10) Space  | Hard |
-| 1308 | [Run-Length Encoding II](https://leetcode.com/problems/run-length-encoding-ii/) | Array, String | O(n) Time, O(n) Space | Medium |
+| 1308 | [📓 Run-Length Encoding II](leetcode/1308.ipynb) | <span title="Process encoded runs directly without decoding, splitting the targeted run and merging adjacent same-character runs.">Array, String</span> | O(n) Time, O(n) Space | Medium |
 | 1309 | [📓 Decompress Run-Length Encoded List](leetcode/1309.ipynb) | <span title="Iterate through [freq, val] pairs and append val exactly freq times to reconstruct each run.">Single Pass Expansion</span> | O(n) Time, O(n) Space | Easy |
 | 1310 | [Sum of Subarray Minimums](https://leetcode.com/problems/sum-of-subarray-minimums/) | Stack, Array  | O(n) Time, O(n) Space | Medium |
 | 1311 | [Get Watched Videos by Your Friends](https://leetcode.com/problems/get-watched-videos-by-your-friends/) | Graph, HashMap| O(n + m) Time, O(n + m) Space | Medium |
@@ -1360,7 +1360,7 @@
 | 1330 | [Super Egg Drop](https://leetcode.com/problems/super-egg-drop/)| Dynamic Programming| O(k * log n) Time, O(k * log n) Space | Hard |
 | 1331 | [Rank Transform of an Array](https://leetcode.com/problems/rank-transform-of-an-array/) | Sorting, HashMap| O(n log n) Time, O(n) Space | Easy |
 | 1332 | [Remove Palindromic Subsequences](https://leetcode.com/problems/remove-palindromic-subsequences/) | String   | O(n) Time, O(1) Space | Medium |
-| 1333 | [Filter Restaurants by Vegan-Friendly, Price and Distance](https://leetcode.com/problems/filter-restaurants-by-vegan-friendly-price-and-distance/) | Array, Sorting| O(n log n) Time, O(n) Space | Medium |
+| 1333 | [📓 Filter Restaurants by Vegan-Friendly, Price and Distance](leetcode/1333.ipynb) | <span title="Filter by constraints first, then sort survivors by rating descending and id descending.">Array, Sorting</span>| O(n log n) Time, O(n) Space | Medium |
 | 1334 | [Find the City With the Smallest Number of Neighbors at a Threshold Distance](https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/) | Graph, Dijkstra | O(n^3) Time, O(n^2) Space | Medium |
 | 1335 | [Minimum Difficulty of a Job Schedule](https://leetcode.com/problems/minimum-difficulty-of-a-job-schedule/) | Dynamic Programming| O(n^2) Time, O(n) Space   | Hard |
 | 1336 | [The K Weakest Rows in a Matrix](https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix/) | Sorting, Array| O(n log n) Time, O(n) Space | Medium |
@@ -1377,9 +1377,9 @@
 | 1347 | [Minimum Cost to Move Chips to the Same Position](https://leetcode.com/problems/minimum-cost-to-move-chips-to-the-same-position/) | Math| O(n) Time, O(1) Space | Easy |
 | 1348 | [Tweet Counts Per Frequency](https://leetcode.com/problems/tweet-counts-per-frequency/) | HashMap, Queue| O(n) Time, O(n) Space | Medium |
 | 1349 | [Maximum Students Taking Exam](https://leetcode.com/problems/maximum-students-taking-exam/) | DP, Bitmasking| O(n^2) Time, O(n) Space   | Hard |
-| 1350 | [Product of the Last K Numbers](https://leetcode.com/problems/product-of-the-last-k-numbers/) | Array, Sliding Window | O(1) Time, O(n) Space | Medium |
+| 1350 | [📓 Product of the Last K Numbers](leetcode/1350.ipynb) | <span title="Maintain a prefix-product list; reset on zero and answer queries in O(1) via prefix division.">Array, Sliding Window</span> | O(1) Time, O(n) Space | Medium |
 | 1351 | [Count Negative Numbers in a Sorted Matrix](https://leetcode.com/problems/count-negative-numbers-in-a-sorted-matrix/) | Matrix, Binary Search | O(n + m) Time, O(1) Space | Easy |
-| 1352 | [Product of the Last K Numbers](https://leetcode.com/problems/product-of-the-last-k-numbers/) | Array, Sliding Window | O(1) Time, O(n) Space | Medium |
+| 1352 | [📓 Product of Array Except Self](leetcode/1352.ipynb) | <span title="Accumulate prefix products left-to-right, then fold in suffix products right-to-left using a single scalar.">Array, Sliding Window</span> | O(1) Time, O(n) Space | Medium |
 | 1353 | [Maximum Number of Events That Can Be Attended](https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended/) | Greedy, Sorting| O(n log n) Time, O(n) Space | Medium |
 | 1354 | [Construct Target Array With Multiple Sums](https://leetcode.com/problems/construct-target-array-with-multiple-sums/) | Priority Queue, Greedy| O(n log n) Time, O(n) Space | Hard |
 | 1355 | [Count Words Obtained After Adding a Letter](https://leetcode.com/problems/count-words-obtained-after-adding-a-letter/) | Trie, HashMap | O(n) Time, O(n) Space | Medium |
@@ -1422,7 +1422,7 @@
 | 1392 | [Longest Happy Prefix](https://leetcode.com/problems/longest-happy-prefix/)   | String, KMP   | O(n) Time, O(n) Space | Hard |
 | 1393 | [Capital Gain](https://leetcode.com/problems/capital-gain/)| Math| O(n) Time, O(1) Space | Easy |
 | 1394 | [Find Lucky Integer in an Array](https://leetcode.com/problems/find-lucky-integer-in-an-array/) | HashMap, Array| O(n) Time, O(n) Space | Easy |
-| 1395 | [Count Number of Teams](https://leetcode.com/problems/count-number-of-teams/) | Array, Sorting| O(n^2) Time, O(n) Space   | Medium |
+| 1395 | [📓 Count Number of Teams](leetcode/1395.ipynb) | <span title="Fix each element as the middle soldier and count smaller/larger elements on each side to multiply valid triplet counts.">Array, Sorting</span>| O(n^2) Time, O(n) Space   | Medium |
 | 1396 | [Design Underground System](https://leetcode.com/problems/design-underground-system/) | HashMap, Queue| O(1) Time, O(n) Space | Medium |
 | 1397 | [Find All Good Strings](https://leetcode.com/problems/find-all-good-strings/) | Dynamic Programming, DFS | O(n) Time, O(1) Space | Hard |
 | 1398 | [📓 Company Finder](leetcode/1398.ipynb)| <span title="Load the first array into a HashSet, then collect elements from the second array that hit the set in O(1).">Array, HashSet</span>| O(n) Time, O(n) Space | Easy |
@@ -1464,14 +1464,14 @@
 | 1434 | [Number of Ways to Wear Different Hats to Each Other](https://leetcode.com/problems/number-of-ways-to-wear-different-hats-to-each-other/) | HashMap, Array| O(n * m) Time, O(n * m) Space | Hard |
 | 1435 | [Check if a string contains a valid palindrome](https://leetcode.com/problems/check-if-a-string-contains-a-valid-palindrome/) | String, Dynamic Programming  | O(n^2) Time, O(n) Space   | Medium |
 | 1436 | [Destination City](https://leetcode.com/problems/destination-city/)| Graph, HashMap| O(n) Time, O(n) Space | Easy |
-| 1437 | [Check If All 1's Are at Least Length K Places Away](https://leetcode.com/problems/check-if-all-1s-are-at-least-length-k-places-away/) | Array, Sliding Window | O(n) Time, O(1) Space | Medium |
+| 1437 | [📓 Check If All 1's Are at Least Length K Places Away](leetcode/1437.ipynb) | <span title="Track the index of the last seen 1 and reject any pair whose gap falls below k.">Array, Sliding Window</span> | O(n) Time, O(1) Space | Medium |
 | 1438 | [Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit](https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/) | Sliding Window, Queue | O(n) Time, O(n) Space | Medium |
 | 1439 | [Find the Kth Smallest Sum of a Matrix with Sorted Rows](https://leetcode.com/problems/find-the-kth-smallest-sum-of-a-matrix-with-sorted-rows/) | Heap, Matrix  | O(k log n) Time, O(n) Space | Hard |
 | 1440 | [Evaluate Boolean Expression](https://leetcode.com/problems/evaluate-boolean-expression/) | Stack, Recursion| O(n) Time, O(n) Space | Medium |
 | 1441 | [Build an Array With Stack Operations](https://leetcode.com/problems/build-an-array-with-stack-operations/) | Stack, Array  | O(n) Time, O(n) Space | Easy |
 | 1442 | [📓 Count Triplets That Can Form Two Arrays of Equal XOR](leetcode/1442.ipynb) | <span title="Use prefix XOR; when prefix[i]==prefix[k+1] the subarray XOR is zero, giving k-i valid triplets.">Prefix XOR</span> | O(n^2) Time, O(n) Space | Hard |
 | 1443 | [Minimum Time to Collect All Apples in a Tree](https://leetcode.com/problems/minimum-time-to-collect-all-apples-in-a-tree/) | Tree, DFS | O(n) Time, O(n) Space | Medium |
-| 1444 | [Count Subarrays With Fixed Bounds](https://leetcode.com/problems/count-subarrays-with-fixed-bounds/) | Array, Sliding Window | O(n) Time, O(1) Space | Hard |
+| 1444 | [📓 Count Subarrays With Fixed Bounds](leetcode/1444.ipynb) | <span title="Slide a window tracking the last out-of-range index and last positions of minK and maxK to count valid subarrays in O(1).">Array, Sliding Window</span> | O(n) Time, O(1) Space | Hard |
 | 1445 | [Add Two Integers in Linked List Representation](https://leetcode.com/problems/add-two-integers-in-linked-list-representation/) | Linked List, Math | O(n) Time, O(1) Space | Medium |
 | 1446 | [Count Distinct Integers After Reverse Operations](https://leetcode.com/problems/count-distinct-integers-after-reverse-operations/) | Set, Math | O(n log n) Time, O(n) Space | Medium |
 | 1447 | [Simplified Fractions](https://leetcode.com/problems/simplified-fractions/)| Math, HashSet | O(n^2) Time, O(n) Space | Medium |
@@ -1481,7 +1481,7 @@
 | 1451 | [Rearrange Words in a Sentence](https://leetcode.com/problems/rearrange-words-in-a-sentence/) | String, Sorting | O(n log n) Time, O(n) Space | Medium |
 | 1452 | [People Whose List of Favorite Companies Is Not a Subset of Another List](https://leetcode.com/problems/people-whose-list-of-favorite-companies-is-not-a-subset-of-another-list/) | HashSet, Array| O(n^2) Time, O(n^2) Space   | Medium |
 | 1453 | [Find the Longest Substring Containing Vowels in Even Counts](https://leetcode.com/problems/find-the-longest-substring-containing-vowels-in-even-counts/) | Bit Manipulation, Prefix Sum | O(n) Time, O(1) Space | Medium |
-| 1454 | [Active Students](https://leetcode.com/problems/active-students/)| Array, Set| O(n) Time, O(n) Space | Easy |
+| 1454 | [📓 Active Students](leetcode/1454.ipynb)| <span title="Seed an active set from the first session and intersect with each subsequent session to retain only universal attendees.">Array, Set</span>| O(n) Time, O(n) Space | Easy |
 | 1455 | [Check If a Word Occurs As a Prefix of Any Word in a Sentence](https://leetcode.com/problems/check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence/) | String, Array | O(n) Time, O(1) Space | Easy |
 | 1456 | [Maximum Number of Vowels in a Substring of Given Length](https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/) | Sliding Window, String| O(n) Time, O(1) Space | Medium |
 | 1457 | [Pseudoclassical Pairs](https://leetcode.com/problems/pseudoclassical-pairs/)  | Math, HashSet | O(n^2) Time, O(n) Space | Hard |
@@ -1518,9 +1518,9 @@
 | 1488 | [Avoid Flood in The City](https://leetcode.com/problems/avoid-flood-in-the-city/) | Heap, HashMap | O(n log n) Time, O(n) Space | Hard |
 | 1489 | [Find the Most Competitive Subsequence](https://leetcode.com/problems/find-the-most-competitive-subsequence/) | Stack, Greedy | O(n) Time, O(n) Space | Medium |
 | 1490 | [Clone N-ary Tree](https://leetcode.com/problems/clone-n-ary-tree/)| Tree, DFS | O(n) Time, O(n) Space | Medium |
-| 1491 | [Average Salary Excluding the Minimum and Maximum Salary](https://leetcode.com/problems/average-salary-excluding-the-minimum-and-maximum-salary/) | Array, Sorting| O(n log n) Time, O(1) Space | Easy |
+| 1491 | [📓 Average Salary Excluding the Minimum and Maximum Salary](leetcode/1491.ipynb) | <span title="Find min and max in one pass, subtract both from the total sum, then divide by count minus two.">Array, Sorting</span>| O(n log n) Time, O(1) Space | Easy |
 | 1492 | [The kth Factor of n](https://leetcode.com/problems/the-k-th-factor-of-n/)| Math, Array   | O(n) Time, O(1) Space | Medium |
-| 1493 | [Longest Subarray of 1's After Deleting One Element](https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/) | Array, Sliding Window | O(n) Time, O(1) Space | Medium |
+| 1493 | [📓 Longest Subarray of 1's After Deleting One Element](leetcode/1493.ipynb) | <span title="Expand a window allowing at most one zero; shrink from the left when a second zero appears, answer is window size minus one.">Array, Sliding Window</span> | O(n) Time, O(1) Space | Medium |
 | 1494 | [Parallel Courses II](https://leetcode.com/problems/parallel-courses-ii/)| Graph, Topological Sort | O(n^2) Time, O(n) Space | Hard |
 | 1495 | [Least Number of Unique Integers After K Removals](https://leetcode.com/problems/least-number-of-unique-integers-after-k-removals/) | HashMap, Min-Heap | O(n log n) Time, O(n) Space | Medium |
 | 1496 | [Path Crossing](https://leetcode.com/problems/path-crossing/)   | Set, Array| O(n) Time, O(n) Space | Medium |

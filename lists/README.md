@@ -95,7 +95,7 @@
 | 41 | [First Missing Positive](https://leetcode.com/problems/first-missing-positive/) | Array| Time: O(n), Space: O(1)| Hard|
 |782 | [Transform to Chessboard](https://leetcode.com/problems/transform-to-chessboard/) | Array| Time: O(n^2), Space: O(1)| Hard|
 |4 | [📓 Median of Two Sorted Arrays](../leetcode/0004.ipynb) | <span title="Sort the array first, then narrow the search window by half each step.">Array, Binary Search</span> | Time: O(log(min(m, n))), Space: O(1) | Hard|
-|268 | [Missing Number](https://leetcode.com/problems/missing-number/) | Array, Bit Manipulation| Time: O(n), Space: O(1)| Easy|
+|268 | [📓 Missing Number](../leetcode/0268.ipynb) | <span title="XOR all indices with all values; identical pairs cancel, leaving only the missing number.">XOR with Indices</span> | Time: O(n), Space: O(1)| Easy|
 | 1412 | [Shortest Distance to Target String in a Circular Array](https://leetcode.com/problems/shortest-distance-to-target-string-in-a-circular-array/) | Array, Circular Array| O(n) Time, O(n) Space| Medium|
 |529 | [Minesweeper](https://leetcode.com/problems/minesweeper/) | Array, Depth-First Search (DFS)| Time: O(n), Space: O(n)| Medium|
 |641 | [Design Circular Deque](https://leetcode.com/problems/design-circular-deque/) | Array, Deque | Time: O(1), Space: O(k)| Medium|
@@ -361,29 +361,29 @@
 | 461 | [📓 Hamming Distance](../leetcode/0461.ipynb) | <span title="XOR two numbers to isolate differing bits, then count set bits (popcount) for Hamming distance.">XOR + Popcount</span> | Time: O(1), Space: O(1) | Easy |
 | 476 | [📓 Number Complement](../leetcode/0476.ipynb) | <span title="Build a mask of all 1s up to the highest set bit, then XOR with it to flip those bits.">Bit Mask Flip</span> | Time: O(log n), Space: O(1) | Easy |
 | 762 | [📓 Prime Number of Set Bits in Binary Representation](../leetcode/0762.ipynb) | <span title="Count set bits (popcount); check if the count is prime using a precomputed bitmask of primes ≤ 20.">Bit Manipulation + Prime Mask</span> | Time: O(n), Space: O(1) | Easy |
-| 1404 | [Number of Steps to Reduce a Number in Binary Representation to One](https://leetcode.com/problems/number-of-steps-to-reduce-a-number-in-binary-representation-to-one/) | Bit Manipulation | O(log n) Time, O(1) Space| Easy|
-| 89 | [Gray Code](https://leetcode.com/problems/gray-code/) | Bit Manipulation | Time: O(2^n), Space: O(2^n)| Medium|
-|137 | [Single Number II](https://leetcode.com/problems/single-number-ii/) | Bit Manipulation | Time: O(n), Space: O(1)| Medium|
-|201 | [Bitwise AND of Numbers Range](https://leetcode.com/problems/bitwise-and-of-numbers-range/) | Bit Manipulation | Time: O(1), Space: O(1)| Medium|
-|260 | [Single Number III](https://leetcode.com/problems/single-number-iii/) | Bit Manipulation | Time: O(n), Space: O(1)| Medium|
-|318 | [Maximum Product of Word Lengths](https://leetcode.com/problems/maximum-product-of-word-lengths/) | Bit Manipulation | Time: O(n^2), Space: O(n)| Medium|
-|393 | [UTF-8 Validation](https://leetcode.com/problems/utf-8-validation/) | Bit Manipulation | Time: O(n), Space: O(1)| Medium|
-|477 | [Total Hamming Distance](https://leetcode.com/problems/total-hamming-distance/) | Bit Manipulation | Time: O(n), Space: O(1)| Medium|
-| 1108 | [IP Address to CIDR](https://leetcode.com/problems/ip-address-to-cidr/) | Bit Manipulation | Time: O(1), Space: O(1)| Medium|
-| 1238 | [Circular Permutation in Binary Representation](https://leetcode.com/problems/circular-permutation-in-binary-representation/) | Bit Manipulation, Array| O(n) Time, O(1) Space| Medium|
-| 1442 | [Count Triplets That Can Form Two Arrays of Equal XOR](https://leetcode.com/problems/count-triplets-that-can-form-two-arrays-of-equal-xor/) | Bit Manipulation, Array| O(n^2) Time, O(n) Space| Hard|
+| 1404 | [📓 Number of Steps to Reduce a Number in Binary Representation to One](../leetcode/1404.ipynb) | <span title="Scan bits right-to-left with a carry variable; odd bits cost 2 steps, even bits cost 1.">Linear Scan with Carry</span> | O(log n) Time, O(1) Space| Easy|
+| 89 | [📓 Gray Code](../leetcode/0089.ipynb) | <span title="Generate each Gray code as i XOR (i >> 1) for all i in [0, 2^n) — O(1) per element.">Binary-Reflected XOR Formula</span> | Time: O(2^n), Space: O(2^n)| Medium|
+|137 | [📓 Single Number II](../leetcode/0137.ipynb) | <span title="For each bit position, sum counts across all numbers; mod 3 isolates the unique number's bits.">Bit-Count Mod 3</span> | Time: O(n), Space: O(1)| Medium|
+|201 | [📓 Bitwise AND of Numbers Range](../leetcode/0201.ipynb) | <span title="Right-shift both endpoints until equal; the common prefix, shifted back, is the answer.">Common Prefix (Right Shift)</span> | Time: O(1), Space: O(1)| Medium|
+|260 | [📓 Single Number III](../leetcode/0260.ipynb) | <span title="XOR all values to get x^y; split by the lowest differing bit into two groups; XOR each group.">XOR Partition by Lowest Differing Bit</span> | Time: O(n), Space: O(1)| Medium|
+|318 | [📓 Maximum Product of Word Lengths](../leetcode/0318.ipynb) | <span title="Encode each word's letters as a 26-bit mask; zero AND means disjoint character sets.">Bitmask per Word</span> | Time: O(n^2), Space: O(n)| Medium|
+|393 | [📓 UTF-8 Validation](../leetcode/0393.ipynb) | <span title="Use bitmasks (0x80, 0xC0, 0xE0, 0xF0, 0xF8) to classify each byte; track expected continuations.">Bit-Masking In-Place</span> | Time: O(n), Space: O(1)| Medium|
+|477 | [📓 Total Hamming Distance](../leetcode/0477.ipynb) | <span title="For each bit, count 1-bits (k); contribution is k*(n-k) since 1s pair with 0s across all numbers.">Per-Bit Population Count</span> | Time: O(n), Space: O(1)| Medium|
+| 1108 | [📓 IP Address to CIDR](../leetcode/1108.ipynb) | <span title="Greedily take the largest power-of-two-aligned CIDR block fitting the current IP and count.">Greedy Largest Aligned Block</span> | Time: O(1), Space: O(1)| Medium|
+| 1238 | [📓 Circular Permutation in Binary Representation](../leetcode/1238.ipynb) | <span title="XOR each Gray code i^(i>>1) with the start offset to rebase the circular permutation.">Gray Code with Start XOR</span> | O(n) Time, O(1) Space| Medium|
+| 1442 | [📓 Count Triplets That Can Form Two Arrays of Equal XOR](../leetcode/1442.ipynb) | <span title="Use prefix XOR; when prefix[i]==prefix[k+1] the subarray XOR is zero, giving k-i valid triplets.">Prefix XOR</span> | O(n^2) Time, O(n) Space| Hard|
 | 1274 | [Prime Number of Set Bits in Binary Representation](https://leetcode.com/problems/prime-number-of-set-bits-in-binary-representation/) | Bit Manipulation, Math | O(n) Time, O(1) Space| Easy|
 | 1453 | [Find the Longest Substring Containing Vowels in Even Counts](https://leetcode.com/problems/find-the-longest-substring-containing-vowels-in-even-counts/) | Bit Manipulation, Prefix Sum | O(n) Time, O(1) Space| Medium|
 
 ## Bit Masking
 | Serial No. | Problem Title | Data Structure | Time and Space Complexity | Level |
 | :--- | :--- | :--- | :--- | :--- |
-| 1125 | [Smallest Sufficient Team](https://leetcode.com/problems/smallest-sufficient-team/) | Bit Masking, Greedy, Dynamic Programming | Time: O(n), Space: O(n)| Hard|
+| 1125 | [📓 Smallest Sufficient Team](../leetcode/1125.ipynb) | <span title="Bitmask each skill set; dp[mask] tracks the smallest team covering exactly the skills in mask.">Bitmask DP over Skill Sets</span> | Time: O(n), Space: O(n)| Hard|
 
 ## Bitmask
 | Serial No. | Problem Title | Data Structure | Time and Space Complexity | Level |
 | :--- | :--- | :--- | :--- | :--- |
-| 1371 | [Find the Longest Substring Containing Vowels in Even Counts](https://leetcode.com/problems/find-the-longest-substring-containing-vowels-in-even-counts/) | Bitmask, HashMap | O(n) Time, O(1) Space| Medium|
+| 1371 | [📓 Find the Longest Substring Containing Vowels in Even Counts](../leetcode/1371.ipynb) | <span title="Track vowel parity as a 5-bit XOR state; when state recurs, the gap has all even vowel counts.">Bitmask Prefix XOR + HashMap</span> | O(n) Time, O(1) Space| Medium|
 
 ## Boyer-Moore Voting Algorithm
 | Serial No. | Problem Title | Data Structure | Time and Space Complexity | Level |
@@ -1322,7 +1322,7 @@
 | 1082 | [Special Array With X Elements Greater Than or Equal X](https://leetcode.com/problems/special-array-with-x-elements-greater-than-or-equal-x/) | Sorting, Binary Search | Time: O(n log n), Space: O(1)| Easy|
 | 1385 | [Find the Distance Value Between Two Arrays](https://leetcode.com/problems/find-the-distance-value-between-two-arrays/) | Sorting, Binary Search | O(n log n) Time, O(1) Space| Easy|
 |354 | [Russian Doll Envelopes](https://leetcode.com/problems/russian-doll-envelopes/) | Sorting, Binary Search | Time: O(n log n), Space: O(n)| Hard|
-| 1356 | [Sort Integers by The Number of 1 Bits](https://leetcode.com/problems/sort-integers-by-the-number-of-1-bits/) | Sorting, Bit Manipulation| O(n log n) Time, O(n) Space| Medium|
+| 1356 | [📓 Sort Integers by The Number of 1 Bits](../leetcode/1356.ipynb) | <span title="Precompute popcount for each element once, then sort by (popcount, value) as a composite key.">Precomputed Popcount + Stable Sort</span> | O(n log n) Time, O(n) Space| Medium|
 | 1387 | [Sort Integers by The Number of 1 Bits](https://leetcode.com/problems/sort-integers-by-the-number-of-1-bits/) | Sorting, Bit Manipulation| O(n log n) Time, O(n) Space| Medium|
 | 1417 | [Rearrange the Array to Maximize Prefix Score](https://leetcode.com/problems/rearrange-the-array-to-maximize-prefix-score/) | Sorting, Greedy| O(n log n) Time, O(n) Space| Medium|
 |857 | [Minimum Cost to Hire K Workers](https://leetcode.com/problems/minimum-cost-to-hire-k-workers/) | Sorting, Greedy| Time: O(n log n), Space: O(n)| Hard|

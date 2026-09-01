@@ -55,21 +55,21 @@
 |944 | [Delete Column to Make Sorted](https://leetcode.com/problems/delete-column-to-make-sorted/) | Array| Time: O(n * m), Space: O(1)| Easy|
 |985 | [Sum of Even Numbers After Queries](https://leetcode.com/problems/sum-of-even-numbers-after-queries/) | Array| Time: O(n), Space: O(1)| Easy|
 |989 | [Add to Array-Form of Integer](https://leetcode.com/problems/add-to-array-form-of-integer/) | Array| Time: O(n), Space: O(1)| Easy|
-| 1089 | [Duplicate Zeros](https://leetcode.com/problems/duplicate-zeros/) | Array| Time: O(n), Space: O(1)| Easy|
-| 1090 | [Largest Element in an Array](https://leetcode.com/problems/largest-element-in-an-array/) | Array| Time: O(n), Space: O(1)| Easy|
-| 1304 | [Find N Unique Integers Sum up to Zero](https://leetcode.com/problems/find-n-unique-integers-sum-up-to-zero/) | Array| O(n) Time, O(n) Space| Easy|
-| 1309 | [Decompress Run-Length Encoded List](https://leetcode.com/problems/decompress-run-length-encoded-list/) | Array| O(n) Time, O(n) Space| Easy|
-| 1313 | [Decompress Array](https://leetcode.com/problems/decompress-array/) | Array| O(n) Time, O(n) Space| Easy|
-| 1369 | [Get Maximum in Generated Array](https://leetcode.com/problems/get-maximum-in-generated-array/) | Array| O(n) Time, O(1) Space| Easy|
-| 1414 | [Find the Minimum of an Integer Array](https://leetcode.com/problems/find-the-minimum-of-an-integer-array/) | Array| O(n) Time, O(1) Space| Easy|
-| 1431 | [Kids With the Greatest Number of Candies](https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/) | Array| O(n) Time, O(1) Space| Easy|
-| 1450 | [Number of Students Doing Homework at a Given Time](https://leetcode.com/problems/number-of-students-doing-homework-at-a-given-time/) | Array| O(n) Time, O(1) Space| Easy|
-| 1470 | [Shuffle the Array](https://leetcode.com/problems/shuffle-the-array/) | Array| O(n) Time, O(n) Space| Easy|
-| 1480 | [Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/) | Array| O(n) Time, O(n) Space| Easy|
-| 31 | [Next Permutation](https://leetcode.com/problems/next-permutation/) | Array| Time: O(n), Space: O(1)| Medium|
-| 48 | [Rotate Image](https://leetcode.com/problems/rotate-image/) | Array| Time: O(n^2), Space: O(1)| Medium|
-| 54 | [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | Array| Time: O(m * n), Space: O(1)| Medium|
-| 59 | [Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii/) | Array| Time: O(n^2), Space: O(1)| Medium|
+| 1089 | [📓 Duplicate Zeros](1089.ipynb) | <span title="Count zeros first, then fill backwards from right using a virtual extended index to duplicate each zero in-place.">Two-Pass In-Place</span>| Time: O(n), Space: O(1)| Easy|
+| 1090 | [📓 Largest Element in an Array](1090.ipynb) | <span title="Scan the array once tracking the running maximum, updating whenever a larger element is found.">Single Pass</span>| Time: O(n), Space: O(1)| Easy|
+| 1304 | [📓 Find N Unique Integers Sum up to Zero](1304.ipynb) | <span title="Fill slots with 1 through n-1, then set the last element to their negated sum to guarantee a total of zero.">Direct Construction</span>| O(n) Time, O(n) Space| Easy|
+| 1309 | [📓 Decompress Run-Length Encoded List](1309.ipynb) | <span title="Iterate through [freq, val] pairs and append val exactly freq times to reconstruct each run.">Single Pass Expansion</span>| O(n) Time, O(n) Space| Easy|
+| 1313 | [📓 Decompress Array](1313.ipynb) | <span title="Pre-compute total output size once, then expand each [val, freq] pair into a contiguous run in the result buffer.">Single Pass Expansion</span>| O(n) Time, O(n) Space| Easy|
+| 1369 | [📓 Get Maximum in Generated Array](1369.ipynb) | <span title="Build the generated array bottom-up using two filling rules, then scan for the maximum value.">Dynamic Programming</span>| O(n) Time, O(1) Space| Easy|
+| 1414 | [📓 Find the Minimum of an Integer Array](1414.ipynb) | <span title="Scan the array once tracking the running minimum, updating whenever a smaller element is found.">Single Pass</span>| O(n) Time, O(1) Space| Easy|
+| 1431 | [📓 Kids With the Greatest Number of Candies](1431.ipynb) | <span title="Find the global maximum first, then check if each kid's total with extra candies meets or exceeds it.">Single Pass</span>| O(n) Time, O(1) Space| Easy|
+| 1450 | [📓 Number of Students Doing Homework at a Given Time](1450.ipynb) | <span title="Count students whose [startTime, endTime] interval contains queryTime using one linear pass.">Single Pass</span>| O(n) Time, O(1) Space| Easy|
+| 1470 | [📓 Shuffle the Array](1470.ipynb) | <span title="Write first-half elements at even positions and second-half elements at odd positions in a single output pass.">Index Interleaving</span>| O(n) Time, O(n) Space| Easy|
+| 1480 | [📓 Running Sum of 1d Array](1480.ipynb) | <span title="Add each element's left neighbor cumulatively in one forward pass, turning the array into its own prefix sum.">Prefix Sum In-Place</span>| O(n) Time, O(n) Space| Easy|
+| 31 | [📓 Next Permutation](0031.ipynb) | <span title="Find the rightmost descent, swap with the smallest successor to the right, then reverse the suffix.">Three-Step Reverse</span>| Time: O(n), Space: O(1)| Medium|
+| 48 | [📓 Rotate Image](0048.ipynb) | <span title="Transpose the matrix across the main diagonal, then reverse each row to achieve a 90 degree clockwise rotation.">Transpose + Row Reverse</span>| Time: O(n^2), Space: O(1)| Medium|
+| 54 | [📓 Spiral Matrix](0054.ipynb) | <span title="Shrink four boundary pointers inward after each directional pass to peel the matrix layer by layer.">Boundary Shrinking</span>| Time: O(m * n), Space: O(1)| Medium|
+| 59 | [📓 Spiral Matrix II](0059.ipynb) | <span title="Fill numbers 1 to n-squared in spiral order using four boundary pointers that shrink inward after each directional pass.">Boundary Simulation</span>| Time: O(n^2), Space: O(1)| Medium|
 | 73 | [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/) | Array| Time: O(m * n), Space: O(1)| Medium|
 | 80 | [Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/) | Array| Time: O(n), Space: O(1)| Medium|
 |163 | [Missing Ranges](https://leetcode.com/problems/missing-ranges/) | Array| Time: O(n), Space: O(1)| Medium|

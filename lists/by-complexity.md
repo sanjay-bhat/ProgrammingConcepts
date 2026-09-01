@@ -1335,14 +1335,14 @@
 | 17 | [📓 Letter Combinations of a Phone Number](../leetcode/0017.ipynb)| <span title="Explore all candidates recursively; undo (backtrack) a choice when it leads to a dead end.">Backtracking</span> | Time: O(4^n), Space: O(n)| Medium  |
 | 18 | [📓 4Sum](../leetcode/0018.ipynb) | <span title="Sort first, then use two pointers from both ends to find pairs or triplets in a single sweep.">Sorting + Two Pointers</span> | Time: O(n^3), Space: O(1)| Medium  |
 | 36 | [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/)| Hash Set| Time: O(n^2), Space: O(n^2)| Medium  |
-| 39 | [Combination Sum](https://leetcode.com/problems/combination-sum/) | Backtracking | Time: O(2^n), Space: O(n)| Medium  |
-| 40 | [Combination Sum II](https://leetcode.com/problems/combination-sum-ii/)| Backtracking | Time: O(2^n), Space: O(n)| Medium  |
+| 39 | [📓 Combination Sum](../leetcode/0039.ipynb) | <span title="DFS with explicit undo steps; prune branches early when constraints are already violated.">Backtracking (DFS)</span> | Time: $O(N^{T/M})$, Space: $O(T/M)$ | Medium |
+| 40 | [📓 Combination Sum II](../leetcode/0040.ipynb) | <span title="DFS with explicit undo steps; prune branches early when constraints are already violated.">Backtracking (DFS)</span> | Time: $O(2^N)$, Space: $O(N)$ | Medium |
 | 48 | [📓 Rotate Image](../leetcode/0048.ipynb)| <span title="Transpose the matrix across the main diagonal, then reverse each row to achieve a 90 degree clockwise rotation.">Transpose + Row Reverse</span>| Time: O(n^2), Space: O(1)| Medium  |
 | 59 | [📓 Spiral Matrix II](../leetcode/0059.ipynb)  | <span title="Fill numbers 1 to n-squared in spiral order using four boundary pointers that shrink inward after each directional pass.">Boundary Simulation</span>| Time: O(n^2), Space: O(1)| Medium  |
-| 78 | [Subsets](https://leetcode.com/problems/subsets/)| Backtracking | Time: O(2^n), Space: O(n)| Medium  |
-| 79 | [Word Search](https://leetcode.com/problems/word-search/)  | Backtracking | Time: O(m * n * 4^l), Space: O(m * n)| Medium  |
+| 78 | [📓 Subsets](../leetcode/0078.ipynb) | <span title="Record the running path at every step, then recurse from index+1 to generate all 2^n subsets.">Backtracking</span> | Time: $O(2^n \cdot n)$, Space: $O(n)$ | Medium |
+| 79 | [📓 Word Search](../leetcode/0079.ipynb) | <span title="Mark each visited cell with a sentinel character in-place; restore it after the recursive call returns.">DFS + Backtracking</span> | Time: $O(m \cdot n \cdot 4^L)$, Space: $O(L)$ | Medium |
 | 89 | [📓 Gray Code](../leetcode/0089.ipynb) | <span title="Generate each Gray code as i XOR (i >> 1) for all i in [0, 2^n) — O(1) per element.">Binary-Reflected XOR Formula</span> | Time: O(2^n), Space: O(2^n)| Medium  |
-| 90 | [Subsets II](https://leetcode.com/problems/subsets-ii/) | Backtracking | Time: O(2^n), Space: O(n)| Medium  |
+| 90 | [📓 Subsets II](../leetcode/0090.ipynb) | <span title="Sort first, then skip duplicate elements at the same recursion depth to avoid repeated subsets.">Backtracking + Dedup</span> | Time: $O(2^n \cdot n)$, Space: $O(n)$ | Medium |
 | 96 | [Unique Binary Search Trees](https://leetcode.com/problems/unique-binary-search-trees/)  | Dynamic Programming  | Time: O(n^2), Space: O(n)| Medium  |
 |120 | [Triangle](https://leetcode.com/problems/triangle/)| Dynamic Programming  | Time: O(n^2), Space: O(n^2)| Medium  |
 |127 | [Word Ladder](https://leetcode.com/problems/word-ladder/)  | BFS, Graph | Time: O(n^2), Space: O(n)| Medium  |

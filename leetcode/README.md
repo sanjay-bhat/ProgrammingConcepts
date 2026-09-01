@@ -127,24 +127,24 @@
 | 1384 | [📓 Movie Rating](1384.ipynb) | <span title="Aggregate user rating counts and Feb-2020 movie sums in one pass, then pick the top entries from each map.">Dual Hash Map</span>| O(n) Time, O(n) Space| Easy|
 | 1182 | [📓 Shortest Distance to Target Color](1182.ipynb) | <span title="Left-to-right and right-to-left sweeps per color precompute distances so each query answers in O(1).">Two-Pass Precomputation</span>| O(n) Time, O(n) Space| Medium|
 | 1204 | [📓 Design Hit Counter](1204.ipynb) | <span title="Fixed 300 slots indexed by timestamp % 300; overwrite stale slots on hit() and sum valid slots on getHits().">Circular Buffer</span>| O(1) Time, O(k) Space| Medium|
-| 1226 | [The Employee That Worked on the Longest Task](https://leetcode.com/problems/the-employee-that-worked-on-the-longest-task/) | Array, HashMap | O(n) Time, O(n) Space| Medium|
-| 1183 | [Maximum Number of Ones](https://leetcode.com/problems/maximum-number-of-ones/) | Array, HashMap | O(n) Time, O(n) Space| Hard|
-| 1398 | [Company Finder](https://leetcode.com/problems/company-finder/) | Array, HashSet | O(n) Time, O(n) Space| Easy|
-| 1426 | [Counting Elements](https://leetcode.com/problems/counting-elements/) | Array, HashSet | O(n) Time, O(n) Space| Easy|
-| 1468 | [Find All Numbers Disappeared in an Array](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/) | Array, HashSet | O(n) Time, O(n) Space| Easy|
-| 1469 | [Find All Numbers that Disappeared](https://leetcode.com/problems/find-all-numbers-that-disappeared/) | Array, HashSet | O(n) Time, O(n) Space| Medium|
+| 1226 | [📓 The Employee That Worked on the Longest Task](1226.ipynb) | <span title="Track the previous end-time; update the best employee whenever the current task duration strictly exceeds the running maximum.">Array, HashMap</span> | O(n) Time, O(n) Space| Medium|
+| 1183 | [📓 Maximum Number of Ones](1183.ipynb) | <span title="Count positions by tile-type (row mod sideLength, col mod sideLength), then greedily fill the most-common types first.">Array, HashMap</span> | O(n) Time, O(n) Space| Hard|
+| 1398 | [📓 Company Finder](1398.ipynb) | <span title="Load the first array into a HashSet, then collect elements from the second array that hit the set in O(1).">Array, HashSet</span> | O(n) Time, O(n) Space| Easy|
+| 1426 | [📓 Counting Elements](1426.ipynb) | <span title="Build a HashSet of all values, then count each element x whose successor x+1 is also in the set.">Array, HashSet</span> | O(n) Time, O(n) Space| Easy|
+| 1468 | [📓 Find All Numbers Disappeared in an Array](1468.ipynb) | <span title="Insert all values into a HashSet, then collect every number in [1, n] that is absent from the set.">Array, HashSet</span> | O(n) Time, O(n) Space| Easy|
+| 1469 | [📓 Find All Numbers that Disappeared](1469.ipynb) | <span title="Insert all values into a HashSet, then collect every number in [1, n] that is absent from the set.">Array, HashSet</span> | O(n) Time, O(n) Space| Medium|
 |569 | [Median Employee Salary](https://leetcode.com/problems/median-employee-salary/) | Array, Heap| Time: O(n log n), Space: O(n)| Medium|
-| 1389 | [Create Target Array in the Given Order](https://leetcode.com/problems/create-target-array-in-the-given-order/) | Array, Insertion | O(n) Time, O(n) Space| Easy|
-| 1299 | [Replace Elements with Greatest Element on Right Side](https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side/) | Array, Iteration | O(n) Time, O(1) Space| Easy|
+| 1389 | [📓 Create Target Array in the Given Order](1389.ipynb) | <span title="Use a resizable list's built-in insert to place each element at its specified index, shifting the tail right.">Array, Insertion</span> | O(n) Time, O(n) Space| Easy|
+| 1299 | [📓 Replace Elements with Greatest Element on Right Side](1299.ipynb) | <span title="Scan right-to-left maintaining a running maximum; write it into each position before extending it with the original value.">Array, Iteration</span> | O(n) Time, O(1) Space| Easy|
 |251 | [Flatten 2D Vector](https://leetcode.com/problems/flatten-2d-vector/) | Array, Iterator| Time: O(1), Space: O(1)| Medium|
 |900 | [RLE Iterator](https://leetcode.com/problems/rle-iterator/) | Array, Iterator| Time: O(1), Space: O(n)| Medium|
-| 1409 | [Queries on a Permutation With Key](https://leetcode.com/problems/queries-on-a-permutation-with-key/) | Array, Map | O(1) Time, O(n) Space| Medium|
-| 1184 | [Distance Between Bus Stops](https://leetcode.com/problems/distance-between-bus-stops/) | Array, Math| O(n) Time, O(1) Space| Easy|
-| 1063 | [Valid Triangles](https://leetcode.com/problems/valid-triangles/) | Array, Math| Time: O(n^3), Space: O(1)| Medium|
-| 1222 | [Queens That Can Attack the King](https://leetcode.com/problems/queens-that-can-attack-the-king/) | Array, Matrix| O(1) Time, O(1) Space| Medium|
-| 1013 | [Partition Array Into Three Parts With Equal Sum](https://leetcode.com/problems/partition-array-into-three-parts-with-equal-sum/) | Array, Prefix Sum| Time: O(n), Space: O(1)| Medium|
-| 1375 | [Bulb Switcher III](https://leetcode.com/problems/bulb-switcher-iii/) | Array, Prefix Sum| O(n) Time, O(n) Space| Medium|
-| 1424 | [Diagonal Traverse II](https://leetcode.com/problems/diagonal-traverse-ii/) | Array, Priority Queue| O(n log n) Time, O(n) Space| Medium|
+| 1409 | [📓 Queries on a Permutation With Key](1409.ipynb) | <span title="Maintain the permutation in a list; for each query, find the element's position, record it, and move it to the front.">Array, Map</span> | O(1) Time, O(n) Space| Medium|
+| 1184 | [📓 Distance Between Bus Stops](1184.ipynb) | <span title="Sum the clockwise arc from source to destination and return the minimum of that and the total-minus-clockwise distance.">Array, Math</span>| O(n) Time, O(1) Space| Easy|
+| 1063 | [📓 Valid Triangles](1063.ipynb) | <span title="Sort the array, then fix the largest side and use two pointers to count pairs whose sum exceeds it.">Array, Math</span>| Time: O(n^3), Space: O(1)| Medium|
+| 1222 | [📓 Queens That Can Attack the King](1222.ipynb) | <span title="Store queens in a HashSet, then walk outward in all 8 directions from the king, stopping at the first queen found.">Array, Matrix</span>| O(1) Time, O(1) Space| Medium|
+| 1013 | [📓 Partition Array Into Three Parts With Equal Sum](1013.ipynb) | <span title="Compute total sum divided by 3, then scan left-to-right counting how many times the running sum hits each target multiple.">Array, Prefix Sum</span>| Time: O(n), Space: O(1)| Medium|
+| 1375 | [📓 Bulb Switcher III](1375.ipynb) | <span title="Count turned-on bulbs and track the rightmost position; a moment is all-blue when the max position equals the count.">Array, Prefix Sum</span>| O(n) Time, O(n) Space| Medium|
+| 1424 | [📓 Diagonal Traverse II](1424.ipynb) | <span title="Group elements by diagonal key (row + col) into buckets, then emit each bucket in reverse-row order.">Array, Priority Queue</span>| O(n log n) Time, O(n) Space| Medium|
 |622 | [Design Circular Queue](https://leetcode.com/problems/design-circular-queue/) | Array, Queue | Time: O(1), Space: O(k)| Medium|
 | 1454 | [Active Students](https://leetcode.com/problems/active-students/) | Array, Set | O(n) Time, O(n) Space| Easy|
 |849 | [Maximize Distance to Closest Person](https://leetcode.com/problems/maximize-distance-to-closest-person/) | Array, Simulation| Time: O(n), Space: O(1)| Easy|

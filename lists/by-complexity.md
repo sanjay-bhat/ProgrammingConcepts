@@ -168,7 +168,7 @@
 | 895 | [Maximum Frequency Stack](https://leetcode.com/problems/maximum-frequency-stack/)| Stack, Hash Map| Time: O(1), Space: O(n) | Hard |
 | 972 | [Equal Rational Numbers](https://leetcode.com/problems/equal-rational-numbers/)  | Math | Time: O(1), Space: O(1) | Hard |
 |1157 | [Online Majority Element In Subarray](https://leetcode.com/problems/online-majority-element-in-subarray/)| HashMap, Queue| O(1) Time, O(n) Space | Hard |
-|1449 | [Form Largest Integer With Digits That Add up to Target](https://leetcode.com/problems/form-largest-integer-with-digits-that-add-up-to-target/) | DP, Greedy | O(target^2) Time, O(target) Space| Hard |
+|1449 | [📓 Form Largest Integer With Digits That Add up to Target](../leetcode/1449.ipynb) | <span title="Maximize digit count at each cost with unbounded knapsack; reconstruct greedily from largest digit downward.">Unbounded Knapsack DP</span> | O(9*target) Time, O(target) Space | Hard |
 |7 | [📓 Reverse Integer](../leetcode/0007.ipynb)| <span title="Operate directly on the integer bits or digits without converting to a string.">Integer</span> | Time: O(log x), Space: O(1)| Easy |
 |9 | [📓 Palindrome Number](../leetcode/0009.ipynb)| <span title="Operate directly on the integer bits or digits without converting to a string.">Integer</span> | Time: O(log x), Space: O(1)| Easy |
 | 35 | [📓 Search Insert Position](../leetcode/0035.ipynb) | <span title="Halve the search space each step by comparing the midpoint to a monotone predicate.">Binary Search</span> | Time: $O(\log n)$, Space: $O(1)$ | Easy |
@@ -415,7 +415,7 @@
 |1419 | [📓 Minimum Number of Frogs Croaking](../leetcode/1419.ipynb) | <span title="Halve the search space each step by comparing the midpoint to a monotone predicate.">Binary Search</span> | O(n log n) Time, O(1) Space| Hard |
 |1425 | [Constrained Subset Sum](https://leetcode.com/problems/constrained-subset-sum/)  | Dynamic Programming, Queue | O(n log n) Time, O(n) Space| Hard |
 |1439 | [Find the Kth Smallest Sum of a Matrix with Sorted Rows](https://leetcode.com/problems/find-the-kth-smallest-sum-of-a-matrix-with-sorted-rows/) | Heap, Matrix  | O(k log n) Time, O(n) Space| Hard |
-|1478 | [Max Sum of Rectangle No Larger Than K](https://leetcode.com/problems/max-sum-of-rectangle-no-larger-than-k/) | DP, Binary Search | O(n^2 log n) Time, O(n) Space  | Hard |
+|1478 | [📓 Allocate Mailboxes](../leetcode/1478.ipynb) | <span title="Precompute median-based single-mailbox costs for each segment; dp[i][m] = min cost for first i houses with m mailboxes.">DP + Median Cost</span> | O(n^2*k) Time, O(n^2) Space | Hard |
 |1483 | [Kth Ancestor of a Tree Node](https://leetcode.com/problems/kth-ancestor-of-a-tree-node/) | Tree, Binary Lifting| O(log n) Time, O(n) Space  | Hard |
 |1488 | [Avoid Flood in The City](https://leetcode.com/problems/avoid-flood-in-the-city/)| Heap, HashMap | O(n log n) Time, O(n) Space| Hard |
 |1500 | [Find the Median of a Data Stream](https://leetcode.com/problems/find-the-median-of-a-data-stream/)| Heap, Priority Queue| O(log n) Time, O(n) Space  | Hard |
@@ -1023,13 +1023,13 @@
 |1018 | [Binary Prefix Divisible By 5](https://leetcode.com/problems/binary-prefix-divisible-by-5/) | String| Time: O(n), Space: O(1) | Medium  |
 |1019 | [Next Greater Node In Linked List](https://leetcode.com/problems/next-greater-node-in-linked-list/)| Stack| Time: O(n), Space: O(n) | Medium  |
 |1023 | [Camelcase Matching](https://leetcode.com/problems/camelcase-matching/) | String, Array | Time: O(n), Space: O(1) | Medium  |
-|1024 | [Video Stitching](https://leetcode.com/problems/video-stitching/)| DP, Greedy | Time: O(n), Space: O(n) | Medium  |
+|1024 | [📓 Video Stitching](../leetcode/1024.ipynb) | <span title="Sort clips by start time; greedily pick the clip extending coverage farthest at each step, counting selections.">Greedy Interval Cover</span> | O(n log n) Time, O(1) Space | Medium |
 |1033 | [📓 Matrix Block Sum](../leetcode/1033.ipynb) | <span title="Precompute rectangle sums so any submatrix query is answered in O(1) with inclusion-exclusion.">2D Prefix Sum</span> | Time: O(m * n), Space: O(m * n)| Medium  |
 |1035 | [Uncrossed Lines](https://leetcode.com/problems/uncrossed-lines/)| DP, LCS  | Time: O(m * n), Space: O(m * n)| Medium  |
 |1036 | [Escape a Large Maze](https://leetcode.com/problems/escape-a-large-maze/) | Graph, BFS | Time: O(n), Space: O(n) | Medium  |
 |1038 | [Binary Search Tree to Greater Sum Tree](https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree/)  | Tree, DFS| Time: O(n), Space: O(n) | Medium  |
 |1047 | [Remove All Adjacent Duplicates In String II](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/) | Stack| Time: O(n), Space: O(n) | Medium  |
-|1049 | [Last Stone Weight II](https://leetcode.com/problems/last-stone-weight-ii/)  | DP, Knapsack Problem| Time: O(n * S), Space: O(S)| Medium  |
+|1049 | [📓 Last Stone Weight II](../leetcode/1049.ipynb) | <span title="Reduce to partition problem: maximize subset sum up to total/2 with a boolean knapsack; answer is total minus twice that max.">0/1 Knapsack DP</span> | O(n*S) Time, O(S) Space | Medium |
 |1052 | [Grumpy Bookstore Owner](https://leetcode.com/problems/grumpy-bookstore-owner/)  | Sliding Window, Greedy | Time: O(n), Space: O(1) | Medium  |
 |1053 | [📓 Previous Permutation With One Swap](../leetcode/1053.ipynb) | <span title="Scan from the right for the first descent, then swap with the leftmost occurrence of the largest valid smaller element.">Array, Sorting</span>| Time: O(n), Space: O(1) | Medium  |
 |1058 | [Minimize Rounding Errors](https://leetcode.com/problems/minimize-rounding-errors/)| Math, Simulation  | Time: O(n), Space: O(1) | Medium  |
@@ -1282,7 +1282,7 @@
 |995 | [Minimum Number of K Consecutive Bit Flips](https://leetcode.com/problems/minimum-number-of-k-consecutive-bit-flips/)  | Greedy, Sliding Window | Time: O(n), Space: O(1)  | Hard |
 |996 | [Number of Squareful Arrays](https://leetcode.com/problems/number-of-squareful-arrays/)  | Backtracking | Time: O(n!), Space: O(n) | Hard |
 | 1001 | [Grid Illuminated](https://leetcode.com/problems/grid-illuminated/)  | Graph, DFS | Time: O(n), Space: O(n)  | Hard |
-| 1016 | [Partition Array Into Two Arrays To Minimize Sum Difference](https://leetcode.com/problems/partition-array-into-two-arrays-to-minimize-sum-difference/)| DP, Bitmask| Time: O(n * sum), Space: O(sum) | Hard |
+|1016 | [📓 Subarray Sums Divisible by K](../leetcode/1016.ipynb) | <span title="Track prefix-sum remainders mod k; a repeated remainder means the subarray between those indices sums to a multiple of k.">Prefix Sum + Hash Map</span> | O(n) Time, O(k) Space | Medium |
 | 1055 | [Shortest Way to Form String](https://leetcode.com/problems/shortest-way-to-form-string/)| DP, String | Time: O(n * m), Space: O(n * m) | Hard |
 | 1077 | [Project Management](https://leetcode.com/problems/project-management/)| DP, Graph  | Time: O(n), Space: O(n)  | Hard |
 | 1096 | [Brace Expansion II](https://leetcode.com/problems/brace-expansion-ii/)| String| Time: O(n!), Space: O(n) | Hard |
@@ -1316,7 +1316,7 @@
 | 1397 | [Find All Good Strings](https://leetcode.com/problems/find-all-good-strings/)  | Dynamic Programming, DFS  | O(n) Time, O(1) Space | Hard |
 | 1402 | [Redundant Connection II](https://leetcode.com/problems/redundant-connection-ii/)| Graph, Union-Find | O(n) Time, O(n) Space | Hard |
 | 1406 | [Stone Game III](https://leetcode.com/problems/stone-game-iii/) | Dynamic Programming, DP| O(n) Time, O(n) Space | Hard |
-| 1411 | [Number of Ways to Paint N × 3 Grid](https://leetcode.com/problems/number-of-ways-to-paint-n-3-grid/)| DP, Combinatorics | O(n) Time, O(1) Space | Hard |
+|1411 | [📓 Number of Ways to Paint N × 3 Grid](../leetcode/1411.ipynb) | <span title="Track only two pattern types per row (ABA and ABC); apply fixed transition counts each row for O(n) time and O(1) space.">Row-Pattern DP</span> | O(n) Time, O(1) Space | Hard |
 | 1421 | [📓 Finding the Users Active Minutes](../leetcode/1421.ipynb) | <span title="Map each user to a set of unique active minutes for automatic deduplication, then tally set sizes.">Hash Map of Sets</span> | Time: $O(n)$, Space: $O(n)$ | Medium |
 | 1434 | [Number of Ways to Wear Different Hats to Each Other](https://leetcode.com/problems/number-of-ways-to-wear-different-hats-to-each-other/)  | HashMap, Array  | O(n * m) Time, O(n * m) Space | Hard |
 | 1444 | [📓 Count Subarrays With Fixed Bounds](../leetcode/1444.ipynb)| <span title="Slide a window tracking the last out-of-range index and last positions of minK and maxK to count valid subarrays in O(1).">Array, Sliding Window</span>| O(n) Time, O(1) Space | Hard |
@@ -1396,7 +1396,7 @@
 | 1020 | [📓 Number of Enclaves](../leetcode/1020.ipynb) | <span title="Flood-fill from border land cells to mark escapable regions; count remaining unvisited land cells as enclaves.">DFS, Flood-Fill</span> | Time: O(mn), Space: O(mn)| Medium  |
 | 1043 | [📓 Partition Array for Maximum Sum](../leetcode/1043.ipynb) | <span title="Slide a window of up to k elements backward from each position, filling it with its maximum, and carry the best prefix total forward.">1-D DP</span> | O(n*k) Time, O(n) Space | Medium |
 | 1045 | [Customer Orders Availability System](https://leetcode.com/problems/customer-orders-availability-system/) | Graph, Adjacency List| Time: O(n^2), Space: O(n)| Medium  |
-| 1048 | [Longest String Chain](https://leetcode.com/problems/longest-string-chain/) | DP, Hash Map | Time: O(n^2), Space: O(n)| Medium  |
+|1048 | [📓 Longest String Chain](../leetcode/1048.ipynb) | <span title="Sort words by length; for each word try all single-deletion predecessors in a hash map to extend the longest chain.">DP + Sort + Hash Map</span> | O(n*L^2) Time, O(n*L) Space | Medium |
 | 1063 | [📓 Valid Triangles](../leetcode/1063.ipynb) | <span title="Sort the array, then fix the largest side and use two pointers to count pairs whose sum exceeds it.">Array, Math</span>| Time: O(n^3), Space: O(1)| Medium  |
 | 1065 | [Train System](https://leetcode.com/problems/train-system/)| Graph, BFS | Time: O(n^2), Space: O(n)| Medium  |
 | 1067 | [📓 Digit Count in Range](../leetcode/1067.ipynb) | <span title="Count digit d in [0..n] using place-value decomposition; apply prefix subtraction f(high)-f(low-1).">Digit DP</span> | Time: O(log n), Space: O(1)| Hard  |
@@ -1404,7 +1404,7 @@
 | 1076 | [📓 Project Employees II](../leetcode/1076.ipynb) | <span title="Group employees by project, find the maximum count, then return all projects tied at that count.">Aggregation JOIN</span> | Time: $O(n \log n)$, Space: $O(n)$ | Easy |
 | 1080 | [📓 Insufficient Nodes in Root to Leaf Paths](../leetcode/1080.ipynb) | <span title="Subtract each node's value from the limit as DFS descends, then prune leaves and childless internals that can never satisfy the threshold.">DFS Post-Order Pruning</span> | O(n) Time, O(h) Space | Medium |
 | 1091 | [Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/) | BFS, Graph | Time: O(n^2), Space: O(n^2)| Medium  |
-| 1105 | [Filling Bookcase Shelves](https://leetcode.com/problems/filling-bookcase-shelves/) | DP, Greedy | Time: O(n^2), Space: O(n^2)| Medium  |
+|1105 | [📓 Filling Bookcase Shelves](../leetcode/1105.ipynb) | <span title="dp[i] = min shelf height for first i books; scan backwards adding books to the current shelf until width is exceeded.">1-D DP</span> | O(n^2) Time, O(n) Space | Medium |
 | 1107 | [Gift Card Purchase](https://leetcode.com/problems/gift-card-purchase/)| DP, Knapsack | Time: O(n^2), Space: O(n)| Medium  |
 | 1127 | [Mosaic Style Display](https://leetcode.com/problems/mosaic-style-display/) | DP, Matrix | Time: O(n^2), Space: O(n^2)| Medium  |
 | 1135 | [📓 Connecting Cities With Minimum Cost](../leetcode/1135.ipynb) | <span title="Sort edges by cost and greedily union components; stop as soon as n-1 edges span all cities or declare disconnected.">Kruskal's MST (Union-Find)</span> | O(E log E) Time, O(V) Space | Medium |
@@ -1475,11 +1475,11 @@
 |967 | [Numbers With Same Consecutive Differences](https://leetcode.com/problems/numbers-with-same-consecutive-differences/)  | DP, Backtracking| Time: O(2^n), Space: O(1)| Hard |
 |980 | [Unique Paths III](https://leetcode.com/problems/unique-paths-iii/)  | Backtracking, DFS | Time: O(n^2), Space: O(n^2)| Hard |
 | 1000 | [📓 Minimum Cost to Merge Stones](../leetcode/1000.ipynb) | <span title="Split intervals at every k-1 step and use prefix sums to accumulate merge costs in a bottom-up DP table.">Interval DP</span> | O(n^3/k) Time, O(n^2) Space | Hard |
-| 1029 | [Find Minimum Number Of Nodes That Can Produce All Distinct Subsets](https://leetcode.com/problems/find-minimum-number-of-nodes-that-can-produce-all-distinct-subsets/)  | DP, Backtracking| Time: O(2^n), Space: O(1)| Hard |
-| 1030 | [Find Minimum Number of Pairs That Can Produce All Distinct Subsets](https://leetcode.com/problems/find-minimum-number-of-pairs-that-can-produce-all-distinct-subsets/)  | DP, Backtracking| Time: O(2^n), Space: O(1)| Hard |
-| 1031 | [Find Minimum Number Of Nodes That Can Produce All Distinct Subsets](https://leetcode.com/problems/find-minimum-number-of-nodes-that-can-produce-all-distinct-subsets/)  | DP, Backtracking| Time: O(2^n), Space: O(1)| Hard |
-| 1032 | [Find Minimum Number of Pairs That Can Produce All Distinct Subsets](https://leetcode.com/problems/find-minimum-number-of-pairs-that-can-produce-all-distinct-subsets/)  | DP, Backtracking| Time: O(2^n), Space: O(1)| Hard |
-| 1039 | [Minimum Score Triangulation of Polygon](https://leetcode.com/problems/minimum-score-triangulation-of-polygon/)| DP, Graph  | Time: O(n^3), Space: O(n^2)| Hard |
+|1029 | [📓 Two City Scheduling](../leetcode/1029.ipynb) | <span title="Sort people by cost difference (A minus B); send the cheapest-A half to city A and the rest to city B.">Greedy Sort</span> | O(n log n) Time, O(1) Space | Medium |
+|1030 | [📓 Matrix Cells in Distance Order](../leetcode/1030.ipynb) | <span title="BFS from the center cell naturally yields cells in non-decreasing Manhattan-distance order with no sorting needed.">BFS</span> | O(R*C) Time, O(R*C) Space | Easy |
+|1031 | [📓 Maximum Sum of Two Non-Overlapping Subarrays](../leetcode/1031.ipynb) | <span title="Slide the second window forward while tracking the max first-window sum seen before it; try both orderings.">Prefix Sum + Rolling Max</span> | O(n) Time, O(n) Space | Medium |
+|1032 | [📓 Stream of Characters](../leetcode/1032.ipynb) | <span title="Insert reversed words into a Trie; on each query advance all active suffix-match states one step, returning true if any reaches a terminal node.">Reverse Trie</span> | O(W*L + Q*L) Time, O(W*L) Space | Hard |
+|1039 | [📓 Minimum Score Triangulation of Polygon](../leetcode/1039.ipynb) | <span title="dp[i][j] is the min cost to triangulate vertices i..j; try every interior vertex k as the apex of the spanning triangle.">Interval DP</span> | O(n^3) Time, O(n^2) Space | Medium |
 | 1074 | [📓 Number of Submatrices That Sum to Target](../leetcode/1074.ipynb) | <span title="2D prefix sums for rectangle totals combined with a hash map to count target-sum submatrices.">2D Prefix Sum + Hash Map</span> | Time: O(n^3), Space: O(n^2)| Hard |
 | 1086 | [Largest Palindromic Substring](https://leetcode.com/problems/largest-palindromic-substring/) | DP, String | Time: O(n^2), Space: O(n^2)| Hard |
 | 1092 | [📓 Shortest Common Supersequence](../leetcode/1092.ipynb) | <span title="Build LCS DP table then traceback to merge both strings around LCS characters into the shortest supersequence.">DP (LCS)</span> | Time: $O(m \cdot n)$, Space: $O(m \cdot n)$ | Hard |
@@ -1493,12 +1493,12 @@
 | 1278 | [Palindrome Partitioning III](https://leetcode.com/problems/palindrome-partitioning-iii/)| Dynamic Programming, String | O(n^2) Time, O(n^2) Space| Hard |
 | 1312 | [Minimum Insertion Steps to Make a String Palindrome](https://leetcode.com/problems/minimum-insertion-steps-to-make-a-string-palindrome/)  | Dynamic Programming, String | O(n^2) Time, O(n^2) Space| Hard |
 | 1335 | [Minimum Difficulty of a Job Schedule](https://leetcode.com/problems/minimum-difficulty-of-a-job-schedule/)  | Dynamic Programming  | O(n^2) Time, O(n) Space  | Hard |
-| 1349 | [Maximum Students Taking Exam](https://leetcode.com/problems/maximum-students-taking-exam/)| DP, Bitmasking  | O(n^2) Time, O(n) Space  | Hard |
+|1349 | [📓 Maximum Students Taking Exam](../leetcode/1349.ipynb) | <span title="Encode each row as a seat-availability bitmask; DP transitions ensure no adjacent or diagonal cheating between rows.">Bitmask DP</span> | O(m*4^n) Time, O(2^n) Space | Hard |
 | 1359 | [Count All Valid Pickup and Delivery Options](https://leetcode.com/problems/count-all-valid-pickup-and-delivery-options/)| Math, Dynamic Programming | O(n^2) Time, O(n) Space  | Hard |
 | 1388 | [Pizza With 3n Slices](https://leetcode.com/problems/pizza-with-3n-slices/) | Dynamic Programming, Array| O(n^2) Time, O(n) Space  | Hard |
 | 1442 | [📓 Count Triplets That Can Form Two Arrays of Equal XOR](../leetcode/1442.ipynb)| <span title="Use prefix XOR; when prefix[i]==prefix[k+1] the subarray XOR is zero, giving k-i valid triplets.">Prefix XOR</span> | O(n^2) Time, O(n) Space  | Hard |
 | 1457 | [Pseudoclassical Pairs](https://leetcode.com/problems/pseudoclassical-pairs/)  | Math, HashSet| O(n^2) Time, O(n) Space  | Hard |
-| 1458 | [Max Dot Product of Two Subsequences](https://leetcode.com/problems/max-dot-product-of-two-subsequences/) | DP, Array  | O(n^2) Time, O(n^2) Space| Hard |
+|1458 | [📓 Max Dot Product of Two Subsequences](../leetcode/1458.ipynb) | <span title="dp[i][j] = max dot product of non-empty subsequences of nums1[0..i] and nums2[0..j]; pair current elements or skip one.">2-D DP</span> | O(m*n) Time, O(m*n) Space | Hard |
 | 1462 | [Course Schedule IV](https://leetcode.com/problems/course-schedule-iv/)| Graph, Topological Sort| O(n^2) Time, O(n) Space  | Hard |
 | 1463 | [Cherry Pickup II](https://leetcode.com/problems/cherry-pickup-ii/)  | Dynamic Programming, DP| O(n^2) Time, O(n^2) Space| Hard |
 | 1473 | [Paint House III](https://leetcode.com/problems/paint-house-iii/) | Dynamic Programming, DP| O(n^2) Time, O(n) Space  | Hard |

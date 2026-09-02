@@ -510,14 +510,14 @@
 |940 | [Distinct Subsequences II](https://leetcode.com/problems/distinct-subsequences-ii/) | DP, String | Time: O(n^2), Space: O(n)| Hard|
 | 1055 | [📓 Shortest Way to Form String](1055.ipynb) | <span title="Precompute nxt[i][c] = next position of char c at or after i in source; jump to it in O(1) per target character">Next-Char Index Table</span> | Time: O(n * m), Space: O(n * m)| Hard|
 | 1086 | [📓 High Five](1086.ipynb) | <span title="Sort by (id asc, score desc), then take the first 5 scores per student in one linear pass">Sort + Group</span> | Time: O(n^2), Space: O(n^2)| Hard|
-| 53 | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | Dynamic Programming| Time: O(n), Space: O(1)| Easy|
-| 70 | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | Dynamic Programming| Time: O(n), Space: O(1)| Easy|
+| 53 | [📓 Maximum Subarray](0053.ipynb) | <span title="Track running subarray sum; reset to current element when the accumulated sum drops below it.">Kadane's Algorithm</span>| Time: O(n), Space: O(1)| Easy|
+| 70 | [📓 Climbing Stairs](0070.ipynb) | <span title="Fibonacci-style DP: ways(n) = ways(n-1) + ways(n-2); track only two variables at a time.">Space-Optimized DP</span>| Time: O(n), Space: O(1)| Easy|
 |5 | [📓 Longest Palindromic Substring](0005.ipynb) | <span title="Break the problem into overlapping subproblems; cache results to avoid recomputation.">Dynamic Programming</span> | Time: O(n^2), Space: O(n^2)| Medium|
-| 62 | [Unique Paths](https://leetcode.com/problems/unique-paths/) | Dynamic Programming| Time: O(m * n), Space: O(m * n)| Medium|
-| 63 | [Unique Paths II](https://leetcode.com/problems/unique-paths-ii/) | Dynamic Programming| Time: O(m * n), Space: O(m * n)| Medium|
-| 64 | [Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/) | Dynamic Programming| Time: O(m * n), Space: O(m * n)| Medium|
-| 91 | [Decode Ways](https://leetcode.com/problems/decode-ways/) | Dynamic Programming| Time: O(n), Space: O(n)| Medium|
-| 96 | [Unique Binary Search Trees](https://leetcode.com/problems/unique-binary-search-trees/) | Dynamic Programming| Time: O(n^2), Space: O(n)| Medium|
+| 62 | [📓 Unique Paths](0062.ipynb) | <span title="Count paths as a binomial coefficient C(m+n-2, m-1); compute in O(min(m,n)) with O(1) space.">Math (Combinatorics)</span>| Time: O(m * n), Space: O(m * n)| Medium|
+| 63 | [📓 Unique Paths II](0063.ipynb) | <span title="Process the obstacle grid row by row with a 1D array; zero out obstacle cells immediately.">1D DP</span>| Time: O(m * n), Space: O(m * n)| Medium|
+| 64 | [📓 Minimum Path Sum](0064.ipynb) | <span title="Carry the minimum-cost row forward; each cell takes the cheaper of above or left predecessor.">1D DP</span>| Time: O(m * n), Space: O(m * n)| Medium|
+| 91 | [📓 Decode Ways](0091.ipynb) | <span title="Fibonacci-style DP over the digit string; two variables track single- and two-digit decode counts.">Space-Optimized DP</span>| Time: O(n), Space: O(n)| Medium|
+| 96 | [📓 Unique Binary Search Trees](0096.ipynb) | <span title="dp[i] = sum of dp[k-1]*dp[i-k] for k in 1..i; the answer is the n-th Catalan number.">Catalan Number DP</span>| Time: O(n^2), Space: O(n)| Medium|
 |120 | [Triangle](https://leetcode.com/problems/triangle/) | Dynamic Programming| Time: O(n^2), Space: O(n^2)| Medium|
 |152 | [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) | Dynamic Programming| Time: O(n), Space: O(1)| Medium|
 |198 | [House Robber](https://leetcode.com/problems/house-robber/) | Dynamic Programming| Time: O(n), Space: O(1)| Medium|
@@ -559,12 +559,12 @@
 |837 | [New 21 Game](https://leetcode.com/problems/new-21-game/) | Dynamic Programming| Time: O(n), Space: O(n)| Medium|
 |926 | [Flip String to Monotone Increasing](https://leetcode.com/problems/flip-string-to-monotone-increasing/) | Dynamic Programming| Time: O(n), Space: O(1)| Medium|
 |935 | [Knight Dialer](https://leetcode.com/problems/knight-dialer/) | Dynamic Programming| Time: O(n), Space: O(1)| Medium|
-| 1416 | [Restore The Array](https://leetcode.com/problems/restore-the-array/) | Dynamic Programming| O(n) Time, O(n) Space| Medium|
+| 1416 | [📓 Restore The Array](1416.ipynb) | <span title="dp[i] = sum of dp[j] for all j where s[j..i-1] forms a valid number <= k with no leading zeros.">Prefix-Sum DP</span>| O(n) Time, O(n) Space| Medium|
 | 10 | [📓 Regular Expression Matching](0010.ipynb) | <span title="Break the problem into overlapping subproblems; cache results to avoid recomputation.">Dynamic Programming</span> | Time: O(m * n), Space: O(m * n)| Hard|
-| 44 | [Wildcard Matching](https://leetcode.com/problems/wildcard-matching/) | Dynamic Programming| Time: O(m * n), Space: O(m * n)| Hard|
-| 72 | [Edit Distance](https://leetcode.com/problems/edit-distance/) | Dynamic Programming| Time: O(m * n), Space: O(m * n)| Hard|
-| 87 | [Scramble String](https://leetcode.com/problems/scramble-string/) | Dynamic Programming| Time: O(n^4), Space: O(n^4)| Hard|
-| 97 | [Interleaving String](https://leetcode.com/problems/interleaving-string/) | Dynamic Programming| Time: O(m * n), Space: O(m * n)| Hard|
+| 44 | [📓 Wildcard Matching](0044.ipynb) | <span title="Roll the DP match table to a single row; propagate '*' horizontally and '?'/letter diagonally.">1D DP</span>| Time: O(m * n), Space: O(m * n)| Hard|
+| 72 | [📓 Edit Distance](0072.ipynb) | <span title="Roll the edit-distance table to one row; track the diagonal predecessor in a temp variable.">1D DP</span>| Time: O(m * n), Space: O(m * n)| Hard|
+| 87 | [📓 Scramble String](0087.ipynb) | <span title="Recurse on (i1, i2, length) sub-problems; prune with a character-frequency check before branching.">Memoized Recursion</span>| Time: O(n^4), Space: O(n^4)| Hard|
+| 97 | [📓 Interleaving String](0097.ipynb) | <span title="Roll the interleaving DP table to one row; update from above (s1 char) or left (s2 char).">1D DP</span>| Time: O(m * n), Space: O(m * n)| Hard|
 |115 | [Distinct Subsequences](https://leetcode.com/problems/distinct-subsequences/) | Dynamic Programming| Time: O(m * n), Space: O(m * n)| Hard|
 |123 | [Best Time to Buy and Sell Stock III](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/) | Dynamic Programming| Time: O(n), Space: O(1)| Hard|
 |132 | [Palindrome Partitioning II](https://leetcode.com/problems/palindrome-partitioning-ii/) | Dynamic Programming| Time: O(n^2), Space: O(n^2)| Hard|
@@ -591,9 +591,9 @@
 |818 | [Race Car](https://leetcode.com/problems/race-car/) | Dynamic Programming| Time: O(n), Space: O(n)| Hard|
 |913 | [Cat and Mouse](https://leetcode.com/problems/cat-and-mouse/) | Dynamic Programming| Time: O(n^3), Space: O(n^2)| Hard|
 | 1330 | [Super Egg Drop](https://leetcode.com/problems/super-egg-drop/) | Dynamic Programming| O(k * log n) Time, O(k * log n) Space| Hard|
-| 1335 | [Minimum Difficulty of a Job Schedule](https://leetcode.com/problems/minimum-difficulty-of-a-job-schedule/) | Dynamic Programming| O(n^2) Time, O(n) Space| Hard|
+| 1335 | [📓 Minimum Difficulty of a Job Schedule](1335.ipynb) | <span title="dp[day][i] = min schedule cost for i jobs in day days; inner loop scans last-job boundary.">DP</span>| O(n^2) Time, O(n) Space| Hard|
 | 1155 | [📓 Number of Dice Rolls With Target Sum](1155.ipynb) | <span title="dp[s] = ways to reach sum s; roll one die at a time, distributing counts across k face additions">DP Rolling Array</span> | O(n * target) Time, O(n * target) Space| Medium|
-| 1186 | [Maximum Subarray Sum with One Deletion](https://leetcode.com/problems/maximum-subarray-sum-with-one-deletion/) | Dynamic Programming, Array | O(n) Time, O(n) Space| Medium|
+| 1186 | [📓 Maximum Subarray Sum with One Deletion](1186.ipynb) | <span title="Maintain two running sums — no deletion and one deletion used — advancing together in one pass.">Dual Kadane DP</span> | O(n) Time, O(n) Space| Medium|
 | 1193 | [Maximum Profit of Operating a Centennial Wheel](https://leetcode.com/problems/maximum-profit-of-operating-a-centennial-wheel/) | Dynamic Programming, Array | O(n) Time, O(n) Space| Medium|
 | 1194 | [Target Sum](https://leetcode.com/problems/target-sum/) | Dynamic Programming, Array | O(n * sum) Time, O(n * sum) Space| Medium|
 | 1199 | [Minimum Time to Build Blocks](https://leetcode.com/problems/minimum-time-to-build-blocks/) | Dynamic Programming, Array | O(n) Time, O(n) Space| Medium|
@@ -624,7 +624,7 @@
 |808 | [Soup Servings](https://leetcode.com/problems/soup-servings/) | Dynamic Programming, DP Table| Time: O(n), Space: O(n)| Hard|
 |823 | [Binary Trees With Factors](https://leetcode.com/problems/binary-trees-with-factors/) | Dynamic Programming, DP Table| Time: O(n^2), Space: O(n)| Hard|
 |879 | [Profitable Schemes](https://leetcode.com/problems/profitable-schemes/) | Dynamic Programming, DP Table| Time: O(n * m), Space: O(n * m)| Hard|
-|887 | [Super Egg Drop](https://leetcode.com/problems/super-egg-drop/) | Dynamic Programming, DP Table| Time: O(K * log N), Space: O(K)| Hard|
+|887 | [📓 Reverse Subarray To Maximize Array Value](1330.ipynb) | Dynamic Programming, DP Table| Time: O(K * log N), Space: O(K)| Hard|
 |920 | [Number of Music Playlists](https://leetcode.com/problems/number-of-music-playlists/) | Dynamic Programming, DP Table| Time: O(n * k), Space: O(n * k)| Hard|
 | 1301 | [Number of Paths with Max Score](https://leetcode.com/problems/number-of-paths-with-max-score/) | Dynamic Programming, Graph | O(n * m) Time, O(n * m) Space| Hard|
 |139 | [Word Break](https://leetcode.com/problems/word-break/) | Dynamic Programming, Hash Set| Time: O(n^2), Space: O(n)| Medium|

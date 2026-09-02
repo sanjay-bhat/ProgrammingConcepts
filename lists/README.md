@@ -261,12 +261,12 @@
 | 1284 | [📓 Minimum Number of Flips to Convert Binary Matrix to Zero Matrix](../leetcode/1284.ipynb) | <span title="Encode the matrix as a bitmask and BFS; the first time zero state is reached is the minimum flips.">BFS (Bitmask State)</span> | Time: $O(2^{nm} \cdot nm)$, Space: $O(2^{nm})$ | Hard |
 |778 | [Swim in Rising Water](https://leetcode.com/problems/swim-in-rising-water/) | BFS, Priority Queue| Time: O(n log n), Space: O(n)| Hard|
 |994 | [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/) | BFS, Queue | Time: O(n^2), Space: O(n)| Medium|
-| 1197 | [Minimum Knight Moves](https://leetcode.com/problems/minimum-knight-moves/) | BFS, Queue | O(n) Time, O(n) Space| Medium|
-| 1244 | [Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/) | BFS, Queue | O(n * m) Time, O(n * m) Space| Medium|
-| 1263 | [Minimum Moves to Move a Robot to the Origin](https://leetcode.com/problems/minimum-moves-to-move-a-robot-to-the-origin/) | BFS, Queue | O(n) Time, O(n) Space| Medium|
-| 1210 | [Minimum Moves to Reach Target with Rotations](https://leetcode.com/problems/minimum-moves-to-reach-target-with-rotations/) | BFS, Queue | O(n) Time, O(n) Space| Hard|
+| 1197 | [📓 Minimum Knight Moves](1197.ipynb) | <span title="BFS from origin in the symmetry-reduced first quadrant; shortest path = minimum knight moves.">BFS, Queue</span> | Time: O(|x|*|y|), Space: O(|x|*|y|)| Medium|
+| 1244 | [📓 Design A Leaderboard](1244.ipynb) | <span title="HashMap for O(1) score mutations; sort values descending on query to sum top-k entries.">HashMap</span> | Time: O(n log n), Space: O(n)| Medium|
+| 1263 | [📓 Minimum Moves to Move a Box to Their Target Location](1263.ipynb) | <span title="BFS on (box_pos, player_pos) state; inner BFS checks player reachability for each potential push direction.">BFS, Deque</span> | Time: O(m^2*n^2), Space: O(m^2*n^2)| Hard|
+| 1210 | [📓 Minimum Moves to Reach Target with Rotations](1210.ipynb) | <span title="BFS on (tail_row, tail_col, orientation) state space; first hit guarantees minimum moves.">BFS, Queue</span> | Time: O(n^2), Space: O(n^2)| Hard|
 | 1| 293 | [📓 Flip Game](../leetcode/0293.ipynb) | <span title="One sweep through the data, typically updating a counter or maximum in place.">Single Scan</span> | Time: O(n²), Space: O(n) per result | Easy |
-| 1345 | [Jump Game IV](https://leetcode.com/problems/jump-game-iv/) | BFS, Queue | O(n) Time, O(n) Space| Hard|
+| 1345 | [📓 Jump Game IV](1345.ipynb) | <span title="BFS with same-value group pruning; clear each group after visiting to guarantee O(n) total work.">BFS, Queue</span> | Time: O(n), Space: O(n)| Hard|
 |505 | [The Maze II](https://leetcode.com/problems/the-maze-ii/) | Breadth-First Search | O(MN) Time, O(MN) Space| Medium|
 
 ## Binary Indexed Tree
@@ -308,13 +308,13 @@
 | 1419 | [📓 Minimum Number of Frogs Croaking](../leetcode/1419.ipynb) | <span title="Halve the search space each step by comparing the midpoint to a monotone predicate.">Binary Search</span> | O(n log n) Time, O(1) Space| Hard|
 | 852 | [📓 Peak Index in a Mountain Array](../leetcode/0852.ipynb) | <span title="Halve the search space each step by comparing the midpoint to a monotone predicate.">Binary Search</span> | Time: $O(\log n)$, Space: $O(1)$ | Medium |
 | 1233 | [📓 Remove Sub-Folders from the Filesystem](../leetcode/1233.ipynb) | <span title="Sort the array then binary search; or sort + two-pointer sweep after the search.">Binary Search, Array</span> | O(n log n) Time, O(n) Space| Medium|
-| 1285 | [Find the Right Interval](https://leetcode.com/problems/find-the-right-interval/) | Binary Search, Array | O(n log n) Time, O(n) Space| Medium|
+| 1285 | [📓 Find the Right Interval](1285.ipynb) | <span title="Sort interval starts with original indices; binary search each end point for smallest start >= end.">Binary Search</span> | Time: O(n log n), Space: O(n)| Medium|
 | 1300 | [📓 Sum of Mutated Array Closest to Target](../leetcode/1300.ipynb) | <span title="Sort the array then binary search; or sort + two-pointer sweep after the search.">Binary Search, Array</span> | O(n log n) Time, O(1) Space| Medium|
 | 1459 | [Find the Start and End of the Range](https://leetcode.com/problems/find-the-start-and-end-of-the-range/) | Binary Search, Array | O(log n) Time, O(1) Space| Medium|
 | 1231 | [📓 Divide Chocolate](../leetcode/1231.ipynb) | <span title="Binary search for the insert position within a DP transition (e.g., patience sorting for LIS).">Binary Search, Dynamic Programming</span> | O(n log n) Time, O(1) Space| Medium|
 |410 | [📓 Split Array Largest Sum](../leetcode/0410.ipynb) | <span title="Binary search for the insert position within a DP transition (e.g., patience sorting for LIS).">Binary Search, Dynamic Programming</span> | Time: O(n log m), Space: O(n)| Hard|
 | 1011 | [📓 Capacity To Ship Packages Within D Days](../leetcode/1011.ipynb) | <span title="Greedily simulate a feasibility check (e.g., days or capacity) inside a binary-search loop.">Binary Search, Greedy</span> | Time: O(n log m), Space: O(1)| Medium|
-| 1211 | [Divide Chocolate](https://leetcode.com/problems/divide-chocolate/) | Binary Search, Math| O(n log n) Time, O(1) Space| Medium|
+| 1211 | [📓 Divide Chocolate](1211.ipynb) | <span title="Binary search on the minimum sweetness; greedily cut when the running sum hits the threshold.">Binary Search</span> | Time: O(n log(sum)), Space: O(1)| Hard|
 | 1283 | [📓 Find the Smallest Divisor Given a Threshold](../leetcode/1283.ipynb) | <span title="Combine binary search with a mathematical formula to evaluate the feasibility predicate.">Binary Search, Math</span> | O(n log m) Time, O(1) Space| Medium|
 |327 | [📓 Count of Range Sum](../leetcode/0327.ipynb) | <span title="Merge sort to count inversions or range sums; binary search for the split boundary.">Binary Search, Merge Sort</span> | Time: O(n log n), Space: O(n)| Hard|
 | 1498 | [📓 Number of Subsequences That Satisfy the Given Sum Condition](../leetcode/1498.ipynb) | <span title="Sort first, then binary search for target positions or boundaries.">Binary Search, Sorting</span> | O(n log n) Time, O(n) Space| Medium|
@@ -372,8 +372,8 @@
 | 1108 | [📓 IP Address to CIDR](../leetcode/1108.ipynb) | <span title="Greedily take the largest power-of-two-aligned CIDR block fitting the current IP and count.">Greedy Largest Aligned Block</span> | Time: O(1), Space: O(1)| Medium|
 | 1238 | [📓 Circular Permutation in Binary Representation](../leetcode/1238.ipynb) | <span title="XOR each Gray code i^(i>>1) with the start offset to rebase the circular permutation.">Gray Code with Start XOR</span> | O(n) Time, O(1) Space| Medium|
 | 1442 | [📓 Count Triplets That Can Form Two Arrays of Equal XOR](../leetcode/1442.ipynb) | <span title="Use prefix XOR; when prefix[i]==prefix[k+1] the subarray XOR is zero, giving k-i valid triplets.">Prefix XOR</span> | O(n^2) Time, O(n) Space| Hard|
-| 1274 | [Prime Number of Set Bits in Binary Representation](https://leetcode.com/problems/prime-number-of-set-bits-in-binary-representation/) | Bit Manipulation, Math | O(n) Time, O(1) Space| Easy|
-| 1453 | [Find the Longest Substring Containing Vowels in Even Counts](https://leetcode.com/problems/find-the-longest-substring-containing-vowels-in-even-counts/) | Bit Manipulation, Prefix Sum | O(n) Time, O(1) Space| Medium|
+| 1274 | [📓 Prime Number of Set Bits in Binary Representation](1274.ipynb) | <span title="Precompute a prime bitmask for counts 0-20; use popcount + single bit-shift lookup per number.">Bit Manipulation</span> | Time: O((R-L)*log R), Space: O(1)| Easy|
+| 1453 | [📓 Maximum Number of Darts Inside of a Circular Dartboard](1453.ipynb) | <span title="For each pair of darts, compute two circle centers of radius r; count darts inside each candidate center.">Geometry</span> | Time: O(n^2*n), Space: O(n)| Hard|
 
 ## Bit Masking
 | Serial No. | Problem Title | Data Structure | Time and Space Complexity | Level |
@@ -413,11 +413,11 @@
 |130 | [Surrounded Regions](https://leetcode.com/problems/surrounded-regions/) | DFS, BFS | Time: O(m * n), Space: O(m * n)| Medium|
 |200 | [Number of Islands](https://leetcode.com/problems/number-of-islands/) | DFS, BFS | Time: O(m * n), Space: O(m * n)| Medium|
 |797 | [All Paths From Source to Target](https://leetcode.com/problems/all-paths-from-source-to-target/) | DFS, Backtracking| Time: O(n * 2^n), Space: O(n)| Medium|
-| 1067 | [Path with Maximum Gold](https://leetcode.com/problems/path-with-maximum-gold/) | DFS, Backtracking| Time: O(n^2), Space: O(n^2)| Medium|
+| 1067 | [📓 Digit Count in Range](1067.ipynb) | <span title="Count digit d in [0..n] using place-value decomposition; apply prefix subtraction f(high)-f(low-1).">Digit DP</span> | Time: O(log n), Space: O(1)| Hard|
 |465 | [Optimal Account Balancing](https://leetcode.com/problems/optimal-account-balancing/) | DFS, Backtracking| Time: O(2^n), Space: O(n)| Hard|
-| 1020 | [Number of Enclaves](https://leetcode.com/problems/number-of-enclaves/) | DFS, Graph | Time: O(n^2), Space: O(n)| Medium|
+| 1020 | [📓 Number of Enclaves](1020.ipynb) | <span title="Flood-fill from border land cells to mark escapable regions; count remaining unvisited land cells as enclaves.">DFS, Flood-Fill</span> | Time: O(mn), Space: O(mn)| Medium|
 | 1270 | [All Paths from Source Lead to Destination](https://leetcode.com/problems/all-paths-from-source-lead-to-destination/) | DFS, Graph | O(n * m) Time, O(n * m) Space| Medium|
-| 1015 | [Swim in Rising Water](https://leetcode.com/problems/swim-in-rising-water/) | DFS, Graph, Binary Search| Time: O(n log n), Space: O(n)| Hard|
+| 1015 | [📓 Swim in Rising Water](1015.ipynb) | <span title="Use a min-heap to greedily expand the lowest-elevation unvisited cell; track the running max elevation to reach (n-1,n-1).">Dijkstra (Min-Heap)</span> | Time: O(n^2 log n), Space: O(n^2)| Hard|
 |694 | [Number of Distinct Islands](https://leetcode.com/problems/number-of-distinct-islands/) | DFS, Hash Set| Time: O(n), Space: O(n)| Medium|
 | 1219 | [Path with Maximum Gold](https://leetcode.com/problems/path-with-maximum-gold/) | DFS, Matrix| O(n * m) Time, O(n * m) Space| Medium|
 | 1254 | [Number of Closed Islands](https://leetcode.com/problems/number-of-closed-islands/) | DFS, Matrix| O(n * m) Time, O(n * m) Space| Medium|

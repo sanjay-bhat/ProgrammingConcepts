@@ -596,27 +596,27 @@
 | 1186 | [📓 Maximum Subarray Sum with One Deletion](1186.ipynb) | <span title="Maintain two running sums — no deletion and one deletion used — advancing together in one pass.">Dual Kadane DP</span> | O(n) Time, O(n) Space| Medium|
 | 1193 | [Maximum Profit of Operating a Centennial Wheel](https://leetcode.com/problems/maximum-profit-of-operating-a-centennial-wheel/) | Dynamic Programming, Array | O(n) Time, O(n) Space| Medium|
 | 1194 | [Target Sum](https://leetcode.com/problems/target-sum/) | Dynamic Programming, Array | O(n * sum) Time, O(n * sum) Space| Medium|
-| 1199 | [Minimum Time to Build Blocks](https://leetcode.com/problems/minimum-time-to-build-blocks/) | Dynamic Programming, Array | O(n) Time, O(n) Space| Medium|
+| 1199 | [📓 Minimum Time to Build Blocks](1199.ipynb) | <span title="Repeatedly merge the two cheapest build-times via a min-heap; the last element is the minimum bottleneck time.">Huffman Greedy (Min-Heap)</span> | Time: O(n log n), Space: O(n) | Hard |
 | 1223 | [📓 Dice Roll Simulation](1223.ipynb) | <span title="dp[f][c] = ways for last face f with streak c; extend by subtracting sequences that would exceed rollMax[f]">DP with Subtraction</span> | O(n) Time, O(n) Space| Medium|
-| 1262 | [Greatest Sum Divisible by Three](https://leetcode.com/problems/greatest-sum-divisible-by-three/) | Dynamic Programming, Array | O(n) Time, O(1) Space| Medium|
+| 1262 | [📓 Greatest Sum Divisible by Three](1262.ipynb) | <span title="Maintain three running best-sums keyed by remainder mod 3; update each element in O(1) with a snapshot swap.">Remainder-State DP</span> | Time: O(n), Space: O(1) | Medium |
 | 1322 | [Longest Arithmetic Subsequence](https://leetcode.com/problems/longest-arithmetic-subsequence/) | Dynamic Programming, Array | O(n^2) Time, O(n) Space| Medium|
-| 1400 | [Find Good Days to Rob the Bank](https://leetcode.com/problems/find-good-days-to-rob-the-bank/) | Dynamic Programming, Array | O(n) Time, O(n) Space| Medium|
-| 1420 | [Find Good Days to Rob the Bank](https://leetcode.com/problems/find-good-days-to-rob-the-bank/) | Dynamic Programming, Array | O(n) Time, O(n) Space| Medium|
+| 1400 | [📓 Construct K Palindrome Strings](1400.ipynb) | <span title="Count characters with odd frequency; answer is true iff odd_count <= k <= n (each odd-freq char needs its own center).">Odd-Frequency Count</span> | Time: O(n), Space: O(1) | Medium |
+| 1420 | [📓 Build Array Where You Can Find The Maximum Exactly K Comparisons](1420.ipynb) | <span title="3D DP over (position, current_max, comparisons_used); transition by placing a value <= max or a new larger max.">3D DP</span> | Time: O(n·k·m^2), Space: O(n·k·m) | Hard |
 | 1195 | [Frog Jump](https://leetcode.com/problems/frog-jump/) | Dynamic Programming, Array | O(n^2) Time, O(n) Space| Hard|
-| 1215 | [Palindrome Partitioning II](https://leetcode.com/problems/palindrome-partitioning-ii/) | Dynamic Programming, Array | O(n^2) Time, O(n^2) Space| Hard|
-| 1220 | [Count Vowels Permutation](https://leetcode.com/problems/count-vowels-permutation/) | Dynamic Programming, Array | O(n) Time, O(1) Space| Hard|
-| 1235 | [Job Scheduler](https://leetcode.com/problems/job-scheduler/) | Dynamic Programming, Array | O(n^2) Time, O(n^2) Space| Hard|
-| 1240 | [Tiling a Rectangle with the Fewest Squares](https://leetcode.com/problems/tiling-a-rectangle-with-the-fewest-squares/) | Dynamic Programming, Array | O(m * n) Time, O(m * n) Space| Hard|
-| 1340 | [Jump Game V](https://leetcode.com/problems/jump-game-v/) | Dynamic Programming, Array | O(n) Time, O(n) Space| Hard|
-| 1388 | [Pizza With 3n Slices](https://leetcode.com/problems/pizza-with-3n-slices/) | Dynamic Programming, Array | O(n^2) Time, O(n) Space| Hard|
+| 1215 | [📓 Stepping Numbers](1215.ipynb) | <span title="Seed BFS with digits 1-9 and expand each number by appending last_digit ± 1; collect those within [low, high].">BFS Digit Expansion</span> | Time: O(K), Space: O(K) | Medium |
+| 1220 | [📓 Count Vowels Permutation](1220.ipynb) | <span title="Track five counts (one per vowel) and propagate via fixed adjacency rules each step; only O(1) state needed.">Transition-Matrix DP</span> | Time: O(n), Space: O(1) | Hard |
+| 1235 | [📓 Maximum Profit in Job Scheduling](1235.ipynb) | <span title="Sort jobs by end time; for each job binary-search the latest compatible predecessor and pick skip-or-take greedily.">DP + Binary Search</span> | Time: O(n log n), Space: O(n) | Hard |
+| 1240 | [📓 Tiling a Rectangle with the Fewest Squares](1240.ipynb) | <span title="Fill the lowest skyline column first with the largest valid square; prune branches exceeding the current best.">Backtracking + Skyline Pruning</span> | Time: O(min(m,n)^(mn)), Space: O(mn) | Hard |
+| 1340 | [📓 Jump Game V](1340.ipynb) | <span title="Process bars shortest-first so all reachable (lower) bars are solved; scan ±d steps and take the max sub-result.">Sort + Memoized DP</span> | Time: O(n·d), Space: O(n) | Hard |
+| 1388 | [📓 Pizza With 3n Slices](1388.ipynb) | <span title="Pick exactly n non-adjacent elements from a circular 3n array; run two House Robber DPs to handle circularity.">Circular House Robber DP</span> | Time: O(n^2), Space: O(n^2) | Hard |
 |542 | [01 Matrix](https://leetcode.com/problems/01-matrix/) | Dynamic Programming, BFS | Time: O(m * n), Space: O(m * n)| Medium|
 |140 | [Word Break II](https://leetcode.com/problems/word-break-ii/) | Dynamic Programming, Backtracking| Time: O(n^3), Space: O(n)| Hard|
 |514 | [Freedom Trail](https://leetcode.com/problems/freedom-trail/) | Dynamic Programming, Binary Search | Time: O(m * n), Space: O(m * n)| Hard|
 |576 | [Out of Boundary Paths](https://leetcode.com/problems/out-of-boundary-paths/) | Dynamic Programming, DFS | Time: O(m * n * maxMove), Space: O(m * n)| Medium|
-| 1397 | [Find All Good Strings](https://leetcode.com/problems/find-all-good-strings/) | Dynamic Programming, DFS | O(n) Time, O(1) Space| Hard|
-| 1406 | [Stone Game III](https://leetcode.com/problems/stone-game-iii/) | Dynamic Programming, DP| O(n) Time, O(n) Space| Hard|
-| 1463 | [Cherry Pickup II](https://leetcode.com/problems/cherry-pickup-ii/) | Dynamic Programming, DP| O(n^2) Time, O(n^2) Space| Hard|
-| 1473 | [Paint House III](https://leetcode.com/problems/paint-house-iii/) | Dynamic Programming, DP| O(n^2) Time, O(n) Space| Hard|
+| 1397 | [📓 Find All Good Strings](1397.ipynb) | <span title="Digit DP with tight-lo/tight-hi bounds; use KMP failure function to track evil-match state per character placed.">Digit DP + KMP</span> | Time: O(n·|evil|·26), Space: O(n·|evil|) | Hard |
+| 1406 | [📓 Stone Game III](1406.ipynb) | <span title="Compute score advantage from each position right-to-left; taking 1-3 stones, the current player maximises own lead.">Suffix DP</span> | Time: O(n), Space: O(1) | Hard |
+| 1463 | [📓 Cherry Pickup II](1463.ipynb) | <span title="Two robots descend row by row; dp[r][c1][c2] = max cherries with robot positions c1, c2; rolling array saves space.">3D DP</span> | Time: O(rows·cols^2), Space: O(cols^2) | Hard |
+| 1473 | [📓 Paint House III](1473.ipynb) | <span title="dp[i][color][neighborhoods] = min cost; transition checks whether the new color matches the previous to increment neighborhoods.">3D DP</span> | Time: O(n·target·m^2), Space: O(n·target·m) | Hard |
 |813 | [Largest Sum of Averages](https://leetcode.com/problems/largest-sum-of-averages/) | Dynamic Programming, DP Table| Time: O(n^2), Space: O(n^2)| Medium|
 |877 | [Stone Game](https://leetcode.com/problems/stone-game/) | Dynamic Programming, DP Table| Time: O(n^2), Space: O(n^2)| Medium|
 |741 | [Cherry Pickup](https://leetcode.com/problems/cherry-pickup/) | Dynamic Programming, DP Table| Time: O(n^2), Space: O(n^2)| Hard|

@@ -682,16 +682,16 @@
 | :--- | :--- | :--- | :--- | :--- |
 | 1034 | [📓 Coloring A Border](../leetcode/1034.ipynb) | <span title="BFS the connected component from the source cell; mark cells whose neighbour is out-of-bounds or a different colour.">BFS Connected-Component</span>| Time: O(E), Space: O(V)| Medium|
 | 1045 | [Customer Orders Availability System](https://leetcode.com/problems/customer-orders-availability-system/) | Graph, Adjacency List| Time: O(n^2), Space: O(n)| Medium|
-| 1477 | [📓 Find Two Non-overlapping Sub-arrays Each With Target Sum](../leetcode/1477.ipynb) | <span title="Prefix sum hashmap finds subarrays summing to target in O(1); bestLeft array enables O(n) pair matching.">Prefix Sum + DP</span>| O(n) Time, O(n) Space| Medium|
+| 1477 | [📓 Find Two Non-overlapping Sub-arrays Each With Target Sum](../leetcode/1477.ipynb) | <span title="Sliding window finds all target-sum subarrays; a prefix-min array stores the shortest left-side window for O(1) pairing.">Sliding Window + Prefix Min</span> | O(n) Time, O(n) Space| Easy|
 |310 | [Minimum Height Trees](https://leetcode.com/problems/minimum-height-trees/) | Graph, BFS | Time: O(n), Space: O(n)| Medium|
-| 1036 | [Escape a Large Maze](https://leetcode.com/problems/escape-a-large-maze/) | Graph, BFS | Time: O(n), Space: O(n)| Medium|
-| 1065 | [Train System](https://leetcode.com/problems/train-system/) | Graph, BFS | Time: O(n^2), Space: O(n)| Medium|
+| 1036 | [📓 Escape a Large Maze](../leetcode/1036.ipynb) | <span title="BFS from source and target each capped at b^2 visits; exceeding the cap proves the start cannot be enclosed by b blocked cells.">Bounded BFS</span> | Time: O(n), Space: O(n)| Medium|
+| 1065 | [📓 Index Pairs of a String](../leetcode/1065.ipynb) | <span title="Build a trie from all words, then walk the trie from each start index in text to collect all matching index pairs in O(n*L).">Trie</span> | Time: O(n^2), Space: O(n)| Medium|
 |749 | [Contain Virus](https://leetcode.com/problems/contain-virus/) | Graph, BFS | Time: O(n^2), Space: O(n^2)| Hard|
 |753 | [Cracking the Safe](https://leetcode.com/problems/cracking-the-safe/) | Graph, BFS | Time: O(n^2), Space: O(n)| Hard|
 |815 | [Bus Routes](https://leetcode.com/problems/bus-routes/) | Graph, BFS | Time: O(n * m), Space: O(n * m)| Hard|
 |847 | [Shortest Path Visiting All Nodes](https://leetcode.com/problems/shortest-path-visiting-all-nodes/) | Graph, BFS | Time: O(n^2), Space: O(n^2)| Hard|
-| 1377 | [Frog Position After T Seconds](https://leetcode.com/problems/frog-position-after-t-seconds/) | Graph, BFS | O(n) Time, O(n) Space| Hard|
-| 1391 | [Check if There is a Valid Path in a Grid](https://leetcode.com/problems/check-if-there-is-a-valid-path-in-a-grid/) | Graph, BFS, DFS| O(n * m) Time, O(n * m) Space| Medium|
+| 1377 | [📓 Frog Position After T Seconds](../leetcode/1377.ipynb) | <span title="BFS tracks probability at each node, splitting evenly among unvisited children; probability stays if the frog has nowhere new to jump.">BFS Probability Propagation</span> | O(n) Time, O(n) Space| Hard|
+| 1391 | [📓 Check if There is a Valid Path in a Grid](../leetcode/1391.ipynb) | <span title="BFS from (0,0) using a per-street-type direction table; a move is valid only when both cells agree on the shared edge.">BFS with Street Connectivity</span> | O(n * m) Time, O(n * m) Space| Medium|
 |785 | [Is Graph Bipartite?](https://leetcode.com/problems/is-graph-bipartite/)| Graph, BFS/DFS | Time: O(n + e), Space: O(n)| Medium|
 |133 | [Clone Graph](https://leetcode.com/problems/clone-graph/) | Graph, DFS | Time: O(V + E), Space: O(V)| Medium|
 |332 | [Reconstruct Itinerary](https://leetcode.com/problems/reconstruct-itinerary/) | Graph, DFS | Time: O(E log E), Space: O(E)| Medium|
@@ -702,29 +702,29 @@
 |886 | [Possible Bipartition](https://leetcode.com/problems/possible-bipartition/) | Graph, DFS | Time: O(n + m), Space: O(n)| Medium|
 |947 | [Most Stones Removed with Same Row or Column](https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/) | Graph, DFS | Time: O(n), Space: O(n)| Medium|
 |924 | [Minimize Malware Spread](https://leetcode.com/problems/minimize-malware-spread/) | Graph, DFS | Time: O(n^2), Space: O(n)| Hard|
-| 1001 | [Grid Illuminated](https://leetcode.com/problems/grid-illuminated/) | Graph, DFS | Time: O(n), Space: O(n)| Hard|
-| 1466 | [Reorder Routes to Make All Paths Lead to the City Zero](https://leetcode.com/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero/) | Graph, DFS, BFS| O(n) Time, O(n) Space| Medium|
+| 1001 | [📓 Grid Illumination](../leetcode/1001.ipynb) | <span title="Maintain row, col, diagonal, and anti-diagonal counts; answer illumination queries in O(1) and turn off lamps in each 3x3 neighbourhood.">Hash Map Counters</span> | Time: O(n), Space: O(n)| Hard|
+| 1466 | [📓 Reorder Routes to Make All Paths Lead to the City Zero](../leetcode/1466.ipynb) | <span title="BFS on the undirected tree from city 0; count original-direction edges (pointing away from 0) — each needs one reversal.">BFS/DFS Undirected Traversal</span> | O(n) Time, O(n) Space| Medium|
 |882 | [Reachable Nodes In Subdivided Graph](https://leetcode.com/problems/reachable-nodes-in-subdivided-graph/) | Graph, DFS, BFS| Time: O(n^2), Space: O(n)| Hard|
 |997 | [Find the Town Judge](https://leetcode.com/problems/find-the-town-judge/) | Graph, DFS, In-degree| Time: O(n), Space: O(n)| Easy|
 | 1027 | [📓 Longest Arithmetic Subsequence](../leetcode/1027.ipynb) | <span title="dp[i] maps each arithmetic difference to the longest subsequence length ending at index i; extend for each (j,i) pair">DP with HashMap</span> | Time: O(n), Space: O(n)| Easy|
-| 1079 | [Find the Town Judge](https://leetcode.com/problems/find-the-town-judge/) | Graph, DFS, In-degree| Time: O(n), Space: O(n)| Easy|
+| 1079 | [📓 Letter Tile Possibilities](../leetcode/1079.ipynb) | <span title="Recurse over the 26-letter frequency array; each non-zero letter placed is a valid new sequence, pruning duplicates automatically.">Frequency Backtracking</span> | Time: O(n), Space: O(n)| Easy|
 |928 | [Minimize Malware Spread II](https://leetcode.com/problems/minimize-malware-spread-ii/) | Graph, DFS, Simulation | Time: O(n^2), Space: O(n)| Hard|
-| 1192 | [Critical Connections in a Network](https://leetcode.com/problems/critical-connections-in-a-network/) | Graph, DFS, Union-Find | O(n + m) Time, O(n) Space| Hard|
+| 1192 | [📓 Critical Connections in a Network](../leetcode/1192.ipynb) | <span title="One DFS pass assigns discovery and low-link times; an edge u-v is a bridge when low[v] > disc[u].">Tarjan's Bridge Finding</span> | O(n + m) Time, O(n) Space| Hard|
 |323 | [Number of Connected Components in an Undirected Graph](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/) | Graph, DFS/BFS | Time: O(V + E), Space: O(V)| Medium|
 |743 | [Network Delay Time](https://leetcode.com/problems/network-delay-time/) | Graph, Dijkstra| Time: O(E log V), Space: O(V)| Medium|
-| 1334 | [Find the City With the Smallest Number of Neighbors at a Threshold Distance](https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/) | Graph, Dijkstra| O(n^3) Time, O(n^2) Space| Medium|
-| 1368 | [Minimum Cost to Make at Least One Valid Path in a Grid](https://leetcode.com/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid/) | Graph, Dijkstra, BFS | O(n * m) Time, O(n * m) Space| Hard|
+| 1334 | [📓 Find the City With the Smallest Number of Neighbors at a Threshold Distance](../leetcode/1334.ipynb) | <span title="Floyd-Warshall computes all-pairs shortest paths in O(n^3); count cities reachable within the threshold per node.">Floyd-Warshall</span> | O(n^3) Time, O(n^2) Space| Medium|
+| 1368 | [📓 Minimum Cost to Make at Least One Valid Path in a Grid](../leetcode/1368.ipynb) | <span title="0-1 BFS uses a deque: free moves (existing arrow) push front, direction-change moves push back, achieving O(nm) without a heap.">0-1 BFS (Deque)</span> | O(n * m) Time, O(n * m) Space| Hard|
 |734 | [Sentence Similarity](https://leetcode.com/problems/sentence-similarity/) | Graph, Hash Map| Time: O(n), Space: O(n)| Easy|
-| 1436 | [Destination City](https://leetcode.com/problems/destination-city/) | Graph, HashMap | O(n) Time, O(n) Space| Easy|
-| 1311 | [Get Watched Videos by Your Friends](https://leetcode.com/problems/get-watched-videos-by-your-friends/) | Graph, HashMap | O(n + m) Time, O(n + m) Space| Medium|
+| 1436 | [📓 Destination City](../leetcode/1436.ipynb) | <span title="Collect all source cities in a set in one pass; the unique destination absent from that set is the terminal city.">Source Hash Set</span> | O(n) Time, O(n) Space| Easy|
+| 1311 | [📓 Get Watched Videos by Your Friends](../leetcode/1311.ipynb) | <span title="BFS from person 0 stops at level k; tally video frequencies among level-k friends and sort by frequency then title.">BFS Level-by-Level</span> | O(n + m) Time, O(n + m) Space| Medium|
 | 1364 | [Jetpack](https://leetcode.com/problems/jetpack/) | Graph, Priority Queue| O(n log n) Time, O(n) Space| Medium|
 |207 | [Course Schedule](https://leetcode.com/problems/course-schedule/) | Graph, Topological Sort| Time: O(V + E), Space: O(V + E)| Medium|
 |210 | [Course Schedule II](https://leetcode.com/problems/course-schedule-ii/) | Graph, Topological Sort| Time: O(V + E), Space: O(V + E)| Medium|
 |851 | [Loud and Rich](https://leetcode.com/problems/loud-and-rich/) | Graph, Topological Sort| Time: O(n + m), Space: O(n + m)| Medium|
 |269 | [Alien Dictionary](https://leetcode.com/problems/alien-dictionary/) | Graph, Topological Sort| Time: O(V + E), Space: O(V + E)| Hard|
-| 1136 | [Parallel Courses](https://leetcode.com/problems/parallel-courses/) | Graph, Topological Sort| Time: O(n), Space: O(n)| Hard|
-| 1203 | [Sort Items by Groups Respecting Dependencies](https://leetcode.com/problems/sort-items-by-groups-respecting-dependencies/) | Graph, Topological Sort| O(n + m) Time, O(n + m) Space| Hard|
-| 1462 | [Course Schedule IV](https://leetcode.com/problems/course-schedule-iv/) | Graph, Topological Sort| O(n^2) Time, O(n) Space| Hard|
+| 1136 | [📓 Parallel Courses](../leetcode/1136.ipynb) | <span title="Kahn's BFS processes courses level-by-level where each level equals one semester; a leftover course signals a cycle.">Topological Sort (Kahn's BFS)</span> | Time: O(n), Space: O(n)| Hard|
+| 1203 | [📓 Sort Items by Groups Respecting Dependencies](../leetcode/1203.ipynb) | <span title="Two independent Kahn's sorts — one for group ordering, one for item ordering — then emit items group by group.">Two-Level Topological Sort</span> | O(n + m) Time, O(n + m) Space| Hard|
+| 1462 | [📓 Course Schedule IV](../leetcode/1462.ipynb) | <span title="Floyd-Warshall transitive closure preprocesses the DAG in O(n^3); each prerequisite query is then answered in O(1).">Floyd-Warshall Reachability</span> | O(n^2) Time, O(n) Space| Hard|
 | 1494 | [Parallel Courses II](https://leetcode.com/problems/parallel-courses-ii/) | Graph, Topological Sort| O(n^2) Time, O(n) Space| Hard|
 | 1257 | [Smallest Common Region](https://leetcode.com/problems/smallest-common-region/) | Graph, Tree| O(n) Time, O(n) Space| Medium|
 |277 | [Find the Celebrity](https://leetcode.com/problems/find-the-celebrity/) | Graph, Two Pointers| Time: O(n), Space: O(1)| Medium|

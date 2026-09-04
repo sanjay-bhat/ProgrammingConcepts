@@ -306,7 +306,7 @@
 |1102 | [Path Sum IV](https://leetcode.com/problems/path-sum-iv/)| Tree, DFS | Time: O(n), Space: O(n)| Easy |
 |1103 | [Distribute Candies to People](https://leetcode.com/problems/distribute-candies-to-people/) | Math, Simulation| Time: O(n), Space: O(1)| Easy |
 |1113 | [Intersection of Three Sorted Arrays](https://leetcode.com/problems/intersection-of-three-sorted-arrays/) | Array, Two Pointers| Time: O(n), Space: O(1)| Easy |
-|1114 | [Print in Order](https://leetcode.com/problems/print-in-order/) | DFS, Multi-threading | Time: O(1), Space: O(1)| Easy |
+|1114 | [📓 Print in Order](../leetcode/1114.ipynb) | <span title="Two semaphores gate second() and third() in strict sequence.">Concurrency</span> | Time: O(1), Space: O(1)| Easy |
 |1118 | [Number of Days in a Month](https://leetcode.com/problems/number-of-days-in-a-month/) | Math, Array| Time: O(1), Space: O(1)| Easy |
 |1119 | [Remove Vowels from a String](https://leetcode.com/problems/remove-vowels-from-a-string/) | String  | Time: O(n), Space: O(1)| Easy |
 |1122 | [Relative Sort Array](https://leetcode.com/problems/relative-sort-array/)| Sorting, Hash Map  | Time: O(n log n), Space: O(n)| Easy |
@@ -342,6 +342,7 @@
 |1271 | [Hexspeak](https://leetcode.com/problems/hexspeak/)| Math, String  | O(n) Time, O(1) Space  | Easy |
 |1274 | [📓 Prime Number of Set Bits in Binary Representation](../leetcode/1274.ipynb) | <span title="Precompute a prime bitmask for counts 0-20; use popcount + single bit-shift lookup per number.">Bit Manipulation</span> | Time: O((R-L)*log R), Space: O(1) | Easy |
 |1275 | [Find Winner on a Tic Tac Toe Game](https://leetcode.com/problems/find-winner-on-a-tic-tac-toe-game/)| Matrix, Array | O(1) Time, O(1) Space  | Easy |
+|1279 | [📓 Traffic Light Controlled Intersection](../leetcode/1279.ipynb) | <span title="Single mutex serializes all carArrived calls; switch light only when roadId changes.">Concurrency</span> | Time: O(1), Space: O(1)| Easy |
 |1281 | [Subtract the Product and Sum of Digits of an Integer](https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/)| Math | O(1) Time, O(1) Space  | Easy |
 |1287 | [📓 Element Appearing More Than 25% in Sorted Array](../leetcode/1287.ipynb)| <span title="Check arr[i] == arr[i + n/4] for each i; the dominant element must bridge any quarter-length gap.">Quarter-Jump Check</span>| O(n) Time, O(1) Space  | Easy |
 |1290 | [Convert Binary Number in a Linked List to Integer](https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/) | Linked List, Math  | O(n) Time, O(1) Space  | Easy |
@@ -979,9 +980,9 @@
 |1110 | [Delete Node in a BST](https://leetcode.com/problems/delete-node-in-a-bst/)| Tree, BST | Time: O(log n), Space: O(1)  | Medium  |
 |1111 | [Delete Node in a BST](https://leetcode.com/problems/delete-node-in-a-bst/)| Tree, BST | Time: O(log n), Space: O(1)  | Medium  |
 |1112 | [Smallest Subtree with all the Deepest Nodes](https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/)  | Tree, DFS | Time: O(n), Space: O(n)| Medium  |
-|1115 | [Print Foo Bar Alternately](https://leetcode.com/problems/print-foo-bar-alternately/) | DFS, Multi-threading | Time: O(1), Space: O(1)| Medium  |
-|1116 | [Print Zero Even Odd](https://leetcode.com/problems/print-zero-even-odd/)| Multi-threading | Time: O(1), Space: O(1)| Medium  |
-|1117 | [Building H2O](https://leetcode.com/problems/building-h2o/)| Multi-threading | Time: O(1), Space: O(1)| Medium  |
+|1115 | [📓 Print FooBar Alternately](../leetcode/1115.ipynb) | <span title="fooSem(1) and barSem(0) alternate; each thread releases the other's gate after printing.">Concurrency</span> | Time: O(1), Space: O(1)| Medium  |
+|1116 | [📓 Print Zero Even Odd](../leetcode/1116.ipynb) | <span title="zeroSem(1) routes to oddSem or evenSem; each number thread releases zeroSem to continue.">Concurrency</span> | Time: O(1), Space: O(1)| Medium  |
+|1117 | [📓 Building H2O](../leetcode/1117.ipynb) | <span title="hSem(2) and oSem(1) control entry; Barrier(3) ensures all three rendezvous before bonding.">Concurrency</span> | Time: O(1), Space: O(1)| Medium  |
 |1120 | [Path Sum III](https://leetcode.com/problems/path-sum-iii/)| Tree, DFS | Time: O(n), Space: O(n)| Medium  |
 |1121 | [Divide Array in Sets of K Consecutive Numbers](https://leetcode.com/problems/divide-array-in-sets-of-k-consecutive-numbers/)| Greedy, Hash Map| Time: O(n), Space: O(n)| Medium  |
 |1123 | [Lowest Common Ancestor of Deepest Leaves](https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves/)  | Tree, DFS | Time: O(n), Space: O(n)| Medium  |
@@ -1023,6 +1024,7 @@
 |1191 | [📓 K Concatenation Maximum Sum](../leetcode/1191.ipynb) | <span title="Run Kadane on the double copy for cross-boundary subarrays, then add (k-2) times total sum when positive.">Kadane + Math</span>| O(n) Time, O(1) Space  | Medium  |
 |1193 | [Maximum Profit of Operating a Centennial Wheel](https://leetcode.com/problems/maximum-profit-of-operating-a-centennial-wheel/) | Dynamic Programming, Array | O(n) Time, O(n) Space  | Medium  |
 |1194 | [Target Sum](https://leetcode.com/problems/target-sum/)  | Dynamic Programming, Array | O(n * sum) Time, O(n * sum) Space | Medium  |
+|1195 | [📓 Fizz Buzz Multithreaded](../leetcode/1195.ipynb) | <span title="Four semaphores, one per output type; shared counter routes each turn to the correct thread.">Concurrency</span> | Time: O(1), Space: O(1)| Medium  |
 |1196 | [How Many Apples Can You Put into the Basket](https://leetcode.com/problems/how-many-apples-can-you-put-into-the-basket/)  | Sliding Window, Array| O(n) Time, O(1) Space  | Medium  |
 |1197 | [📓 Minimum Knight Moves](../leetcode/1197.ipynb) | <span title="BFS from origin in the symmetry-reduced first quadrant; shortest path = minimum knight moves.">BFS, Queue</span> | Time: O(|x|*|y|), Space: O(|x|*|y|) | Medium  |
 |1198 | [Find Smallest Common Element in All Rows](https://leetcode.com/problems/find-smallest-common-element-in-all-rows/)  | HashSet, Array| O(n * m) Time, O(n) Space| Medium  |
@@ -1041,7 +1043,7 @@
 |1222 | [📓 Queens That Can Attack the King](../leetcode/1222.ipynb)| <span title="Store queens in a HashSet, then walk outward in all 8 directions from the king, stopping at the first queen found.">Array, Matrix</span> | O(1) Time, O(1) Space  | Medium  |
 |1223 | [📓 Dice Roll Simulation](../leetcode/1223.ipynb) | <span title="dp[f][c] = ways for last face f with streak c; extend by subtracting sequences that would exceed rollMax[f]">DP with Subtraction</span> | O(n) Time, O(n) Space  | Medium  |
 |1225 | [Reports to the Boss](https://leetcode.com/problems/reports-to-the-boss/)| Tree, Graph| O(n) Time, O(n) Space  | Medium  |
-|1226 | [📓 The Employee That Worked on the Longest Task](../leetcode/1226.ipynb)| <span title="Track the previous end-time; update the best employee whenever the current task duration strictly exceeds the running maximum.">Array, HashMap</span>| O(n) Time, O(n) Space  | Medium  |
+|1226 | [📓 Dining Philosophers](../leetcode/1226.ipynb) | <span title="Acquire chopsticks in ascending index order to break circular-wait and prevent deadlock.">Concurrency</span> | Time: O(1), Space: O(1)| Medium  |
 |1227 | [Airplane Seat Assignment Probability](https://leetcode.com/problems/airplane-seat-assignment-probability/) | Probability, Simulation  | O(1) Time, O(1) Space  | Medium  |
 |1228 | [Missing Number in Arithmetic Progression](https://leetcode.com/problems/missing-number-in-arithmetic-progression/)  | Math | O(n) Time, O(1) Space  | Medium  |
 |1229 | [Meeting Scheduler](https://leetcode.com/problems/meeting-scheduler/) | Interval, Sorting  | O(n log n) Time, O(1) Space  | Medium  |
@@ -1051,7 +1053,7 @@
 |1237 | [Rotate Function](https://leetcode.com/problems/rotate-function/)| Math, Array| O(n) Time, O(n) Space  | Medium  |
 |1238 | [📓 Circular Permutation in Binary Representation](../leetcode/1238.ipynb)| <span title="XOR each Gray code i^(i>>1) with the start offset to rebase the circular permutation.">Gray Code with Start XOR</span> | O(n) Time, O(1) Space  | Medium  |
 |1239 | [LongestSubstringWithoutRepeatingCharacters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)| Sliding Window, HashSet  | O(n) Time, O(n) Space  | Medium  |
-|1242 | [Maximum Sum of Two Non-Overlapping Subarrays](https://leetcode.com/problems/maximum-sum-of-two-non-overlapping-subarrays/)| Sliding Window, Dynamic Programming | O(n) Time, O(1) Space  | Medium  |
+|1242 | [📓 Web Crawler Multithreaded](../leetcode/1242.ipynb) | <span title="Concurrent BFS with thread-safe visited set; CountdownEvent tracks all outstanding page fetches.">Concurrency</span> | Time: O(1), Space: O(1)| Medium  |
 |1243 | [📓 Array Transformation](../leetcode/1243.ipynb)| <span title="Apply local-min-up/local-max-down each round, stopping as soon as a full pass produces no changes.">Simulation</span>| O(n) Time, O(1) Space  | Medium  |
 |1244 | [📓 Design A Leaderboard](../leetcode/1244.ipynb) | <span title="HashMap for O(1) score mutations; sort values descending on query to sum top-k entries.">HashMap</span> | Time: O(n log n), Space: O(n) | Medium  |
 |1245 | [Tree Diameter](https://leetcode.com/problems/tree-diameter/) | Tree, DFS | O(n) Time, O(n) Space  | Medium  |
@@ -1081,7 +1083,6 @@
 |1273 | [Delete Nodes And Return Forest](https://leetcode.com/problems/delete-nodes-and-return-forest/)| Tree, DFS | O(n) Time, O(n) Space  | Medium  |
 |1276 | [Number of Burgers with No Waste of Ingredients](https://leetcode.com/problems/number-of-burgers-with-no-waste-of-ingredients/) | Math | O(1) Time, O(1) Space  | Medium  |
 |1277 | [📓 Count Square Submatrices with All Ones](../leetcode/1277.ipynb) | <span title="dp[i][j] = side of largest all-ones square with bottom-right at (i,j); sum all dp values to count every valid square">DP</span> | O(n * m) Time, O(n * m) Space| Medium  |
-|1279 | [Frog Jump II](https://leetcode.com/problems/frog-jump-ii/)| DP, Array | O(n) Time, O(n) Space  | Medium  |
 |1280 | [Interval List Intersections](https://leetcode.com/problems/interval-list-intersections/) | Two-pointer, Array | O(n + m) Time, O(n + m) Space| Medium  |
 |1282 | [Group People Given the Group Size They Belong To](https://leetcode.com/problems/group-people-given-the-group-size-they-belong-to/)| HashMap, Array| O(n) Time, O(n) Space  | Medium  |
 |1283 | [📓 Find the Smallest Divisor Given a Threshold](../leetcode/1283.ipynb)  | <span title="Combine binary search with a mathematical formula to evaluate the feasibility predicate.">Binary Search, Math</span> | O(n log m) Time, O(1) Space  | Medium  |
@@ -1447,7 +1448,6 @@
 |1178 | [Number of Valid Words for Each Puzzle](https://leetcode.com/problems/number-of-valid-words-for-each-puzzle/)| Trie, Bitmasking| O(n) Time, O(n) Space  | Hard |
 |1183 | [📓 Maximum Number of Ones](../leetcode/1183.ipynb)| <span title="Count positions by tile-type (row mod sideLength, col mod sideLength), then greedily fill the most-common types first.">Array, HashMap</span>| O(n) Time, O(n) Space  | Hard |
 |1192 | [📓 Critical Connections in a Network](../leetcode/1192.ipynb)| <span title="One DFS pass assigns discovery and low-link times; an edge u-v is a bridge when low[v] > disc[u].">Tarjan's Bridge Finding</span> | O(n + m) Time, O(n) Space| Hard |
-|1195 | [Frog Jump](https://leetcode.com/problems/frog-jump/)| Dynamic Programming, Array | O(n^2) Time, O(n) Space| Hard |
 |1203 | [📓 Sort Items by Groups Respecting Dependencies](../leetcode/1203.ipynb)| <span title="Two independent Kahn's sorts — one for group ordering, one for item ordering — then emit items group by group.">Two-Level Topological Sort</span> | O(n + m) Time, O(n + m) Space| Hard |
 |1210 | [📓 Minimum Moves to Reach Target with Rotations](../leetcode/1210.ipynb) | <span title="BFS on (tail_row, tail_col, orientation) state space; first hit guarantees minimum moves.">BFS, Queue</span> | Time: O(n^2), Space: O(n^2) | Hard |
 | 1215 | [📓 Stepping Numbers](../leetcode/1215.ipynb) | <span title="Seed BFS with digits 1-9 and expand each number by appending last_digit ± 1; collect those within [low, high].">BFS Digit Expansion</span> | Time: O(K), Space: O(K) | Medium |

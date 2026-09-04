@@ -58,13 +58,14 @@
 |1056 | [Confusing Number](https://leetcode.com/problems/confusing-number/) | Math, Simulation  | Time: O(1), Space: O(1) | Easy |
 |1085 | [Sum of Digits in the Minimum Number](https://leetcode.com/problems/sum-of-digits-in-the-minimum-number/)| Math, String  | Time: O(1), Space: O(1) | Easy |
 |1087 | [📓 Design Tic-Tac-Toe](../leetcode/1087.ipynb) | <span title="Use per-row, per-column, and diagonal integer counters to detect wins in O(1) per move.">Array, Simulation</span> | Time: O(1), Space: O(1) | Easy |
-|1114 | [Print in Order](https://leetcode.com/problems/print-in-order/)| DFS, Multi-threading| Time: O(1), Space: O(1) | Easy |
+|1114 | [Print in Order](https://leetcode.com/problems/print-in-order/)| Concurrency | Time: O(1), Space: O(1) | Easy |
 |1118 | [Number of Days in a Month](https://leetcode.com/problems/number-of-days-in-a-month/) | Math, Array| Time: O(1), Space: O(1) | Easy |
 |1154 | [Day of the Year](https://leetcode.com/problems/day-of-the-year/)| Integer, Array| O(1) Time, O(1) Space | Easy |
 |1185 | [Day of the Week](https://leetcode.com/problems/day-of-the-week/)| Integer  | O(1) Time, O(1) Space | Easy |
 |1206 | [Design Linked List](https://leetcode.com/problems/design-linked-list/) | Linked List| O(1) Time, O(1) Space | Easy |
 |1241 | [A Number After a Double Reversal](https://leetcode.com/problems/a-number-after-a-double-reversal/)| Math | O(1) Time, O(1) Space | Easy |
 |1275 | [Find Winner on a Tic Tac Toe Game](https://leetcode.com/problems/find-winner-on-a-tic-tac-toe-game/)| Matrix, Array | O(1) Time, O(1) Space | Easy |
+|1279 | [Traffic Light Controlled Intersection](https://leetcode.com/problems/traffic-light-controlled-intersection/)| Concurrency | Time: O(1), Space: O(1) | Easy |
 |1281 | [Subtract the Product and Sum of Digits of an Integer](https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/) | Math | O(1) Time, O(1) Space | Easy |
 |1360 | [Number of Days Between Two Dates](https://leetcode.com/problems/number-of-days-between-two-dates/)| Math | O(1) Time, O(1) Space | Easy |
 |1378 | [Replace Employee ID in a Table](https://leetcode.com/problems/replace-employee-id-in-a-table/)| SQL  | O(1) Time, O(1) Space | Easy |
@@ -132,14 +133,17 @@
 |1083 | [Ancient Chinese Remainder](https://leetcode.com/problems/ancient-chinese-remainder/) | Math, Simulation  | Time: O(1), Space: O(1) | Medium  |
 |1088 | [Validate IP Address](https://leetcode.com/problems/validate-ip-address/) | String| Time: O(1), Space: O(1) | Medium  |
 |1108 | [📓 IP Address to CIDR](../leetcode/1108.ipynb) | <span title="Greedily take the largest power-of-two-aligned CIDR block fitting the current IP and count.">Greedy Largest Aligned Block</span> | Time: O(1), Space: O(1) | Medium  |
-|1115 | [Print Foo Bar Alternately](https://leetcode.com/problems/print-foo-bar-alternately/) | DFS, Multi-threading| Time: O(1), Space: O(1) | Medium  |
-|1116 | [Print Zero Even Odd](https://leetcode.com/problems/print-zero-even-odd/) | Multi-threading| Time: O(1), Space: O(1) | Medium  |
-|1117 | [Building H2O](https://leetcode.com/problems/building-h2o/)| Multi-threading| Time: O(1), Space: O(1) | Medium  |
+|1115 | [Print Foo Bar Alternately](https://leetcode.com/problems/print-foo-bar-alternately/) | Concurrency | Time: O(1), Space: O(1) | Medium  |
+|1116 | [Print Zero Even Odd](https://leetcode.com/problems/print-zero-even-odd/) | Concurrency | Time: O(1), Space: O(1) | Medium  |
+|1117 | [Building H2O](https://leetcode.com/problems/building-h2o/)| Concurrency | Time: O(1), Space: O(1) | Medium  |
 |1146 | [📓 Snapshot Array](../leetcode/1146.ipynb)| <span title="Store (snap_id, value) pairs per index; binary-search for the floor entry to answer get() in O(log s).">Binary Search on Snapshots</span>| Time: O(1), Space: O(n) | Medium  |
 |1188 | [Design a Stack With Increment Operation](https://leetcode.com/problems/design-a-stack-with-increment-operation/)| Stack, Array  | O(1) Time, O(n) Space | Medium  |
+|1195 | [Fizz Buzz Multithreaded](https://leetcode.com/problems/fizz-buzz-multithreaded/)| Concurrency | Time: O(1), Space: O(1) | Medium  |
 |1204 | [📓 Design Hit Counter](../leetcode/1204.ipynb) | <span title="Fixed 300 slots indexed by timestamp % 300; overwrite stale slots on hit() and sum valid slots on getHits().">Circular Buffer</span>| O(1) Time, O(k) Space | Medium  |
 |1222 | [📓 Queens That Can Attack the King](../leetcode/1222.ipynb)  | <span title="Store queens in a HashSet, then walk outward in all 8 directions from the king, stopping at the first queen found.">Array, Matrix</span> | O(1) Time, O(1) Space | Medium  |
+|1226 | [📓 Dining Philosophers](../leetcode/1226.ipynb)| Concurrency | Time: O(1), Space: O(1) | Medium  |
 |1227 | [Airplane Seat Assignment Probability](https://leetcode.com/problems/airplane-seat-assignment-probability/) | Probability, Simulation| O(1) Time, O(1) Space | Medium  |
+|1242 | [Web Crawler Multithreaded](https://leetcode.com/problems/web-crawler-multithreaded/)| Concurrency | Time: O(1), Space: O(1) | Medium  |
 |1276 | [Number of Burgers with No Waste of Ingredients](https://leetcode.com/problems/number-of-burgers-with-no-waste-of-ingredients/) | Math | O(1) Time, O(1) Space | Medium  |
 |1286 | [Iterator for Combination](https://leetcode.com/problems/iterator-for-combination/)| Backtracking, Array | O(1) Time, O(n) Space | Medium  |
 |1321 | [Restaurant Profit](https://leetcode.com/problems/restaurant-profit/)| Math | O(1) Time, O(1) Space | Medium  |
@@ -1092,13 +1096,11 @@
 |1219 | [📓 Path with Maximum Gold](../leetcode/1219.ipynb) | <span title="Mark visited cells as 0 during DFS and restore them after backtracking, trying every non-zero starting cell to find the maximum gold path.">DFS Backtracking</span> | O(m*n*4^k) Time, O(m*n) Space | Medium |
 |1223 | [📓 Dice Roll Simulation](../leetcode/1223.ipynb) | <span title="dp[f][c] = ways for last face f with streak c; extend by subtracting sequences that would exceed rollMax[f]">DP with Subtraction</span> | O(n) Time, O(n) Space | Medium  |
 |1225 | [Reports to the Boss](https://leetcode.com/problems/reports-to-the-boss/) | Tree, Graph| O(n) Time, O(n) Space | Medium  |
-|1226 | [📓 The Employee That Worked on the Longest Task](../leetcode/1226.ipynb)| <span title="Track the previous end-time; update the best employee whenever the current task duration strictly exceeds the running maximum.">Array, HashMap</span>| O(n) Time, O(n) Space | Medium  |
 |1228 | [Missing Number in Arithmetic Progression](https://leetcode.com/problems/missing-number-in-arithmetic-progression/)  | Math | O(n) Time, O(1) Space | Medium  |
 |1234 | [Replace the Substring for Balanced String](https://leetcode.com/problems/replace-the-substring-for-balanced-string/)| Sliding Window, String | O(n) Time, O(1) Space | Medium  |
 |1237 | [Rotate Function](https://leetcode.com/problems/rotate-function/)| Math, Array| O(n) Time, O(n) Space | Medium  |
 |1238 | [📓 Circular Permutation in Binary Representation](../leetcode/1238.ipynb) | <span title="XOR each Gray code i^(i>>1) with the start offset to rebase the circular permutation.">Gray Code with Start XOR</span> | O(n) Time, O(1) Space | Medium  |
 |1239 | [LongestSubstringWithoutRepeatingCharacters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)| Sliding Window, HashSet| O(n) Time, O(n) Space | Medium  |
-|1242 | [Maximum Sum of Two Non-Overlapping Subarrays](https://leetcode.com/problems/maximum-sum-of-two-non-overlapping-subarrays/)| Sliding Window, Dynamic Programming | O(n) Time, O(1) Space | Medium  |
 |1243 | [📓 Array Transformation](../leetcode/1243.ipynb)  | <span title="Apply local-min-up/local-max-down each round, stopping as soon as a full pass produces no changes.">Simulation</span>| O(n) Time, O(1) Space | Medium  |
 |1244 | [📓 Design A Leaderboard](../leetcode/1244.ipynb) | <span title="HashMap for O(1) score mutations; sort values descending on query to sum top-k entries.">HashMap</span> | Time: O(n log n), Space: O(n)| Medium  |
 |1245 | [Tree Diameter](https://leetcode.com/problems/tree-diameter/)  | Tree, DFS| O(n) Time, O(n) Space | Medium  |
@@ -1124,7 +1126,6 @@
 |1272 | [Delete Tree Nodes](https://leetcode.com/problems/delete-tree-nodes/)| Tree, DFS| O(n) Time, O(n) Space | Medium  |
 |1273 | [Delete Nodes And Return Forest](https://leetcode.com/problems/delete-nodes-and-return-forest/)| Tree, DFS| O(n) Time, O(n) Space | Medium  |
 |1277 | [📓 Count Square Submatrices with All Ones](../leetcode/1277.ipynb) | <span title="dp[i][j] = side of largest all-ones square with bottom-right at (i,j); sum all dp values to count every valid square">DP</span> | O(n * m) Time, O(n * m) Space  | Medium  |
-|1279 | [Frog Jump II](https://leetcode.com/problems/frog-jump-ii/)| DP, Array| O(n) Time, O(n) Space | Medium  |
 |1280 | [Interval List Intersections](https://leetcode.com/problems/interval-list-intersections/) | Two-pointer, Array| O(n + m) Time, O(n + m) Space  | Medium  |
 |1282 | [Group People Given the Group Size They Belong To](https://leetcode.com/problems/group-people-given-the-group-size-they-belong-to/)| HashMap, Array| O(n) Time, O(n) Space | Medium  |
 |1289 | [📓 Minimum Falling Path Sum II](../leetcode/1289.ipynb) | <span title="Track min and second-min of each row; blocked column uses second-min, avoiding an O(n) inner scan.">Two-Min DP</span>| O(n * m) Time, O(n * m) Space  | Medium  |

@@ -58,14 +58,14 @@
 |1056 | [Confusing Number](https://leetcode.com/problems/confusing-number/) | Math, Simulation  | Time: O(1), Space: O(1) | Easy |
 |1085 | [Sum of Digits in the Minimum Number](https://leetcode.com/problems/sum-of-digits-in-the-minimum-number/)| Math, String  | Time: O(1), Space: O(1) | Easy |
 |1087 | [📓 Design Tic-Tac-Toe](../leetcode/1087.ipynb) | <span title="Use per-row, per-column, and diagonal integer counters to detect wins in O(1) per move.">Array, Simulation</span> | Time: O(1), Space: O(1) | Easy |
-|1114 | [Print in Order](https://leetcode.com/problems/print-in-order/)| Concurrency | Time: O(1), Space: O(1) | Easy |
+|1114 | [📓 Print in Order](../leetcode/1114.ipynb) | <span title="Two semaphores gate second() and third() in strict sequence.">Concurrency</span> | Time: O(1), Space: O(1) | Easy |
 |1118 | [Number of Days in a Month](https://leetcode.com/problems/number-of-days-in-a-month/) | Math, Array| Time: O(1), Space: O(1) | Easy |
 |1154 | [Day of the Year](https://leetcode.com/problems/day-of-the-year/)| Integer, Array| O(1) Time, O(1) Space | Easy |
 |1185 | [Day of the Week](https://leetcode.com/problems/day-of-the-week/)| Integer  | O(1) Time, O(1) Space | Easy |
 |1206 | [Design Linked List](https://leetcode.com/problems/design-linked-list/) | Linked List| O(1) Time, O(1) Space | Easy |
 |1241 | [A Number After a Double Reversal](https://leetcode.com/problems/a-number-after-a-double-reversal/)| Math | O(1) Time, O(1) Space | Easy |
 |1275 | [Find Winner on a Tic Tac Toe Game](https://leetcode.com/problems/find-winner-on-a-tic-tac-toe-game/)| Matrix, Array | O(1) Time, O(1) Space | Easy |
-|1279 | [Traffic Light Controlled Intersection](https://leetcode.com/problems/traffic-light-controlled-intersection/)| Concurrency | Time: O(1), Space: O(1) | Easy |
+|1279 | [📓 Traffic Light Controlled Intersection](../leetcode/1279.ipynb) | <span title="Single mutex serializes all carArrived calls; switch light only when roadId changes.">Concurrency</span> | Time: O(1), Space: O(1) | Easy |
 |1281 | [Subtract the Product and Sum of Digits of an Integer](https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/) | Math | O(1) Time, O(1) Space | Easy |
 |1360 | [Number of Days Between Two Dates](https://leetcode.com/problems/number-of-days-between-two-dates/)| Math | O(1) Time, O(1) Space | Easy |
 |1378 | [Replace Employee ID in a Table](https://leetcode.com/problems/replace-employee-id-in-a-table/)| SQL  | O(1) Time, O(1) Space | Easy |
@@ -133,17 +133,17 @@
 |1083 | [Ancient Chinese Remainder](https://leetcode.com/problems/ancient-chinese-remainder/) | Math, Simulation  | Time: O(1), Space: O(1) | Medium  |
 |1088 | [Validate IP Address](https://leetcode.com/problems/validate-ip-address/) | String| Time: O(1), Space: O(1) | Medium  |
 |1108 | [📓 IP Address to CIDR](../leetcode/1108.ipynb) | <span title="Greedily take the largest power-of-two-aligned CIDR block fitting the current IP and count.">Greedy Largest Aligned Block</span> | Time: O(1), Space: O(1) | Medium  |
-|1115 | [Print Foo Bar Alternately](https://leetcode.com/problems/print-foo-bar-alternately/) | Concurrency | Time: O(1), Space: O(1) | Medium  |
-|1116 | [Print Zero Even Odd](https://leetcode.com/problems/print-zero-even-odd/) | Concurrency | Time: O(1), Space: O(1) | Medium  |
-|1117 | [Building H2O](https://leetcode.com/problems/building-h2o/)| Concurrency | Time: O(1), Space: O(1) | Medium  |
+|1115 | [📓 Print FooBar Alternately](../leetcode/1115.ipynb) | <span title="fooSem(1) and barSem(0) alternate; each thread releases the other's gate after printing.">Concurrency</span> | Time: O(1), Space: O(1) | Medium  |
+|1116 | [📓 Print Zero Even Odd](../leetcode/1116.ipynb) | <span title="zeroSem(1) routes to oddSem or evenSem; each number thread releases zeroSem to continue.">Concurrency</span> | Time: O(1), Space: O(1) | Medium  |
+|1117 | [📓 Building H2O](../leetcode/1117.ipynb) | <span title="hSem(2) and oSem(1) control entry; Barrier(3) ensures all three rendezvous before bonding.">Concurrency</span> | Time: O(1), Space: O(1) | Medium  |
 |1146 | [📓 Snapshot Array](../leetcode/1146.ipynb)| <span title="Store (snap_id, value) pairs per index; binary-search for the floor entry to answer get() in O(log s).">Binary Search on Snapshots</span>| Time: O(1), Space: O(n) | Medium  |
 |1188 | [Design a Stack With Increment Operation](https://leetcode.com/problems/design-a-stack-with-increment-operation/)| Stack, Array  | O(1) Time, O(n) Space | Medium  |
-|1195 | [Fizz Buzz Multithreaded](https://leetcode.com/problems/fizz-buzz-multithreaded/)| Concurrency | Time: O(1), Space: O(1) | Medium  |
+|1195 | [📓 Fizz Buzz Multithreaded](../leetcode/1195.ipynb) | <span title="Four semaphores, one per output type; shared counter routes each turn to the correct thread.">Concurrency</span> | Time: O(1), Space: O(1) | Medium  |
 |1204 | [📓 Design Hit Counter](../leetcode/1204.ipynb) | <span title="Fixed 300 slots indexed by timestamp % 300; overwrite stale slots on hit() and sum valid slots on getHits().">Circular Buffer</span>| O(1) Time, O(k) Space | Medium  |
 |1222 | [📓 Queens That Can Attack the King](../leetcode/1222.ipynb)  | <span title="Store queens in a HashSet, then walk outward in all 8 directions from the king, stopping at the first queen found.">Array, Matrix</span> | O(1) Time, O(1) Space | Medium  |
-|1226 | [📓 Dining Philosophers](../leetcode/1226.ipynb)| Concurrency | Time: O(1), Space: O(1) | Medium  |
+|1226 | [📓 Dining Philosophers](../leetcode/1226.ipynb) | <span title="Acquire chopsticks in ascending index order to break circular-wait and prevent deadlock.">Concurrency</span> | Time: O(1), Space: O(1) | Medium  |
 |1227 | [Airplane Seat Assignment Probability](https://leetcode.com/problems/airplane-seat-assignment-probability/) | Probability, Simulation| O(1) Time, O(1) Space | Medium  |
-|1242 | [Web Crawler Multithreaded](https://leetcode.com/problems/web-crawler-multithreaded/)| Concurrency | Time: O(1), Space: O(1) | Medium  |
+|1242 | [📓 Web Crawler Multithreaded](../leetcode/1242.ipynb) | <span title="Concurrent BFS with thread-safe visited set; CountdownEvent tracks all outstanding page fetches.">Concurrency</span> | Time: O(1), Space: O(1) | Medium  |
 |1276 | [Number of Burgers with No Waste of Ingredients](https://leetcode.com/problems/number-of-burgers-with-no-waste-of-ingredients/) | Math | O(1) Time, O(1) Space | Medium  |
 |1286 | [Iterator for Combination](https://leetcode.com/problems/iterator-for-combination/)| Backtracking, Array | O(1) Time, O(n) Space | Medium  |
 |1321 | [Restaurant Profit](https://leetcode.com/problems/restaurant-profit/)| Math | O(1) Time, O(1) Space | Medium  |

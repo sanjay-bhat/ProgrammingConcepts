@@ -1162,14 +1162,14 @@
 ## Concurrency
 | Serial No. | Problem Title | Data Structure | Time and Space Complexity | Level |
 | :--- | :--- | :--- | :--- | :--- |
-| 1114 | [Print in Order](https://leetcode.com/problems/print-in-order/) | Concurrency | Time: O(1), Space: O(1)| Easy|
-| 1115 | [Print Foo Bar Alternately](https://leetcode.com/problems/print-foo-bar-alternately/) | Concurrency | Time: O(1), Space: O(1)| Medium|
-| 1116 | [Print Zero Even Odd](https://leetcode.com/problems/print-zero-even-odd/) | Concurrency | Time: O(1), Space: O(1)| Medium|
-| 1117 | [Building H2O](https://leetcode.com/problems/building-h2o/) | Concurrency | Time: O(1), Space: O(1)| Medium|
-| 1195 | [Fizz Buzz Multithreaded](https://leetcode.com/problems/fizz-buzz-multithreaded/) | Concurrency | Time: O(1), Space: O(1)| Medium|
-| 1226 | [📓 Dining Philosophers](../leetcode/1226.ipynb) | Concurrency | Time: O(1), Space: O(1)| Medium|
-| 1242 | [Web Crawler Multithreaded](https://leetcode.com/problems/web-crawler-multithreaded/) | Concurrency | Time: O(1), Space: O(1)| Medium|
-| 1279 | [Traffic Light Controlled Intersection](https://leetcode.com/problems/traffic-light-controlled-intersection/) | Concurrency | Time: O(1), Space: O(1)| Easy|
+| 1114 | [📓 Print in Order](../leetcode/1114.ipynb) | <span title="Two semaphores gate second() and third() in strict sequence.">Concurrency</span> | Time: O(1), Space: O(1)| Easy|
+| 1115 | [📓 Print FooBar Alternately](../leetcode/1115.ipynb) | <span title="fooSem(1) and barSem(0) alternate; each thread releases the other's gate after printing.">Concurrency</span> | Time: O(1), Space: O(1)| Medium|
+| 1116 | [📓 Print Zero Even Odd](../leetcode/1116.ipynb) | <span title="zeroSem(1) routes to oddSem or evenSem; each number thread releases zeroSem to continue.">Concurrency</span> | Time: O(1), Space: O(1)| Medium|
+| 1117 | [📓 Building H2O](../leetcode/1117.ipynb) | <span title="hSem(2) and oSem(1) control entry; Barrier(3) ensures all three rendezvous before bonding.">Concurrency</span> | Time: O(1), Space: O(1)| Medium|
+| 1195 | [📓 Fizz Buzz Multithreaded](../leetcode/1195.ipynb) | <span title="Four semaphores, one per output type; shared counter routes each turn to the correct thread.">Concurrency</span> | Time: O(1), Space: O(1)| Medium|
+| 1226 | [📓 Dining Philosophers](../leetcode/1226.ipynb) | <span title="Acquire chopsticks in ascending index order to break circular-wait and prevent deadlock.">Concurrency</span> | Time: O(1), Space: O(1)| Medium|
+| 1242 | [📓 Web Crawler Multithreaded](../leetcode/1242.ipynb) | <span title="Concurrent BFS with thread-safe visited set; CountdownEvent tracks all outstanding page fetches.">Concurrency</span> | Time: O(1), Space: O(1)| Medium|
+| 1279 | [📓 Traffic Light Controlled Intersection](../leetcode/1279.ipynb) | <span title="Single mutex serializes all carArrived calls; switch light only when roadId changes.">Concurrency</span> | Time: O(1), Space: O(1)| Easy|
 
 ## Prefix Sum Array
 | Serial No. | Problem Title | Data Structure | Time and Space Complexity | Level |

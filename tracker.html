@@ -457,6 +457,79 @@ td.act-col { padding: 4px 6px; white-space: nowrap; }
 /* ── Fav pill active color ── */
 #sf .pill[data-s="fav"].on { background: #f59e0b; border-color: #f59e0b; color: #fff; }
 
+/* ── Notebook viewer overlay ── */
+.nb-overlay {
+  position: fixed; inset: 0; z-index: 400;
+  background: rgba(0,0,0,.55); backdrop-filter: blur(3px);
+  display: none; justify-content: flex-end;
+}
+.nb-overlay.open { display: flex; }
+.nb-panel {
+  width: min(96vw, 960px); height: 100vh;
+  background: var(--bg); display: flex; flex-direction: column;
+  box-shadow: -16px 0 64px rgba(0,0,0,.28);
+  animation: nbSlide .24s cubic-bezier(.4,0,.2,1);
+}
+@keyframes nbSlide { from { transform: translateX(32px); opacity: 0; } to { transform: none; opacity: 1; } }
+
+.nb-header {
+  display: flex; align-items: center; gap: 10px;
+  padding: 12px 18px; border-bottom: 1px solid var(--border);
+  background: var(--surface); flex-shrink: 0; min-width: 0;
+}
+.nb-num { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--muted); white-space: nowrap; }
+.nb-title { font-size: 14px; font-weight: 600; margin: 0; flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.nb-badge { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 10px; white-space: nowrap; }
+.nb-badge.be { background: var(--easy-bg); color: var(--easy); }
+.nb-badge.bm { background: var(--medium-bg); color: var(--medium); }
+.nb-badge.bh { background: var(--hard-bg); color: var(--hard); }
+.nb-gh-link { font-size: 11.5px; color: var(--accent); text-decoration: none; white-space: nowrap; padding: 3px 9px; border: 1px solid var(--accent-dim); border-radius: 5px; }
+.nb-gh-link:hover { background: var(--accent-dim); }
+.nb-close { background: none; border: 1px solid var(--border); cursor: pointer; color: var(--muted); font-size: 15px; padding: 3px 9px; border-radius: 6px; transition: all .12s; white-space: nowrap; flex-shrink: 0; }
+.nb-close:hover { background: var(--surface-hi); color: var(--text); }
+
+.nb-tabs { display: flex; border-bottom: 1px solid var(--border); background: var(--surface); padding: 0 18px; flex-shrink: 0; overflow-x: auto; }
+.nb-tab { background: none; border: none; cursor: pointer; padding: 10px 14px; font-size: 12.5px; font-weight: 500; color: var(--muted); border-bottom: 2px solid transparent; transition: color .1s, border-color .1s; margin-bottom: -1px; white-space: nowrap; font-family: inherit; }
+.nb-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+.nb-tab:hover:not(.active) { color: var(--text); }
+
+.nb-body { flex: 1; overflow-y: auto; padding: 24px 28px; }
+.nb-loading, .nb-error { text-align: center; padding: 60px 20px; color: var(--muted); font-size: 13.5px; }
+.nb-error a { color: var(--accent); }
+
+.nb-code-wrap { border-radius: 8px; overflow: hidden; border: 1px solid var(--border); position: relative; margin: 4px 0 16px; }
+.nb-code-lang { position: absolute; top: 9px; right: 13px; font-size: 10px; font-weight: 600; color: #6e7681; font-family: 'IBM Plex Mono', monospace; text-transform: uppercase; letter-spacing: .08em; }
+pre.nb-code { margin: 0; padding: 18px 20px; overflow-x: auto; font-family: 'IBM Plex Mono', monospace; font-size: 13px; line-height: 1.65; background: #0d1117; color: #e6edf3; }
+
+/* Prism GitHub Dark theme (inlined) */
+code[class*="language-"], pre[class*="language-"] { color: #e6edf3; background: none; font-family: 'IBM Plex Mono', monospace; font-size: 13px; line-height: 1.65; }
+.token.comment, .token.prolog, .token.cdata { color: #8b949e; font-style: italic; }
+.token.punctuation { color: #e6edf3; }
+.token.namespace { opacity: .7; }
+.token.property, .token.tag, .token.deleted, .token.constant { color: #ff7b72; }
+.token.boolean, .token.number { color: #79c0ff; }
+.token.string, .token.char, .token.inserted, .token.attr-value { color: #a5d6ff; }
+.token.operator { color: #e6edf3; }
+.token.keyword, .token.atrule { color: #ff7b72; }
+.token.function, .token.class-name { color: #d2a8ff; }
+.token.regex, .token.variable { color: #ffa657; }
+.token.type-annotation, .token.builtin { color: #79c0ff; }
+
+.nb-md { font-size: 13.5px; line-height: 1.75; color: var(--text); }
+.nb-md h1 { font-size: 18px; margin: 0 0 14px; }
+.nb-md h2 { font-size: 14.5px; margin: 22px 0 8px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+.nb-md h3 { font-size: 13px; margin: 14px 0 6px; }
+.nb-md table { width: 100%; border-collapse: collapse; font-size: 12.5px; margin: 10px 0 16px; }
+.nb-md th, .nb-md td { padding: 6px 10px; border: 1px solid var(--border); text-align: left; }
+.nb-md th { background: var(--surface); font-weight: 600; }
+.nb-md code { font-family: 'IBM Plex Mono', monospace; font-size: 12px; background: var(--surface-hi); padding: 1px 5px; border-radius: 3px; }
+.nb-md a { color: var(--accent); }
+.nb-md p { margin: 8px 0; }
+.nb-md hr { border: none; border-top: 1px solid var(--border); margin: 16px 0; }
+.nb-md ul, .nb-md ol { padding-left: 20px; margin: 8px 0; }
+.nb-md strong { font-weight: 600; }
+.nb-md em { font-style: italic; }
+
 /* ── Playlists filter pills ── */
 .pl-pills { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; }
 .pl-filter-pill {
@@ -527,6 +600,37 @@ td.act-col { padding: 4px 6px; white-space: nowrap; }
 
 <div class="content" id="content"></div>
 <p class="empty" id="empty">No problems match your filters.</p>
+
+<!-- ── Notebook viewer overlay ── -->
+<div class="nb-overlay" id="nb-overlay">
+  <div class="nb-panel">
+    <div class="nb-header">
+      <span class="nb-num" id="nb-num"></span>
+      <h2 class="nb-title" id="nb-title"></h2>
+      <span class="nb-badge" id="nb-badge"></span>
+      <a class="nb-gh-link" id="nb-gh-link" target="_blank" rel="noopener">↗ GitHub</a>
+      <button class="nb-close" id="nb-close" title="Close (Esc)">✕</button>
+    </div>
+    <div class="nb-tabs" id="nb-tabs">
+      <button class="nb-tab active" data-tab="csharp">C#</button>
+      <button class="nb-tab" data-tab="python">Python</button>
+      <button class="nb-tab" data-tab="go">Go</button>
+      <button class="nb-tab" data-tab="rust">Rust</button>
+      <button class="nb-tab" data-tab="overview">Overview</button>
+      <button class="nb-tab" data-tab="examples">Examples</button>
+    </div>
+    <div class="nb-body" id="nb-body">
+      <div class="nb-loading">Loading notebook…</div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-go.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-rust.min.js"></script>
 
 <script>
 const P = [
@@ -2330,4 +2434,256 @@ document.getElementById('pl-popup-body').addEventListener('click', e => {
 
 refilter();
 renderPlDrawer();
+
+// ── Notebook Viewer ──
+const NB_RAW = 'https://raw.githubusercontent.com/sanjay-bhat/ProgrammingConcepts/main/leetcode/';
+let nbData = {}, activeNbTab = 'csharp';
+
+function getCellSrc(cell) {
+  if (!cell) return '';
+  const s = cell.source || cell.input || [];
+  return Array.isArray(s) ? s.join('') : String(s);
+}
+
+function renderMd(md) {
+  const html = typeof marked !== 'undefined'
+    ? marked.parse(md || '')
+    : `<pre style="white-space:pre-wrap">${(md||'').replace(/</g,'&lt;')}</pre>`;
+  return `<div class="nb-md">${html}</div>`;
+}
+
+function renderCode(src, lang) {
+  const pLang = { csharp:'csharp', python:'python', go:'go', rust:'rust' }[lang] || 'csharp';
+  const label = { csharp:'C#', python:'Python', go:'Go', rust:'Rust' }[lang] || lang;
+  let hi = (src||'').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  if (typeof Prism !== 'undefined' && Prism.languages[pLang]) {
+    hi = Prism.highlight(src || '', Prism.languages[pLang], pLang);
+  }
+  return `<div class="nb-code-wrap"><span class="nb-code-lang">${label}</span><pre class="nb-code language-${pLang}"><code>${hi}</code></pre></div>`;
+}
+
+function showNbTab(tab) {
+  activeNbTab = tab;
+  document.querySelectorAll('.nb-tab').forEach(t => t.classList.toggle('active', t.dataset.tab === tab));
+  const body = document.getElementById('nb-body');
+  if (tab === 'overview' || tab === 'examples') {
+    body.innerHTML = renderMd(nbData[tab]);
+  } else {
+    const src = (nbData[tab]||'').trim();
+    body.innerHTML = src ? renderCode(src, tab) : `<div class="nb-error">No ${tab} solution in this notebook.</div>`;
+  }
+}
+
+async function openNotebook(p) {
+  const overlay = document.getElementById('nb-overlay');
+  const body    = document.getElementById('nb-body');
+  const file    = String(p.n).padStart(4,'0');
+  const ghUrl   = `${ghBase}${file}.ipynb`;
+
+  document.getElementById('nb-num').textContent = `#${p.n}`;
+  document.getElementById('nb-title').textContent = p.t;
+  const badge = document.getElementById('nb-badge');
+  badge.textContent = p.d.charAt(0).toUpperCase() + p.d.slice(1);
+  badge.className = 'nb-badge b' + p.d[0];
+  document.getElementById('nb-gh-link').href = ghUrl;
+
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  body.innerHTML = '<div class="nb-loading">Loading notebook…</div>';
+  document.querySelectorAll('.nb-tab').forEach(t => t.classList.toggle('active', t.dataset.tab === 'csharp'));
+
+  try {
+    const res = await fetch(`${NB_RAW}${file}.ipynb`);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const nb = await res.json();
+    const cells = nb.cells || (nb.worksheets?.[0]?.cells) || [];
+    nbData = {
+      overview: getCellSrc(cells[0]),
+      csharp:   getCellSrc(cells[2]),
+      python:   getCellSrc(cells[4]),
+      go:       getCellSrc(cells[6]),
+      rust:     getCellSrc(cells[8]),
+      examples: getCellSrc(cells[9])
+    };
+    showNbTab('csharp');
+  } catch {
+    body.innerHTML = `<div class="nb-error">
+      <p>Could not load inline — please open the tracker directly in your browser (not as a preview).</p>
+      <p style="margin-top:14px"><a href="${ghUrl}" target="_blank" rel="noopener">View on GitHub ↗</a></p>
+    </div>`;
+  }
+}
+
+function closeNotebook() {
+  document.getElementById('nb-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+  nbData = {};
+}
+
+document.getElementById('nb-close').addEventListener('click', closeNotebook);
+document.getElementById('nb-overlay').addEventListener('click', e => {
+  if (e.target === document.getElementById('nb-overlay')) closeNotebook();
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && document.getElementById('nb-overlay').classList.contains('open')) closeNotebook();
+});
+document.getElementById('nb-tabs').addEventListener('click', e => {
+  const tab = e.target.closest('.nb-tab');
+  if (tab && nbData.csharp !== undefined) showNbTab(tab.dataset.tab);
+});
+// Intercept solved-link clicks
+document.addEventListener('click', e => {
+  const link = e.target.closest('a.plink:not(.unsolved)');
+  if (!link || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+  e.preventDefault();
+  const row = link.closest('tr');
+  if (!row) return;
+  const prob = P.find(x => x.n === +row.dataset.n && x.s);
+  if (prob) openNotebook(prob);
+}, true);
+
+// ── Bulk Select + PDF Export ──
+let selectMode = false;
+const selectedNs = new Set();
+
+// inject select bar + select toggle button
+document.querySelector('.filter-bar h1').insertAdjacentHTML('afterend',
+  `<button id="sel-toggle" style="background:var(--surface);border:1px solid var(--border);color:var(--text);padding:6px 12px;border-radius:6px;font-size:12px;font-weight:500;cursor:pointer;white-space:nowrap;transition:background .1s">☑ Select</button>`
+);
+
+const selBar = document.createElement('div');
+selBar.id = 'sel-bar';
+selBar.style.cssText = 'display:none;align-items:center;gap:10px;padding:7px 18px;background:var(--surface);border-bottom:1px solid var(--border);font-size:13px;position:sticky;top:0;z-index:50;';
+selBar.innerHTML = `<span id="sel-count" style="font-weight:600;color:var(--accent)">0 selected</span>
+  <button id="sel-all" style="background:none;border:none;cursor:pointer;color:var(--muted);font-size:12px;text-decoration:underline;padding:0">Select visible solved</button>
+  <button id="sel-none" style="background:none;border:none;cursor:pointer;color:var(--muted);font-size:12px;text-decoration:underline;padding:0">Clear</button>
+  <button id="sel-pdf" style="margin-left:auto;background:var(--accent);color:#fff;border:none;padding:7px 16px;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer;">⬇ Export PDF</button>`;
+document.querySelector('.stats-strip').before(selBar);
+
+// hidden print section
+const printSec = document.createElement('div');
+printSec.id = 'print-sec';
+printSec.style.display = 'none';
+document.body.appendChild(printSec);
+
+// print CSS
+const printStyle = document.createElement('style');
+printStyle.textContent = `
+@media print {
+  .filter-bar,.stats-strip,.content,.nb-overlay,.pl-drawer,.pl-popup,#sel-bar,#pl-filter-row,.empty,#sel-toggle,.pl-open-btn { display:none!important; }
+  #print-sec { display:block!important; }
+}
+.print-nb { page-break-after:always; padding:24px 32px; font-family:system-ui,sans-serif; }
+.print-nb:last-child { page-break-after:auto; }
+.print-nb h1 { font-size:20px; margin:0 0 4px; }
+.print-nb .print-meta { font-size:12px; color:#555; margin-bottom:16px; }
+.print-nb pre { background:#f5f5f5; padding:14px; border-radius:6px; font-size:11px; line-height:1.5; overflow-x:auto; white-space:pre-wrap; word-break:break-all; margin:6px 0 14px; font-family:monospace; }
+.print-nb h3 { font-size:13px; margin:12px 0 2px; }
+.print-nb table { width:100%; border-collapse:collapse; font-size:11px; margin:8px 0; }
+.print-nb th,.print-nb td { padding:4px 8px; border:1px solid #ddd; }
+.print-nb th { background:#f0f0f0; }`;
+document.head.appendChild(printStyle);
+
+function updateSelUI() {
+  document.getElementById('sel-count').textContent = `${selectedNs.size} selected`;
+}
+
+function toggleSelectMode(on) {
+  selectMode = on;
+  selectedNs.clear();
+  document.getElementById('sel-toggle').style.background = on ? 'var(--accent)' : '';
+  document.getElementById('sel-toggle').style.color = on ? '#fff' : '';
+  document.getElementById('sel-toggle').style.borderColor = on ? 'var(--accent)' : '';
+  selBar.style.display = on ? 'flex' : 'none';
+  // add/remove checkboxes
+  document.querySelectorAll('tbody tr').forEach(row => {
+    const existing = row.querySelector('.sel-cb');
+    if (on && !existing) {
+      const isSolved = row.dataset.s === '1';
+      const td = document.createElement('td');
+      td.style.cssText = 'padding:4px 8px;width:28px;';
+      if (isSolved) {
+        td.innerHTML = `<input type="checkbox" class="sel-cb" data-n="${row.dataset.n}" style="cursor:pointer;accent-color:var(--accent)">`;
+      }
+      row.insertBefore(td, row.firstChild);
+    } else if (!on && existing) {
+      existing.closest('td')?.remove();
+    }
+  });
+  // also add/remove blank th in all headers
+  document.querySelectorAll('thead tr').forEach(row => {
+    const existing = row.querySelector('.sel-th');
+    if (on && !existing) {
+      const th = document.createElement('th');
+      th.className = 'sel-th'; th.style.width = '28px';
+      row.insertBefore(th, row.firstChild);
+    } else if (!on) row.querySelector('.sel-th')?.remove();
+  });
+  if (!on) updateSelUI();
+}
+
+document.getElementById('sel-toggle').addEventListener('click', () => toggleSelectMode(!selectMode));
+
+document.addEventListener('change', e => {
+  const cb = e.target.closest('.sel-cb');
+  if (!cb) return;
+  const n = +cb.dataset.n;
+  cb.checked ? selectedNs.add(n) : selectedNs.delete(n);
+  updateSelUI();
+});
+
+document.getElementById('sel-all').addEventListener('click', () => {
+  document.querySelectorAll('.sel-cb:not([hidden])').forEach(cb => {
+    const row = cb.closest('tr');
+    if (!row || row.hidden) return;
+    cb.checked = true; selectedNs.add(+cb.dataset.n);
+  });
+  updateSelUI();
+});
+document.getElementById('sel-none').addEventListener('click', () => {
+  document.querySelectorAll('.sel-cb').forEach(cb => { cb.checked = false; });
+  selectedNs.clear(); updateSelUI();
+});
+
+document.getElementById('sel-pdf').addEventListener('click', async () => {
+  if (!selectedNs.size) { alert('Select at least one solved problem first.'); return; }
+  const btn = document.getElementById('sel-pdf');
+  btn.disabled = true;
+  const total = selectedNs.size;
+  let done = 0;
+
+  const results = await Promise.allSettled([...selectedNs].map(async n => {
+    const file = String(n).padStart(4,'0');
+    const res = await fetch(`${NB_RAW}${file}.ipynb`);
+    if (!res.ok) throw new Error('Not found');
+    const nb = await res.json();
+    const cells = nb.cells || (nb.worksheets?.[0]?.cells) || [];
+    btn.textContent = `Loading ${++done}/${total}…`;
+    return { n, cells };
+  }));
+
+  printSec.innerHTML = results.map((r, i) => {
+    const n = [...selectedNs][i];
+    const prob = P.find(x => x.n === n);
+    if (r.status === 'rejected') return `<div class="print-nb"><h1>#${n} — Load failed</h1></div>`;
+    const { cells } = r.value;
+    const cs = getCellSrc(cells[2]), py = getCellSrc(cells[4]);
+    const go = getCellSrc(cells[6]), rs = getCellSrc(cells[8]);
+    const diff = prob ? prob.d.charAt(0).toUpperCase()+prob.d.slice(1) : '';
+    return `<div class="print-nb">
+      <h1>#${n}: ${prob?.t||''}</h1>
+      <div class="print-meta">${diff} · <a href="https://leetcode.com/problems/">${prob?.ds||''}</a> · Time: O(${prob?.tc||'?'}) · Space: O(${prob?.sc||'?'})</div>
+      ${getCellSrc(cells[0]).split('---')[0] ? `<div style="font-size:12px;margin-bottom:12px;white-space:pre-wrap">${getCellSrc(cells[0]).replace(/^#[^\n]*\n/,'').replace(/https?:\/\/[^\s]+/g,'').slice(0,800)}</div>` : ''}
+      ${cs ? `<h3>C#</h3><pre>${cs.replace(/</g,'&lt;')}</pre>` : ''}
+      ${py ? `<h3>Python</h3><pre>${py.replace(/</g,'&lt;')}</pre>` : ''}
+      ${go ? `<h3>Go</h3><pre>${go.replace(/</g,'&lt;')}</pre>` : ''}
+      ${rs ? `<h3>Rust</h3><pre>${rs.replace(/</g,'&lt;')}</pre>` : ''}
+    </div>`;
+  }).join('');
+
+  btn.disabled = false;
+  btn.textContent = '⬇ Export PDF';
+  window.print();
+  printSec.innerHTML = '';
+});
 </script>

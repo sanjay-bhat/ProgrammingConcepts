@@ -1,0 +1,79 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+  # Allow manual trigger with a custom tag
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Tag name (e.g. v1.2)"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Create GitHub Release
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Resolve tag
+        id: tag
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "name=${{ github.event.inputs.tag }}" >> $GITHUB_OUTPUT
+          else
+            echo "name=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Collect stats
+        id: stats
+        run: |
+          NOTEBOOKS=$(find leetcode -name "*.ipynb" | wc -l | tr -d ' ')
+          SOLVED=$(python3 -c "
+          import re
+          with open('tracker.html') as f: src = f.read()
+          nums = set(int(m) for m in re.findall(r'\"n\":(\d+),.*?\"s\":true', src))
+          print(len(nums))
+          " 2>/dev/null || echo "?")
+          echo "notebooks=$NOTEBOOKS" >> $GITHUB_OUTPUT
+          echo "solved=$SOLVED"       >> $GITHUB_OUTPUT
+
+      - name: Package release asset
+        run: |
+          TAG=${{ steps.tag.outputs.name }}
+          cp tracker.html "LeetCode-Tracker-${TAG}.html"
+
+      - name: Publish release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.tag.outputs.name }}
+          name: "LeetCode Solutions ${{ steps.tag.outputs.name }}"
+          generate_release_notes: true
+          files: |
+            LeetCode-Tracker-${{ steps.tag.outputs.name }}.html
+          body: |
+            ## 📓 LeetCode Solutions ${{ steps.tag.outputs.name }}
+
+            **${{ steps.stats.outputs.notebooks }} notebooks** · **${{ steps.stats.outputs.solved }} solved** across C#, Python, Go, and Rust.
+
+            ### Features in this release
+            - Inline notebook viewer (click any 📓 to read the solution in the page)
+            - Favorites (★) and named Playlists — both persisted in localStorage
+            - Row zoom-on-hover with spring animation
+            - Bulk select → Export PDF
+            - Search, difficulty, and solved/unsolved filters
+
+            ### View online
+            🌐 **[Open tracker](https://sanjay-bhat.github.io/ProgrammingConcepts/)**
+
+            ### Standalone use
+            Download `LeetCode-Tracker-${{ steps.tag.outputs.name }}.html` and open it directly in any browser — no server required.

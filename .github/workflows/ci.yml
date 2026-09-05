@@ -1,0 +1,77 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    name: Validate tracker & notebooks
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check tracker.html is present and substantial
+        run: |
+          test -f tracker.html || (echo "::error::tracker.html is missing" && exit 1)
+          SIZE=$(wc -c < tracker.html)
+          echo "tracker.html: ${SIZE} bytes"
+          [ "$SIZE" -gt 50000 ] || (echo "::error::tracker.html looks truncated (${SIZE} bytes)" && exit 1)
+
+      - name: Verify 📓 notebook links resolve to real files
+        run: |
+          python3 << 'PYEOF'
+          import re, os, sys
+
+          with open("leetcode/README.md", encoding="utf-8") as f:
+              content = f.read()
+
+          links = re.findall(r"\[📓[^\]]*\]\((\d{4}\.ipynb)\)", content)
+          missing = [l for l in links if not os.path.exists(f"leetcode/{l}")]
+
+          if missing:
+              for m in missing:
+                  print(f"::error file=leetcode/README.md::Missing notebook: leetcode/{m}")
+              sys.exit(1)
+
+          print(f"✓ All {len(links)} notebook references resolve to existing files")
+          PYEOF
+
+      - name: Check solved problem count in tracker
+        run: |
+          SOLVED=$(python3 -c "
+          import re
+          with open('tracker.html') as f: src = f.read()
+          print(len(re.findall(r'\"s\":true', src)))
+          ")
+          echo "Solved entries in tracker.html: $SOLVED"
+          [ "$SOLVED" -gt 200 ] || (echo "::error::Fewer than 200 solved entries — tracker may be stale" && exit 1)
+
+      - name: Validate notebook JSON structure (sample 10)
+        run: |
+          python3 << 'PYEOF'
+          import os, json, sys, glob, random
+
+          notebooks = glob.glob("leetcode/*.ipynb")
+          sample = random.sample(notebooks, min(10, len(notebooks)))
+          errors = []
+
+          for path in sample:
+              try:
+                  with open(path) as f:
+                      nb = json.load(f)
+                  cells = nb.get("cells", [])
+                  if len(cells) < 10:
+                      errors.append(f"{path}: only {len(cells)} cells (expected ≥10)")
+              except Exception as e:
+                  errors.append(f"{path}: {e}")
+
+          if errors:
+              for e in errors:
+                  print(f"::error::{e}")
+              sys.exit(1)
+
+          print(f"✓ Sampled {len(sample)} notebooks — all valid JSON with ≥10 cells")
+          PYEOF

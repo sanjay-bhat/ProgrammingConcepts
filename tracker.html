@@ -1,4 +1,6 @@
 <title>LeetCode Tracker</title>
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; connect-src https://raw.githubusercontent.com; img-src 'self' data:; frame-ancestors 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests;">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
 
 <style>
@@ -625,12 +627,12 @@ code[class*="language-"], pre[class*="language-"] { color: #e6edf3; background: 
   </div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-go.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-rust.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js" integrity="sha384-odPBjvtXVM/5hOYIr3A1dB+flh0c3wAT3bSesIOqEGmyUA4JoKf/YTWy0XKOYAY7" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha384-06z5D//U/xpvxZHuUz92xBvq3DqBBFi7Up53HRrbV7Jlv7Yvh/MZ7oenfUe9iCEt" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js" integrity="sha384-nMKYzg6yfy0qgpaRpVhHvZp0gT5sgvmZYlFC0XAKZSp+zFUB9rE6zsdmIEiou4bV" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js" integrity="sha384-WJdEkJKrbsqw0evQ4GB6mlsKe5cGTxBOw4KAEIa52ZLB7DDpliGkwdme/HMa5n1m" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-go.min.js" integrity="sha384-YxCco6ByOY5rJ3jD18514fa8w5so07zigIyV6tZa3CWSE5vYrbDSuFkZ5zOknnZ6" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-rust.min.js" integrity="sha384-JyDgFjMbyrE/TGiEUSXW3CLjQOySrsoiUNAlXTFdIsr/XUfaB7E+eYlR+tGQ9bCO" crossorigin="anonymous"></script>
 
 <script>
 const P = [
@@ -2149,6 +2151,13 @@ function chip(k) {
   return `<span class="chip ${cls}">${lbl}</span>`;
 }
 
+// ── Security: HTML escape helper ──
+function esc(s) {
+  return String(s)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+}
+
 // ── Favorites + Playlists (localStorage) ──
 const FAV_KEY = 'lc_favs';
 const PL_KEY  = 'lc_playlists';
@@ -2333,9 +2342,9 @@ function renderPlDrawer() {
   list.innerHTML = names.map(name => {
     const ct = (playlists[name]||[]).length;
     const active = activePl === name ? ' active-pl' : '';
-    return `<div class="pl-item${active}" data-pl="${name}">
-      <span>${name}</span><span class="pl-ct">${ct}</span>
-      <button class="pl-item-del" data-del="${name}" title="Delete playlist">✕</button>
+    return `<div class="pl-item${active}" data-pl="${esc(name)}">
+      <span>${esc(name)}</span><span class="pl-ct">${ct}</span>
+      <button class="pl-item-del" data-del="${esc(name)}" title="Delete playlist">✕</button>
     </div>`;
   }).join('');
 
@@ -2343,7 +2352,7 @@ function renderPlDrawer() {
   filterRow.style.display = 'flex';
   filterRow.innerHTML = '<span style="font-size:12px;color:var(--muted);white-space:nowrap">Playlist:</span>' +
     names.map(name =>
-      `<button class="pl-filter-pill${activePl===name?' on':''}" data-plf="${name}">${name} (${(playlists[name]||[]).length})</button>`
+      `<button class="pl-filter-pill${activePl===name?' on':''}" data-plf="${esc(name)}">${esc(name)} (${(playlists[name]||[]).length})</button>`
     ).join('') +
     (activePl ? '<button class="pl-filter-pill" data-plf="">Clear</button>' : '');
 }
@@ -2408,7 +2417,7 @@ document.addEventListener('click', e => {
     } else {
       body.innerHTML = names.map(name => {
         const has = (playlists[name]||[]).includes(popupTargetN);
-        return `<div class="pl-popup-item${has?' already':''}" data-add="${name}">${has?'✓ ':''} ${name}</div>`;
+        return `<div class="pl-popup-item${has?' already':''}" data-add="${esc(name)}">${has?'✓ ':''} ${esc(name)}</div>`;
       }).join('');
     }
     const r = btn.getBoundingClientRect();

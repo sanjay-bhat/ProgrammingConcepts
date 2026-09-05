@@ -1,0 +1,178 @@
+name: Security
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    # Weekly full scan every Monday at 06:00 UTC
+    - cron: "0 6 * * 1"
+
+permissions:
+  contents: read
+  security-events: write  # required to upload SARIF results
+
+jobs:
+  # ── 1. Secret scanning ────────────────────────────────────────────────────
+  secrets:
+    name: Secret scanning (Gitleaks)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # full history so Gitleaks can diff all commits
+
+      - name: Run Gitleaks
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  # ── 2. Tracker hardening checks ───────────────────────────────────────────
+  tracker-security:
+    name: Tracker security audit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: CSP meta tag present
+        run: |
+          grep -q 'Content-Security-Policy' tracker.html \
+            || (echo "::error file=tracker.html::Content-Security-Policy meta tag is missing" && exit 1)
+          echo "✓ CSP present"
+
+      - name: frame-ancestors in CSP (clickjacking protection)
+        run: |
+          grep -q "frame-ancestors 'none'" tracker.html \
+            || (echo "::error file=tracker.html::CSP is missing frame-ancestors 'none'" && exit 1)
+          echo "✓ frame-ancestors 'none' present"
+
+      - name: Referrer-Policy meta tag present
+        run: |
+          grep -q 'referrer' tracker.html \
+            || (echo "::error file=tracker.html::Referrer-Policy meta tag is missing" && exit 1)
+          echo "✓ Referrer-Policy present"
+
+      - name: All CDN scripts have SRI integrity hashes
+        run: |
+          python3 << 'PYEOF'
+          import re, sys
+          with open("tracker.html") as f:
+              src = f.read()
+          cdn_scripts = re.findall(r'<script[^>]+cdnjs\.cloudflare\.com[^>]*>', src)
+          bad = [s for s in cdn_scripts if 'integrity=' not in s]
+          if bad:
+              for b in bad:
+                  print(f"::error file=tracker.html::CDN script missing integrity=: {b[:120]}")
+              sys.exit(1)
+          print(f"✓ {len(cdn_scripts)} CDN script(s) all carry integrity= SRI hashes")
+          PYEOF
+
+      - name: Verify SRI hashes match live CDN content
+        run: |
+          python3 << 'PYEOF'
+          import re, subprocess, base64, hashlib, sys, urllib.request
+
+          with open("tracker.html") as f:
+              src = f.read()
+
+          # Extract (url, integrity) pairs
+          pairs = re.findall(
+              r'<script[^>]+src="(https://cdnjs[^"]+)"[^>]+integrity="sha384-([^"]+)"',
+              src
+          )
+          if not pairs:
+              print("::warning::No CDN scripts with integrity hashes found")
+              sys.exit(0)
+
+          errors = []
+          for url, declared_b64 in pairs:
+              try:
+                  with urllib.request.urlopen(url, timeout=15) as r:
+                      data = r.read()
+                  digest = base64.b64encode(hashlib.sha384(data).digest()).decode()
+                  if digest != declared_b64:
+                      errors.append(f"SRI MISMATCH for {url.split('/')[-1]}: expected {declared_b64[:20]}… got {digest[:20]}…")
+                  else:
+                      print(f"✓ {url.split('/')[-1]}")
+              except Exception as e:
+                  print(f"::warning::Could not fetch {url}: {e}")
+
+          if errors:
+              for e in errors:
+                  print(f"::error file=tracker.html::{e}")
+              sys.exit(1)
+          PYEOF
+
+      - name: XSS — no raw user data injected via innerHTML
+        run: |
+          python3 << 'PYEOF'
+          import re, sys
+          with open("tracker.html") as f:
+              src = f.read()
+
+          # Flag innerHTML assignments that use localStorage / location values directly
+          dangerous = re.findall(
+              r'\.innerHTML\s*[+]?=\s*[^;]*(?:localStorage\.getItem|location\.hash|location\.search|document\.cookie)[^;]*;',
+              src
+          )
+          if dangerous:
+              for d in dangerous:
+                  print(f"::error file=tracker.html::Potential XSS — innerHTML set from user-controlled source: {d[:140]}")
+              sys.exit(1)
+
+          # Confirm esc() helper is defined
+          if 'function esc(' not in src:
+              print("::error file=tracker.html::esc() HTML-escape helper is missing")
+              sys.exit(1)
+
+          print("✓ No dangerous innerHTML patterns detected, esc() helper present")
+          PYEOF
+
+      - name: External links use rel=noopener
+        run: |
+          python3 << 'PYEOF'
+          import re, sys
+          with open("tracker.html") as f:
+              src = f.read()
+
+          blank_links = re.findall(r'<a\b[^>]*target=["\']_blank["\'][^>]*>', src)
+          bad = [l for l in blank_links if 'noopener' not in l and 'noreferrer' not in l]
+          if bad:
+              print(f"::warning file=tracker.html::{len(bad)} _blank link(s) missing rel=noopener: {bad[0][:80]}")
+          else:
+              print(f"✓ All {len(blank_links)} _blank link(s) have rel=noopener/noreferrer")
+          PYEOF
+
+  # ── 3. Workflow permissions audit ─────────────────────────────────────────
+  workflow-audit:
+    name: Workflow permissions audit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check all workflows declare explicit permissions
+        run: |
+          python3 << 'PYEOF'
+          import os, sys
+          import yaml  # pre-installed on ubuntu-latest
+
+          wf_dir = ".github/workflows"
+          warnings = []
+          for fn in os.listdir(wf_dir):
+              if not fn.endswith((".yml", ".yaml")):
+                  continue
+              path = os.path.join(wf_dir, fn)
+              with open(path) as f:
+                  wf = yaml.safe_load(f)
+              if not isinstance(wf, dict):
+                  continue
+              # Top-level permissions block should exist
+              if "permissions" not in wf:
+                  warnings.append(f"{fn}: no top-level 'permissions' block (defaults to write-all)")
+
+          if warnings:
+              for w in warnings:
+                  print(f"::warning::{w}")
+          else:
+              print(f"✓ All workflows have explicit permissions blocks")
+          PYEOF

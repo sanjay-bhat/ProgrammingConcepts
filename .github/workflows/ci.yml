@@ -47,7 +47,7 @@ jobs:
           SOLVED=$(python3 -c "
           import re
           with open('tracker.html') as f: src = f.read()
-          print(len(re.findall(r'\"s\":true', src)))
+          print(len(re.findall(r'\bs:true\b', src)))
           ")
           echo "Solved entries in tracker.html: $SOLVED"
           [ "$SOLVED" -gt 200 ] || (echo "::error::Fewer than 200 solved entries — tracker may be stale" && exit 1)

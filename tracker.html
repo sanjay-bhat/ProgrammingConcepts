@@ -272,8 +272,9 @@ details[open] .chevron { transform: rotate(90deg); }
   border-top: none;
   border-radius: 0 0 6px 6px;
 }
-table { width: 100%; border-collapse: collapse; }
-thead tr { background: var(--surface-hi); border-bottom: 1px solid var(--border); }
+table { width: 100%; border-collapse: separate; border-spacing: 0; }
+thead tr { background: var(--surface-hi); }
+thead th { border-bottom: 1px solid var(--border); }
 th {
   padding: 5px 10px;
   font-size: 10.5px;
@@ -290,14 +291,22 @@ th.cmx { width: 96px; }
 
 tbody tr {
   background: var(--surface);
-  border-bottom: 1px solid var(--border);
-  transition: background .08s;
+  transition: transform .22s cubic-bezier(.34,1.56,.64,1), background .1s, box-shadow .22s, opacity .15s;
+  position: relative;
+  z-index: 0;
 }
-tbody tr:last-child { border-bottom: none; }
-tbody tr:hover { background: var(--surface-hi); }
+tbody tr:hover {
+  background: var(--surface-hi);
+  transform: scaleY(1.06) scaleX(1.005);
+  box-shadow: 0 8px 32px rgba(0,0,0,.13), 0 2px 8px rgba(0,0,0,.08);
+  z-index: 10;
+}
+tbody:has(tr:hover) tr:not(:hover):not([hidden]) { opacity: .62; }
 tbody tr[hidden] { display: none; }
+tbody tr.fav-row td.ttl { border-left-color: #f59e0b !important; }
 
-td { padding: 6px 10px; vertical-align: middle; }
+td { padding: 6px 10px; vertical-align: middle; border-bottom: 1px solid var(--border); }
+tbody tr:last-child td { border-bottom: none; }
 td.num {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 11.5px;
@@ -360,6 +369,102 @@ tr.hard   td.ttl { border-left-color: var(--stripe-hard); }
 
 /* ── Empty ── */
 .empty { text-align:center; padding:28px; color:var(--muted); font-size:13px; display:none; }
+
+/* ── Actions column ── */
+th.act-th { width: 52px; }
+td.act-col { padding: 4px 6px; white-space: nowrap; }
+.fav-btn, .pl-btn {
+  background: none; border: none; cursor: pointer; padding: 3px 4px;
+  border-radius: 4px; font-size: 14px; line-height: 1;
+  color: var(--muted); transition: color .12s, background .12s, transform .15s;
+}
+.fav-btn:hover { color: #f59e0b; background: rgba(245,158,11,.1); transform: scale(1.2); }
+.fav-btn.active { color: #f59e0b; }
+.pl-btn { font-size: 16px; font-weight: 600; }
+.pl-btn:hover { color: var(--accent); background: var(--accent-dim); transform: scale(1.2); }
+
+/* ── Playlists drawer ── */
+.pl-open-btn {
+  background: var(--surface); border: 1px solid var(--border); color: var(--text);
+  padding: 6px 12px; border-radius: 6px; font-size: 12px; font-weight: 500;
+  cursor: pointer; white-space: nowrap; transition: background .1s;
+}
+.pl-open-btn:hover { background: var(--surface-hi); }
+
+.pl-drawer {
+  position: fixed; top: 0; right: -340px; width: 320px; height: 100vh;
+  background: var(--surface); border-left: 1px solid var(--border);
+  box-shadow: -8px 0 32px rgba(0,0,0,.12); z-index: 100;
+  transition: right .28s cubic-bezier(.4,0,.2,1);
+  display: flex; flex-direction: column;
+}
+.pl-drawer.open { right: 0; }
+.pl-drawer-hd {
+  display: flex; align-items: center; gap: 8px;
+  padding: 14px 16px; border-bottom: 1px solid var(--border);
+  font-weight: 600; font-size: 14px;
+}
+.pl-drawer-close {
+  margin-left: auto; background: none; border: none;
+  cursor: pointer; font-size: 18px; color: var(--muted); padding: 2px 6px;
+  border-radius: 4px;
+}
+.pl-drawer-close:hover { background: var(--surface-hi); color: var(--text); }
+.pl-list { flex: 1; overflow-y: auto; padding: 10px 12px; }
+.pl-item {
+  display: flex; align-items: center; gap: 8px;
+  padding: 8px 10px; border-radius: 6px; cursor: pointer;
+  font-size: 13px; font-weight: 500; transition: background .1s;
+  border: 1px solid transparent; margin-bottom: 4px;
+}
+.pl-item:hover { background: var(--surface-hi); }
+.pl-item.active-pl { background: var(--accent-dim); border-color: var(--accent); color: var(--accent); }
+.pl-item .pl-ct { margin-left: auto; font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); }
+.pl-item-del { background: none; border: none; cursor: pointer; color: var(--muted); font-size: 14px; padding: 2px; border-radius: 3px; }
+.pl-item-del:hover { color: var(--hard); background: var(--hard-bg); }
+.pl-create {
+  padding: 10px 12px; border-top: 1px solid var(--border);
+  display: flex; gap: 6px;
+}
+.pl-create input {
+  flex: 1; padding: 6px 9px; border: 1px solid var(--border); border-radius: 6px;
+  background: var(--bg); color: var(--text); font-size: 12.5px;
+}
+.pl-create input:focus { outline: none; border-color: var(--accent); }
+.pl-create button {
+  padding: 6px 12px; background: var(--accent); color: #fff;
+  border: none; border-radius: 6px; font-size: 12px; font-weight: 600; cursor: pointer;
+}
+
+/* ── Playlist popup (add-to-playlist) ── */
+.pl-popup {
+  position: fixed; z-index: 200; background: var(--surface);
+  border: 1px solid var(--border); border-radius: 10px;
+  box-shadow: 0 8px 32px rgba(0,0,0,.18); padding: 10px 0;
+  min-width: 200px; max-width: 260px;
+  display: none;
+}
+.pl-popup.open { display: block; }
+.pl-popup-title { padding: 4px 14px 8px; font-size: 11px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .06em; }
+.pl-popup-item {
+  padding: 7px 14px; cursor: pointer; font-size: 12.5px;
+  transition: background .08s; display: flex; align-items: center; gap: 8px;
+}
+.pl-popup-item:hover { background: var(--surface-hi); }
+.pl-popup-item.already { color: var(--muted); font-style: italic; }
+.pl-popup-divider { height: 1px; background: var(--border); margin: 6px 0; }
+
+/* ── Fav pill active color ── */
+#sf .pill[data-s="fav"].on { background: #f59e0b; border-color: #f59e0b; color: #fff; }
+
+/* ── Playlists filter pills ── */
+.pl-pills { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; }
+.pl-filter-pill {
+  padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: 500;
+  background: var(--surface); border: 1px solid var(--border); cursor: pointer;
+  transition: background .1s; color: var(--text);
+}
+.pl-filter-pill.on { background: var(--accent); border-color: var(--accent); color: #fff; }
 </style>
 
 <div class="filter-bar">
@@ -380,7 +485,30 @@ tr.hard   td.ttl { border-left-color: var(--stripe-hard); }
     <button class="pill on" data-s="all">All</button>
     <button class="pill" data-s="1">Solved</button>
     <button class="pill" data-s="0">Unsolved</button>
+    <button class="pill" data-s="fav" id="fav-pill">★ Favorites</button>
   </div>
+  <button class="pl-open-btn" id="pl-open">📋 Playlists</button>
+</div>
+
+<div class="pl-pills" id="pl-filter-row" style="padding:6px 18px 0; display:none;"></div>
+
+<!-- Playlists drawer -->
+<aside class="pl-drawer" id="pl-drawer">
+  <div class="pl-drawer-hd">
+    📋 Playlists
+    <button class="pl-drawer-close" id="pl-close">✕</button>
+  </div>
+  <div class="pl-list" id="pl-list"></div>
+  <div class="pl-create">
+    <input id="pl-new-name" placeholder="New playlist name…" maxlength="40">
+    <button id="pl-create-btn">Create</button>
+  </div>
+</aside>
+
+<!-- Add-to-playlist popup -->
+<div class="pl-popup" id="pl-popup">
+  <div class="pl-popup-title">Add to playlist</div>
+  <div id="pl-popup-body"></div>
 </div>
 
 <div class="stats-strip" id="stats-strip">
@@ -1917,6 +2045,26 @@ function chip(k) {
   return `<span class="chip ${cls}">${lbl}</span>`;
 }
 
+// ── Favorites + Playlists (localStorage) ──
+const FAV_KEY = 'lc_favs';
+const PL_KEY  = 'lc_playlists';
+
+function loadFavs() {
+  try { return new Set(JSON.parse(localStorage.getItem(FAV_KEY)||'[]')); } catch { return new Set(); }
+}
+function saveFavs() {
+  try { localStorage.setItem(FAV_KEY, JSON.stringify([...favs])); } catch {}
+}
+function loadPlaylists() {
+  try { return JSON.parse(localStorage.getItem(PL_KEY)||'{}'); } catch { return {}; }
+}
+function savePlaylists() {
+  try { localStorage.setItem(PL_KEY, JSON.stringify(playlists)); } catch {}
+}
+
+let favs     = loadFavs();
+let playlists = loadPlaylists(); // { name: [n, n, ...] }
+
 // ── global stats ──
 const uniq = new Set();
 P.forEach(p => uniq.add(p.n));
@@ -1968,13 +2116,18 @@ Object.entries(cats).forEach(([cat, probs]) => {
       ? `${ghBase}${nb}.ipynb`
       : `https://leetcode.com/problems/`;
     const icon = p.s ? '📓 ' : '';
-    return `<tr class="${p.d}" data-d="${p.d}" data-s="${p.s?'1':'0'}" data-t="${p.t.toLowerCase()}">
+    const isFav = favs.has(p.n);
+    return `<tr class="${p.d}${isFav?' fav-row':''}" data-d="${p.d}" data-s="${p.s?'1':'0'}" data-t="${p.t.toLowerCase()}" data-n="${p.n}" data-fav="${isFav?'1':'0'}">
       <td class="num">${p.n}</td>
       <td class="ttl"><a class="plink ${p.s?'':'unsolved'}" href="${href}" target="_blank" rel="noopener">${icon}${p.t}</a></td>
       <td class="ds">${p.ds}</td>
       <td>${chip(p.tc)}</td>
       <td>${chip(p.sc)}</td>
       <td><span class="badge b${p.d[0]}">${p.d.charAt(0).toUpperCase()+p.d.slice(1)}</span></td>
+      <td class="act-col">
+        <button class="fav-btn${isFav?' active':''}" data-n="${p.n}" title="${isFav?'Remove from favorites':'Add to favorites'}">${isFav?'★':'☆'}</button>
+        <button class="pl-btn" data-n="${p.n}" data-title="${p.t.replace(/"/g,'&quot;')}" title="Add to playlist">+</button>
+      </td>
     </tr>`;
   }).join('');
 
@@ -1991,7 +2144,7 @@ Object.entries(cats).forEach(([cat, probs]) => {
       <table>
         <thead><tr>
           <th class="num">#</th><th>Problem</th><th>Approach</th>
-          <th class="cmx">Time</th><th class="cmx">Space</th><th class="lvl">Level</th>
+          <th class="cmx">Time</th><th class="cmx">Space</th><th class="lvl">Level</th><th class="act-th"></th>
         </tr></thead>
         <tbody>${rows}</tbody>
       </table>
@@ -2000,16 +2153,21 @@ Object.entries(cats).forEach(([cat, probs]) => {
 });
 
 // ── filters ──
-let activeDiff = 'all', activeStatus = 'all';
+let activeDiff = 'all', activeStatus = 'all', activePl = null;
 
 function refilter() {
   const q = document.getElementById('search').value.toLowerCase().trim();
+  const plNums = activePl ? new Set(playlists[activePl]||[]) : null;
   let vis = 0;
   document.querySelectorAll('tbody tr').forEach(row => {
+    const n = +row.dataset.n;
     const show =
       (!q || row.dataset.t.includes(q)) &&
       (activeDiff === 'all' || row.dataset.d === activeDiff) &&
-      (activeStatus === 'all' || row.dataset.s === activeStatus);
+      (activeStatus === 'all' || activeStatus === 'fav'
+        ? (activeStatus === 'fav' ? row.dataset.fav === '1' : true)
+        : row.dataset.s === activeStatus) &&
+      (!plNums || plNums.has(n));
     row.hidden = !show;
     if (show) vis++;
   });
@@ -2037,5 +2195,139 @@ document.getElementById('sf').addEventListener('click', e => {
   refilter();
 });
 
+// ── Fav button clicks ──
+document.addEventListener('click', e => {
+  const btn = e.target.closest('.fav-btn');
+  if (!btn) return;
+  const n = +btn.dataset.n;
+  const row = btn.closest('tr');
+  if (favs.has(n)) {
+    favs.delete(n);
+    btn.textContent = '☆'; btn.classList.remove('active');
+    btn.title = 'Add to favorites';
+    row.dataset.fav = '0'; row.classList.remove('fav-row');
+  } else {
+    favs.add(n);
+    btn.textContent = '★'; btn.classList.add('active');
+    btn.title = 'Remove from favorites';
+    row.dataset.fav = '1'; row.classList.add('fav-row');
+  }
+  saveFavs();
+  if (activeStatus === 'fav') refilter();
+});
+
+// ── Playlist drawer ──
+function renderPlDrawer() {
+  const list = document.getElementById('pl-list');
+  const filterRow = document.getElementById('pl-filter-row');
+  const names = Object.keys(playlists);
+  if (!names.length) {
+    list.innerHTML = '<p style="color:var(--muted);font-size:13px;padding:12px">No playlists yet. Create one below.</p>';
+    filterRow.style.display = 'none';
+    return;
+  }
+  list.innerHTML = names.map(name => {
+    const ct = (playlists[name]||[]).length;
+    const active = activePl === name ? ' active-pl' : '';
+    return `<div class="pl-item${active}" data-pl="${name}">
+      <span>${name}</span><span class="pl-ct">${ct}</span>
+      <button class="pl-item-del" data-del="${name}" title="Delete playlist">✕</button>
+    </div>`;
+  }).join('');
+
+  // filter pills row
+  filterRow.style.display = 'flex';
+  filterRow.innerHTML = '<span style="font-size:12px;color:var(--muted);white-space:nowrap">Playlist:</span>' +
+    names.map(name =>
+      `<button class="pl-filter-pill${activePl===name?' on':''}" data-plf="${name}">${name} (${(playlists[name]||[]).length})</button>`
+    ).join('') +
+    (activePl ? '<button class="pl-filter-pill" data-plf="">Clear</button>' : '');
+}
+
+document.getElementById('pl-open').addEventListener('click', () => {
+  document.getElementById('pl-drawer').classList.add('open');
+  renderPlDrawer();
+});
+document.getElementById('pl-close').addEventListener('click', () => {
+  document.getElementById('pl-drawer').classList.remove('open');
+});
+
+document.getElementById('pl-list').addEventListener('click', e => {
+  const del = e.target.closest('[data-del]');
+  if (del) {
+    const name = del.dataset.del;
+    if (!confirm(`Delete playlist "${name}"?`)) return;
+    delete playlists[name];
+    if (activePl === name) { activePl = null; refilter(); }
+    savePlaylists(); renderPlDrawer(); return;
+  }
+  const item = e.target.closest('.pl-item');
+  if (item) {
+    const name = item.dataset.pl;
+    activePl = activePl === name ? null : name;
+    renderPlDrawer(); refilter();
+  }
+});
+
+document.getElementById('pl-filter-row').addEventListener('click', e => {
+  const btn = e.target.closest('[data-plf]');
+  if (!btn) return;
+  activePl = btn.dataset.plf || null;
+  renderPlDrawer(); refilter();
+});
+
+document.getElementById('pl-create-btn').addEventListener('click', () => {
+  const inp = document.getElementById('pl-new-name');
+  const name = inp.value.trim();
+  if (!name) return;
+  if (playlists[name]) { inp.select(); return; }
+  playlists[name] = [];
+  savePlaylists(); inp.value = ''; renderPlDrawer();
+});
+document.getElementById('pl-new-name').addEventListener('keydown', e => {
+  if (e.key === 'Enter') document.getElementById('pl-create-btn').click();
+});
+
+// ── Add-to-playlist popup ──
+let popupTargetN = null;
+const popup = document.getElementById('pl-popup');
+
+document.addEventListener('click', e => {
+  const btn = e.target.closest('.pl-btn');
+  if (btn) {
+    e.stopPropagation();
+    popupTargetN = +btn.dataset.n;
+    const names = Object.keys(playlists);
+    const body = document.getElementById('pl-popup-body');
+    if (!names.length) {
+      body.innerHTML = '<div class="pl-popup-item" style="color:var(--muted)">No playlists yet — open 📋 to create one</div>';
+    } else {
+      body.innerHTML = names.map(name => {
+        const has = (playlists[name]||[]).includes(popupTargetN);
+        return `<div class="pl-popup-item${has?' already':''}" data-add="${name}">${has?'✓ ':''} ${name}</div>`;
+      }).join('');
+    }
+    const r = btn.getBoundingClientRect();
+    popup.style.top  = `${Math.min(r.bottom + 4, window.innerHeight - 160)}px`;
+    popup.style.left = `${Math.max(4, r.left - 170)}px`;
+    popup.classList.add('open');
+    return;
+  }
+  if (!popup.contains(e.target)) popup.classList.remove('open');
+});
+
+document.getElementById('pl-popup-body').addEventListener('click', e => {
+  const item = e.target.closest('[data-add]');
+  if (!item || popupTargetN == null) return;
+  const name = item.dataset.add;
+  if (!playlists[name]) playlists[name] = [];
+  const idx = playlists[name].indexOf(popupTargetN);
+  if (idx >= 0) playlists[name].splice(idx, 1);
+  else playlists[name].push(popupTargetN);
+  savePlaylists(); renderPlDrawer(); popup.classList.remove('open');
+  if (activePl === name) refilter();
+});
+
 refilter();
+renderPlDrawer();
 </script>

@@ -8,8 +8,8 @@
 
 <div align="center">
 
-| [📋 All Problems](lists/all-problems.md) | [🎯 By Difficulty](lists/by-difficulty.md) | [⚡ By Complexity](lists/by-complexity.md) | [🏗️ By Data Structure](lists/) |
-|:---:|:---:|:---:|:---:|
+| [🔍 Interactive Tracker](tracker.html) | [📋 All Problems](lists/all-problems.md) | [🎯 By Difficulty](lists/by-difficulty.md) | [⚡ By Complexity](lists/by-complexity.md) | [🏗️ By Data Structure](lists/) |
+|:---:|:---:|:---:|:---:|:---:|
 
 </div>
 

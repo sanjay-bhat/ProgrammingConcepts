@@ -18,7 +18,7 @@ jobs:
     name: Secret scanning (Gitleaks)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0  # full history so Gitleaks can diff all commits
 
@@ -32,7 +32,7 @@ jobs:
     name: Tracker security audit
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: CSP meta tag present
         run: |
@@ -148,7 +148,7 @@ jobs:
     name: Workflow permissions audit
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Check all workflows declare explicit permissions
         run: |

@@ -621,6 +621,7 @@ code[class*="language-"], pre[class*="language-"] { color: #e6edf3; background: 
       <button class="nb-tab" data-tab="rust">Rust</button>
       <button class="nb-tab" data-tab="overview">Overview</button>
       <button class="nb-tab" data-tab="examples">Examples</button>
+      <button class="nb-tab" data-tab="infographic">Infographic</button>
     </div>
     <div class="nb-body" id="nb-body">
       <div class="nb-loading">Loading notebook…</div>
@@ -2523,6 +2524,11 @@ function showNbTab(tab) {
   const body = document.getElementById('nb-body');
   if (tab === 'overview' || tab === 'examples') {
     body.innerHTML = renderMd(nbData[tab]);
+  } else if (tab === 'infographic') {
+    const img = nbData.infographic;
+    body.innerHTML = img
+      ? `<div style="text-align:center;padding:12px 0"><img src="data:image/${img.type};base64,${img.data}" style="max-width:100%;height:auto;border-radius:8px;" alt="Infographic"></div>`
+      : `<div class="nb-error">No infographic in this notebook.</div>`;
   } else {
     const src = (nbData[tab]||'').trim();
     body.innerHTML = src ? renderCode(src, tab) : `<div class="nb-error">No ${tab} solution in this notebook.</div>`;
@@ -2553,12 +2559,22 @@ async function openNotebook(p) {
     const nb = await res.json();
     const cells = nb.cells || (nb.worksheets?.[0]?.cells) || [];
     nbData = {
-      overview: getCellSrc(cells[0]),
-      csharp:   getCellSrc(cells[2]),
-      python:   getCellSrc(cells[4]),
-      go:       getCellSrc(cells[6]),
-      rust:     getCellSrc(cells[8]),
-      examples: getCellSrc(cells[9])
+      overview:     getCellSrc(cells[0]),
+      csharp:       getCellSrc(cells[2]),
+      python:       getCellSrc(cells[4]),
+      go:           getCellSrc(cells[6]),
+      rust:         getCellSrc(cells[8]),
+      examples:     getCellSrc(cells[9]),
+      infographic:  (() => {
+        const c = cells[10];
+        if (!c) return null;
+        const atts = c.attachments || {};
+        for (const fname of Object.keys(atts)) {
+          const mime = atts[fname]['image/png'] || atts[fname]['image/jpeg'];
+          if (mime) return { fname, data: mime, type: atts[fname]['image/png'] ? 'png' : 'jpeg' };
+        }
+        return null;
+      })()
     };
     showNbTab('csharp');
   } catch {

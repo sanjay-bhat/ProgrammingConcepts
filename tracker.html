@@ -542,6 +542,27 @@ code[class*="language-"], pre[class*="language-"] { color: #e6edf3; background: 
 .pl-filter-pill.on { background: var(--accent); border-color: var(--accent); color: #fff; }
 </style>
 
+<!-- DevTools warning overlay -->
+<style>
+#_dt_overlay {
+  position: fixed; inset: 0; z-index: 99999;
+  background: rgba(9,14,26,.92); backdrop-filter: blur(8px);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 16px; color: #e2e8f4; font-family: 'DM Sans', sans-serif;
+}
+#_dt_overlay svg { width: 56px; height: 56px; color: #f87171; }
+#_dt_overlay h2 { font-size: 1.6rem; font-weight: 700; margin: 0; }
+#_dt_overlay p  { font-size: .95rem; color: #7a8faf; margin: 0; max-width: 360px; text-align: center; }
+</style>
+<div id="_dt_overlay" hidden>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+    <line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+  </svg>
+  <h2>DevTools detected</h2>
+  <p>Close browser DevTools to continue using the tracker.</p>
+</div>
+
 <div class="filter-bar">
   <h1>LeetCode</h1>
   <div class="search-wrap">
@@ -635,6 +656,71 @@ code[class*="language-"], pre[class*="language-"] { color: #e6edf3; background: 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-rust.min.js" integrity="sha384-JyDgFjMbyrE/TGiEUSXW3CLjQOySrsoiUNAlXTFdIsr/XUfaB7E+eYlR+tGQ9bCO" crossorigin="anonymous"></script>
 
 <script>
+// ── Anti-tamper shield ────────────────────────────────────────────────────────
+(function(){
+  // 1. Styled console warning (like Facebook's "Stop!" banner)
+  const W = [
+    '%cStop!',
+    'color:#dc2626;font-size:48px;font-weight:900;-webkit-text-stroke:2px #7f1d1d;',
+  ];
+  const D = [
+    '%cThis is a browser feature intended for developers. If someone told you to paste anything here, it is a scam and will give them access to your data.',
+    'color:#1f2937;font-size:14px;line-height:1.6;',
+  ];
+  console.log(...W);
+  console.log(...D);
+
+  // 2. Overwrite console so inspection output is suppressed once the banner is shown
+  const _noop = () => {};
+  const _methods = ['log','debug','info','warn','dir','table','trace','group','groupEnd'];
+  _methods.forEach(m => { try { console[m] = _noop; } catch {} });
+
+  // 3. Disable right-click context menu on the page body
+  document.addEventListener('contextmenu', e => e.preventDefault(), true);
+
+  // 4. Block common DevTools keyboard shortcuts
+  document.addEventListener('keydown', e => {
+    const k = e.key;
+    const ctrl = e.ctrlKey || e.metaKey;
+    // F12, Ctrl/Cmd+Shift+I/J/C/K, Ctrl/Cmd+U (view source)
+    if (
+      k === 'F12' ||
+      (ctrl && e.shiftKey && ['i','I','j','J','c','C','k','K'].includes(k)) ||
+      (ctrl && ['u','U'].includes(k))
+    ) {
+      e.preventDefault();
+      e.stopImmediatePropagation();
+    }
+  }, true);
+
+  // 5. DevTools open detection via window-size heuristic (works in Chrome/Edge)
+  //    When DevTools is docked the viewport shrinks; floating DevTools won't be caught.
+  const THRESH = 160;
+  let _dtWarned = false;
+  const _dtCheck = () => {
+    const open = (window.outerWidth - window.innerWidth > THRESH) ||
+                 (window.outerHeight - window.innerHeight > THRESH);
+    const overlay = document.getElementById('_dt_overlay');
+    if (open && !_dtWarned) {
+      _dtWarned = true;
+      if (overlay) overlay.removeAttribute('hidden');
+    } else if (!open && _dtWarned) {
+      _dtWarned = false;
+      if (overlay) overlay.setAttribute('hidden', '');
+    }
+  };
+  window.addEventListener('resize', _dtCheck);
+  // Run after DOM is ready
+  document.addEventListener('DOMContentLoaded', _dtCheck);
+
+  // 6. Disable text selection on table data cells (rows) to discourage scraping
+  document.addEventListener('DOMContentLoaded', () => {
+    const style = document.createElement('style');
+    style.textContent = 'tbody td { user-select: none; -webkit-user-select: none; }';
+    document.head.appendChild(style);
+  });
+})();
+
 const P = [
   {c:"2D Array",n:1074,t:"Number of Submatrices That Sum to Target",s:true,d:"hard",tc:"n3",sc:"n2",ds:"2D Prefix Sum + Hash Map"},
   {c:"2D Array",n:1033,t:"Matrix Block Sum",s:true,d:"medium",tc:"n",sc:"n",ds:"2D Prefix Sum"},

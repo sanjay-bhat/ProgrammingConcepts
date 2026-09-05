@@ -2,6 +2,12 @@
   <img src="assets/banner.png" alt="LeetCode Solutions" width="960">
 </p>
 
+<p align="center">
+  <a href="https://sanjay-bhat.github.io/ProgrammingConcepts/"><img src="https://img.shields.io/badge/Live_Tracker-GitHub_Pages-0969da?style=for-the-badge&logo=github" alt="Live Tracker"></a>
+  &nbsp;
+  <a href="https://github.com/sanjay-bhat/ProgrammingConcepts/releases/tag/v1.0"><img src="https://img.shields.io/badge/Release-v1.0-22c55e?style=for-the-badge&logo=github" alt="v1.0 Release"></a>
+</p>
+
 ---
 
 ## Problem Lists

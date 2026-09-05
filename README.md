@@ -19,6 +19,16 @@
 
 > Problem titles link to the **solution notebook** (problems 1–20 and 723 are solved). Remaining titles link to the LeetCode problem page.
 
+**Complexity colour map** — each chip shows `Time · Space`:
+
+![O(1)](https://img.shields.io/badge/O%281%29-166534?style=flat-square) Constant &nbsp;·&nbsp;
+![O(log n)](https://img.shields.io/badge/O%28log_n%29-0e7490?style=flat-square) Logarithmic &nbsp;·&nbsp;
+![O(n)](https://img.shields.io/badge/O%28n%29-1d4ed8?style=flat-square) Linear &nbsp;·&nbsp;
+![O(n log n)](https://img.shields.io/badge/O%28n_log_n%29-6d28d9?style=flat-square) Linearithmic &nbsp;·&nbsp;
+![O(n²)](https://img.shields.io/badge/O%28n%C2%B2%29-c2410c?style=flat-square) Quadratic &nbsp;·&nbsp;
+![O(n³)](https://img.shields.io/badge/O%28n%C2%B3%29-9f1239?style=flat-square) Cubic &nbsp;·&nbsp;
+![O(2^n)](https://img.shields.io/badge/O%282%5En%29-7c2d12?style=flat-square) Exponential
+
 | # | Problem | Approach | Complexity | Level |
 |:---:|---|---|:---:|:---:|
 | 1 | [📓 Two Sum](leetcode/0001.ipynb) | <span title="Store complements (or seen elements) in a hash map; find a match in the same forward pass.">One-Pass Hash Map</span> | ![O(n)](https://img.shields.io/badge/O%28n%29-1d4ed8?style=flat-square) · ![O(n)](https://img.shields.io/badge/O%28n%29-1d4ed8?style=flat-square) | ![Easy](https://img.shields.io/badge/Easy-166534?style=flat-square) |

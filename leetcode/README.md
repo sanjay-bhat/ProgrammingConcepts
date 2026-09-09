@@ -42,7 +42,7 @@
 |661 | [Image Smoothening](https://leetcode.com/problems/image-smoothening/) | Array| Time: O(mn), Space: O(1) | Easy|
 |674 | [Longest Continuous Increasing Subsequence](https://leetcode.com/problems/longest-continuous-increasing-subsequence/) | Array| Time: O(n), Space: O(1)| Easy|
 |717 | [1-bit and 2-bit Characters](https://leetcode.com/problems/1-bit-and-2-bit-characters/) | Array| Time: O(n), Space: O(1)| Easy|
-|724 | [Find Pivot Index](https://leetcode.com/problems/find-pivot-index/) | Array| Time: O(n), Space: O(1)| Easy|
+| 724 | [📓 Find Pivot Index](0724.ipynb) | <span title="Compute total sum once; at each index derive rightSum = totalSum − leftSum − nums[i] in O(1).">Prefix Sum</span> | Time: O(n), Space: O(1)| Easy|
 |747 | [Largest Number At Least Twice of Others](https://leetcode.com/problems/largest-number-at-least-twice-of-others/) | Array| Time: O(n), Space: O(1)| Easy|
 |766 | [Toeplitz Matrix](https://leetcode.com/problems/toeplitz-matrix/) | Array| Time: O(m * n), Space: O(1)| Easy|
 |832 | [Flipping an Image](https://leetcode.com/problems/flipping-an-image/) | Array| Time: O(n), Space: O(1)| Easy|

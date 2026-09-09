@@ -2313,6 +2313,72 @@ Object.entries(cats).forEach(([cat, probs]) => {
 });
 
 // ── filters ──
+// ── Company selector ──────────────────────────────────────────────────────
+const COMPANY_META = {
+  leetcode:  { icon: '🧩', label: 'LeetCode' },
+  anthropic: { icon: '✳️', label: 'Anthropic' },
+};
+const COMPANY_PROBS = {
+  leetcode: null,
+  anthropic: new Set([
+    1,2,3,5,7,11,15,17,20,21,22,23,25,33,39,42,46,48,
+    49,53,54,55,56,70,72,76,84,98,100,101,102,104,105,
+    121,122,127,128,133,139,141,146,148,149,152,153,155,
+    198,200,206,207,210,212,215,217,221,226,230,234,236,
+    238,239,242,253,261,269,279,283,295,297,300,312,322,
+    329,338,340,347,378,380,394,399,406,412,416,435,437,
+    445,494,496,543,547,560,572,621,647,692,695,721,739,
+    743,763,778,785,787,863,875,876,904,912,973,994,1004,
+    1011,1048,1143,1192,1235,1268,1293,1463,1696
+  ])
+};
+let activeCompany = 'leetcode';
+
+function updateCompanyStats() {
+  const nums = COMPANY_PROBS[activeCompany];
+  const subset = nums ? P.filter(p => nums.has(p.n)) : P;
+  const seen = {}, solvedSeen = {};
+  const diffS = {easy:0,medium:0,hard:0}, diffT = {easy:0,medium:0,hard:0};
+  subset.forEach(p => {
+    if (!seen[p.n]) {
+      seen[p.n] = true;
+      diffT[p.d] = (diffT[p.d]||0) + 1;
+      if (p.s) { solvedSeen[p.n] = true; diffS[p.d] = (diffS[p.d]||0) + 1; }
+    }
+  });
+  const tot = Object.keys(seen).length, sol = Object.keys(solvedSeen).length;
+  document.getElementById('st-solved').textContent = sol;
+  document.getElementById('st-total').textContent  = tot;
+  document.getElementById('st-pct').textContent    = tot ? Math.round(sol/tot*100)+'%' : '0%';
+  document.getElementById('st-bar').style.width    = tot ? (sol/tot*100)+'%' : '0%';
+  document.getElementById('st-easy').textContent   = `Easy ${diffS.easy}/${diffT.easy}`;
+  document.getElementById('st-med').textContent    = `Med ${diffS.medium}/${diffT.medium}`;
+  document.getElementById('st-hard').textContent   = `Hard ${diffS.hard}/${diffT.hard}`;
+}
+
+const csEl  = document.getElementById('company-selector');
+const csBtn = document.getElementById('company-btn');
+const csDd  = document.getElementById('company-dropdown');
+csBtn.addEventListener('click', e => {
+  e.stopPropagation();
+  const open = !csDd.hidden;
+  csDd.hidden = open; csEl.classList.toggle('open', !open);
+  csBtn.setAttribute('aria-expanded', String(!open));
+});
+document.addEventListener('click', () => { csDd.hidden = true; csEl.classList.remove('open'); });
+csDd.addEventListener('click', e => {
+  const opt = e.target.closest('.company-option'); if (!opt) return;
+  const co = opt.dataset.company;
+  if (co === activeCompany) { csDd.hidden = true; csEl.classList.remove('open'); return; }
+  activeCompany = co;
+  document.getElementById('co-icon').textContent = COMPANY_META[co].icon;
+  document.getElementById('co-name').textContent = COMPANY_META[co].label;
+  document.querySelectorAll('.company-option').forEach(o => o.classList.toggle('active', o.dataset.company === co));
+  csDd.hidden = true; csEl.classList.remove('open');
+  refilter(); updateCompanyStats();
+});
+// ─────────────────────────────────────────────────────────────────────────────
+
 let activeDiff = 'all', activeStatus = 'all', activePl = null;
 
 function refilter() {
@@ -2321,7 +2387,9 @@ function refilter() {
   let vis = 0;
   document.querySelectorAll('tbody tr').forEach(row => {
     const n = +row.dataset.n;
+    const companyNums = COMPANY_PROBS[activeCompany];
     const show =
+      (!companyNums || companyNums.has(n)) &&
       (!q || row.dataset.t.includes(q)) &&
       (activeDiff === 'all' || row.dataset.d === activeDiff) &&
       (activeStatus === 'all' || activeStatus === 'fav'
@@ -2618,7 +2686,7 @@ let selectMode = false;
 const selectedNs = new Set();
 
 // inject select bar + select toggle button
-document.querySelector('.filter-bar h1').insertAdjacentHTML('afterend',
+document.getElementById('company-selector').insertAdjacentHTML('afterend',
   `<button id="sel-toggle" style="background:var(--surface);border:1px solid var(--border);color:var(--text);padding:6px 12px;border-radius:6px;font-size:12px;font-weight:500;cursor:pointer;white-space:nowrap;transition:background .1s">☑ Select</button>`
 );
 

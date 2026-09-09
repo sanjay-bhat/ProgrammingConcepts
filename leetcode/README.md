@@ -35,7 +35,7 @@
 |561 | [Array Partition I](https://leetcode.com/problems/array-partition-i/) | Array| Time: O(n log n), Space: O(1)| Easy|
 |598 | [Range Addition II](https://leetcode.com/problems/range-addition-ii/) | Array| Time: O(1), Space: O(1)| Easy|
 |603 | [Consecutive Available Seats](https://leetcode.com/problems/consecutive-available-seats/) | Array| Time: O(n), Space: O(1)| Easy|
-|605 | [Can Place Flowers](https://leetcode.com/problems/can-place-flowers/) | Array| Time: O(n), Space: O(1)| Easy|
+|605 | [📓 Can Place Flowers](0605.ipynb) | Array| Time: O(n), Space: O(1)| Easy|
 |615 | [Average Salary: Excluding the Minimum and Maximum Salary](https://leetcode.com/problems/average-salary-excluding-the-minimum-and-maximum-salary/)| Array| Time: O(n), Space: O(1)| Easy|
 |628 | [Maximum Product of Three Numbers](https://leetcode.com/problems/maximum-product-of-three-numbers/) | Array| Time: O(n log n), Space: O(1)| Easy|
 |643 | [Maximum Average Subarray I](https://leetcode.com/problems/maximum-average-subarray-i/) | Array| Time: O(n), Space: O(1)| Easy|

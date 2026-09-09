@@ -47,7 +47,7 @@
 |766 | [Toeplitz Matrix](https://leetcode.com/problems/toeplitz-matrix/) | Array| Time: O(m * n), Space: O(1)| Easy|
 |832 | [Flipping an Image](https://leetcode.com/problems/flipping-an-image/) | Array| Time: O(n), Space: O(1)| Easy|
 |867 | [Transpose Matrix](https://leetcode.com/problems/transpose-matrix/) | Array| Time: O(n * m), Space: O(1)| Easy|
-|896 | [Monotonic Array](https://leetcode.com/problems/monotonic-array/) | Array| Time: O(n), Space: O(1)| Easy|
+|896 | [📓 Monotonic Array](0896.ipynb) | Array| Time: O(n), Space: O(1)| Easy|
 |905 | [Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity/) | Array| Time: O(n), Space: O(1)| Easy|
 |922 | [Sort Array By Parity II](https://leetcode.com/problems/sort-array-by-parity-ii/) | Array| Time: O(n), Space: O(1)| Easy|
 |941 | [Valid Mountain Array](https://leetcode.com/problems/valid-mountain-array/) | Array| Time: O(n), Space: O(1)| Easy|

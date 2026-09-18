@@ -2,7 +2,7 @@
 
 Compiled from the [2024 Google Interview Questions thread](https://leetcode.com/discuss/post/6185127/2024-google-interview-questions-compilat-mjrf/), frequency lists, and verified interview experiences (L3/L4/L5).
 
-**247 problems** appear in recent Google interviews. Topics skew heavily toward arrays/strings (83%) and graphs (76% of L4+ loops).
+**265 problems** appear in recent Google interviews. Topics skew heavily toward arrays/strings (83%) and graphs (76% of L4+ loops).
 
 ---
 
@@ -29,11 +29,11 @@ Compiled from the [2024 Google Interview Questions thread](https://leetcode.com/
 | 80 | Remove Duplicates from Sorted Array II | Medium | ✅ |
 | 88 | Merge Sorted Array | Easy | ✅ |
 | 121 | Best Time to Buy and Sell Stock | Easy | ✅ |
-| 122 | Best Time to Buy and Sell Stock II | Medium | ❌ |
-| 128 | Longest Consecutive Sequence | Medium | ❌ |
-| 134 | Gas Station | Medium | ❌ |
-| 135 | Candy | Hard | ❌ |
-| 169 | Majority Element | Easy | ❌ |
+| 122 | Best Time to Buy and Sell Stock II | Medium | ✅ |
+| 128 | Longest Consecutive Sequence | Medium | ✅ |
+| 134 | Gas Station | Medium | ✅ |
+| 135 | Candy | Hard | ✅ |
+| 169 | Majority Element | Easy | ✅ |
 | 189 | Rotate Array | Medium | ✅ |
 | 209 | Minimum Size Subarray Sum | Medium | ❌ |
 | 238 | Product of Array Except Self | Medium | ❌ |
@@ -79,12 +79,12 @@ Compiled from the [2024 Google Interview Questions thread](https://leetcode.com/
 | 67 | Add Binary | Easy | ✅ |
 | 68 | Text Justification | Hard | ✅ |
 | 91 | Decode Ways | Medium | ✅ |
-| 125 | Valid Palindrome | Easy | ❌ |
-| 127 | Word Ladder | Hard | ❌ |
-| 131 | Palindrome Partitioning | Medium | ❌ |
-| 139 | Word Break | Medium | ❌ |
-| 151 | Reverse Words in a String | Medium | ❌ |
-| 165 | Compare Version Numbers | Medium | ❌ |
+| 125 | Valid Palindrome | Easy | ✅ |
+| 127 | Word Ladder | Hard | ✅ |
+| 131 | Palindrome Partitioning | Medium | ✅ |
+| 139 | Word Break | Medium | ✅ |
+| 151 | Reverse Words in a String | Medium | ✅ |
+| 165 | Compare Version Numbers | Medium | ✅ |
 | 242 | Valid Anagram | Easy | ❌ |
 | 336 | Palindrome Pairs | Hard | ❌ |
 | 340 | Longest Substring with At Most K Distinct Characters | Medium | ❌ |
@@ -113,13 +113,13 @@ Compiled from the [2024 Google Interview Questions thread](https://leetcode.com/
 | 83 | Remove Duplicates from Sorted List | Easy | ✅ |
 | 86 | Partition List | Medium | ✅ |
 | 92 | Reverse Linked List II | Medium | ✅ |
-| 138 | Copy List with Random Pointer | Medium | ❌ |
-| 141 | Linked List Cycle | Easy | ❌ |
-| 142 | Linked List Cycle II | Medium | ❌ |
-| 143 | Reorder List | Medium | ❌ |
-| 146 | LRU Cache | Medium | ❌ |
-| 148 | Sort List | Medium | ❌ |
-| 160 | Intersection of Two Linked Lists | Easy | ❌ |
+| 138 | Copy List with Random Pointer | Medium | ✅ |
+| 141 | Linked List Cycle | Easy | ✅ |
+| 142 | Linked List Cycle II | Medium | ✅ |
+| 143 | Reorder List | Medium | ✅ |
+| 146 | LRU Cache | Medium | ✅ |
+| 148 | Sort List | Medium | ✅ |
+| 160 | Intersection of Two Linked Lists | Easy | ✅ |
 | 206 | Reverse Linked List | Easy | ❌ |
 | 234 | Palindrome Linked List | Easy | ❌ |
 | 237 | Delete Node in a Linked List | Medium | ❌ |
@@ -138,21 +138,21 @@ Compiled from the [2024 Google Interview Questions thread](https://leetcode.com/
 | 98 | Validate Binary Search Tree | Medium | ✅ |
 | 99 | Recover Binary Search Tree | Medium | ✅ |
 | 100 | Same Tree | Easy | ✅ |
-| 102 | Binary Tree Level Order Traversal | Medium | ❌ |
-| 103 | Binary Tree Zigzag Level Order Traversal | Medium | ❌ |
-| 104 | Maximum Depth of Binary Tree | Easy | ❌ |
-| 105 | Construct Binary Tree from Preorder and Inorder Traversal | Medium | ❌ |
-| 108 | Convert Sorted Array to Binary Search Tree | Easy | ❌ |
-| 110 | Balanced Binary Tree | Easy | ❌ |
-| 111 | Minimum Depth of Binary Tree | Easy | ❌ |
-| 112 | Path Sum | Easy | ❌ |
-| 113 | Path Sum II | Medium | ❌ |
-| 114 | Flatten Binary Tree to Linked List | Medium | ❌ |
-| 116 | Populating Next Right Pointers in Each Node | Medium | ❌ |
-| 124 | Binary Tree Maximum Path Sum | Hard | ❌ |
-| 129 | Sum Root to Leaf Numbers | Medium | ❌ |
-| 144 | Binary Tree Preorder Traversal | Easy | ❌ |
-| 145 | Binary Tree Postorder Traversal | Easy | ❌ |
+| 102 | Binary Tree Level Order Traversal | Medium | ✅ |
+| 103 | Binary Tree Zigzag Level Order Traversal | Medium | ✅ |
+| 104 | Maximum Depth of Binary Tree | Easy | ✅ |
+| 105 | Construct Binary Tree from Preorder and Inorder Traversal | Medium | ✅ |
+| 108 | Convert Sorted Array to Binary Search Tree | Easy | ✅ |
+| 110 | Balanced Binary Tree | Easy | ✅ |
+| 111 | Minimum Depth of Binary Tree | Easy | ✅ |
+| 112 | Path Sum | Easy | ✅ |
+| 113 | Path Sum II | Medium | ✅ |
+| 114 | Flatten Binary Tree to Linked List | Medium | ✅ |
+| 116 | Populating Next Right Pointers in Each Node | Medium | ✅ |
+| 124 | Binary Tree Maximum Path Sum | Hard | ✅ |
+| 129 | Sum Root to Leaf Numbers | Medium | ✅ |
+| 144 | Binary Tree Preorder Traversal | Easy | ✅ |
+| 145 | Binary Tree Postorder Traversal | Easy | ✅ |
 | 199 | Binary Tree Right Side View | Medium | ❌ |
 | 226 | Invert Binary Tree | Easy | ❌ |
 | 230 | Kth Smallest Element in a BST | Medium | ❌ |
@@ -194,9 +194,9 @@ Compiled from the [2024 Google Interview Questions thread](https://leetcode.com/
 | 85 | Maximal Rectangle | Hard | ✅ |
 | 91 | Decode Ways | Medium | ✅ |
 | 97 | Interleaving String | Medium | ✅ |
-| 115 | Distinct Subsequences | Hard | ❌ |
+| 115 | Distinct Subsequences | Hard | ✅ |
 | 121 | Best Time to Buy and Sell Stock | Easy | ✅ |
-| 152 | Maximum Product Subarray | Medium | ❌ |
+| 152 | Maximum Product Subarray | Medium | ✅ |
 | 198 | House Robber | Medium | ❌ |
 | 213 | House Robber II | Medium | ❌ |
 | 279 | Perfect Squares | Medium | ❌ |
@@ -223,9 +223,9 @@ Compiled from the [2024 Google Interview Questions thread](https://leetcode.com/
 
 | # | Title | Difficulty | Status |
 |---|-------|------------|--------|
-| 127 | Word Ladder | Hard | ❌ |
-| 130 | Surrounded Regions | Medium | ❌ |
-| 133 | Clone Graph | Medium | ❌ |
+| 127 | Word Ladder | Hard | ✅ |
+| 130 | Surrounded Regions | Medium | ✅ |
+| 133 | Clone Graph | Medium | ✅ |
 | 200 | Number of Islands | Medium | ❌ |
 | 207 | Course Schedule | Medium | ❌ |
 | 210 | Course Schedule II | Medium | ❌ |
@@ -263,7 +263,7 @@ Compiled from the [2024 Google Interview Questions thread](https://leetcode.com/
 | 79 | Word Search | Medium | ✅ |
 | 90 | Subsets II | Medium | ✅ |
 | 93 | Restore IP Addresses | Medium | ✅ |
-| 131 | Palindrome Partitioning | Medium | ❌ |
+| 131 | Palindrome Partitioning | Medium | ✅ |
 | 212 | Word Search II | Hard | ❌ |
 | 491 | Non-decreasing Subsequences | Medium | ❌ |
 
@@ -345,8 +345,8 @@ Compiled from the [2024 Google Interview Questions thread](https://leetcode.com/
 
 | # | Title | Difficulty | Status |
 |---|-------|------------|--------|
-| 146 | LRU Cache | Medium | ❌ |
-| 155 | Min Stack | Medium | ❌ |
+| 146 | LRU Cache | Medium | ✅ |
+| 155 | Min Stack | Medium | ✅ |
 | 208 | Implement Trie (Prefix Tree) | Medium | ❌ |
 | 211 | Design Add and Search Words Data Structure | Medium | ❌ |
 | 295 | Find Median from Data Stream | Hard | ❌ |
@@ -373,7 +373,7 @@ Compiled from the [2024 Google Interview Questions thread](https://leetcode.com/
 | 42 | Trapping Rain Water | Hard | ✅ |
 | 84 | Largest Rectangle in Histogram | Hard | ✅ |
 | 85 | Maximal Rectangle | Hard | ✅ |
-| 155 | Min Stack | Medium | ❌ |
+| 155 | Min Stack | Medium | ✅ |
 | 496 | Next Greater Element I | Easy | ❌ |
 | 735 | Asteroid Collision | Medium | ❌ |
 | 739 | Daily Temperatures | Medium | ❌ |
@@ -407,7 +407,7 @@ Compiled from the [2024 Google Interview Questions thread](https://leetcode.com/
 | # | Title | Difficulty | Status |
 |---|-------|------------|--------|
 | 75 | Sort Colors | Medium | ✅ |
-| 148 | Sort List | Medium | ❌ |
+| 148 | Sort List | Medium | ✅ |
 | 215 | Kth Largest Element in an Array | Medium | ❌ |
 | 324 | Wiggle Sort II | Medium | ❌ |
 | 347 | Top K Frequent Elements | Medium | ❌ |
@@ -435,6 +435,87 @@ Compiled from the [2024 Google Interview Questions thread](https://leetcode.com/
 | Sorting | 6 | 2 |
 
 > ✅ = solved in this repo · ❌ = not yet solved
+
+---
+
+
+## Reddit: 50 Must-Practice Google Interview Questions (2025)
+
+Source: [r/interviews — 50 LeetCode Questions You Must Practice Before Your Google Interview](https://www.reddit.com/r/interviews/comments/1olihm4/50_leetcode_questions_you_must_practice_before/)
+
+Based on 200+ interview experiences (Jan 2024 – Aug 2025). Frequency = % of interviews where the problem appeared.
+
+### Tier 1: Must-Knows (40%+ frequency)
+
+| # | Title | Difficulty | Pattern | Freq | Status |
+|---|-------|------------|---------|------|--------|
+| 200 | Number of Islands | Medium | BFS/DFS | 47% | ❌ |
+| 146 | LRU Cache | Medium | Design | 45% | ✅ |
+| 42 | Trapping Rain Water | Hard | Two Pointers/Stack | 43% | ✅ |
+| 56 | Merge Intervals | Medium | Sorting | 42% | ✅ |
+| 297 | Serialize and Deserialize Binary Tree | Hard | Design | 41% | ❌ |
+| 139 | Word Break | Medium | DP | 39% | ✅ |
+| 133 | Clone Graph | Medium | Graph/BFS-DFS | 38% | ✅ |
+| 208 | Implement Trie | Medium | Design | 37% | ❌ |
+| 239 | Sliding Window Maximum | Hard | Monotonic Deque | 36% | ❌ |
+| 560 | Subarray Sum Equals K | Medium | Prefix + Hashmap | 35% | ❌ |
+
+### Tier 2: High Frequency (20-35%)
+
+| # | Title | Difficulty | Pattern | Freq | Status |
+|---|-------|------------|---------|------|--------|
+| 23 | Merge k Sorted Lists | Hard | Heap/Merge | 20-35% | ✅ |
+| 128 | Longest Consecutive Sequence | Medium | Hashing | 20-35% | ✅ |
+| 295 | Find Median from Data Stream | Hard | Two Heaps | 20-35% | ❌ |
+| 380 | Insert Delete GetRandom O(1) | Medium | Design | 20-35% | ❌ |
+| 394 | Decode String | Medium | Stack | 20-35% | ❌ |
+| 269 | Alien Dictionary | Hard | Topological Sort | 20-35% | ❌ |
+| 340 | Longest Substring with At Most K Distinct | Medium | Sliding Window | 20-35% | ❌ |
+| 417 | Pacific Atlantic Water Flow | Medium | Multi-source BFS/DFS | 20-35% | ❌ |
+| 684 | Redundant Connection | Medium | Union-Find | 20-35% | ❌ |
+| 494 | Target Sum | Medium | DP/Subset Sum | 20-35% | ❌ |
+
+### Tier 3: Differentiators — L5+ (10-20%)
+
+| # | Title | Difficulty | Pattern | Freq | Status |
+|---|-------|------------|---------|------|--------|
+| 4 | Median of Two Sorted Arrays | Hard | Binary Search | 10-20% | ✅ |
+| 10 | Regular Expression Matching | Hard | DP | 10-20% | ✅ |
+| 218 | The Skyline Problem | Hard | Sweep Line/Heap | 10-20% | ❌ |
+| 224 | Basic Calculator | Hard | Stack/Parsing | 10-20% | ❌ |
+| 282 | Expression Add Operators | Hard | Backtracking | 10-20% | ❌ |
+| 315 | Count of Smaller Numbers After Self | Hard | BIT/Merge Sort | 10-20% | ✅ |
+| 332 | Reconstruct Itinerary | Hard | Eulerian Path | 10-20% | ❌ |
+| 460 | LFU Cache | Hard | Design | 10-20% | ❌ |
+| 685 | Redundant Connection II | Hard | Union-Find + Directed | 10-20% | ❌ |
+| 727 | Minimum Window Subsequence | Hard | DP/Two-pass | 10-20% | ❌ |
+
+### Tier 4: Specialists — System Design Hybrids (5-10%)
+
+| # | Title | Difficulty | Pattern | Freq | Status |
+|---|-------|------------|---------|------|--------|
+| 31 | Next Permutation | Medium | Array Manipulation | 5-10% | ✅ |
+| 57 | Insert Interval | Medium | Intervals | 5-10% | ✅ |
+| 212 | Word Search II | Hard | Trie + DFS | 5-10% | ❌ |
+| 240 | Search a 2D Matrix II | Medium | 2-Pointer Grid | 5-10% | ✅ |
+| 261 | Graph Valid Tree | Medium | Union-Find/BFS | 5-10% | ❌ |
+| 271 | Encode and Decode Strings | Medium | Design | 5-10% | ❌ |
+| 310 | Minimum Height Trees | Medium | Graph Trimming | 5-10% | ❌ |
+| 329 | Longest Increasing Path in a Matrix | Hard | DFS + Memo | 5-10% | ❌ |
+| 336 | Palindrome Pairs | Hard | Trie/Hashing | 5-10% | ❌ |
+| 354 | Russian Doll Envelopes | Hard | LIS Variant | 5-10% | ❌ |
+| 363 | Max Sum of Rectangle No Larger Than K | Hard | Prefix + TreeSet | 5-10% | ❌ |
+| 378 | Kth Smallest Element in a Sorted Matrix | Medium | Heap/Binary Search | 5-10% | ❌ |
+| 399 | Evaluate Division | Medium | Graph/Union-Find | 5-10% | ❌ |
+| 406 | Queue Reconstruction by Height | Medium | Greedy Sorting | 5-10% | ❌ |
+| 421 | Maximum XOR of Two Numbers | Medium | Bit Trie | 5-10% | ❌ |
+| 425 | Word Squares | Hard | Trie/Backtracking | 5-10% | ❌ |
+| 480 | Sliding Window Median | Hard | Heaps/Balanced BST | 5-10% | ❌ |
+| 490 | The Maze | Medium | BFS/DFS | 5-10% | ❌ |
+| 652 | Find Duplicate Subtrees | Medium | Tree Hashing | 5-10% | ❌ |
+| 668 | Kth Smallest Number in Multiplication Table | Hard | Binary Search on Answer | 5-10% | ✅ |
+
+> **14/50** solved from this list
 
 ---
 

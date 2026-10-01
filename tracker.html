@@ -2420,7 +2420,7 @@ function refilter() {
     const companyNums = COMPANY_PROBS[activeCompany];
     const show =
       (!companyNums || companyNums.has(n)) &&
-      (!q || row.dataset.t.includes(q)) &&
+      (!q || row.dataset.t.includes(q) || String(n) === q || String(n).startsWith(q)) &&
       (activeDiff === 'all' || row.dataset.d === activeDiff) &&
       (activeStatus === 'all' || activeStatus === 'fav'
         ? (activeStatus === 'fav' ? row.dataset.fav === '1' : true)

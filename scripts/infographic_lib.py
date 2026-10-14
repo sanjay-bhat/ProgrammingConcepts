@@ -217,3 +217,70 @@ def counter(n, label='Count'):
             [f'<span class="count-step">{i}</span>' for i in range(1, n)]
             + [f'<span class="count-final">{n}</span>'])
     return f'<div class="counter">{label}: {seq}</div>'
+
+
+# ---------------------------------------------------------------- trees (SVG)
+def _tree_layout(node, depth, xcounter, positions, edges, parent=None):
+    """Assign x by in-order leaf position, y by depth. node is a dict:
+    {'label': str, 'children': [...], 'leaf': bool(optional), 'ok': bool(optional)}."""
+    children = node.get('children', [])
+    nid = id(node)
+    if parent is not None:
+        edges.append((parent, nid))
+    if not children:
+        x = xcounter[0]
+        xcounter[0] += 1
+    else:
+        child_xs = []
+        for ch in children:
+            _tree_layout(ch, depth + 1, xcounter, positions, edges, nid)
+            child_xs.append(positions[id(ch)][0])
+        x = sum(child_xs) / len(child_xs)
+    positions[nid] = (x, depth, node)
+    return nid
+
+
+def tree_svg(root, node_w=58, node_h=34, x_gap=70, y_gap=78, pad=28):
+    """Render a decision/backtracking/binary tree from a nested dict.
+    Node dict keys: label (str), children (list), leaf (bool -> rounded pill),
+    ok (True=green success leaf, False=pruned/red), accent (palette idx).
+    NOTE: escape < > & in labels before passing them in."""
+    positions, edges = {}, []
+    _tree_layout(root, 0, [0], positions, edges)
+    max_x = max(p[0] for p in positions.values())
+    max_d = max(p[1] for p in positions.values())
+    W = int(max_x * x_gap + node_w + 2 * pad)
+    H = int(max_d * y_gap + node_h + 2 * pad)
+
+    def cx(x):
+        return int(pad + x * x_gap + node_w / 2)
+
+    def cy(d):
+        return int(pad + d * y_gap + node_h / 2)
+
+    svg = [f'<svg width="{W}" height="{H}" viewBox="0 0 {W} {H}" xmlns="http://www.w3.org/2000/svg" font-family="Courier New, monospace">']
+    for a, b in edges:
+        xa, da, _ = positions[a]
+        xb, db, _ = positions[b]
+        svg.append(f'<line x1="{cx(xa)}" y1="{cy(da)+node_h//2}" x2="{cx(xb)}" y2="{cy(db)-node_h//2}" stroke="#b0b8c8" stroke-width="2"/>')
+    for nid, (x, d, node) in positions.items():
+        label = node.get('label', '')
+        ok = node.get('ok', None)
+        leaf = node.get('leaf', False) or not node.get('children')
+        if ok is True:
+            fill, border, text = '#d4edda', '#2f9e58', '#155724'
+        elif ok is False:
+            fill, border, text = '#f8d7da', '#c0392b', '#721c24'
+        elif 'accent' in node:
+            fill, border, text = color(node['accent'])
+        else:
+            fill, border, text = '#e8edf3', '#8792a6', '#1f2430'
+        rx = node_h // 2 if leaf else 7
+        X = cx(x) - node_w // 2
+        Y = cy(d) - node_h // 2
+        svg.append(f'<rect x="{X}" y="{Y}" width="{node_w}" height="{node_h}" rx="{rx}" '
+                   f'fill="{fill}" stroke="{border}" stroke-width="2"/>')
+        svg.append(f'<text x="{cx(x)}" y="{cy(d)+5}" text-anchor="middle" font-size="14" '
+                   f'font-weight="700" fill="{text}">{label}</text>')
+    svg.append('</svg>')
+    return ''.join(svg)

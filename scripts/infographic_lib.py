@@ -96,6 +96,20 @@ table.dp td.base {{ background:#f5eed4; color:#6b5f1a; }}
 .count-step {{ display:inline-block; min-width:26px; padding:2px 8px; border-radius:6px; background:#eef1f5; color:#888; font-family:'Courier New',monospace; }}
 .count-final {{ display:inline-block; min-width:26px; padding:2px 10px; border-radius:6px; background:#2f9e58; color:#fff; font-family:'Courier New',monospace; font-weight:700; }}
 .count-arrow {{ color:#aaa; }}
+/* matrix */
+table.mtx {{ border-collapse:collapse; margin:0 auto; font-family:'Courier New',monospace; }}
+table.mtx td {{ width:40px; height:40px; text-align:center; border:1px solid #c7ccd6; font-size:15px; font-weight:700; color:#1f2430; background:#fff; }}
+table.mtx td.hl {{ outline:3px solid #2f9e58; outline-offset:-3px; }}
+table.mtx td.bt {{ border-top:3px solid #1f2430; }}
+table.mtx td.bl {{ border-left:3px solid #1f2430; }}
+table.mtx td.br {{ border-right:3px solid #1f2430; }}
+table.mtx td.bb {{ border-bottom:3px solid #1f2430; }}
+/* timeline / intervals */
+.tl {{ position:relative; width:860px; margin:0 auto; }}
+.tlrow {{ position:relative; height:34px; margin-bottom:6px; }}
+.tlbar {{ position:absolute; height:28px; border-radius:6px; display:flex; align-items:center; justify-content:center; font-family:'Courier New',monospace; font-size:12px; font-weight:700; border:2px solid; }}
+.tlaxis {{ position:relative; height:22px; border-top:2px solid #b0b8c8; margin-top:4px; }}
+.tltick {{ position:absolute; font-size:10px; color:#999; transform:translateX(-50%); top:4px; }}
 /* grid */
 .grid-wrap {{ position:relative; }}
 .gcell {{ position:absolute; width:46px; height:46px; display:flex; align-items:center; justify-content:center; font-family:'Courier New',monospace; font-size:17px; font-weight:700; border-radius:8px; border:2px solid transparent; z-index:2; }}
@@ -284,3 +298,75 @@ def tree_svg(root, node_w=58, node_h=34, x_gap=70, y_gap=78, pad=28):
                    f'font-weight="700" fill="{text}">{label}</text>')
     svg.append('</svg>')
     return ''.join(svg)
+
+
+# ---------------------------------------------------------------- matrix (general 2D grid)
+def matrix(grid, cell_colors=None, highlights=None, boxes=None, cell=40):
+    """General 2D matrix of values (sudoku, chessboard, rotate, spiral).
+    grid: 2D list of display values (str/int; '' for blank).
+    cell_colors: optional 2D list of (fill,border,text) triples or palette idx or None.
+    highlights: set of (r,c) to outline green.
+    boxes: int box size for thick separators (e.g. 3 for sudoku 9x9); or None.
+    NOTE: escape < > & in values."""
+    highlights = highlights or set()
+    rows, cols = len(grid), len(grid[0])
+    html = ['<table class="mtx">']
+    for r in range(rows):
+        html.append('<tr>')
+        for c in range(cols):
+            v = grid[r][c]
+            style = ''
+            if cell_colors and cell_colors[r][c] is not None:
+                cc = cell_colors[r][c]
+                f, b, t = color(cc) if isinstance(cc, int) else cc
+                style = f'background:{f};color:{t};'
+            cls = []
+            if (r, c) in highlights:
+                cls.append('hl')
+            if boxes:
+                if r % boxes == 0:
+                    cls.append('bt')
+                if c % boxes == 0:
+                    cls.append('bl')
+                if r == rows - 1:
+                    cls.append('bb')
+                if c == cols - 1:
+                    cls.append('br')
+            clsattr = f' class="{" ".join(cls)}"' if cls else ''
+            html.append(f'<td{clsattr} style="{style}">{v}</td>')
+        html.append('</tr>')
+    html.append('</table>')
+    return ''.join(html)
+
+
+# ---------------------------------------------------------------- intervals / timeline
+def intervals(items, lo=None, hi=None, width=860, ticks=None):
+    """Horizontal timeline of intervals.
+    items: list of (start, end, label, palette_idx) — one bar each, stacked in rows.
+    lo/hi: axis bounds (auto from items if None). ticks: list of tick values.
+    NOTE: escape < > & in labels."""
+    starts = [s for s, *_ in items]
+    ends = [e for _, e, *_ in items]
+    lo = lo if lo is not None else min(starts)
+    hi = hi if hi is not None else max(ends)
+    span = (hi - lo) or 1
+
+    def px(v):
+        return int((v - lo) / span * (width - 20)) + 10
+
+    rows_html = []
+    for (s, e, label, ci) in items:
+        f, b, t = color(ci)
+        left = px(s)
+        w = max(px(e) - px(s), 24)
+        rows_html.append(
+            f'<div class="tlrow"><div class="tlbar" style="left:{left}px;width:{w}px;'
+            f'background:{f};border-color:{b};color:{t};">{label}</div></div>')
+
+    if ticks is None:
+        ticks = list(range(lo, hi + 1, max(1, span // 10)))
+    tick_html = ''.join(
+        f'<span class="tltick" style="left:{px(tv)}px;">{tv}</span>' for tv in ticks)
+
+    return (f'<div class="tl">{"".join(rows_html)}'
+            f'<div class="tlaxis">{tick_html}</div></div>')

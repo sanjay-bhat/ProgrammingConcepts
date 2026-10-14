@@ -101,14 +101,38 @@ Each walkthrough should be 1-2 sentences. Use LaTeX for math notation (`$O(n)$`,
 
 An embedded PNG (`image.png` attachment) rendered from an HTML template via headless Chrome.
 
+### Match the Visualization to the Data Structure ★
+
+**The most important rule: draw the problem's actual data structure, not a flattened array.**
+A 1D array of cells + a trace table is only right for genuinely 1D problems (two-pointer, sliding
+window, prefix sums). For anything with spatial or relational structure, show that structure
+directly — the way a good YouTube walkthrough sketches it on a whiteboard:
+
+| Problem shape | Visualization |
+| :--- | :--- |
+| **Grid / matrix** (islands, flood fill, DP on grid) | A real 2D grid. Color each region/component distinctly, draw **connection bars** between adjacent cells that belong together, **cross out** inactive/water cells (diagonal slash), and show a **running counter** when something is being tallied. See the `#200` generator in `scripts/`. |
+| **Tree** (BST, binary tree, traversal) | An SVG node-and-edge tree. Highlight the visited path / target nodes; number nodes in traversal order. |
+| **Graph** (topological sort, union-find, shortest path) | An SVG node-edge diagram with colored traversal order or component grouping — not an adjacency array. |
+| **Linked list** | A horizontal chain of node boxes with `→` pointer arrows; show before/after for pointer surgery. |
+| **Intervals** | A horizontal timeline with overlapping bars. |
+| **1D array / string** | Flat colored cells + trace table (the original default). |
+
+Show **input → after** side by side where it clarifies the transformation (e.g. grid before vs.
+after flood fill). Each example should make the *mechanism* visible at a glance, not just the answer.
+
+A reusable grid generator lives at `scripts/gen_grid_infographic.py` — feed it a grid and an
+island/region assignment and it auto-places cells, connection bars, crossouts, and the counter.
+Prefer extending a generator like this over hand-writing hundreds of cell `<div>`s (hand-writing
+large grids by hand tends to stall the agent).
+
 ### Image Generation Steps
 
-1. **Create the HTML file** in the scratchpad directory with all 5 examples laid out as cards. Each card contains:
+1. **Create the HTML file** in the scratchpad directory with all 5 examples laid out as cards. Pick
+   the visualization that matches the data structure (see the table above). Each card contains:
    - Example title and input line (monospace)
-   - Array visualization (colored cells with index labels beneath)
-   - Step-by-step trace table (columns: iteration var, value, computed result, lookup outcome)
-   - Final data structure state box (e.g., hash map contents)
-   - Result box (green checkmark for match, red X for no match)
+   - The structure visualization (2D grid / tree / graph / chain / timeline / array as appropriate)
+   - A step indicator where it helps (trace table, running counter, or numbered traversal order)
+   - Result box (green checkmark for success, red X / blue info for other outcomes)
    - Optional note for non-obvious behavior
 
 2. **Preview in browser** to verify layout — use `preview_start` with a local HTTP server, check for overlaps, truncated text, or misaligned elements.
@@ -130,10 +154,16 @@ An embedded PNG (`image.png` attachment) rendered from an HTML template via head
 
 - Card width: 968px inside a 1024px viewport
 - Background: `#eef1f5`, card: `#ffffff` with `#1f2430` border, rounded corners
-- Array cells: 46×46px default, 42×42px for arrays with 6+ elements, 72×42px for wide values (e.g., `-1e9`)
+- Array / grid cells: 46×46px default, 42×42px for 6+ per row, 72×42px for wide values (e.g., `-1e9`)
+- **Grid cells** sit in a `position:relative` wrapper with ~10px gaps; connection bars are absolutely
+  positioned in those gaps (thickness ~16px) colored to match the region
+- **Region palette**: cycle 10 distinct (fill, border, text) triples so adjacent components never
+  share a color. Green `#d4f5d4`/`#2f9e58`, blue `#d4e8f5`/`#2f7e9e`, pink, gold, purple, teal, etc.
+  (full list in `scripts/gen_grid_infographic.py`)
+- **Water / inactive cells**: grey fill with a blue diagonal slash via `linear-gradient`
 - Matched elements highlighted with green border/background (`#2f9e58` / `#e4f7ea`)
 - Trace table uses monospace font, green for matches, grey for misses
-- Result boxes: green for success, red for failure
+- Result boxes: green for success (`#d4edda`/`#155724`), red for failure (`#f8d7da`/`#721c24`), blue info (`#d1ecf1`/`#0c5460`)
 - Notes in italic, kept to 1-2 lines
 
 ---

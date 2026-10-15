@@ -15,7 +15,10 @@ Visualization families:
   - stack_view()    : vertical stack with push/pop annotations
   - dp_table()      : 2D DP grid with row/col headers and highlighted cells
   - bar_chart()     : vertical bars (heights), e.g. container-with-most-water
-  - grid()          : 2D grid with region colors + connection bars + crossouts
+  - matrix()        : general 2D grid (sudoku, chessboard, rotation, spiral)
+  - intervals()     : horizontal timeline of interval bars
+  - graph_svg()     : directed/undirected node-edge diagram (DAGs, cycles, graphs)
+  - grid()          : 2D grid with region colors + connection bars + crossouts (gen_grid_infographic.py)
 """
 
 # ---- shared palette (fill, border, text) ----
@@ -370,3 +373,87 @@ def intervals(items, lo=None, hi=None, width=860, ticks=None):
 
     return (f'<div class="tl">{"".join(rows_html)}'
             f'<div class="tlaxis">{tick_html}</div></div>')
+
+
+# ---------------------------------------------------------------- graph (SVG)
+import math as _math
+
+def graph_svg(nodes, edges, pos=None, directed=True, node_colors=None,
+              badges=None, width=440, height=320, radius=24):
+    """Directed/undirected node-edge diagram (DAGs, cycles, dependency graphs).
+    nodes: list of ids, or dict {id: label} (label defaults to str(id)).
+    edges: list of (u, v) pairs.
+    pos: dict {id: (x, y)} in normalized 0..1 coords; None -> circular layout.
+    node_colors: dict {id: triple | palette_idx | 'green' | 'red' | 'blue'}.
+    badges: dict {id: text} drawn as a small corner badge (e.g. visit order).
+    NOTE: escape < > & in labels/badges.
+    """
+    if isinstance(nodes, dict):
+        labels = {k: str(v) for k, v in nodes.items()}
+        ids = list(nodes.keys())
+    else:
+        ids = list(nodes)
+        labels = {i: str(i) for i in ids}
+    node_colors = node_colors or {}
+    badges = badges or {}
+
+    pad = radius + 16
+    if pos is None:
+        n = len(ids)
+        pos = {}
+        cx0, cy0 = 0.5, 0.5
+        r0 = 0.40
+        for k, nid in enumerate(ids):
+            ang = -_math.pi / 2 + 2 * _math.pi * k / max(n, 1)
+            pos[nid] = (cx0 + r0 * _math.cos(ang), cy0 + r0 * _math.sin(ang))
+
+    def px(nid):
+        x, y = pos[nid]
+        return pad + x * (width - 2 * pad), pad + y * (height - 2 * pad)
+
+    def resolve(nid):
+        c = node_colors.get(nid)
+        if c is None:
+            return '#e8edf3', '#8792a6', '#1f2430'
+        if c == 'green':
+            return '#d4f5d4', '#2f9e58', '#1a6b35'
+        if c == 'red':
+            return '#f8d7da', '#c0392b', '#721c24'
+        if c == 'blue':
+            return '#d4e8f5', '#2f7e9e', '#1a4f6b'
+        if isinstance(c, int):
+            return color(c)
+        return c  # already a triple
+
+    svg = [f'<svg width="{width}" height="{height}" viewBox="0 0 {width} {height}" '
+           f'xmlns="http://www.w3.org/2000/svg" font-family="Courier New, monospace">']
+    svg.append('<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="3" '
+               'orient="auto" markerUnits="strokeWidth">'
+               '<path d="M0,0 L7,3 L0,6 Z" fill="#8792a6"/></marker></defs>')
+    # edges
+    for (u, v) in edges:
+        x1, y1 = px(u)
+        x2, y2 = px(v)
+        dx, dy = x2 - x1, y2 - y1
+        d = _math.hypot(dx, dy) or 1
+        # trim to node borders
+        sx, sy = x1 + dx / d * radius, y1 + dy / d * radius
+        ex, ey = x2 - dx / d * (radius + 6), y2 - dy / d * (radius + 6)
+        marker = ' marker-end="url(#arrow)"' if directed else ''
+        svg.append(f'<line x1="{sx:.1f}" y1="{sy:.1f}" x2="{ex:.1f}" y2="{ey:.1f}" '
+                   f'stroke="#8792a6" stroke-width="2"{marker}/>')
+    # nodes
+    for nid in ids:
+        x, y = px(nid)
+        fill, border, text = resolve(nid)
+        svg.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{radius}" fill="{fill}" '
+                   f'stroke="{border}" stroke-width="2.5"/>')
+        svg.append(f'<text x="{x:.1f}" y="{y+5:.1f}" text-anchor="middle" font-size="15" '
+                   f'font-weight="700" fill="{text}">{labels[nid]}</text>')
+        if nid in badges:
+            bx, by = x + radius * 0.75, y - radius * 0.75
+            svg.append(f'<circle cx="{bx:.1f}" cy="{by:.1f}" r="10" fill="#2f9e58" stroke="#fff" stroke-width="1.5"/>')
+            svg.append(f'<text x="{bx:.1f}" y="{by+4:.1f}" text-anchor="middle" font-size="11" '
+                       f'font-weight="700" fill="#fff">{badges[nid]}</text>')
+    svg.append('</svg>')
+    return ''.join(svg)

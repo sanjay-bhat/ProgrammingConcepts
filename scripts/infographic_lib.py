@@ -8,6 +8,7 @@ large HTML/SVG (which tends to stall agents). Compose cards with page_shell().
 Visualization families:
   - card()          : wrapper for one example (title, subtitle, input, body, result)
   - array_row()     : 1D array of colored cells with optional pointer labels
+  - word_row()      : like array_row but variable-width cells for strings/words
   - trace_table()   : step-by-step table
   - linked_list()   : horizontal node chain with -> pointer arrows
   - binary_tree()   : SVG binary tree from a level-order list
@@ -65,6 +66,8 @@ h1 {{ text-align:center; font-size:26px; color:#1f2430; margin-bottom:8px; font-
 .arr {{ display:inline-grid; gap:4px; }}
 .acell {{ width:46px; height:46px; display:flex; align-items:center; justify-content:center; font-family:'Courier New',monospace; font-size:15px; font-weight:700; border-radius:8px; border:2px solid #b0b8c8; background:#e8edf3; color:#1f2430; position:relative; }}
 .aidx {{ position:absolute; bottom:-16px; left:50%; transform:translateX(-50%); font-size:9px; color:#999; }}
+.wrow {{ display:flex; gap:6px; flex-wrap:wrap; justify-content:center; align-items:center; }}
+.wcell {{ width:auto; min-width:46px; padding:0 12px; }}
 .aptr {{ position:absolute; top:-18px; left:50%; transform:translateX(-50%); font-size:11px; font-weight:700; }}
 /* trace table */
 table.trace {{ border-collapse:collapse; font-size:13px; margin:0 auto; }}
@@ -156,6 +159,25 @@ def array_row(values, colors=None, pointers=None, show_index=True):
         cells.append(f'<div class="acell" style="{style}">{ptr}{v}{idx}</div>')
     cols = len(values)
     return f'<div class="arr" style="grid-template-columns:repeat({cols},46px);">{"".join(cells)}</div>'
+
+
+def word_row(values, colors=None, pointers=None, show_index=True):
+    """Like array_row but with variable-width cells for strings/words
+    (array_row's fixed 46px cells clip real words). colors: list of palette
+    idx or None; pointers: {index: label}. NOTE: escape < > & in values."""
+    cells = []
+    for i, v in enumerate(values):
+        style = ''
+        if colors and colors[i] is not None:
+            f, b, t = color(colors[i])
+            style = f'background:{f};border-color:{b};color:{t};'
+        ptr = ''
+        if pointers and i in pointers:
+            f, b, t = GREEN
+            ptr = f'<span class="aptr" style="color:{b};white-space:nowrap;">{pointers[i]}</span>'
+        idx = f'<span class="aidx">{i}</span>' if show_index else ''
+        cells.append(f'<div class="acell wcell" style="{style}">{ptr}{v}{idx}</div>')
+    return f'<div class="wrow">{"".join(cells)}</div>'
 
 
 def trace_table(headers, rows):

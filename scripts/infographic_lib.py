@@ -19,6 +19,7 @@ Visualization families:
   - matrix()        : general 2D grid (sudoku, chessboard, rotation, spiral)
   - intervals()     : horizontal timeline of interval bars
   - graph_svg()     : directed/undirected node-edge diagram (DAGs, cycles, graphs)
+  - threads()       : thread-interleaving sequence diagram (concurrency problems)
   - grid()          : 2D grid with region colors + connection bars + crossouts (gen_grid_infographic.py)
 """
 
@@ -478,5 +479,73 @@ def graph_svg(nodes, edges, pos=None, directed=True, node_colors=None,
             svg.append(f'<circle cx="{bx:.1f}" cy="{by:.1f}" r="10" fill="#2f9e58" stroke="#fff" stroke-width="1.5"/>')
             svg.append(f'<text x="{bx:.1f}" y="{by+4:.1f}" text-anchor="middle" font-size="11" '
                        f'font-weight="700" fill="#fff">{badges[nid]}</text>')
+    svg.append('</svg>')
+    return ''.join(svg)
+
+
+# ---------------------------------------------------------------- threads (sequence diagram)
+def threads(lanes, steps, width=860, lane_gap=150, row_h=46, pad=40):
+    """Thread-interleaving sequence diagram for concurrency problems.
+
+    lanes: list of lane names, e.g. ['threadA', 'threadB', 'threadC'].
+    steps: ordered list of dicts, one per time row:
+        {'lane': 'threadA',            # which lane the event happens in
+         'label': 'print("first")',    # text in the box
+         'kind': 'run'|'block'|'signal'|'wait',   # styling
+         'to':   'threadB'}            # optional: draw an arrow to this lane
+    Rows are drawn top-to-bottom in list order (time flows down).
+    NOTE: escape < > & in labels.
+    """
+    KIND = {
+        'run':    ('#d4f5d4', '#2f9e58', '#1a6b35'),
+        'signal': ('#d4e8f5', '#2f7e9e', '#1a4f6b'),
+        'wait':   ('#f5eed4', '#9e8e2f', '#6b5f1a'),
+        'block':  ('#f8d7da', '#c0392b', '#721c24'),
+    }
+    n = len(lanes)
+    idx = {name: i for i, name in enumerate(lanes)}
+    # widen the gutters so the widest event box (and the lane header) never clips
+    half = max([56] + [max(96, 9 * len(s.get('label', '')) + 22) // 2 for s in steps])
+    pad = max(pad, half + 24)
+    lane_gap = max(lane_gap, 2 * half + 16)
+    W = max(width, pad * 2 + lane_gap * max(n - 1, 1))
+    H = pad + 34 + row_h * len(steps) + pad
+    x_of = lambda i: pad + (lane_gap * i if n > 1 else (W - 2 * pad) // 2)
+
+    svg = [f'<svg width="{W}" height="{H}" viewBox="0 0 {W} {H}" '
+           f'xmlns="http://www.w3.org/2000/svg" font-family="Courier New, monospace">']
+    svg.append('<defs><marker id="tharrow" markerWidth="9" markerHeight="9" refX="7" refY="3" '
+               'orient="auto" markerUnits="strokeWidth">'
+               '<path d="M0,0 L7,3 L0,6 Z" fill="#2f7e9e"/></marker></defs>')
+    # lane headers + vertical lifelines
+    for i, name in enumerate(lanes):
+        x = x_of(i)
+        svg.append(f'<rect x="{x-56}" y="{pad-22}" width="112" height="26" rx="6" '
+                   f'fill="#1f2430"/>')
+        svg.append(f'<text x="{x}" y="{pad-4}" text-anchor="middle" font-size="12" '
+                   f'font-weight="700" fill="#fff">{name}</text>')
+        svg.append(f'<line x1="{x}" y1="{pad+8}" x2="{x}" y2="{H-pad+8}" '
+                   f'stroke="#c7ccd6" stroke-width="2" stroke-dasharray="4,4"/>')
+    # event rows
+    for r, st in enumerate(steps):
+        y = pad + 34 + r * row_h
+        i = idx[st['lane']]
+        x = x_of(i)
+        fill, border, text = KIND.get(st.get('kind', 'run'), KIND['run'])
+        label = st.get('label', '')
+        bw = max(96, 9 * len(label) + 22)
+        svg.append(f'<rect x="{x-bw//2}" y="{y}" width="{bw}" height="30" rx="7" '
+                   f'fill="{fill}" stroke="{border}" stroke-width="2"/>')
+        svg.append(f'<text x="{x}" y="{y+20}" text-anchor="middle" font-size="12.5" '
+                   f'font-weight="700" fill="{text}">{label}</text>')
+        if st.get('to') in idx:
+            j = idx[st['to']]
+            x2 = x_of(j)
+            sx = x + (bw // 2 + 4) * (1 if x2 > x else -1)
+            ex = x2 - 10 * (1 if x2 > x else -1)
+            svg.append(f'<line x1="{sx}" y1="{y+15}" x2="{ex}" y2="{y+15}" '
+                       f'stroke="#2f7e9e" stroke-width="2" marker-end="url(#tharrow)"/>')
+        svg.append(f'<text x="16" y="{y+20}" text-anchor="start" font-size="10" '
+                   f'fill="#999">{r+1}</text>')
     svg.append('</svg>')
     return ''.join(svg)

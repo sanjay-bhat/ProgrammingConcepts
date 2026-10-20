@@ -311,7 +311,8 @@ def tree_svg(root, node_w=58, node_h=34, x_gap=70, y_gap=78, pad=28):
         elif ok is False:
             fill, border, text = '#f8d7da', '#c0392b', '#721c24'
         elif 'accent' in node:
-            fill, border, text = color(node['accent'])
+            _a = node['accent']
+            fill, border, text = color(_a) if isinstance(_a, int) else _a
         else:
             fill, border, text = '#e8edf3', '#8792a6', '#1f2430'
         rx = node_h // 2 if leaf else 7

@@ -20,6 +20,7 @@ EXAMPLES_HEADING = '## Example Scenarios'
 # never silently fail, even though new work should use EXAMPLES_HEADING.
 EXAMPLES_HEADINGS = ('## Example Scenarios', '## Examples')
 NEWBIE_HEADING = "## Explain Like I'm a Newbie"
+INTERVIEW_HEADING = '## Talking It Through in an Interview'
 SOLUTIONS_HEADING = '## Solutions'
 IMAGE_ATTACHMENT = 'image.png'
 
@@ -65,6 +66,10 @@ def find_examples(nb):
 
 def find_newbie(nb):
     return find_by_heading(nb, NEWBIE_HEADING)
+
+
+def find_interview(nb):
+    return find_by_heading(nb, INTERVIEW_HEADING)
 
 
 def find_solutions(nb):
@@ -123,6 +128,20 @@ def get_infographic(nb):
     return base64.b64decode(att['image/png']) if att else None
 
 
+def upsert_interview(nb, markdown):
+    """Insert (or replace) the interview section just before '## Solutions'."""
+    i = find_interview(nb)
+    if i is not None:
+        _set_text(nb['cells'][i], markdown)
+        return i
+    at = find_solutions(nb)
+    if at is None:
+        at = len(nb['cells'])
+    nb['cells'].insert(at, {'cell_type': 'markdown', 'metadata': {},
+                            'source': markdown.splitlines(keepends=True)})
+    return at
+
+
 def upsert_newbie(nb, markdown):
     """Insert (or replace) the newbie section just before '## Solutions'."""
     i = find_newbie(nb)
@@ -147,6 +166,7 @@ def audit(nb):
         'examples_at': ex,
         'infographic_at': ig,
         'newbie_at': find_newbie(nb),
+        'interview_at': find_interview(nb),
         'scenario_headings': c9.count('### '),
         'has_image': ig is not None and IMAGE_ATTACHMENT in (nb['cells'][ig].get('attachments') or {}),
         'code_cells': len(code_cells(nb)),

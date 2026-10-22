@@ -12,20 +12,21 @@ Kernel: `.NET (C#)` — all notebooks use the .NET Interactive C# kernel.
 |-------|----------|------------------------------------|
 | 1     | markdown | Title, URL, complexity table, methodology |
 | 2     | markdown | `## Explain Like I'm a Newbie` *(only where it earns its place — see below)* |
-| 3     | markdown | `## Solutions` header + `### C#`   |
-| 4     | code     | C# solution                        |
-| 5     | markdown | `### Python`                       |
-| 6     | code     | Python solution                    |
-| 7     | markdown | `### Go`                           |
-| 8     | code     | Go solution                        |
-| 9     | markdown | `### Rust`                         |
-| 10    | code     | Rust solution                      |
-| 11    | markdown | `## Example Scenarios` (5 examples) |
-| 12    | markdown | Infographic image attachment       |
+| 3     | markdown | `## Talking It Through in an Interview` |
+| 4     | markdown | `## Solutions` header + `### C#`   |
+| 5     | code     | C# solution                        |
+| 6     | markdown | `### Python`                       |
+| 7     | code     | Python solution                    |
+| 8     | markdown | `### Go`                           |
+| 9     | code     | Go solution                        |
+| 10    | markdown | `### Rust`                         |
+| 11    | code     | Rust solution                      |
+| 12    | markdown | `## Example Scenarios` (5 examples) |
+| 13    | markdown | Infographic image attachment       |
 
 ### Never address cells by index ★
 
-The newbie section is optional, so a notebook is **11 or 12 cells** and the
+The newbie section is optional, so a notebook is **12 or 13 cells** and the
 examples/infographic sit at different indices in each. Code that hardcodes
 "cell 9" and "cell 10" silently edits the wrong cell.
 
@@ -39,10 +40,36 @@ nb = nbcells.load('leetcode/0200.ipynb')
 nbcells.set_examples(nb, markdown)          # finds '## Example Scenarios'
 nbcells.set_infographic(nb, png_bytes)      # finds the image cell, embeds base64
 nbcells.upsert_newbie(nb, markdown)         # inserts/replaces before '## Solutions'
+nbcells.upsert_interview(nb, markdown)      # same, for the interview section
 nbcells.save(nb, 'leetcode/0200.ipynb')     # indent=1 + trailing newline
 
 nbcells.audit(nb)   # {'cells', 'examples_at', 'infographic_at', 'newbie_at', ...}
 ```
+
+---
+
+## House style: plain language everywhere ★
+
+These notebooks exist to be understood on the fly. A notebook the reader can't
+follow has failed, however correct it is. So the plain-language treatment is
+not one optional section — it applies to the whole file:
+
+| Part | Scope |
+| :--- | :--- |
+| Header | **every** notebook — never leave a term unexplained |
+| `Explain Like I'm a Newbie` | only where there's a genuine "aha" |
+| `Talking It Through in an Interview` | **every** notebook |
+| Code comments | **every** notebook |
+| Example scenarios | **every** notebook |
+
+Unpack jargon rather than assuming it. Don't leave $O(m \times n)$ bare — say
+it means "the work grows with the number of squares", and that a 300×300 grid
+is about 90,000 steps. Don't leave $\alpha$ sitting in a table — say it is
+under 5 for any input you could physically store. Introduce a technique's name
+*after* its idea, as a label for something already explained.
+
+Only the dedicated newbie section is selective. Everything else is just
+writing clearly, which costs little and always helps.
 
 ---
 
@@ -103,6 +130,23 @@ Keep descriptions concise — an entry-level developer should understand them wi
 - Comments explain the *why*, not the *what* — e.g., "Calculate the complement needed to hit the target" not "subtract nums[i] from target".
 - Use each language's idiomatic naming conventions (PascalCase for C#, snake_case for Python/Rust, camelCase for Go).
 
+### Comment for a reader who doesn't know the technique
+
+Comment the handful of places where the logic turns, and say what breaks
+otherwise — not every line. For #200 that's three: why any `1` the sweep finds
+must be a new island, why the square is marked **before** recursing (recurse
+first and two neighbours call each other forever), and what the guard covers.
+Label mechanical things inline where it's free (`// down`, `// up`).
+
+Add a one-line note under a `### Language` heading only where the *language*
+is the confusing part, not the algorithm — Python's nested closure, Go's
+forward-declared `var dfs func`, Rust's `i32` coordinates (`usize` would
+underflow at −1). Skip it when there's nothing language-specific to say.
+
+**Never change behaviour while commenting.** Re-run the Python cell against a
+reference implementation afterwards; adding comments to working code is an
+easy way to introduce a typo.
+
 ---
 
 ## "Explain Like I'm a Newbie" (optional section)
@@ -142,6 +186,52 @@ Rules:
   this repo by accident, and undermine trust in the prose.
 - Write it so someone who has never seen the technique can follow it, without
   ever talking down to them.
+
+---
+
+## "Talking It Through in an Interview" (every notebook)
+
+Sits between the newbie section and `## Solutions`. It is **written from the
+interviewer's chair** — not as advice to the candidate. The difference is the
+whole point of the section:
+
+> ✗ *"Ask a clarifying question that shows you read the problem."*
+> ✓ *"That question is the one I'm listening for. It changes the answer, and it
+>    tells me you looked at the actual problem instead of pattern-matching."*
+
+Write it as a running dialogue from the moment the problem is handed over to
+the finished whiteboard. The reader's lines appear as block quotes; the
+interviewer's reasoning sits between them, in first person.
+
+**The arc** (skip any beat the problem doesn't support):
+
+1. **The 30-second pitch** up front — the destination, what they should end up
+   able to say out loud. End it pointing at the solution's own weakness.
+2. **I slide the problem across** — reading time is fine; the restatement; the
+   one or two clarifiers that genuinely change something, *with the
+   interviewer's answers written in*.
+3. **Name the hard part before naming a technique.** The highest-signal moment
+   in the interview. Opening with "I'll use DFS" teaches the interviewer
+   nothing; "a 2×2 block would get counted four times" proves understanding.
+   The technique must fall out of the difficulty, not precede it.
+4. **The shape of the code, and the cost derived rather than announced.**
+   Anyone can say O(n); the section must show the reasoning that survives the
+   follow-up.
+5. **Whiteboard it in order**, with the one sentence worth saying at each line
+   that could have gone wrong — and state the question the interviewer will ask
+   if that sentence is missing.
+6. **Dry-run it** on a concrete input before handing the pen back, tying an
+   edge case back to the clarifier asked at the start.
+7. **Volunteer the breaking point** before being asked.
+8. **What would worry me** — the anti-patterns, briefly.
+
+**Rules:**
+- Every quote must be specific to this problem. Generic lines ("can the input
+  be null?") appear only as examples of what *not* to say.
+- Include the interviewer's replies, so it reads as a conversation.
+- Be honest about where the posted solution breaks. If it has no real
+  weakness, say that instead of inventing one.
+- No pacing tables, no numbered "tips". If it reads like a listicle, rewrite it.
 
 ---
 

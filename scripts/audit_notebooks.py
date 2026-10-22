@@ -17,6 +17,15 @@ Checks, and why each exists:
                      key existed. Never check a key's presence as a proxy for
                      its content.
   no_infographic     No infographic cell at all.
+  clipped_infographic  Real content runs into the image's bottom edge — the
+                     signature of a render whose window was too short. Chrome
+                     truncates silently; #206 lost scenario 5 this way.
+                     Verified against all 81 hits: every one ends inside an
+                     unclosed white card (71 cut through content, 10 cut only
+                     the card's bottom padding), so no false positives.
+  fail_box_check     Contains a red failure box, which every image rendered
+                     before the card() fix labels with a green "✔". Fixing the
+                     library only helps new renders; these need regenerating.
   no_examples        No '## Example Scenarios' cell.
   wrong_scenarios    Not exactly 5 '### ' scenario headings.
   no_interview       Missing '## Talking It Through in an Interview'.
@@ -32,6 +41,9 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import nbcells  # noqa: E402
+import infographic_lib  # noqa: E402
+
+FAIL_BG = (248, 215, 218)   # .result-fail background, #f8d7da
 
 # "wait" only counts as an aside when used as an interjection — adjacent to a
 # dash, ellipsis or question mark. Concurrency notebooks legitimately contain
@@ -44,8 +56,27 @@ ASIDE = re.compile(
     r"|\bno[,:]? (?:wait|that's wrong)",
     re.I)
 
-CHECKS = ['empty_infographic', 'no_infographic', 'no_examples', 'wrong_scenarios',
+CHECKS = ['empty_infographic', 'no_infographic', 'clipped_infographic', 'fail_box_check', 'no_examples', 'wrong_scenarios',
           'no_interview', 'few_code_cells', 'aside']
+
+
+def has_fail_box(png, min_px=400, tol=4):
+    """True if the image contains a red failure-result box."""
+    import io
+    from PIL import Image
+    im = Image.open(io.BytesIO(png)).convert('RGB')
+    w, h = im.size
+    px = im.load()
+    hits = 0
+    for y in range(0, h, 3):
+        for x in range(0, w, 3):
+            r, g, b = px[x, y]
+            if (abs(r - FAIL_BG[0]) <= tol and abs(g - FAIL_BG[1]) <= tol
+                    and abs(b - FAIL_BG[2]) <= tol):
+                hits += 1
+                if hits >= min_px:
+                    return True
+    return False
 
 
 def inspect(path):
@@ -57,9 +88,16 @@ def inspect(path):
     ig = nbcells.find_infographic(nb)
     if ig is None:
         bad.add('no_infographic')
-    elif nbcells.get_infographic(nb) is None:
-        # cell and key exist, payload does not
-        bad.add('empty_infographic')
+    else:
+        png = nbcells.get_infographic(nb)
+        if png is None:
+            # cell and key exist, payload does not
+            bad.add('empty_infographic')
+        else:
+            if infographic_lib.is_clipped(png):
+                bad.add('clipped_infographic')
+            if has_fail_box(png):
+                bad.add('fail_box_check')
 
     ex = nbcells.find_examples(nb)
     if ex is None:

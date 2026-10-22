@@ -586,10 +586,12 @@ class GraphView(View):
         names:  {id: text} text drawn inside the node instead of the id, so one
                 value can appear twice (e.g. the input graph beside a union-find
                 forest, with ids ('f', 3) shown as 3)
+        split:  with directed=True, draw u->v and v->u side by side instead of on
+                top of each other (round trips, two-way tickets)
     """
 
     def __init__(self, nodes, edges, directed=False, styles=None, edge_styles=None,
-                 labels=None, rings=(), height=None, names=None):
+                 labels=None, rings=(), height=None, names=None, split=False):
         if isinstance(nodes, (list, tuple)):
             k = len(nodes)
             nodes = {v: (0.5 + 0.42 * math.cos(2 * math.pi * i / k - math.pi / 2),
@@ -599,6 +601,7 @@ class GraphView(View):
         self.styles, self.edge_styles = styles or {}, edge_styles or {}
         self.labels, self.rings, self.height = labels or {}, rings, height
         self.names = names or {}
+        self.split = split
 
     def draw(self, p, box):
         x0, y0, x1, y1 = box
@@ -612,7 +615,12 @@ class GraphView(View):
             st = self.edge_styles.get((u, v)) or (None if self.directed else self.edge_styles.get((v, u)))
             col = style(st)[1] if st else '#9aa3b2'
             w = 4.5 if st else 2.5
-            if self.directed:
+            if self.directed and self.split and any(f[0] == v and f[1] == u for f in self.edges):
+                (xa, ya), (xb, yb) = pos[u], pos[v]
+                d = math.hypot(xb - xa, yb - ya) or 1
+                ox, oy = -(yb - ya) / d * 7, (xb - xa) / d * 7      # shift to this edge's own side
+                p.arrow((xa + ox, ya + oy), (xb + ox, yb + oy), col, w, 11, shorten=r + 2)
+            elif self.directed:
                 p.arrow(pos[u], pos[v], col, w, 11, shorten=r + 2)
             else:
                 p.line([pos[u], pos[v]], col, w)

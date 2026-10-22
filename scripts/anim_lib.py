@@ -428,23 +428,31 @@ class ListView(View):
                   drawn as arcs UNDER the row; i == j draws a small self-loop
     Arrows to i+1 are straight, to i-1 are drawn under the row, others arc above.
     With null=False a None in nxt draws no arrow at all (nodes not linked yet).
+        title:    optional label at the left (e.g. 'list 0')
+        room:     space kept above the row for arcs (default 46; ~8 for plain chains)
     """
 
     EXTRA = '#7e2f9e'
 
-    def __init__(self, values, nxt=None, styles=None, pointers=None, cut=(), null=True, extra=()):
+    def __init__(self, values, nxt=None, styles=None, pointers=None, cut=(), null=True, extra=(),
+                 title=None, room=46):
         self.values = values
         self.nxt = nxt if nxt is not None else [i + 1 if i + 1 < len(values) else None for i in range(len(values))]
         self.styles, self.pointers, self.cut, self.null = styles or {}, pointers or {}, set(cut), null
         self.extra = list(extra)
+        self.title, self.room = title, room
 
     def draw(self, p, box):
         x0, y0, x1, _ = box
         n = len(self.values)
-        slots = n + (1 if self.null else 0)
-        size = int(min(58, (x1 - x0) / (slots * 1.75)))
+        slots = max(1, n + (1 if self.null else 0))
+        tw = (p.width(self.title, 'monob', 15) + 14) if self.title else 0
+        size = int(min(58, (x1 - x0 - tw) / (slots * 1.75)))
         gap = int(size * 0.75)
-        top = y0 + 46
+        top = y0 + self.room
+        if self.title:
+            p.text((x0, top + size / 2), self.title, 'monob', 15, MUTED, 'lm')
+            x0 += tw
         at = lambda i: x0 + i * (size + gap)
         nullx = at(n)
         for i, v in enumerate(self.values):
@@ -490,7 +498,7 @@ class ListView(View):
             p.d.polygon([(cx * S, yy * S), ((cx - 6) * S, (yy + 9) * S), ((cx + 6) * S, (yy + 9) * S)], fill=ACTIVE)
             p.text((cx, yy + 17), name, 'monob', 13, ACTIVE, 'mm')
         deepest = max(stacks.values()) if stacks else 0
-        self.used = int(46 + size + 12 + drop + deepest * 22)
+        self.used = int(self.room + size + 12 + drop + deepest * 22)
 
 
 class TreeView(View):

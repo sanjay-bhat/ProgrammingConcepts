@@ -24,6 +24,22 @@ Kernel: `.NET (C#)` — all notebooks use the .NET Interactive C# kernel.
 | 12    | markdown | `## Example Scenarios` (5 examples) |
 | 13    | markdown | Infographic image attachment       |
 
+### Check the collection with the audit, not by eye ★
+
+```bash
+python3 scripts/audit_notebooks.py            # summary of what's outstanding
+python3 scripts/audit_notebooks.py --list     # with the notebook numbers
+```
+
+This is the source of truth for remaining work — don't keep a hand-written
+backlog, it goes stale.
+
+It exists because of a real failure: for weeks the retrofit was reported
+"555 of 569 complete" while **165 notebooks rendered a broken image**. Their
+`image.png` attachment was present but its payload was an empty string, and
+the verification only asked whether the key existed. **Never check a key's
+presence as a proxy for its content.**
+
 ### Never address cells by index ★
 
 The newbie section is optional, so a notebook is **12 or 13 cells** and the

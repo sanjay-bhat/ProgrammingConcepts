@@ -120,12 +120,23 @@ def set_infographic(nb, png_bytes):
 
 
 def get_infographic(nb):
-    """Raw PNG bytes of the embedded infographic, or None."""
+    """Raw PNG bytes of the embedded infographic, or None.
+
+    An attachment whose payload is empty counts as MISSING. 165 notebooks
+    shipped with `{'image.png': {'image/png': ''}}` — the key present but no
+    data, so they render a broken image. Checking only for the key's presence
+    reported those as complete for weeks; always check the payload.
+    """
     i = find_infographic(nb)
     if i is None:
         return None
     att = (nb['cells'][i].get('attachments') or {}).get(IMAGE_ATTACHMENT)
-    return base64.b64decode(att['image/png']) if att else None
+    if not att:
+        return None
+    data = att.get('image/png') or ''
+    if not data.strip():
+        return None
+    return base64.b64decode(data)
 
 
 def upsert_interview(nb, markdown):
@@ -168,6 +179,6 @@ def audit(nb):
         'newbie_at': find_newbie(nb),
         'interview_at': find_interview(nb),
         'scenario_headings': c9.count('### '),
-        'has_image': ig is not None and IMAGE_ATTACHMENT in (nb['cells'][ig].get('attachments') or {}),
+        'has_image': get_infographic(nb) is not None,
         'code_cells': len(code_cells(nb)),
     }

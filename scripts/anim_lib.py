@@ -270,13 +270,16 @@ class ArrayView(View):
                   pointers on one index stack downward
         window:   (lo, hi) inclusive -> a bracket under the range
         title:    optional label at the left (e.g. 'nums')
+        cuts:     [i, ...] -> a divider drawn just before cell i (i == len(values)
+                  means after the last cell): partitions, split points
     """
 
     def __init__(self, values, styles=None, pointers=None, window=None, title=None,
-                 indices=True, subs=None, cell=None):
+                 indices=True, subs=None, cell=None, cuts=()):
         self.values, self.styles = values, styles or {}
         self.pointers, self.window, self.title = pointers or {}, window, title
         self.indices, self.subs, self.cell = indices, subs or {}, cell
+        self.cuts = cuts
 
     def draw(self, p, box):
         x0, y0, x1, _ = box
@@ -295,6 +298,9 @@ class ArrayView(View):
                 p.text((x + size / 2, y0 + 6), i, 'sans', 12, MUTED, 'mm')
             _cell(p, (x, top, x + size, top + size), self.styles.get(i, 'plain'),
                   '' if v is None else v, self.subs.get(i, ''))
+        for i in self.cuts:
+            cx = at(i) - gap / 2
+            p.line([(cx, top - 8), (cx, top + size + 8)], ACTIVE, 4)
         y = top + size + 6
         if self.window:
             lo, hi = self.window

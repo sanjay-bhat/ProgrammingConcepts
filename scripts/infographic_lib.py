@@ -57,7 +57,7 @@ h1 {{ text-align:center; font-size:26px; color:#1f2430; margin-bottom:8px; font-
 .card-title {{ font-size:18px; font-weight:700; color:#1f2430; margin-bottom:6px; }}
 .card-subtitle {{ font-size:13px; color:#666; margin-bottom:16px; font-style:italic; }}
 .input-line {{ font-family:'Courier New',monospace; font-size:13px; background:#f4f5f7; padding:8px 12px; border-radius:6px; margin-bottom:20px; color:#333; }}
-.body-center {{ display:flex; justify-content:center; margin-bottom:18px; flex-wrap:wrap; gap:24px; }}
+.body-center {{ display:flex; justify-content:center; align-items:flex-start; margin-bottom:18px; flex-wrap:wrap; gap:24px; }}
 .note {{ font-size:13px; color:#666; font-style:italic; margin-bottom:12px; text-align:center; max-width:820px; margin:0 auto 12px; }}
 .result-box {{ display:block; width:fit-content; margin:0 auto; padding:8px 20px; border-radius:8px; font-weight:700; font-size:15px; }}
 .result-success {{ background:#d4edda; color:#155724; border:1px solid #c3e6cb; }}
@@ -129,10 +129,25 @@ table.mtx td.bb {{ border-bottom:3px solid #1f2430; }}
 </body></html>'''
 
 
+# The icon must match the box. card() used to hard-code a green check into
+# every result, so red failure boxes read "✔ Output: false" — in 400+ notebooks.
+RESULT_ICON = {'success': '&#10004;',   # ✔
+               'fail':    '&#10008;',   # ✘
+               'info':    '&#8594;'}    # →
+
+
 def card(title, subtitle, input_line, body, result=None, note=None):
     rtype, rtext = result if result else ("info", "")
+    if rtype not in RESULT_ICON:
+        raise ValueError(f"result type must be one of {sorted(RESULT_ICON)}, got {rtype!r}")
+    # callers sometimes pass their own glyph; drop it so we never print two
+    rtext = rtext.lstrip()
+    for g in ('✔', '✘', '✓', '✗', '&#10004;', '&#10008;', '&#10003;', '&#10007;'):
+        if rtext.startswith(g):
+            rtext = rtext[len(g):].lstrip()
     note_html = f'<div class="note">{note}</div>' if note else ''
-    res_html = f'<div class="result-box result-{rtype}">&#10004; {rtext}</div>' if result else ''
+    res_html = (f'<div class="result-box result-{rtype}">{RESULT_ICON[rtype]} {rtext}</div>'
+                if result else '')
     return f'''<div class="card">
 <div class="card-title">{title}</div>
 <div class="card-subtitle">{subtitle}</div>
@@ -549,3 +564,74 @@ def threads(lanes, steps, width=860, lane_gap=150, row_h=46, pad=40):
                    f'fill="#999">{r+1}</text>')
     svg.append('</svg>')
     return ''.join(svg)
+
+
+# ---------------------------------------------------------------- render
+CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+PAGE_BG = (238, 241, 245)   # #eef1f5, the body background
+
+
+def _last_content_row(im, tol=6):
+    """Index of the lowest pixel row that isn't plain page background."""
+    w, h = im.size
+    px = im.load()
+    step = max(1, w // 256)
+    for y in range(h - 1, -1, -1):
+        for x in range(0, w, step):
+            r, g, b = px[x, y][:3]
+            if (abs(r - PAGE_BG[0]) > tol or abs(g - PAGE_BG[1]) > tol
+                    or abs(b - PAGE_BG[2]) > tol):
+                return y
+    return -1
+
+
+def render_png(html_path, png_path, width=1024, scale=2, start_height=4000,
+               max_height=40000, margin=48):
+    """Render HTML to PNG without ever truncating it.
+
+    Chrome's --screenshot captures exactly --window-size and silently drops
+    anything below. #206 shipped with scenario 4 cut mid-card and scenario 5
+    missing because the height was guessed short. This renders into an
+    oversized window, re-renders taller if content reaches the bottom edge,
+    then crops to the last real row plus a margin.
+
+    Returns (width_px, height_px) of the saved image.
+    """
+    import os
+    import subprocess
+    import tempfile
+    from PIL import Image
+
+    url = 'file://' + os.path.abspath(html_path)
+    height = start_height
+    while True:
+        with tempfile.NamedTemporaryFile(suffix='.png', delete=False) as tmp:
+            raw = tmp.name
+        subprocess.run(
+            [CHROME, '--headless=new', '--disable-gpu', '--hide-scrollbars', '--no-sandbox',
+             '--virtual-time-budget=3000', '--run-all-compositor-stages-before-draw',
+             f'--screenshot={raw}', f'--window-size={width},{height}',
+             f'--force-device-scale-factor={scale}', url],
+            capture_output=True, check=False)
+        im = Image.open(raw).convert('RGB')
+        last = _last_content_row(im)
+        # content touching the bottom means the window was too short: grow it
+        if last >= im.size[1] - 4 and height < max_height:
+            os.unlink(raw)
+            height = min(height * 2, max_height)
+            continue
+        if last >= im.size[1] - 4:
+            os.unlink(raw)
+            raise RuntimeError(f'{html_path}: content still taller than {max_height}px')
+        crop_to = min(im.size[1], last + 1 + margin * scale)
+        im.crop((0, 0, im.size[0], crop_to)).save(png_path)
+        os.unlink(raw)
+        return im.size[0], crop_to
+
+
+def is_clipped(png_bytes, band=20, tol=6):
+    """True if real content runs into the bottom edge — the truncation signature."""
+    import io
+    from PIL import Image
+    im = Image.open(io.BytesIO(png_bytes)).convert('RGB')
+    return _last_content_row(im, tol) >= im.size[1] - band

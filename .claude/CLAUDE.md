@@ -157,7 +157,9 @@ Label mechanical things inline where it's free (`// down`, `// up`).
 Add a one-line note under a `### Language` heading only where the *language*
 is the confusing part, not the algorithm — Python's nested closure, Go's
 forward-declared `var dfs func`, Rust's `i32` coordinates (`usize` would
-underflow at −1). Skip it when there's nothing language-specific to say.
+underflow at −1). Skip it when there's nothing language-specific to say. A
+missing note is a deliberate decision, not a gap to fill. Don't add "Python
+uses a dict here" to make the four sections look symmetrical.
 
 **Never change behaviour while commenting.** Re-run the Python cell against a
 reference implementation afterwards; adding comments to working code is an
@@ -178,6 +180,12 @@ click?"** Two Sum passes (the complement flip, and why you check before you
 record). XOR Operation in an Array does not. Padding easy problems trains the
 reader to skip the section everywhere.
 
+To make that call concretely, ask: **is there a wrong implementation that
+passes the sample input?** If yes, there's a trap a newbie will fall into and
+the section has a job (Binary Search: `while lo < hi` passes both samples,
+then returns -1 for `nums = [5], target = 5`). If the only way to get it wrong
+is to misread the question, skip the section.
+
 Structure, in this order — skip any part that has nothing to say:
 
 1. **What the question is actually asking** — restate it concretely, with a
@@ -193,8 +201,13 @@ Structure, in this order — skip any part that has nothing to say:
    depth, overflow).
 
 Rules:
-- Length scales with difficulty: roughly 350-500 words, more only if the
-  concept genuinely needs it.
+- Length follows the difficulty band in the table below. Check it with
+  `python3 scripts/wordcount.py N`; never let an Easy run longer than a Medium.
+- **Data-structure primer allowance.** When the problem rests on a structure
+  the reader may never have built (the doubly linked list inside LRU Cache, a
+  trie, a monotonic deque), open with a short `### Primer: <structure>` of up
+  to 150 words. It sits outside the band, and the counter allows for it
+  automatically.
 - Don't re-trace what the infographic already shows — the picture does step
   tables better. The unique value here is framing and mistakes.
 - **No rhetorical self-corrections** ("you need a 4… no, you need 2"). They are
@@ -238,8 +251,22 @@ interviewer's reasoning sits between them, in first person.
    if that sentence is missing.
 6. **Dry-run it** on a concrete input before handing the pen back, tying an
    edge case back to the clarifier asked at the start.
-7. **Volunteer the breaking point** before being asked.
+7. **Volunteer the breaking point** before being asked. When the solution
+   is already optimal and nothing breaks, this beat doesn't disappear; it
+   becomes one of these, whichever is true:
+   - **The assumption it leans on**: "this relies on the list being sorted;
+     unsorted, binary search returns garbage, not an error."
+   - **The contract cost**: "I'm mutating your grid; if you need it back
+     that's an extra O(m×n)."
+   - **How it generalises**: "if 'k' were 3 instead of 2, the same trick
+     needs a hash map instead of two pointers."
 8. **What would worry me** — the anti-patterns, briefly.
+
+**Design problems** (LRU Cache, Min Stack, Trie, iterators): whiteboard the
+**structures before the methods**. Draw the fields and how they point at each
+other, say why each one is there ("the map gives me O(1) lookup, the list gives
+me O(1) eviction order"), and only then write `get`/`put`. Methods written
+before the structure is agreed get rewritten.
 
 **Rules:**
 - Every quote must be specific to this problem. Generic lines ("can the input
@@ -248,6 +275,23 @@ interviewer's reasoning sits between them, in first person.
 - Be honest about where the posted solution breaks. If it has no real
   weakness, say that instead of inventing one.
 - No pacing tables, no numbered "tips". If it reads like a listicle, rewrite it.
+- Use contractions. An interviewer says "I'd", "you're", "that's".
+
+### Length bands ★
+
+The pilot ran Two Sum (Easy) longer than Number of Islands (Medium), the wrong
+way round. The bands below are word counts of prose: code fences don't count.
+Check with `python3 scripts/wordcount.py N` (difficulty comes from
+`tracker.html`). The bands in that script must match this table.
+
+| Difficulty | Newbie   | Interview  |
+|------------|----------|------------|
+| Easy       | 300–450  | 800–1100   |
+| Medium     | 350–500  | 1000–1500  |
+| Hard       | 450–650  | 1200–1800  |
+
+`#200` (Medium, ~1450) is the reference. Overrunning a band means something
+is being said twice. Find it and cut it; don't trim sentences evenly.
 
 ---
 
@@ -262,6 +306,12 @@ Exactly **5 examples**, each with `**Input:**` and a short walkthrough:
 5. **Almost-Impossible but Plausible** — extreme boundary values, overflow-adjacent, near-miss decoys
 
 Each walkthrough should be 1-2 sentences. Use LaTeX for math notation (`$O(n)$`, `$\approx$`, `$\pm$`).
+
+Keep the slot label at the start of each heading and put the specifics after
+it: `### 3. Edge Case: Time Factor — Single Row`, not `### 3. Edge Case: Single
+Row`. The audit's `scenario_labels` check enforces this. A slot relabelled to
+describe its input is usually one whose input isn't actually the worst case
+for time or space. Fix the input, not just the label.
 
 ---
 
@@ -300,21 +350,20 @@ large grids by hand tends to stall the agent).
    - Example title and input line (monospace)
    - The structure visualization (2D grid / tree / graph / chain / timeline / array as appropriate)
    - A step indicator where it helps (trace table, running counter, or numbered traversal order)
-   - Result box (green checkmark for success, red X / blue info for other outcomes)
+   - Result box: pass `result=('success'|'fail'|'info', text)` to
+     `infographic_lib.card()`. It adds the ✔ / ✘ / → itself, so don't put a
+     glyph in the text. Before this was enforced, 119 images shipped with a
+     green ✔ on a red failure box.
    - Optional note for non-obvious behavior
 
 2. **Preview in browser** to verify layout — use `preview_start` with a local HTTP server, check for overlaps, truncated text, or misaligned elements.
 
-3. **Render to PNG** via headless Chrome:
-   ```bash
-   "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
-     --headless=new --disable-gpu --hide-scrollbars \
-     --screenshot="NNNN_final.png" \
-     --window-size=1024,<content_height> \
-     --force-device-scale-factor=2 \
-     "file:///path/to/NNNN_infographic.html"
-   ```
-   Measure `<content_height>` from the rendered page (`.card` bounding rect height + ~56px margin).
+3. **Render to PNG** with `infographic_lib.render_png(html_path, png_path)`.
+   **Never call Chrome with a guessed `--window-size`.** Chrome silently drops
+   everything below the window, and 81 images shipped cut off that way.
+   `render_png` renders into an oversized window, grows until the content
+   stops short of the bottom, and crops to the content plus a margin.
+   Afterwards `infographic_lib.is_clipped(png_bytes)` must be False.
 
 4. **Embed into notebook** by base64-encoding the PNG and writing it into the last cell's `attachments.image.png.image/png` field in the notebook JSON.
 

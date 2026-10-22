@@ -28,6 +28,10 @@ Checks, and why each exists:
                      library only helps new renders; these need regenerating.
   no_examples        No '## Example Scenarios' cell.
   wrong_scenarios    Not exactly 5 '### ' scenario headings.
+  scenario_labels    The 5 headings don't follow the slot order (Common Case,
+                     Slightly Complex, Edge Case: Time Factor, Edge Case:
+                     Space Factor, Almost-Impossible). A relabelled slot
+                     usually means the Time/Space worst case was never written.
   no_interview       Missing '## Talking It Through in an Interview'.
   few_code_cells     Fewer than 4 code cells (C#, Python, Go, Rust).
   aside              Prose contains an unresolved mid-edit aside ("wait,
@@ -56,8 +60,13 @@ ASIDE = re.compile(
     r"|\bno[,:]? (?:wait|that's wrong)",
     re.I)
 
+# Each scenario heading must open with its slot's label (an optional "3." is fine).
+SLOT_LABELS = [re.compile(r'(?:\d+[.)]\s*)?' + label, re.I) for label in
+               ('Common Case', 'Slightly Complex', 'Edge Case: Time',
+                'Edge Case: Space', 'Almost')]
+
 CHECKS = ['empty_infographic', 'no_infographic', 'clipped_infographic', 'fail_box_check', 'no_examples', 'wrong_scenarios',
-          'no_interview', 'few_code_cells', 'aside']
+          'scenario_labels', 'no_interview', 'few_code_cells', 'aside']
 
 
 def has_fail_box(png, min_px=400, tol=4):
@@ -102,8 +111,12 @@ def inspect(path):
     ex = nbcells.find_examples(nb)
     if ex is None:
         bad.add('no_examples')
-    elif nbcells.text(cells[ex]).count('### ') != 5:
-        bad.add('wrong_scenarios')
+    else:
+        heads = re.findall(r'^### (.*)$', nbcells.text(cells[ex]), re.M)
+        if len(heads) != 5:
+            bad.add('wrong_scenarios')
+        elif not all(r.match(h) for r, h in zip(SLOT_LABELS, heads)):
+            bad.add('scenario_labels')
 
     if nbcells.find_interview(nb) is None:
         bad.add('no_interview')

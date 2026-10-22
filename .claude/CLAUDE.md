@@ -8,19 +8,41 @@ Kernel: `.NET (C#)` — all notebooks use the .NET Interactive C# kernel.
 
 ### Cell Layout
 
-| Cell | Type     | Content                            |
-|------|----------|------------------------------------|
-| 0    | markdown | Title, URL, complexity table, methodology |
-| 1    | markdown | `## Solutions` header + `### C#`   |
-| 2    | code     | C# solution                        |
-| 3    | markdown | `### Python`                       |
-| 4    | code     | Python solution                    |
-| 5    | markdown | `### Go`                           |
-| 6    | code     | Go solution                        |
-| 7    | markdown | `### Rust`                         |
-| 8    | code     | Rust solution                      |
-| 9    | markdown | Example scenarios (5 examples)     |
-| 10   | markdown | Infographic image attachment       |
+| Order | Type     | Content                            |
+|-------|----------|------------------------------------|
+| 1     | markdown | Title, URL, complexity table, methodology |
+| 2     | markdown | `## Explain Like I'm a Newbie` *(only where it earns its place — see below)* |
+| 3     | markdown | `## Solutions` header + `### C#`   |
+| 4     | code     | C# solution                        |
+| 5     | markdown | `### Python`                       |
+| 6     | code     | Python solution                    |
+| 7     | markdown | `### Go`                           |
+| 8     | code     | Go solution                        |
+| 9     | markdown | `### Rust`                         |
+| 10    | code     | Rust solution                      |
+| 11    | markdown | `## Example Scenarios` (5 examples) |
+| 12    | markdown | Infographic image attachment       |
+
+### Never address cells by index ★
+
+The newbie section is optional, so a notebook is **11 or 12 cells** and the
+examples/infographic sit at different indices in each. Code that hardcodes
+"cell 9" and "cell 10" silently edits the wrong cell.
+
+Use `scripts/nbcells.py`, which finds cells by content:
+
+```python
+import sys; sys.path.insert(0, 'scripts')
+import nbcells
+
+nb = nbcells.load('leetcode/0200.ipynb')
+nbcells.set_examples(nb, markdown)          # finds '## Example Scenarios'
+nbcells.set_infographic(nb, png_bytes)      # finds the image cell, embeds base64
+nbcells.upsert_newbie(nb, markdown)         # inserts/replaces before '## Solutions'
+nbcells.save(nb, 'leetcode/0200.ipynb')     # indent=1 + trailing newline
+
+nbcells.audit(nb)   # {'cells', 'examples_at', 'infographic_at', 'newbie_at', ...}
+```
 
 ---
 
@@ -80,6 +102,46 @@ Keep descriptions concise — an entry-level developer should understand them wi
 - All four languages use the **same comment structure** so the logic can be followed across languages.
 - Comments explain the *why*, not the *what* — e.g., "Calculate the complement needed to hit the target" not "subtract nums[i] from target".
 - Use each language's idiomatic naming conventions (PascalCase for C#, snake_case for Python/Rust, camelCase for Go).
+
+---
+
+## "Explain Like I'm a Newbie" (optional section)
+
+A plain-English bridge between the header and the code, for a reader who does
+not yet know the technique. It goes **before** `## Solutions` — that is where
+the gap is, since the header jumps straight from the title to a complexity
+table full of unexplained terms.
+
+**Only add it where it earns its place.** The test is not "is this problem
+hard?" but **"is there an idea here that the header states without making it
+click?"** Two Sum passes (the complement flip, and why you check before you
+record). XOR Operation in an Array does not. Padding easy problems trains the
+reader to skip the section everywhere.
+
+Structure, in this order — skip any part that has nothing to say:
+
+1. **What the question is actually asking** — restate it concretely, with a
+   tiny worked picture. No jargon.
+2. **The one idea you need** — name the real difficulty, then the insight that
+   dissolves it. An everyday analogy if an honest one exists (flood fill is the
+   paint-bucket tool), never a forced one.
+3. **What that means in code** — only here introduce the technique's name, and
+   call out any ordering that must be right (mark *before* you recurse).
+4. **Mistakes people make the first time** — a short numbered list of the
+   specific bugs this problem produces.
+5. **Things worth knowing** — honest caveats (mutating the input, recursion
+   depth, overflow).
+
+Rules:
+- Length scales with difficulty: roughly 350-500 words, more only if the
+  concept genuinely needs it.
+- Don't re-trace what the infographic already shows — the picture does step
+  tables better. The unique value here is framing and mistakes.
+- **No rhetorical self-corrections** ("you need a 4… no, you need 2"). They are
+  indistinguishable from the unresolved mid-edit asides that have shipped in
+  this repo by accident, and undermine trust in the prose.
+- Write it so someone who has never seen the technique can follow it, without
+  ever talking down to them.
 
 ---
 

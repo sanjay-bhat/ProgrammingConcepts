@@ -731,6 +731,54 @@ class TextView(View):
         self.used = y - y0
 
 
+class ChipsView(View):
+    """A titled collection of small labelled chips that wraps onto new lines:
+    the answers collected so far by a backtracking search, a set of words.
+        items: list of str or (str, style), in the order they were added
+        title: label above the chips; empty: text shown when there are none
+        max_rows: when the chips need more rows, only the newest rows are shown
+                  and a '+N earlier' note appears beside the title
+    """
+
+    def __init__(self, items, title=None, empty='(none yet)', size=15, max_rows=None):
+        self.items, self.title, self.empty = items, title, empty
+        self.size, self.max_rows = size, max_rows
+
+    def draw(self, p, box):
+        x0, y0, x1, _ = box
+        y = y0
+        if self.title:
+            p.text((x0, y + 8), self.title, 'bold', 16)
+            y += 26
+        h, gap = self.size + 18, 6
+        rows, row, w = [], [], 0
+        for it in self.items:
+            s, st = (it, None) if isinstance(it, str) else it
+            cw = max(36, p.width(s, 'monob', self.size) + 18)
+            if row and w + cw > x1 - x0:
+                rows.append(row); row, w = [], 0
+            row.append((s, st, cw)); w += cw + gap
+        if row:
+            rows.append(row)
+        hidden = 0
+        if self.max_rows and len(rows) > self.max_rows:
+            hidden = sum(len(r) for r in rows[:-self.max_rows])
+            rows = rows[-self.max_rows:]
+        if hidden and self.title:
+            p.text((x0 + p.width(self.title, 'bold', 16) + 12, y0 + 8), f'+{hidden} earlier',
+                   'sans', 12, MUTED)
+        if not self.items:
+            p.text((x0, y + h / 2), self.empty, 'sans', 14, MUTED, 'lm')
+            y += h + gap
+        for r in rows:
+            x = x0
+            for s, st, cw in r:
+                _cell(p, (x, y, x + cw, y + h), st or 'plain', s, size=self.size, lw=2)
+                x += cw + gap
+            y += h + gap
+        self.used = y - y0 - gap
+
+
 # ------------------------------------------------------------------ scene
 class Scene:
     """Collects frames. Layout per frame:

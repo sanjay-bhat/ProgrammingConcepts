@@ -583,10 +583,13 @@ class GraphView(View):
         directed: draw arrowheads
         styles: {id: style}; edge_styles: {(u, v): style}
         labels: {id: text} small tag under the node
+        names:  {id: text} text drawn inside the node instead of the id, so one
+                value can appear twice (e.g. the input graph beside a union-find
+                forest, with ids ('f', 3) shown as 3)
     """
 
     def __init__(self, nodes, edges, directed=False, styles=None, edge_styles=None,
-                 labels=None, rings=(), height=None):
+                 labels=None, rings=(), height=None, names=None):
         if isinstance(nodes, (list, tuple)):
             k = len(nodes)
             nodes = {v: (0.5 + 0.42 * math.cos(2 * math.pi * i / k - math.pi / 2),
@@ -595,6 +598,7 @@ class GraphView(View):
         self.nodes, self.edges, self.directed = nodes, edges, directed
         self.styles, self.edge_styles = styles or {}, edge_styles or {}
         self.labels, self.rings, self.height = labels or {}, rings, height
+        self.names = names or {}
 
     def draw(self, p, box):
         x0, y0, x1, y1 = box
@@ -620,7 +624,8 @@ class GraphView(View):
         for v, (x, y) in pos.items():
             fill, border, tc = style(self.styles.get(v, 'plain'))
             p.circle(x, y, r, fill, border, 3)
-            p.text((x, y), v, 'monob', p.fit(str(v), 'monob', 17, 2 * r - 6), tc, 'mm')
+            name = str(self.names.get(v, v))
+            p.text((x, y), name, 'monob', p.fit(name, 'monob', 17, 2 * r - 6), tc, 'mm')
             if v in self.labels:
                 p.text((x, y + r + 11), self.labels[v], 'bold', 12, ACTIVE, 'mm')
         for v, color in self.rings:

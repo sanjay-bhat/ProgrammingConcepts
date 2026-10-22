@@ -771,8 +771,9 @@ class DPTableView(TableView):
             if ln.get('label'):
                 t = str(ln['label'])
                 w = p.width(t, 'bold', 13) + 12
-                p.box((mx - w / 2, my - 10, mx + w / 2, my + 10), CARD, col, 2, 6)
-                p.text((mx, my), t, 'bold', 13, col, 'mm')
+                ly = my + (22 if ln.get('cross') else 0)     # keep the cross visible
+                p.box((mx - w / 2, ly - 10, mx + w / 2, ly + 10), CARD, col, 2, 6)
+                p.text((mx, ly), t, 'bold', 13, col, 'mm')
         for (r, c), color in self.rings:
             x, y = at(r, c)
             _ring(p, (x, y, x + size, y + size), color, 4, 3, 9)

@@ -713,12 +713,14 @@ class DPTableView(TableView):
         max_cell: largest cell size in px (TableView caps at 56; short rows read
                   better with bigger cells)
         font: value font size (default: scales with the cell)
+        gap: space between cells in px (wider gaps make arrows between
+             neighbouring cells easier to see)
     """
 
     def __init__(self, values, row_labels=None, col_labels=None, styles=None, rings=(),
-                 arrows=(), title=None, links=(), max_cell=56, font=None):
+                 arrows=(), title=None, links=(), max_cell=56, font=None, gap=4):
         super().__init__(values, row_labels, col_labels, styles, rings, arrows, title)
-        self.links, self.max_cell, self.font = links, max_cell, font
+        self.links, self.max_cell, self.font, self.gap = links, max_cell, font, gap
 
     def draw(self, p, box):
         x0, y0, x1, y1 = box
@@ -728,7 +730,7 @@ class DPTableView(TableView):
             p.text((x0, y0 + 8), self.title, 'bold', 16)
         lw = (max(p.width(s, 'monob', 14) for s in map(str, self.rl)) + 14) if self.rl else 0
         hh = 22 if self.cl else 0
-        gap = 4
+        gap = self.gap
         drop = max([-ln.get('lift', 0) for ln in self.links] + [0])
         size = int(min((x1 - x0 - lw - gap * (cols - 1)) / cols,
                        (y1 - y0 - ty - hh - drop // 2 - gap * (rows - 1)) / rows, self.max_cell))

@@ -23,6 +23,8 @@ NEWBIE_HEADING = "## Explain Like I'm a Newbie"
 INTERVIEW_HEADING = '## Talking It Through in an Interview'
 SOLUTIONS_HEADING = '## Solutions'
 IMAGE_ATTACHMENT = 'image.png'
+ANIMATION_HEADING = '## Watch It Run'
+ANIMATION_ATTACHMENT = 'walkthrough.gif'
 
 
 # ---------------------------------------------------------------- io
@@ -139,6 +141,42 @@ def get_infographic(nb):
     return base64.b64decode(data)
 
 
+def find_animation(nb):
+    return find_by_heading(nb, ANIMATION_HEADING)
+
+
+def set_animation(nb, gif_bytes, blurb):
+    """Embed the animated walkthrough as the last cell, after the infographic.
+
+    `blurb` is one plain-language sentence telling the reader what to watch
+    for (the moment the problem turns on), shown above the GIF.
+    """
+    src = (f'{ANIMATION_HEADING}\n\n*{blurb.strip()}*\n\n'
+           f'![walkthrough](attachment:{ANIMATION_ATTACHMENT})')
+    cell = {'cell_type': 'markdown', 'metadata': {},
+            'attachments': {ANIMATION_ATTACHMENT:
+                            {'image/gif': base64.b64encode(gif_bytes).decode('ascii')}},
+            'source': src.splitlines(keepends=True)}
+    i = find_animation(nb)
+    if i is not None:
+        nb['cells'][i] = cell
+        return i
+    at = find_infographic(nb)
+    at = len(nb['cells']) if at is None else at + 1
+    nb['cells'].insert(at, cell)
+    return at
+
+
+def get_animation(nb):
+    """Raw GIF bytes of the walkthrough, or None (empty payload counts as missing)."""
+    i = find_animation(nb)
+    if i is None:
+        return None
+    att = (nb['cells'][i].get('attachments') or {}).get(ANIMATION_ATTACHMENT) or {}
+    data = att.get('image/gif') or ''
+    return base64.b64decode(data) if data.strip() else None
+
+
 def upsert_interview(nb, markdown):
     """Insert (or replace) the interview section just before '## Solutions'."""
     i = find_interview(nb)
@@ -180,5 +218,6 @@ def audit(nb):
         'interview_at': find_interview(nb),
         'scenario_headings': c9.count('### '),
         'has_image': get_infographic(nb) is not None,
+        'has_animation': get_animation(nb) is not None,
         'code_cells': len(code_cells(nb)),
     }

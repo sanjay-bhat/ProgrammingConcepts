@@ -270,13 +270,16 @@ class ArrayView(View):
                   pointers on one index stack downward
         window:   (lo, hi) inclusive -> a bracket under the range
         title:    optional label at the left (e.g. 'nums')
+        cuts:     [i, ...] -> a divider drawn just before cell i (i == len(values)
+                  means after the last cell): partitions, split points
     """
 
     def __init__(self, values, styles=None, pointers=None, window=None, title=None,
-                 indices=True, subs=None, cell=None):
+                 indices=True, subs=None, cell=None, cuts=()):
         self.values, self.styles = values, styles or {}
         self.pointers, self.window, self.title = pointers or {}, window, title
         self.indices, self.subs, self.cell = indices, subs or {}, cell
+        self.cuts = cuts
 
     def draw(self, p, box):
         x0, y0, x1, _ = box
@@ -295,6 +298,9 @@ class ArrayView(View):
                 p.text((x + size / 2, y0 + 6), i, 'sans', 12, MUTED, 'mm')
             _cell(p, (x, top, x + size, top + size), self.styles.get(i, 'plain'),
                   '' if v is None else v, self.subs.get(i, ''))
+        for i in self.cuts:
+            cx = at(i) - gap / 2
+            p.line([(cx, top - 8), (cx, top + size + 8)], ACTIVE, 4)
         y = top + size + 6
         if self.window:
             lo, hi = self.window
@@ -418,21 +424,35 @@ class ListView(View):
         styles:   {i: style}
         pointers: {'prev': i, 'curr': j} labels under nodes; None index -> shown at 'null'
         cut:      set of i whose outgoing arrow is drawn faded (just broken)
+        extra:    [(i, j)] or [(i, j, color)] second pointers (random, child, skip)
+                  drawn as arcs UNDER the row; i == j draws a small self-loop
     Arrows to i+1 are straight, to i-1 are drawn under the row, others arc above.
+    With null=False a None in nxt draws no arrow at all (nodes not linked yet).
+        title:    optional label at the left (e.g. 'list 0')
+        room:     space kept above the row for arcs (default 46; ~8 for plain chains)
     """
 
-    def __init__(self, values, nxt=None, styles=None, pointers=None, cut=(), null=True):
+    EXTRA = '#7e2f9e'
+
+    def __init__(self, values, nxt=None, styles=None, pointers=None, cut=(), null=True, extra=(),
+                 title=None, room=46):
         self.values = values
         self.nxt = nxt if nxt is not None else [i + 1 if i + 1 < len(values) else None for i in range(len(values))]
         self.styles, self.pointers, self.cut, self.null = styles or {}, pointers or {}, set(cut), null
+        self.extra = list(extra)
+        self.title, self.room = title, room
 
     def draw(self, p, box):
         x0, y0, x1, _ = box
         n = len(self.values)
-        slots = n + (1 if self.null else 0)
-        size = int(min(58, (x1 - x0) / (slots * 1.75)))
+        slots = max(1, n + (1 if self.null else 0))
+        tw = (p.width(self.title, 'monob', 15) + 14) if self.title else 0
+        size = int(min(58, (x1 - x0 - tw) / (slots * 1.75)))
         gap = int(size * 0.75)
-        top = y0 + 46
+        top = y0 + self.room
+        if self.title:
+            p.text((x0, top + size / 2), self.title, 'monob', 15, MUTED, 'lm')
+            x0 += tw
         at = lambda i: x0 + i * (size + gap)
         nullx = at(n)
         for i, v in enumerate(self.values):
@@ -455,16 +475,30 @@ class ListView(View):
             else:
                 p.curve_arrow((at(i) + size / 2, top), (at(j) + size / 2, top - 2),
                               lift=24 + 8 * abs(j - i), fill=col)
+        drop = 0                      # how far the extra arcs reach below the row
+        for e in self.extra:
+            i, j = e[0], e[1]
+            col = e[2] if len(e) > 2 else self.EXTRA
+            by = top + size
+            if i == j:
+                cx = at(i) + size / 2
+                p.curve_arrow((cx - size * 0.3, by), (cx + size * 0.3, by + 2), lift=-34, fill=col, width=2)
+                drop = max(drop, 17)
+            else:
+                lift = 26 + 8 * abs(j - i)
+                p.curve_arrow((at(i) + size / 2 - 5, by), (at(j) + size / 2 + 5, by + 2), lift=-lift,
+                              fill=col, width=2)
+                drop = max(drop, lift / 2)
         stacks = {}
         for name, i in self.pointers.items():
             slot = n if i is None else i
             k = stacks.get(slot, 0); stacks[slot] = k + 1
             cx = at(slot) + size / 2
-            yy = top + size + 8 + k * 22
+            yy = top + size + 8 + drop + k * 22
             p.d.polygon([(cx * S, yy * S), ((cx - 6) * S, (yy + 9) * S), ((cx + 6) * S, (yy + 9) * S)], fill=ACTIVE)
             p.text((cx, yy + 17), name, 'monob', 13, ACTIVE, 'mm')
         deepest = max(stacks.values()) if stacks else 0
-        self.used = 46 + size + 12 + deepest * 22
+        self.used = int(self.room + size + 12 + drop + deepest * 22)
 
 
 class TreeView(View):

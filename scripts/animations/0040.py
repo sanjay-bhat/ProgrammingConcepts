@@ -11,6 +11,21 @@ from anim_lib import *  # noqa: E402,F403
 
 CANDIDATES, TARGET = [2, 5, 2, 1, 2], 5          # LeetCode example 2
 
+# The hard example (interactive page only): LeetCode example 1, where one answer
+# uses BOTH 1s. Writing the repeat check as `i > 0` instead of `i > start`
+# also blocks the second 1 one level deeper, where it's the first pick at that
+# step, so [1,1,6] disappears: [[1,2,5],[1,7],[2,6]]. Answer
+# [[1,1,6],[1,2,5],[1,7],[2,6]]. Notes are keyed by ('choose' | 'found', path)
+# or 'sorted' / 'done' and replace that frame's second caption line.
+HARD, HARD_TARGET = [10, 1, 2, 7, 6, 1, 5], 8
+HARD_NOTES = {
+    'sorted': "Two 1s now sit side by side, and one of the answers uses both of them.",
+    ('choose', (1, 1)): "With i > 0 instead of i > start, this 1 counts as a repeat and gets skipped.",
+    ('found', (1, 1, 6)): "This is the answer i > 0 loses: it needs the second 1 one level down.",
+    ('skip', (), 1): "Here the skip is right: a second 1 at the TOP step would rebuild everything the first 1 did.",
+    'done': "With i > 0, [1,1,6] is missing: only 3 combinations come back.",
+}
+
 
 def fmt(xs):
     return '[' + ','.join(map(str, xs)) + ']'
@@ -62,8 +77,21 @@ def trace(candidates, target):
     return events
 
 
-def words(e, first):
+def words(e, first, target=TARGET, notes=None):
+    cap, sub, hold = _words(e, first, target, notes is None)
+    if notes:
+        k = e['kind']
+        key = {'choose': (k, tuple(e['path'])), 'found': (k, tuple(e['path'])),
+               'skip': (k, tuple(e['path']), e['i'])}.get(k, k)
+        if key in notes:
+            return cap, notes[key], (END if k == 'done' else KEY)
+    return cap, sub, hold
+
+
+def _words(e, first, TARGET, standard):
     k, i, path, c = e['kind'], e['i'], e['path'], e['cand']
+    if k == 'sorted' and not standard:
+        return (f"Sort first: {fmt(c)}.", "", KEY)
     if k == 'sorted':
         return (f"Sort first: {fmt(c)}. The three 2s now sit side by side.",
                 "Sorting makes repeats neighbours and puts the big numbers last, where they can be cut off.", KEY)
@@ -99,20 +127,21 @@ def words(e, first):
         return (f"Pop {e['popped']}: path back to {fmt(path)}.", "", QUICK * 1.6)
     if k == 'return':
         return ("This call has nothing left to try, so it returns.", "", QUICK * 1.4)
-    return (f"Done: {len(e['result'])} combinations, " + ' and '.join(fmt(r) for r in e['result']) + ".",
+    res = [fmt(r) for r in e['result']]
+    if not standard:
+        return (f"Done: {len(res)} combinations, " + ', '.join(res[:-1]) + ' and ' + res[-1] + ".", "", END)
+    return (f"Done: {len(e['result'])} combinations, " + ' and '.join(res) + ".",
             "[1,2,2] appears once even though there are three 2s to choose two from.", END)
 
 
-def main():
-    args = cli()
-    events = trace(list(CANDIDATES), TARGET)
+def build(candidates, target, subtitle, notes=None):
+    events = trace(list(candidates), target)
     first = {}
     for e in events:
         for k in ('skip', 'undo', 'prune', 'found'):
             if e['kind'] == k and k not in first:
                 first[k] = id(e)
-    sc = Scene('#40 Combination Sum II: prune and skip repeats',
-               f'candidates = {CANDIDATES}, target = {TARGET}. Each number used at most once.')
+    sc = Scene('#40 Combination Sum II: prune and skip repeats', subtitle)
     legend = [(ACTIVE, 'number being tried'), (style('bad')[1], 'skipped or too big'),
               (style('good')[1], 'in the current path')]
     for e in events:
@@ -137,11 +166,26 @@ def main():
         got = [(fmt(r), 'good' if k in ('found', 'done') else None) for r in e['result']]
         chips = ChipsView(got, 'Combinations found')
         stack = [f'backtrack(start={s}, remain={r})' for s, r in e['calls']]
-        cap, sub, hold = words(e, first)
+        cap, sub, hold = words(e, first, target, notes)
         rem = e['remain'] if e['remain'] is not None else '-'
         sc.frame([cand, path, chips], cap, sub, hold,
                  side=StackView(stack, 'Call stack', base='combinationSum2'),
                  counters={'remain': rem, 'found': len(e['result'])}, legend=legend)
+    return sc
+
+
+def hard():
+    """Harder input for the interactive page (scripts/motion_build.py)."""
+    sc = build(HARD, HARD_TARGET, f'candidates = {HARD}, target = {HARD_TARGET}. One answer needs both 1s.',
+               HARD_NOTES)
+    return sc, ("LeetCode's first example, where [1,1,6] uses both 1s. Write the repeat check as i > 0 "
+                "instead of i > start and the second 1 is skipped one level down too, so [1,1,6] goes "
+                "missing. Answer: [[1,1,6],[1,2,5],[1,7],[2,6]].")
+
+
+def main():
+    args = cli()
+    sc = build(CANDIDATES, TARGET, f'candidates = {CANDIDATES}, target = {TARGET}. Each number used at most once.')
     finish(sc, 40, "Watch the second and third 2 get skipped at the top level, and 5 cut off the loop "
                    "once it's bigger than what's left: one check stops repeats, the other stops wasted work.",
            embed=not args.no_embed, preview_dir=args.preview, preview=args.frames)

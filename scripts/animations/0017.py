@@ -13,6 +13,29 @@ DIGITS = "23"          # LeetCode example 1
 PHONE = {'2': 'abc', '3': 'def', '4': 'ghi', '5': 'jkl',
          '6': 'mno', '7': 'pqrs', '8': 'tuv', '9': 'wxyz'}
 
+# Hard examples (interactive page only). Notes are keyed by 'begin', 'done', or
+# (kind, digit index, letter) for the first time that step happens; each
+# replaces that frame's second caption line and holds it as a KEY moment.
+# 1) "79": both four-letter keys. "3 letters per key" ('a' + 3 * (d - 2) + k)
+#    gives p q r for 7 and v w x for 9: 9 strings, three of them (pv, qv, rv)
+#    not real. Answer: 16 combinations.
+HARD1 = "79"
+HARD1_NOTES = {
+    'begin': "7 and 9 are the two keys with four letters: pqrs and wxyz.",
+    ('choose', 1, 'w'): "9 starts at w. A 3-letters-per-key formula starts it at v, because 7's s shifts every key after it.",
+    ('choose', 1, 'z'): "z is 9's fourth letter. A formula that assumes three per key never reaches it.",
+    ('choose', 0, 's'): "s is 7's fourth letter, so 4 more combinations start here.",
+    'done': "The 3-per-key formula returns only 9, and pv, qv, rv aren't even real.",
+}
+# 2) "234": three digits. Nested loops written for one or two digits return the
+#    9 pairs from "23" and never look at the 4. Answer: 27 combinations.
+HARD2 = "234"
+HARD2_NOTES = {
+    'begin': "Three digits means three levels of recursion, one per digit.",
+    ('choose', 2, 'g'): "The third level. Two hard-coded loops stop at \"ad\" and never reach the 4.",
+    'done': "Hard-coding a loop per digit for up to two digits returns 9 here.",
+}
+
 
 def trace(digits):
     events, calls = [], []
@@ -46,13 +69,24 @@ def trace(digits):
     return events
 
 
-def words(e, first):
+def words(e, first, digits=DIGITS, notes=None, seen=None):
+    cap, sub, hold = _words(e, first, digits)
+    if notes:
+        k = e['kind']
+        key = k if k in ('begin', 'done') else (k, e['index'], e.get('letter'))
+        if key in notes and key not in seen:
+            seen.add(key)
+            return cap, notes[key], (END if k == 'done' else KEY)
+    return cap, sub, hold
+
+
+def _words(e, first, digits):
     k = e['kind']
     if k == 'begin':
-        return (f'"{DIGITS}" has {len(DIGITS)} digits, so every answer is {len(DIGITS)} letters long.',
+        return (f'"{digits}" has {len(digits)} digits, so every answer is {len(digits)} letters long.',
                 "One level of recursion per digit replaces a loop per digit, however many digits there are.", KEY)
     if k == 'choose':
-        d = DIGITS[e['index']]
+        d = digits[e['index']]
         if first.get('choose') == id(e):
             return (f"Digit {d} gives {PHONE[d]}. Pick '{e['letter']}' and go on to the next digit.",
                     "", STEP)
@@ -67,18 +101,18 @@ def words(e, first):
             return (f"Remove '{e['letter']}' so the same digit can try its next letter.",
                     "Undoing the last letter is what lets one list build every combination.", KEY)
         if e['index'] == 0 and first.get('undo0') == id(e):
-            nxt = PHONE[DIGITS[0]][PHONE[DIGITS[0]].index(e['letter']) + 1]
+            nxt = PHONE[digits[0]][PHONE[digits[0]].index(e['letter']) + 1]
             return (f"Back at the first digit: remove '{e['letter']}' and start over with '{nxt}'.",
                     f"'{nxt}' now gets paired with every letter of the next digit, just as '{e['letter']}' was.", KEY)
         return (f"Remove '{e['letter']}'.", "", QUICK)
     if k == 'return':
         return ("No letters left for this digit, so back up one level.", "", QUICK * 1.4)
-    return (f"Done: {len(e['result'])} combinations = 3 letters × 3 letters.", "", END)
+    sizes = ' × '.join(f'{len(PHONE[d])} letters' for d in digits)
+    return (f"Done: {len(e['result'])} combinations = {sizes}.", "", END)
 
 
-def main():
-    args = cli()
-    events = trace(DIGITS)
+def build(digits, subtitle, notes=None):
+    events = trace(digits)
     first = {}
     for e in events:
         for k in ('choose', 'record', 'undo'):
@@ -86,23 +120,23 @@ def main():
                 first[k] = id(e)
         if e['kind'] == 'undo' and e['index'] == 0 and 'undo0' not in first:
             first['undo0'] = id(e)
-    sc = Scene('#17 Letter Combinations: one level per digit',
-               f'digits = "{DIGITS}". Each digit stands for the letters on its phone key.')
+    sc = Scene('#17 Letter Combinations: one level per digit', subtitle)
     legend = [(style('good')[1], 'letters chosen'), (ACTIVE, 'letter being tried')]
+    seen = set()
     for e in events:
         k, idx = e['kind'], e['index']
         dstyles = {j: 'good' for j in range(len(e['current']))}
-        if k in ('choose', 'undo', 'return') and idx is not None and idx < len(DIGITS):
+        if k in ('choose', 'undo', 'return') and idx is not None and idx < len(digits):
             dstyles[idx] = 'active' if k == 'choose' else 'window'
-        dv = ArrayView(list(DIGITS), dstyles, title='digits', cell=58,
-                       pointers={'index': idx} if idx is not None and idx < len(DIGITS) else {})
+        dv = ArrayView(list(digits), dstyles, title='digits', cell=58,
+                       pointers={'index': idx} if idx is not None and idx < len(digits) else {})
         views = [dv]
-        if idx is not None and idx < len(DIGITS):
-            letters = PHONE[DIGITS[idx]]
+        if idx is not None and idx < len(digits):
+            letters = PHONE[digits[idx]]
             lst = {}
             if k in ('choose', 'undo'):
                 lst[letters.index(e['letter'])] = 'active' if k == 'choose' else 'muted'
-            views.append(ArrayView(list(letters), lst, title=f'key {DIGITS[idx]}', indices=False, cell=50))
+            views.append(ArrayView(list(letters), lst, title=f'key {digits[idx]}', indices=False, cell=50))
         else:
             views.append(TextView([''], size=16))
         cur = ''.join(e['current'])
@@ -111,9 +145,25 @@ def main():
                for j, r in enumerate(e['result'])]
         views.append(ChipsView(got, 'Combinations recorded'))
         stack = [f'backtrack(index={i})' for i in e['calls']]
-        cap, sub, hold = words(e, first)
+        cap, sub, hold = words(e, first, digits, notes, seen)
         sc.frame(views, cap, sub, hold, side=StackView(stack, 'Call stack', base='letterCombinations'),
                  counters={'found': len(e['result'])}, legend=legend)
+    return sc
+
+
+def hard():
+    """Harder inputs for the interactive page (scripts/motion_build.py)."""
+    sc1 = build(HARD1, f'digits = "{HARD1}". Both keys have four letters, not three.', HARD1_NOTES)
+    sc2 = build(HARD2, f'digits = "{HARD2}". Three digits, so the call stack goes three levels deep.', HARD2_NOTES)
+    return [(sc1, '"79": assume three letters per key and 7 loses its s and 9 becomes v w x, giving 9 strings '
+                  'instead of 16. Watch for s and z, the fourth letters.'),
+            (sc2, '"234": nested loops hard-coded for up to two digits return 9 strings. One level of '
+                  'recursion per digit handles the third digit and finds all 27.')]
+
+
+def main():
+    args = cli()
+    sc = build(DIGITS, f'digits = "{DIGITS}". Each digit stands for the letters on its phone key.')
     finish(sc, 17, "Watch the call stack: it's exactly as deep as the number of digits, and removing "
                    "the last letter after each answer is what lets the same list build all nine.",
            embed=not args.no_embed, preview_dir=args.preview, preview=args.frames)

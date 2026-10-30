@@ -132,11 +132,17 @@ def _mix(a, b, t):
 def style_tokens():
     """CSS custom properties for every anim_lib style, light and dark."""
     names = list(anim_lib.STYLES)
+    # Dark mode: a uniform darken made every state the same murky shade, so a
+    # bar chart drawn as a grid (#11) lost its bars. Keep "nothing here" states
+    # close to the surface and give every other state real colour.
+    QUIET = {'plain': ('#172a35', '#3b5566', '#dbe6ec'),
+             'muted': ('#13232d', '#2a4352', '#7d93a2')}
     light, dark = [], []
     for n in names:
         f, b, t = anim_lib.style(n)
         light.append(f'--{n}-f:{f};--{n}-b:{b};--{n}-t:{t};')
-        dark.append(f'--{n}-f:{_mix(b, "#13232d", 0.74)};--{n}-b:{_mix(b, "#ffffff", 0.18)};--{n}-t:{f};')
+        df, db, dt = QUIET.get(n) or (_mix(b, '#13232d', 0.5), _mix(b, '#ffffff', 0.25), _mix(f, '#ffffff', 0.35))
+        dark.append(f'--{n}-f:{df};--{n}-b:{db};--{n}-t:{dt};')
     return ''.join(light), ''.join(dark)
 
 

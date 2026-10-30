@@ -23,6 +23,7 @@ Kernel: `.NET (C#)` — all notebooks use the .NET Interactive C# kernel.
 | 11    | code     | Rust solution                      |
 | 12    | markdown | `## Example Scenarios` (5 examples) |
 | 13    | markdown | Infographic image attachment       |
+| 14    | markdown | `## Watch It Run`: animated walkthrough GIF (`walkthrough.gif` attachment) |
 
 ### Check the collection with the audit, not by eye ★
 
@@ -384,6 +385,52 @@ large grids by hand tends to stall the agent).
 - Notes in italic, kept to 1-2 lines
 
 ---
+
+## Cell 14 — Watch It Run (animated walkthrough) ★
+
+A GIF that plays the algorithm step by step on one example, with a caption
+under every frame saying what just happened and why. It's the closest thing
+to someone sketching the solution on a whiteboard while explaining it. `#200`
+is the reference: `scripts/animations/0200.py`.
+
+**How it's built.** Every notebook gets `scripts/animations/NNNN.py`, kept in
+the repo so the GIF can be regenerated. The script:
+
+1. **Runs the notebook's Python solution** with recorder calls added, never
+   changing an algorithm line. The trace comes from executing the code. Never
+   hand-write a sequence of states; if the code and the animation can
+   disagree, one day they will.
+2. Turns each recorded state into a frame with `scripts/anim_lib.py`. Pick
+   views that match the data structure, the same rule as the infographic:
+   `GridView`, `ArrayView` (pointers, window bracket), `ListView` (pointer
+   surgery), `TreeView` (LeetCode level-order input), `GraphView`,
+   `TableView` (DP, with dependency arrows), `IntervalView`, plus side panels
+   `StackView` (call stack / explicit stack), `QueueView`, `MapView`, and
+   `TextView` for a running string or result.
+3. Calls `finish(scene, N, blurb)`, which renders, enforces the size budget,
+   and embeds via `nbcells.set_animation`. Use `--no-embed --preview DIR
+   --frames 3,10` while iterating.
+
+**What makes a good one:**
+- **Use the example from the problem statement** (or the smallest example
+  that still shows the mechanism). Readers recognise it.
+- **Pause on the aha, hurry through the bookkeeping.** `KEY` (2.6s) for the
+  moments the problem turns on, the same ones the newbie section names; `STEP`
+  for ordinary progress; `QUICK` for routine skips and rejected neighbours;
+  `END` on the answer.
+- **Show the hidden state**: the call stack for recursion, the hash map for
+  Two Sum, the queue for BFS. That's where newbies get lost, and it's the
+  thing a static picture can't show.
+- **Captions in plain language**, line 1 what happened, line 2 why it matters
+  (optional). The same house style as the prose: no jargon before it's
+  explained, contractions, no asides.
+- The **blurb** above the GIF is one sentence telling the reader which moment
+  to watch for.
+- **Size budget: 600 KB** (`anim_lib.MAX_KB`, enforced by `finish` and the
+  audit). Typical is 300–450 KB for 40–70 frames. Over budget means too many
+  routine frames: merge them, don't shrink the canvas.
+- Look at two or three frames (`--frames`) before embedding: one ordinary
+  step, the key moment, the final frame.
 
 ## Editing Notebooks Programmatically
 

@@ -34,6 +34,9 @@ Checks, and why each exists:
                      usually means the Time/Space worst case was never written.
   no_interview       Missing '## Talking It Through in an Interview'.
   few_code_cells     Fewer than 4 code cells (C#, Python, Go, Rust).
+  no_animation       No '## Watch It Run' cell with a non-empty walkthrough.gif.
+  animation_too_big  The GIF is over anim_lib.MAX_KB. At 550+ notebooks the
+                     per-GIF budget is what keeps the repo cloneable.
   aside              Prose contains an unresolved mid-edit aside ("wait,
                      actually..."). ~10 notebooks shipped with these.
 """
@@ -46,6 +49,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import nbcells  # noqa: E402
 import infographic_lib  # noqa: E402
+from anim_lib import MAX_KB  # noqa: E402
 
 FAIL_BG = (248, 215, 218)   # .result-fail background, #f8d7da
 
@@ -66,7 +70,8 @@ SLOT_LABELS = [re.compile(r'(?:\d+[.)]\s*)?' + label, re.I) for label in
                 'Edge Case: Space', 'Almost')]
 
 CHECKS = ['empty_infographic', 'no_infographic', 'clipped_infographic', 'fail_box_check', 'no_examples', 'wrong_scenarios',
-          'scenario_labels', 'no_interview', 'few_code_cells', 'aside']
+          'scenario_labels', 'no_interview', 'few_code_cells', 'no_animation',
+          'animation_too_big', 'aside']
 
 
 def has_fail_box(png, min_px=400, tol=4):
@@ -123,6 +128,12 @@ def inspect(path):
 
     if len(nbcells.code_cells(nb)) < 4:
         bad.add('few_code_cells')
+
+    gif = nbcells.get_animation(nb)
+    if gif is None:
+        bad.add('no_animation')
+    elif len(gif) > MAX_KB * 1024:
+        bad.add('animation_too_big')
 
     for c in cells:
         if c.get('cell_type') == 'markdown' and ASIDE.search(nbcells.text(c)):

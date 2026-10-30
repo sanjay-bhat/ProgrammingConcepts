@@ -83,7 +83,7 @@ def words(e, first_half, nums=NUMS, target=TARGET):
     if k == 'start':
         return (f"Find {t}. The array was sorted, then cut and swapped, so it drops once: 7 then 0.",
                 f"Plain binary search breaks: {t} is smaller than the middle 7, yet it's on the right.", KEY)
-    if k == 'mid' and nums is not NUMS and n[e['mid']] == t:
+    if k == 'mid' and n[e['mid']] == t:
         return (f"Range {e['lo']}..{e['hi']}: the middle is index {e['mid']}, value {n[e['mid']]}. That's the target.",
                 "", STEP)
     if k == 'mid':

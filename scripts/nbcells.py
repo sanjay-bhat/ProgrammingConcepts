@@ -153,6 +153,13 @@ def set_animation(nb, gif_bytes, blurb):
     """
     src = (f'{ANIMATION_HEADING}\n\n*{blurb.strip()}*\n\n'
            f'![walkthrough](attachment:{ANIMATION_ATTACHMENT})')
+    i = find_animation(nb)
+    if i is not None:
+        # Keep the link to the interactive page (scripts/motion_build.py --link):
+        # re-embedding a GIF must not silently drop it.
+        link = [ln for ln in text(nb['cells'][i]).splitlines() if ln.startswith('**[Step through it yourself')]
+        if link:
+            src += '\n\n' + link[0]
     cell = {'cell_type': 'markdown', 'metadata': {},
             'attachments': {ANIMATION_ATTACHMENT:
                             {'image/gif': base64.b64encode(gif_bytes).decode('ascii')}},

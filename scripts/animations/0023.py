@@ -13,6 +13,19 @@ from anim_lib import *  # noqa: E402,F403
 
 LISTS = [[1, 4, 5], [1, 3, 4], [2, 6]]          # LeetCode example 1
 
+# The hard example (interactive page only): three of the five lists are empty
+# and three heads tie at 2 at once. Seeding the heap without skipping empty
+# lists reads None.val and crashes on L0; pushing bare (value, node) pairs
+# raises TypeError at the first tie. Answer [1,2,2,2,2,5].
+# Notes are keyed by event number and replace that frame's second caption line.
+HARD = [[], [2, 5], [], [1, 2, 2], [2]]
+HARD_NOTES = {
+    0: "L0 and L2 are empty, so they're skipped. Pushing L0's head as-is would read None.val and crash.",
+    3: "Order: L1, L3, L4. With bare (value, node) pairs, Python compares two nodes here and crashes.",
+    7: "L3's second 2 ties with L4's 2. Index 3 beats index 4, so L3 goes first again.",
+    13: "The heap held 3 entries at most: one per NON-EMPTY list, not one per list.",
+}
+
 
 class ListNode:
     def __init__(self, val=0, next=None):
@@ -94,17 +107,19 @@ def trace(lists_vals):
     return events
 
 
-def words(e, flags):
+def words(e, flags, k_lists=3):
     k = e['kind']
     if k == 'start':
-        return ("Put the head of every list in a min-heap: 1 (L0), 1 (L1), 2 (L2).",
+        heads = ', '.join(f'{v} (L{i})' for v, i in sorted(e['heap'], key=lambda x: x[1]))
+        return (f"Put the head of every list in a min-heap: {heads}.",
                 "The next node of the answer is always the smallest head, and the heap keeps it on top.", KEY)
     if k == 'peek':
         v, i = e['heap'][0]
         tie = [x for x in e['heap'] if x[0] == v]
         if len(tie) > 1 and 'tie' not in flags:
             flags.add('tie')
-            return (f"Two heads tie at {v}. The list index breaks the tie, so L{i} comes out first.",
+            many = {2: 'Two', 3: 'Three'}.get(len(tie), str(len(tie)))
+            return (f"{many} heads tie at {v}. The list index breaks the tie, so L{i} comes out first.",
                     "In Python that index also stops heapq from ever comparing two nodes.", KEY)
         return (f"The smallest head is {v}, from L{i}. Pop it.", "", QUICK * 2)
     if k == 'pop':
@@ -119,18 +134,16 @@ def words(e, flags):
                     "Only one head changed, so the heap needs one push, about log k steps.", KEY)
         return (f"Append {e['val']}; push {e['pushed']} from L{e['i']}.", "", STEP)
     return ("Heap empty: every node has been placed. Return dummy.next.",
-            "Each node went in and out of a heap of at most k = 3: O(n log k).", END)
+            f"Each node went in and out of a heap of at most k = {k_lists}: O(n log k).", END)
 
 
-def main():
-    args = cli()
-    sc = Scene('#23 Merge k Sorted Lists: min-heap of the heads',
-               f'lists = {LISTS}. The heap holds one head per list; pop the smallest, push its successor.',
+def build(lists, subtitle, notes=None):
+    sc = Scene('#23 Merge k Sorted Lists: min-heap of the heads', subtitle,
                width=1100, height=720, side_width=300)
     legend = [(style('good')[1], 'merged so far'), (ACTIVE, 'just appended / smallest head, about to pop'),
               ('#2f7e9e', 'colour = which list a node came from')]
     flags = set()
-    for e in trace(LISTS):
+    for idx, e in enumerate(trace(lists)):
         views = []
         for i, rest in enumerate(e['rest']):
             views.append(ListView(rest if rest else [], None, {j: f'region{i + 1}' for j in range(len(rest))},
@@ -147,10 +160,26 @@ def main():
             rings = [(0, ACTIVE)] if e['kind'] == 'peek' else []
             tree = TreeView([v for v, _ in heap], labels={j: f'L{i}' for j, (_, i) in enumerate(heap)},
                             styles={j: f'region{i + 1}' for j, (_, i) in enumerate(heap)}, rings=rings)
-        cap, sub, hold = words(e, flags)
+        cap, sub, hold = words(e, flags, len(lists))
+        if notes and idx in notes:
+            sub, hold = notes[idx], (END if e['kind'] == 'done' else KEY)
         sc.frame(views, cap, sub, hold,
                  side=Panel('Min-heap', tree, 'smallest on top, one entry per list'),
                  counters={'in heap': len(heap)}, legend=legend)
+    return sc
+
+
+def hard():
+    """Harder input for the interactive page (scripts/motion_build.py)."""
+    sc = build(HARD, f'lists = {HARD}. Three lists are empty, and three heads tie at 2.', HARD_NOTES)
+    return sc, ("Three empty lists and a three-way tie at 2. Seed the heap without skipping empty lists and "
+                "None.val crashes on L0; push bare (value, node) pairs and the tie raises TypeError. "
+                "Answer: [1,2,2,2,2,5].")
+
+
+def main():
+    args = cli()
+    sc = build(LISTS, f'lists = {LISTS}. The heap holds one head per list; pop the smallest, push its successor.')
     finish(sc, 23, "Watch the heap panel: it never holds more than one head per list, so each pop and "
                    "push costs about log k, not log n.",
            embed=not args.no_embed, preview_dir=args.preview, preview=args.frames)

@@ -13,6 +13,20 @@ from anim_lib import *  # noqa: E402,F403
 
 CANDS, TARGET = [2, 3, 6, 7], 7   # LeetCode example 1
 
+# The hard example (interactive page only): the candidates arrive UNSORTED.
+# Keep the break but drop the sort, and on [5,3,2] the loop breaks at the first
+# too-big number before reaching the smaller ones after it: it returns only
+# [[2,2,2,2]]. Answer [[2,2,2,2],[2,3,3],[3,5]].
+# Notes are keyed by ('record', path) or 'sort' / 'done' and replace that
+# frame's second caption line (held as a KEY moment).
+HARD_CANDS, HARD_TARGET = [5, 3, 2], 8
+HARD_NOTES = {
+    'sort': "Unsorted, the break would stop at the first too-big number with smaller ones still behind it.",
+    ('record', (2, 3, 3)): "Unsorted ([5,3,2]), [3,3] meets 3 > 2 and breaks before the 2 behind it, so [2,3,3] is never built.",
+    ('record', (3, 5)): "Unsorted, 5 comes before 3, and from [3] the loop can't go back to it: [3,5] is lost.",
+    'done': "Without the sort, the same code returns only [[2,2,2,2]].",
+}
+
 
 class Row(View):
     """Two views side by side."""
@@ -38,8 +52,11 @@ def trace(cands, target):
     class Solution:
         # ---- the notebook's solution, with rec() calls added ----
         def combinationSum(self, candidates: list[int], target: int) -> list[list[int]]:
+            before = list(candidates)                  # display only
             candidates.sort()
             result = []
+            if candidates != before:
+                rec('sort', [], result, before=before, remain=target)
 
             def backtrack(start: int, path: list[int], remain: int) -> None:
                 calls.append([start, list(path), remain])
@@ -71,9 +88,10 @@ def nid(path):
     return 'p' + '.'.join(map(str, path))
 
 
-def layout(events):
+def layout(events, cands=CANDS, target=TARGET):
     """Tree of choices (plus a red 'too big' leaf for each break), from the whole trace."""
-    kids, label = {nid([]): []}, {nid([]): str(TARGET)}
+    cands = sorted(cands)
+    kids, label = {nid([]): []}, {nid([]): str(target)}
     for e in events:
         if e['kind'] == 'choose':
             n, par = nid(e['path']), nid(e['path'][:-1])
@@ -82,7 +100,7 @@ def layout(events):
         if e['kind'] == 'break':
             n = nid(e['path']) + 'x'
             kids[nid(e['path'])].append(n); kids[n] = []
-            label[n] = f"{CANDS[e['i']]}>{e['remain']}"
+            label[n] = f"{cands[e['i']]}>{e['remain']}"
     xs, depth, leaves = {}, {}, [0]
 
     def walk(n, d):
@@ -100,36 +118,50 @@ def layout(events):
     return pos, edges, label
 
 
-def words(e):
+def words(e, cands=CANDS, notes=None):
+    cap, sub, hold = _words(e, cands, notes is None)
+    if notes:
+        k = e['kind']
+        key = ('record', tuple(e['path'])) if k == 'record' else k
+        if key in notes:
+            return cap, notes[key], (END if k == 'done' else KEY)
+    return cap, sub, hold
+
+
+def _words(e, cands, standard):
     k = e['kind']
+    cands = sorted(cands)
+    if k == 'sort':
+        return (f"Sort first: {e['before']} becomes {cands}.", "", KEY)
     if k == 'choose':
-        v = CANDS[e['i']]
-        if e['path'] == [3]:
+        v = cands[e['i']]
+        if standard and e['path'] == [3]:
             return ("Add 3: 4 still missing. From here only 3, 6, 7 may follow, never 2.",
                     "That's why [3,2,2] is never built: [2,2,3] was already found going the other way.", KEY)
         return (f"Add {v}: {e['remain']} still missing. Recurse with the SAME index, so {v} can be used again.",
                 "", QUICK * 2.4)
     if k == 'record':
         return (f"Nothing missing: record a copy of {e['path']}.",
-                "Built in sorted order only, so [3,2,2] and [2,3,2] are never built.", KEY)
+                "Built in sorted order only, so [3,2,2] and [2,3,2] are never built." if standard else "", KEY)
     if k == 'break':
-        v = CANDS[e['i']]
-        if e['path'] == [2, 2, 2]:
+        v = cands[e['i']]
+        if standard and e['path'] == [2, 2, 2]:
             return (f"{v} is bigger than the {e['remain']} still missing. Stop this whole loop.",
                     "The list is sorted, so every later candidate is even bigger. This break needs the sort.", KEY)
         return (f"{v} > {e['remain']} still missing: break, skip the rest of this loop.", "", QUICK * 2.4)
     if k == 'undo':
         return (f"Pop {e['removed']} (undo): back to {e['path']} with {e['remain']} missing.", "", QUICK * 1.6)
+    if not standard:
+        return (f"Done: {e['result']}.".replace(' ', '').replace(':', ': ', 1), "", END)
     return ("Done: [[2,2,3],[7]].", "Two answers, each built exactly once; most branches stopped at the first too-big number.", END)
 
 
-def main():
-    args = cli()
-    sc = Scene('#39 Combination Sum: sorted order, reuse, early stop',
-               f'candidates = {CANDS}, target = {TARGET}. Each node adds one number; red = too big, loop stops.')
+def build(cands, target, subtitle, notes=None):
+    sc = Scene('#39 Combination Sum: sorted order, reuse, early stop', subtitle)
     legend = [(ACTIVE, 'current'), (style('good')[1], 'hit the target'), (style('bad')[1], 'too big: break')]
-    evs = trace(CANDS, TARGET)
-    pos_all, edges_all, label = layout(evs)
+    evs = trace(cands, target)
+    pos_all, edges_all, label = layout(evs, cands, target)
+    shown = sorted(cands)
     seen = {nid([])}
     for e in evs:
         if e['kind'] == 'choose':
@@ -151,18 +183,34 @@ def main():
                       text={n: label[n] for n in pos})
         nst, ptr, win = {}, {}, None
         if 'start' in e:
-            win = (e['start'], len(CANDS) - 1)
+            win = (e['start'], len(shown) - 1)
         if 'i' in e:
             ptr = {'i': e['i']}
             nst[e['i']] = 'bad' if e['kind'] == 'break' else 'active'
-        arr = ArrayView(CANDS, styles=nst, pointers=ptr, window=win, title='cands', cell=44)
+        arr = ArrayView(shown, styles=nst, pointers=ptr, window=win, title='cands', cell=44)
         pth = ArrayView(e['path'] or [''], styles={j: 'window' for j in range(len(e['path']))}, title='path', cell=44)
-        cap, sub, hold = words(e)
+        cap, sub, hold = words(e, cands, notes)
         missing = e.get('remain', '-') if e['kind'] != 'done' else 0
         sc.frame([g, Row(arr, pth)], cap, sub, hold,
                  side=MapView([(str(j + 1), str(r), 'good') for j, r in enumerate(e['result'])], 'Found so far',
                               headers=('#', 'combination'), empty='(nothing yet)'),
                  counters={'still missing': missing}, legend=legend)
+    return sc
+
+
+def hard():
+    """Harder input for the interactive page (scripts/motion_build.py)."""
+    sc = build(HARD_CANDS, HARD_TARGET, f'candidates = {HARD_CANDS}, target = {HARD_TARGET}. '
+               'Unsorted input: the early break only works after sorting.', HARD_NOTES)
+    return sc, ("Candidates [5,3,2] arrive unsorted. Keep the break but skip the sort and the loop stops "
+                "before reaching the smaller numbers, returning only [[2,2,2,2]]. Sorted, it finds "
+                "[[2,2,2,2],[2,3,3],[3,5]].")
+
+
+def main():
+    args = cli()
+    sc = build(CANDS, TARGET,
+               f'candidates = {CANDS}, target = {TARGET}. Each node adds one number; red = too big, loop stops.')
     finish(sc, 39, "Watch the branch [2,2,2]: 1 is still missing, the next candidate is too big, and the loop "
                    "stops outright, because in a sorted list every later candidate is bigger too.",
            embed=not args.no_embed, preview_dir=args.preview, preview=args.frames)

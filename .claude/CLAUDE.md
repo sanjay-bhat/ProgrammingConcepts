@@ -23,7 +23,7 @@ Kernel: `.NET (C#)` — all notebooks use the .NET Interactive C# kernel.
 | 11    | code     | Rust solution                      |
 | 12    | markdown | `## Example Scenarios` (5 examples) |
 | 13    | markdown | Infographic image attachment       |
-| 14    | markdown | `## Watch It Run`: animated walkthrough GIF (`walkthrough.gif` attachment) |
+| 14    | markdown | `## Watch It Run`: animated walkthrough GIF (`walkthrough.gif` attachment) + link to the interactive page |
 
 ### Check the collection with the audit, not by eye ★
 
@@ -431,6 +431,36 @@ the repo so the GIF can be regenerated. The script:
   routine frames: merge them, don't shrink the canvas.
 - Look at two or three frames (`--frames`) before embedding: one ordinary
   step, the key moment, the final frame.
+
+### The interactive page (Motion) and the hard example ★
+
+Every walkthrough also becomes an interactive page, `walkthroughs/NNNN.html`,
+served by GitHub Pages at
+`https://sanjay-bhat.github.io/ProgrammingConcepts/walkthroughs/NNNN.html`
+and listed on `walkthroughs/index.html`. It plays the **same trace** as the
+GIF, but the reader can pause, step back and forth, scrub, change speed and
+jump to the key moments, with Motion animating the changes between steps.
+
+    python3 scripts/motion_build.py N --link    # build the page + link it from the notebook
+
+Nothing extra is drawn: `motion_build.py` runs `scripts/animations/NNNN.py`
+unchanged and records each frame's views as data, and
+`scripts/motion_player.html` renders them. A view type the player doesn't
+know is rendered as a container of its child views, so a script's own small
+helpers (`Row`, `Panel`) work, but a new *kind* of drawing needs a renderer
+in the player. Don't hand-edit files in `walkthroughs/`; rebuild them.
+
+**Every script defines `hard()`**, returning `(scene, blurb)` for a harder
+input than LeetCode's sample. It's the page's second tab; the GIF stays on
+the standard example (size budget). Pick an input that breaks the usual
+first attempts, not just a bigger one. `#200`'s is a ring of land around a
+lake with an island inside it, a square that touches two islands only at
+corners, and a ring long enough to stack 16 calls. Its `found` captions name
+the trap each island sets. Keep the `main()` output identical so the GIF
+doesn't change: factor the scene loop into a `build(input, subtitle, notes)`
+that both `main()` and `hard()` call (see `scripts/animations/0200.py`).
+
+The audit tracks both: `no_motion_page` and `no_hard_example`.
 
 ## Editing Notebooks Programmatically
 

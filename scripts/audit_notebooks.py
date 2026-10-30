@@ -23,9 +23,10 @@ Checks, and why each exists:
                      Verified against all 81 hits: every one ends inside an
                      unclosed white card (71 cut through content, 10 cut only
                      the card's bottom padding), so no false positives.
-  fail_box_check     Contains a red failure box, which every image rendered
-                     before the card() fix labels with a green "✔". Fixing the
-                     library only helps new renders; these need regenerating.
+  fail_box_check     Contains a red failure box AND predates the card() fix
+                     (no render_png stamp), so the box carries a green "✔".
+                     Stamped images draw ✘ on red and pass: a correct "false"
+                     or "-1" answer may use a red box.
   no_examples        No '## Example Scenarios' cell.
   wrong_scenarios    Not exactly 5 '### ' scenario headings.
   scenario_labels    The 5 headings don't follow the slot order (Common Case,
@@ -110,7 +111,7 @@ def inspect(path):
         else:
             if infographic_lib.is_clipped(png):
                 bad.add('clipped_infographic')
-            if has_fail_box(png):
+            if has_fail_box(png) and not infographic_lib.has_render_mark(png):
                 bad.add('fail_box_check')
 
     ex = nbcells.find_examples(nb)

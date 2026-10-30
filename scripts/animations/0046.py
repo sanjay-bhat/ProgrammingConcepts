@@ -5,12 +5,26 @@ number into the current slot, recurse on the next slot, swap back.
 The trace comes from running the notebook's Python solution with a recorder
 added; the algorithm lines are unchanged. The input is LeetCode's example 1.
 """
+import math
 import os
 import sys
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 from anim_lib import *  # noqa: E402,F403
 
 NUMS = [1, 2, 3]   # LeetCode example 1
+
+# The hard example (interactive page only): four numbers, 24 permutations.
+# Drop the swap-back and the array stays scrambled between branches: 4 never
+# reaches slot 0 and only 12 different orderings come back (with repeats).
+# Notes are keyed by event number and replace that frame's second caption line.
+HARD = [1, 2, 3, 4]
+HARD_NOTES = {
+    37: "Every deeper swap was undone too. Without swap-backs the array would be [1, 2, 4, 3] by now.",
+    113: "Back to [1, 2, 3, 4]. Without swap-backs it would be [3, 1, 4, 2], with a 2 at position 3.",
+    114: "4 reaches slot 0. Without swap-backs a 2 sits at position 3 instead, so no [4, ...] is ever built.",
+    118: "[4, 2, 3, 1] before [4, 1, 2, 3]: swapping doesn't give sorted order, and nothing asks for it.",
+    152: "Without the swap-backs, 24 results come back but only 12 are different, and none starts with 4.",
+}
 
 
 def trace(nums_in):
@@ -51,10 +65,10 @@ def nid(chain):
     return 'n' + '.'.join(map(str, chain))
 
 
-def layout(events):
+def layout(events, depth=None):
     kids = {nid([]): []}
     for e in events:
-        if e['kind'] == 'swap_in':
+        if e['kind'] == 'swap_in' and (depth is None or len(e['chain']) <= depth):
             n, par = nid(e['chain']), nid(e['chain'][:-1])
             if n not in kids:
                 kids[par].append(n); kids[n] = []
@@ -74,7 +88,7 @@ def layout(events):
             [(a, b) for a in kids for b in kids[a]])
 
 
-def words(e):
+def words(e, standard=True):
     k = e['kind']
     a = e['nums']
     if k == 'swap_in':
@@ -96,25 +110,33 @@ def words(e):
         if s == i:
             return (f"Undo slot {s} (nothing moved): array is {a}.", "", QUICK * 1.6)
         return (f"Swap back: undo the choice for slot {s}. Array is {a} again.", "", QUICK * 2)
+    if not standard:
+        return (f"All {len(e['result'])} permutations recorded, and the array is back to {a}.", "", END)
     return ("All 6 permutations recorded, and the array is back to [1, 2, 3].",
             "Note [3,2,1] came before [3,1,2]: swapping doesn't give sorted order, and nothing asked for it.", END)
 
 
-def main():
-    args = cli()
-    sc = Scene('#46 Permutations: swap into place, recurse, swap back',
-               'Tree: the number placed in each slot. Array: decided slots (green) | free numbers.')
+def build(nums, subtitle, notes=None, depth=None):
+    """depth: draw the tree only that many slots deep (a 24-leaf tree won't fit);
+    a node turns green once every permutation under it is recorded."""
+    sc = Scene('#46 Permutations: swap into place, recurse, swap back', subtitle)
     legend = [(ACTIVE, 'slot being decided'), (style('good')[1], 'decided'), (style('window')[1], 'still free')]
-    evs = trace(NUMS)
-    pos_all, edges_all = layout(evs)
+    evs = trace(nums)
+    pos_all, edges_all = layout(evs, depth)
+    cut = (lambda c: c) if depth is None else (lambda c: c[:depth])
+    under = math.factorial(len(nums) - depth) if depth is not None else 1
     seen = {nid([])}
-    for e in evs:
+    for idx, e in enumerate(evs):
         if e['kind'] == 'swap_in':
-            seen.add(nid(e['chain']))
-        recorded = {nid(r) for r in e['result']}
+            seen.add(nid(cut(e['chain'])))
+        counts = {}
+        for r in e['result']:
+            counts[nid(cut(r))] = counts.get(nid(cut(r)), 0) + 1
+        recorded = {n for n, c in counts.items() if c == under}
         pos = {n: pos_all[n] for n in seen}
         edges = [(x, y) for x, y in edges_all if x in seen and y in seen]
-        path = [nid(e['chain'][:j]) for j in range(len(e['chain']) + 1)]
+        chain = cut(e['chain'])
+        path = [nid(chain[:j]) for j in range(len(chain) + 1)]
         styles = {n: 'good' for n in recorded}
         for n in path:
             styles.setdefault(n, 'window')
@@ -126,18 +148,35 @@ def main():
         if 'start' in e and e['kind'] != 'record':
             s = e['start']
             decided = s + (1 if e['kind'] == 'swap_in' else 0)
-            for j in range(len(NUMS)):
+            for j in range(len(nums)):
                 st[j] = 'good' if j < decided else 'window'
             st[s] = 'active'
             ptr = {'start': s, 'i': e['i']}
         elif e['kind'] in ('record', 'done'):
-            st = {j: 'good' for j in range(len(NUMS))}
+            st = {j: 'good' for j in range(len(nums))}
         arr = ArrayView(e['nums'], styles=st, pointers=ptr, title='nums', cell=58)
-        cap, sub, hold = words(e)
+        cap, sub, hold = words(e, notes is None)
+        if notes and idx in notes:
+            sub, hold = notes[idx], (END if e['kind'] == 'done' else KEY)
         sc.frame([g, arr], cap, sub, hold,
                  side=MapView([(str(j + 1), str(r), 'good') for j, r in enumerate(e['result'])], 'Recorded so far',
                               headers=('#', 'permutation'), empty='(nothing yet)'),
                  counters={'found': len(e['result'])}, legend=legend)
+    return sc
+
+
+def hard():
+    """Harder input for the interactive page (scripts/motion_build.py)."""
+    sc = build(HARD, f'nums = {HARD}: 4 × 3 × 2 × 1 = 24 orderings. The tree shows the first two slots; '
+               'the array shows all four.', HARD_NOTES, depth=2)
+    return sc, ("Four numbers, 24 permutations. Drop the swap-back and the array stays scrambled between "
+                "branches: 4 never reaches slot 0, and only 12 different orderings come back. Watch the "
+                "array return to [1, 2, 3, 4] before each new first number.")
+
+
+def main():
+    args = cli()
+    sc = build(NUMS, 'Tree: the number placed in each slot. Array: decided slots (green) | free numbers.')
     finish(sc, 46, "Watch the swap back after the [2, ...] branch: the array returns to [1, 2, 3] so the next "
                    "choice starts from the original order. Without that undo, some orderings repeat and others never appear.",
            embed=not args.no_embed, preview_dir=args.preview, preview=args.frames)

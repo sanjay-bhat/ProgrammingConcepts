@@ -16,6 +16,17 @@ from anim_lib import *  # noqa: E402,F403
 
 M, N = 3, 7   # LeetCode example 1: answer 28
 
+# The hard example (interactive page only): a 3×4 grid, answer 10. Dividing
+# before multiplying, result / (i + 1) * (total - i), passes both LeetCode
+# samples (3×7 and 3×2) but here does 5 / 2 = 2 in whole numbers, then 2 × 4 = 8.
+# Notes are keyed by ('loop', step number) or 'done' and replace that frame's
+# second caption line (held as a KEY moment).
+HARD_M, HARD_N = 3, 4
+HARD_NOTES = {
+    ('loop', 2): "Divide first and 5 / 2 = 2 in whole numbers loses the half: 2 × 4 = 8, not 10.",
+    'done': "Dividing before multiplying answers 8 here, though it gets both LeetCode samples right.",
+}
+
 
 # ---- the notebook's solution, unchanged ----
 import math
@@ -61,12 +72,11 @@ def trace(m, n):
     return events
 
 
-def main():
-    args = cli()
-    sc = Scene('#62 Unique Paths: each square = above + left',
-               'Robot starts top-left, moves only right or down. Box = number of paths that reach it.')
+def build(M, N, subtitle, notes=None):
+    sc = Scene('#62 Unique Paths: each square = above + left', subtitle)
     legend = [(ACTIVE, 'just filled'), (style('good')[1], 'filled'), (style('gold')[1], 'edges: one path')]
     loop_lines = []
+    total, downs, rights = M + N - 2, M - 1, N - 1
     for e in trace(M, N):
         k, g = e['kind'], e.get('grid')
         styles, links, rings = {}, [], []
@@ -79,7 +89,7 @@ def main():
         rows = []
         if k == 'start':
             cap, sub, hold = ("dp[r][c] = how many different paths reach square (r, c).",
-                              "The answer is the bottom-right box. Start = (0, 0), finish = (2, 6).", STEP)
+                              f"The answer is the bottom-right box. Start = (0, 0), finish = ({M - 1}, {N - 1}).", STEP)
             styles[(0, 0)] = 'active'; styles[(M - 1, N - 1)] = 'active'
         elif k == 'row0':
             cap, sub, hold = ("Top row: every box is 1. The only way along it is right, right, right.",
@@ -110,23 +120,27 @@ def main():
                 hold = QUICK * 2 if r == 2 else QUICK * 1.6
         elif k == 'choose':
             ans = e['ans']
-            cap = f"Every path is 8 moves: 2 downs and 6 rights. Pick which 2 are downs: C(8, 2) = {ans}."
-            sub = "The notebook skips the table and computes that number directly: math.comb(8, 2)."
+            cap = (f"Every path is {total} moves: {downs} downs and {rights} rights. "
+                   f"Pick which {downs} are downs: C({total}, {downs}) = {ans}.")
+            sub = f"The notebook skips the table and computes that number directly: math.comb({total}, {downs})."
             hold = KEY
             rings = [((M - 1, N - 1), style('good')[1])]
-            rows = [('moves', '8 = 2 down + 6 right'), ('choose', 'C(8, 2)'), ('answer', str(ans), 'good')]
+            rows = [('moves', f'{total} = {downs} down + {rights} right'), ('choose', f'C({total}, {downs})'),
+                    ('answer', str(ans), 'good')]
         elif k == 'loop':
             before, mul, div, res = e['step']
             loop_lines.append(f'{before} × {mul} / {div} = {res}')
             cap = f"The C#/Go/Rust loop: {before} × {mul} / {div} = {res}."
             sub = ("Multiply first, then divide: the division always comes out exact." if div == 1 else
-                   "After step i the running value is C(8, i), so it's always a whole number.")
+                   f"After step i the running value is C({total}, i), so it's always a whole number.")
             hold = STEP
+            if notes and ('loop', div) in notes:
+                sub, hold = notes[('loop', div)], KEY
             rings = [((M - 1, N - 1), style('good')[1])]
             rows = [('step', l) for l in loop_lines]
         else:
-            cap = f"uniquePaths(3, 7) returns {e['ans']}."
-            sub = "The table costs m × n steps; the formula takes min(m, n) - 1 multiplications."
+            cap = f"uniquePaths({M}, {N}) returns {e['ans']}."
+            sub = notes['done'] if notes else "The table costs m × n steps; the formula takes min(m, n) - 1 multiplications."
             hold = END
             rings = [((M - 1, N - 1), style('good')[1])]
             rows = [('step', l) for l in loop_lines] + [('answer', str(e['ans']), 'good')]
@@ -135,6 +149,20 @@ def main():
                             styles=styles, rings=rings, links=links, max_cell=58, gap=16)
         side = MapView(rows, 'Working', headers=('', ''), empty='')
         sc.frame([table], cap, sub, hold, side=side, legend=legend)
+    return sc
+
+
+def hard():
+    """Harder input for the interactive page (scripts/motion_build.py)."""
+    sc = build(HARD_M, HARD_N, f'm = {HARD_M}, n = {HARD_N}. Watch the loop at the end: multiply first, then divide.',
+               HARD_NOTES)
+    return sc, ("A 3×4 grid, answer 10. Dividing before multiplying gets both LeetCode samples right, then "
+                "here 5 / 2 rounds down to 2 and the loop answers 8. Watch the loop's second step.")
+
+
+def main():
+    args = cli()
+    sc = build(M, N, 'Robot starts top-left, moves only right or down. Box = number of paths that reach it.')
     finish(sc, 62, "Watch square (1,1): its 2 is the 1 above plus the 1 to its left, and that "
                    "same 'above + left' rule builds the corner's 28.",
            embed=not args.no_embed, preview_dir=args.preview, preview=args.frames)

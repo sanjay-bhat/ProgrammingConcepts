@@ -131,6 +131,18 @@ table.mtx td.bb {{ border-bottom:3px solid #1f2430; }}
 
 # The icon must match the box. card() used to hard-code a green check into
 # every result, so red failure boxes read "✔ Output: false" — in 400+ notebooks.
+# Stamped into every PNG render_png writes. Images rendered before the card()
+# icon fix have no stamp, and every red box in them wrongly carries a green ✔;
+# images with the stamp draw ✘ on red boxes, so the audit leaves them alone.
+RENDER_MARK = 'infographic_lib render_png card-v2'
+
+
+def has_render_mark(png_bytes):
+    import io
+    from PIL import Image
+    return Image.open(io.BytesIO(png_bytes)).info.get('Software') == RENDER_MARK
+
+
 RESULT_ICON = {'success': '&#10004;',   # ✔
                'fail':    '&#10008;',   # ✘
                'info':    '&#8594;'}    # →
@@ -624,7 +636,10 @@ def render_png(html_path, png_path, width=1024, scale=2, start_height=4000,
             os.unlink(raw)
             raise RuntimeError(f'{html_path}: content still taller than {max_height}px')
         crop_to = min(im.size[1], last + 1 + margin * scale)
-        im.crop((0, 0, im.size[0], crop_to)).save(png_path)
+        from PIL.PngImagePlugin import PngInfo
+        meta = PngInfo()
+        meta.add_text('Software', RENDER_MARK)
+        im.crop((0, 0, im.size[0], crop_to)).save(png_path, pnginfo=meta)
         os.unlink(raw)
         return im.size[0], crop_to
 

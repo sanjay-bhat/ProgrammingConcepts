@@ -38,6 +38,11 @@ Checks, and why each exists:
   no_animation       No '## Watch It Run' cell with a non-empty walkthrough.gif.
   animation_too_big  The GIF is over anim_lib.MAX_KB. At 550+ notebooks the
                      per-GIF budget is what keeps the repo cloneable.
+  no_motion_page     No walkthroughs/NNNN.html, or the notebook doesn't link
+                     it from its "Watch It Run" cell (scripts/motion_build.py
+                     --link does both).
+  no_hard_example    scripts/animations/NNNN.py has no hard() function, so
+                     the interactive page shows only LeetCode's sample.
   aside              Prose contains an unresolved mid-edit aside ("wait,
                      actually..."). ~10 notebooks shipped with these.
 """
@@ -72,7 +77,7 @@ SLOT_LABELS = [re.compile(r'(?:\d+[.)]\s*)?' + label, re.I) for label in
 
 CHECKS = ['empty_infographic', 'no_infographic', 'clipped_infographic', 'fail_box_check', 'no_examples', 'wrong_scenarios',
           'scenario_labels', 'no_interview', 'few_code_cells', 'no_animation',
-          'animation_too_big', 'aside']
+          'animation_too_big', 'no_motion_page', 'no_hard_example', 'aside']
 
 
 def has_fail_box(png, min_px=400, tol=4):
@@ -129,6 +134,16 @@ def inspect(path):
 
     if len(nbcells.code_cells(nb)) < 4:
         bad.add('few_code_cells')
+
+    root = os.path.dirname(os.path.dirname(os.path.abspath(path)))
+    num = int(os.path.basename(path)[:4])
+    anim_i = nbcells.find_animation(nb)
+    if (not os.path.exists(os.path.join(root, 'walkthroughs', f'{num:04d}.html'))
+            or anim_i is None or 'Step through it yourself' not in nbcells.text(cells[anim_i])):
+        bad.add('no_motion_page')
+    script = os.path.join(root, 'scripts', 'animations', f'{num:04d}.py')
+    if not (os.path.exists(script) and re.search(r'^def hard\(', open(script).read(), re.M)):
+        bad.add('no_hard_example')
 
     gif = nbcells.get_animation(nb)
     if gif is None:

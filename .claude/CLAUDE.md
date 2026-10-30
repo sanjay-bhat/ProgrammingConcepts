@@ -450,10 +450,13 @@ know is rendered as a container of its child views, so a script's own small
 helpers (`Row`, `Panel`) work, but a new *kind* of drawing needs a renderer
 in the player. Don't hand-edit files in `walkthroughs/`; rebuild them.
 
-**Every script defines `hard()`**, returning `(scene, blurb)` for a harder
-input than LeetCode's sample. It's the page's second tab; the GIF stays on
+**Every script defines `hard()`** with **one or two hard examples**: it
+returns `(scene, blurb)`, or a list of two such pairs. Each is its own tab on
+the page; the GIF stays on
 the standard example (size budget). Pick an input that breaks the usual
-first attempts, not just a bigger one. `#200`'s is a ring of land around a
+first attempts, not just a bigger one. A second hard example earns its place
+when it breaks a *different* first attempt (one catches a missing visited
+mark, the other a wrong base case). `#200`'s is a ring of land around a
 lake with an island inside it, a square that touches two islands only at
 corners, and a ring long enough to stack 16 calls. Its `found` captions name
 the trap each island sets. Keep the `main()` output identical so the GIF

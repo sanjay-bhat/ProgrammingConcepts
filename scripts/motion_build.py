@@ -11,8 +11,9 @@ makes the notebook's GIF), but instead of drawing pixels it records each
 frame's views as data. scripts/motion_player.html turns that data into a page
 you can play, pause, scrub and step through, animated with Motion.
 
-A script may also define `hard()`, returning `(scene, blurb)` for a harder
-input than LeetCode's sample. It appears as a second tab on the page. The GIF
+A script also defines `hard()`, returning `(scene, blurb)`, or a list of one
+or two of them, for harder inputs than LeetCode's sample. Each appears as
+its own tab on the page. The GIF
 stays on the standard example; the hard one lives only on the page, where the
 reader can scrub through a long trace.
 """
@@ -106,8 +107,11 @@ def capture(num):
             raise SystemExit(f'#{num}: the script never called finish()')
         scenarios = [dict(name='LeetCode example', scene=cap.scenes[0][0], blurb=cap.scenes[0][1])]
         if hasattr(mod, 'hard'):
-            sc, blurb = mod.hard()
-            scenarios.append(dict(name='Hard example', scene=sc, blurb=blurb))
+            extra = mod.hard()
+            extra = [extra] if isinstance(extra, tuple) else list(extra)
+            for k, (sc, blurb) in enumerate(extra, 1):
+                name = 'Hard example' if len(extra) == 1 else f'Hard example {k}'
+                scenarios.append(dict(name=name, scene=sc, blurb=blurb))
     return scenarios
 
 

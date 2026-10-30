@@ -584,11 +584,15 @@ class GraphView(View):
         styles: {id: style}; edge_styles: {(u, v): style}
         labels: {id: text} small tag under the node
         text:   {id: text} what to print inside the node (default: the id itself),
-                for graphs whose ids aren't unique labels, e.g. trie nodes
+                for graphs whose ids aren't unique labels, e.g. trie nodes, or the
+                input graph beside a union-find forest with ids ('f', 3) shown as 3
+        names:  same as text (both spellings are in use; text wins if both given)
+        split:  with directed=True, draw u->v and v->u side by side instead of on
+                top of each other (round trips, two-way tickets)
     """
 
     def __init__(self, nodes, edges, directed=False, styles=None, edge_styles=None,
-                 labels=None, rings=(), height=None, text=None):
+                 labels=None, rings=(), height=None, text=None, names=None, split=False):
         if isinstance(nodes, (list, tuple)):
             k = len(nodes)
             nodes = {v: (0.5 + 0.42 * math.cos(2 * math.pi * i / k - math.pi / 2),
@@ -597,7 +601,9 @@ class GraphView(View):
         self.nodes, self.edges, self.directed = nodes, edges, directed
         self.styles, self.edge_styles = styles or {}, edge_styles or {}
         self.labels, self.rings, self.height = labels or {}, rings, height
-        self.text = text or {}
+        self.text = {**(names or {}), **(text or {})}
+        self.names = self.text
+        self.split = split
 
     def draw(self, p, box):
         x0, y0, x1, y1 = box
@@ -611,7 +617,12 @@ class GraphView(View):
             st = self.edge_styles.get((u, v)) or (None if self.directed else self.edge_styles.get((v, u)))
             col = style(st)[1] if st else '#9aa3b2'
             w = 4.5 if st else 2.5
-            if self.directed:
+            if self.directed and self.split and any(f[0] == v and f[1] == u for f in self.edges):
+                (xa, ya), (xb, yb) = pos[u], pos[v]
+                d = math.hypot(xb - xa, yb - ya) or 1
+                ox, oy = -(yb - ya) / d * 7, (xb - xa) / d * 7      # shift to this edge's own side
+                p.arrow((xa + ox, ya + oy), (xb + ox, yb + oy), col, w, 11, shorten=r + 2)
+            elif self.directed:
                 p.arrow(pos[u], pos[v], col, w, 11, shorten=r + 2)
             else:
                 p.line([pos[u], pos[v]], col, w)

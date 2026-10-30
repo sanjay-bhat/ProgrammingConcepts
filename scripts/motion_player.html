@@ -565,6 +565,10 @@ R.GraphView = (v, host, slot) => {
     const st = (v.edge_styles || {})[`${a}|${b}`] || (!v.directed && (v.edge_styles || {})[`${b}|${a}`]);
     const color = st ? sty(st).b : "var(--edge)";
     let [x1, y1] = pos[a], [x2, y2] = pos[b];
+    if (v.directed && v.split && (v.edges || []).some((f) => String(f[0]) === b && String(f[1]) === a)) {
+      const d = Math.hypot(x2 - x1, y2 - y1) || 1, ox = -(y2 - y1) / d * 7, oy = (x2 - x1) / d * 7;
+      x1 += ox; y1 += oy; x2 += ox; y2 += oy;
+    }
     if (v.directed) { const dx = x2 - x1, dy = y2 - y1, L = Math.hypot(dx, dy) || 1; x1 += dx / L * (r + 2); y1 += dy / L * (r + 2); x2 -= dx / L * (r + 4); y2 -= dy / L * (r + 4); }
     const ln = s("line", { x1, y1, x2, y2, stroke: color, "stroke-width": st ? 4.5 : 2.5 });
     if (v.directed) ln.setAttribute("marker-end", st ? markerFor("var(--accent)") : "url(#arr-edge)");

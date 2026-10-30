@@ -583,10 +583,12 @@ class GraphView(View):
         directed: draw arrowheads
         styles: {id: style}; edge_styles: {(u, v): style}
         labels: {id: text} small tag under the node
+        text:   {id: text} what to print inside the node (default: the id itself),
+                for graphs whose ids aren't unique labels, e.g. trie nodes
     """
 
     def __init__(self, nodes, edges, directed=False, styles=None, edge_styles=None,
-                 labels=None, rings=(), height=None):
+                 labels=None, rings=(), height=None, text=None):
         if isinstance(nodes, (list, tuple)):
             k = len(nodes)
             nodes = {v: (0.5 + 0.42 * math.cos(2 * math.pi * i / k - math.pi / 2),
@@ -595,6 +597,7 @@ class GraphView(View):
         self.nodes, self.edges, self.directed = nodes, edges, directed
         self.styles, self.edge_styles = styles or {}, edge_styles or {}
         self.labels, self.rings, self.height = labels or {}, rings, height
+        self.text = text or {}
 
     def draw(self, p, box):
         x0, y0, x1, y1 = box
@@ -620,7 +623,8 @@ class GraphView(View):
         for v, (x, y) in pos.items():
             fill, border, tc = style(self.styles.get(v, 'plain'))
             p.circle(x, y, r, fill, border, 3)
-            p.text((x, y), v, 'monob', p.fit(str(v), 'monob', 17, 2 * r - 6), tc, 'mm')
+            t = str(self.text.get(v, v))
+            p.text((x, y), t, 'monob', p.fit(t, 'monob', 17, 2 * r - 6), tc, 'mm')
             if v in self.labels:
                 p.text((x, y + r + 11), self.labels[v], 'bold', 12, ACTIVE, 'mm')
         for v, color in self.rings:
@@ -729,6 +733,87 @@ class TextView(View):
             p.text((x0, y + 10), s, 'mono', p.fit(s, 'mono', self.size, x1 - x0), style(st)[2] if st else INK)
             y += self.size + 10
         self.used = y - y0
+
+
+class DPTableView(TableView):
+    """TableView with richer dependency links, for DP tables and DP rows.
+    Takes everything TableView takes, plus:
+        links: [dict(src=(r, c), dst=(r, c), color=ACTIVE, lift=0, cross=False, label=None)]
+               lift=0 draws a straight arrow; lift>0 bows above the cells and
+               lift<0 bows below them, so a 1-D row can show dp[i-2] -> dp[i]
+               jumping over dp[i-1]. cross=True strikes the arrow out (a
+               dependency that was checked and rejected). label is a small tag
+               at the arrow's middle ('+2', 'skip').
+        max_cell: largest cell size in px (TableView caps at 56; short rows read
+                  better with bigger cells)
+        font: value font size (default: scales with the cell)
+        gap: space between cells in px (wider gaps make arrows between
+             neighbouring cells easier to see)
+    """
+
+    def __init__(self, values, row_labels=None, col_labels=None, styles=None, rings=(),
+                 arrows=(), title=None, links=(), max_cell=56, font=None, gap=4):
+        super().__init__(values, row_labels, col_labels, styles, rings, arrows, title)
+        self.links, self.max_cell, self.font, self.gap = links, max_cell, font, gap
+
+    def draw(self, p, box):
+        x0, y0, x1, y1 = box
+        rows, cols = len(self.values), len(self.values[0])
+        ty = 24 if self.title else 0
+        if self.title:
+            p.text((x0, y0 + 8), self.title, 'bold', 16)
+        lw = (max(p.width(s, 'monob', 14) for s in map(str, self.rl)) + 14) if self.rl else 0
+        hh = 22 if self.cl else 0
+        gap = self.gap
+        drop = max([-ln.get('lift', 0) for ln in self.links] + [0])
+        size = int(min((x1 - x0 - lw - gap * (cols - 1)) / cols,
+                       (y1 - y0 - ty - hh - drop // 2 - gap * (rows - 1)) / rows, self.max_cell))
+        ox, oy = x0 + lw, y0 + ty + hh
+        at = lambda r, c: (ox + c * (size + gap), oy + r * (size + gap))
+        if self.cl:
+            for c, s in enumerate(self.cl):
+                p.text((at(0, c)[0] + size / 2, oy - 11), s, 'monob', 13, MUTED, 'mm')
+        if self.rl:
+            for r, s in enumerate(self.rl):
+                p.text((x0 + lw - 10, at(r, 0)[1] + size / 2), s, 'monob', 13, MUTED, 'rm')
+        for r in range(rows):
+            for c in range(cols):
+                x, y = at(r, c)
+                v = self.values[r][c]
+                _cell(p, (x, y, x + size, y + size), self.styles.get((r, c), 'plain'),
+                      '' if v is None else v, size=self.font, lw=2)
+        for a, b in self.arrows:
+            (xa, ya), (xb, yb) = at(*a), at(*b)
+            p.arrow((xa + size / 2, ya + size / 2), (xb + size / 2, yb + size / 2), ACTIVE, 3, 9,
+                    shorten=size * 0.32)
+        for ln in self.links:
+            (xa, ya), (xb, yb) = at(*ln['src']), at(*ln['dst'])
+            col = REJECT if ln.get('cross') else ln.get('color', ACTIVE)
+            lift = ln.get('lift', 0)
+            if lift:
+                edge = 0 if lift > 0 else size
+                a, b = (xa + size / 2, ya + edge), (xb + size / 2, yb + edge)
+                p.curve_arrow(a, b, lift=lift, fill=col, width=3, head=10)
+                mx = (a[0] + b[0]) / 2
+                my = (min(a[1], b[1]) - lift / 2) if lift > 0 else (max(a[1], b[1]) - lift / 2)
+            else:
+                a, b = (xa + size / 2, ya + size / 2), (xb + size / 2, yb + size / 2)
+                p.arrow(a, b, col, 3, 9, shorten=size * 0.32)
+                mx, my = (a[0] + b[0]) / 2, (a[1] + b[1]) / 2
+            if ln.get('cross'):
+                k = 8
+                p.line([(mx - k, my - k), (mx + k, my + k)], REJECT, 4)
+                p.line([(mx - k, my + k), (mx + k, my - k)], REJECT, 4)
+            if ln.get('label'):
+                t = str(ln['label'])
+                w = p.width(t, 'bold', 13) + 12
+                ly = my + (22 if ln.get('cross') else 0)     # keep the cross visible
+                p.box((mx - w / 2, ly - 10, mx + w / 2, ly + 10), CARD, col, 2, 6)
+                p.text((mx, ly), t, 'bold', 13, col, 'mm')
+        for (r, c), color in self.rings:
+            x, y = at(r, c)
+            _ring(p, (x, y, x + size, y + size), color, 4, 3, 9)
+        self.used = ty + hh + rows * size + (rows - 1) * gap + (drop // 2 + 14 if drop else 0)
 
 
 class ChipsView(View):

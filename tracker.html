@@ -114,6 +114,9 @@ body {
   white-space: nowrap;
   margin-right: 2px;
 }
+.home-link { color: inherit; text-decoration: none; border-radius: 4px; }
+.home-link:hover { color: var(--accent); }
+.home-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
 .search-wrap {
   position: relative;
@@ -338,6 +341,8 @@ tr.hard   td.ttl { border-left-color: var(--stripe-hard); }
 .plink.unsolved { color: var(--muted); font-weight: 400; }
 
 .ds { font-size: 11.5px; color: var(--muted); max-width: 180px; }
+.ds .cat-tag { display: block; margin-top: 2px; font-size: 10.5px; opacity: .75; }
+.sort-lbl { align-self: center; margin: 0 4px 0 6px; font-size: 10.5px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
 
 /* ── Chips ── */
 .chip {
@@ -542,11 +547,30 @@ code[class*="language-"], pre[class*="language-"] { color: #e6edf3; background: 
   transition: background .1s; color: var(--text);
 }
 .pl-filter-pill.on { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+/* ── Cherry blossoms: a tree half out of the left edge, petals drifting down ── */
+:root { --trunk: #7a5444; --blossom-opacity: .9; --petal-opacity: .8; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --trunk: #5e4338; --blossom-opacity: .62; --petal-opacity: .6; } }
+:root[data-theme="dark"] { --trunk: #5e4338; --blossom-opacity: .62; --petal-opacity: .6; }
+#blossom-tree {
+  position: fixed; left: 0; bottom: 0; width: 340px; height: 100vh;
+  z-index: -1; pointer-events: none; opacity: var(--blossom-opacity);
+}
+#petals {
+  position: fixed; inset: 0; width: 100vw; height: 100vh;
+  z-index: 40; pointer-events: none; opacity: var(--petal-opacity);
+}
+#petal-toggle { font-size: 14px; line-height: 1; padding: 5px 9px; }
+#petal-toggle[aria-pressed="false"] { filter: grayscale(1); opacity: .55; }
+@media (max-width: 760px) { #blossom-tree { width: 200px; opacity: calc(var(--blossom-opacity) * .5); } }
+@media print { #blossom-tree, #petals { display: none !important; } }
 </style>
 
 
+<canvas id="blossom-tree" aria-hidden="true"></canvas>
+<canvas id="petals" aria-hidden="true"></canvas>
 <div class="filter-bar">
-  <h1>LeetCode</h1>
+  <h1><a class="home-link" href="./" title="Home">DS+Algo</a></h1>
   <div class="search-wrap">
     <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
       <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
@@ -565,7 +589,15 @@ code[class*="language-"], pre[class*="language-"] { color: #e6edf3; background: 
     <button class="pill" data-s="0">Unsolved</button>
     <button class="pill" data-s="fav" id="fav-pill">★ Favorites</button>
   </div>
+  <div class="pill-group" id="sortf" role="group" aria-label="Sort problems">
+    <span class="sort-lbl">Sort</span>
+    <button class="pill on" data-sort="category">Category</button>
+    <button class="pill" data-sort="number">Number</button>
+    <button class="pill" data-sort="difficulty">Difficulty</button>
+    <button class="pill" data-sort="random" title="Click again to reshuffle">🎲 Random</button>
+  </div>
   <button class="pl-open-btn" id="pl-open">📋 Playlists</button>
+  <button class="pl-open-btn" id="petal-toggle" aria-pressed="true" title="Falling petals on or off">🌸</button>
   <div id="company-selector" style="position:relative;display:inline-block">
     <button id="company-btn" class="pill" aria-haspopup="true" aria-expanded="false" style="display:flex;align-items:center;gap:5px;padding:3px 10px">
       <span id="co-icon">🧩</span><span id="co-name">LeetCode</span>
@@ -939,7 +971,6 @@ const P = [
   {c:"BFS",n:1244,t:"Design A Leaderboard",s:true,d:"medium",tc:"nlogn",sc:"n",ds:"HashMap"},
   {c:"BFS",n:1263,t:"Minimum Moves to Move a Box to Their Target Location",s:true,d:"hard",tc:"n2",sc:"n2",ds:"BFS, Deque"},
   {c:"BFS",n:1210,t:"Minimum Moves to Reach Target with Rotations",s:true,d:"hard",tc:"n2",sc:"n2",ds:"BFS, Queue"},
-  {c:"BFS",n:1,t:"293",s:true,d:"medium",tc:"n",sc:"n",ds:"[📓 Flip Game](0293.ipynb)"},
   {c:"BFS",n:1345,t:"Jump Game IV",s:true,d:"hard",tc:"n",sc:"n",ds:"BFS, Queue"},
   {c:"BFS",n:505,t:"The Maze II",s:false,d:"medium",tc:"n",sc:"n",ds:"Breadth-First Search"},
   {c:"Binary Indexed Tree",n:315,t:"Count of Smaller Numbers After Self",s:true,d:"hard",tc:"n",sc:"n",ds:"Binary Indexed Tree"},
@@ -2135,7 +2166,6 @@ const P = [
   {c:"Tree",n:690,t:"Employee Importance",s:false,d:"easy",tc:"n",sc:"n",ds:"Tree, Hash Map"},
   {c:"Tree",n:652,t:"Find Duplicate Subtrees",s:true,d:"medium",tc:"n",sc:"n",ds:"Tree, Hash Map"},
   {c:"Tree",n:653,t:"Two Sum IV - Input is a BST",s:false,d:"easy",tc:"n",sc:"n",ds:"Tree, Hash Set"},
-  {c:"Tree",n:1,t:"485",s:true,d:"medium",tc:"n",sc:"n",ds:"[📓 Max Consecutive Ones](0485.ipynb)"},
   {c:"Tree",n:426,t:"Convert Binary Search Tree to Sorted Doubly Linked List",s:false,d:"medium",tc:"n",sc:"n",ds:"Tree, In-order Traversal"},
   {c:"Tree",n:230,t:"Kth Smallest Element in a BST",s:true,d:"medium",tc:"n",sc:"n",ds:"Tree, Inorder Traversal"},
   {c:"Tree",n:1367,t:"Linked List in Binary Tree",s:false,d:"medium",tc:"n",sc:"n",ds:"Tree, Linked List"},
@@ -2266,15 +2296,47 @@ document.getElementById('st-easy').textContent   = `Easy ${diffSolved.easy}/${di
 document.getElementById('st-med').textContent    = `Med ${diffSolved.medium}/${diffTotal.medium}`;
 document.getElementById('st-hard').textContent   = `Hard ${diffSolved.hard}/${diffTotal.hard}`;
 
-// ── group by category ──
-const cats = {};
-P.forEach(p => { (cats[p.c] = cats[p.c]||[]).push(p); });
+// ── sort: by category (grouped, the original view), number, difficulty or random ──
+const SORT_KEY = 'lc_sort';
+const SORT_MODES = ['category', 'number', 'difficulty', 'random'];
+let sortMode = 'category';
+try { const m = localStorage.getItem(SORT_KEY); if (SORT_MODES.includes(m)) sortMode = m; } catch {}
+
+// A problem can sit in several categories; the flat views list it once.
+function uniqueByNumber(list) {
+  const seen = new Set();
+  return list.filter(p => !seen.has(p.n) && seen.add(p.n));
+}
+function shuffled(list) {
+  const a = list.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+// [[group title, problems], ...] for the current sort.
+function groupsFor(mode) {
+  if (mode === 'category') {
+    const cats = {};
+    P.forEach(p => { (cats[p.c] = cats[p.c] || []).push(p); });
+    return Object.entries(cats);
+  }
+  const uniq = uniqueByNumber(P);
+  if (mode === 'number') return [['All problems, by number', uniq.sort((a, b) => a.n - b.n)]];
+  if (mode === 'random') return [['All problems, shuffled', shuffled(uniq)]];
+  return ['easy', 'medium', 'hard'].map(d =>
+    [d.charAt(0).toUpperCase() + d.slice(1), uniq.filter(p => p.d === d).sort((a, b) => a.n - b.n)]);
+}
 
 // ── render ──
 const content = document.getElementById('content');
 const ghBase = 'https://github.com/sanjay-bhat/ProgrammingConcepts/blob/main/leetcode/';
+let selReady = false;   // set once select mode is wired up (further down)
 
-Object.entries(cats).forEach(([cat, probs]) => {
+function renderList() {
+content.replaceChildren();
+groupsFor(sortMode).forEach(([cat, probs]) => {
   const solved = probs.filter(p=>p.s).length;
   const total  = probs.length;
   const pct    = Math.round(solved/total*100);
@@ -2293,7 +2355,7 @@ Object.entries(cats).forEach(([cat, probs]) => {
     return `<tr class="${p.d}${isFav?' fav-row':''}" data-d="${p.d}" data-s="${p.s?'1':'0'}" data-t="${p.t.toLowerCase()}" data-n="${p.n}" data-fav="${isFav?'1':'0'}">
       <td class="num">${p.n}</td>
       <td class="ttl"><a class="plink ${p.s?'':'unsolved'}" href="${href}" target="_blank" rel="noopener">${icon}${p.t}</a></td>
-      <td class="ds">${p.ds}</td>
+      <td class="ds">${p.ds}${sortMode === 'category' ? '' : `<span class="cat-tag">${esc(p.c)}</span>`}</td>
       <td>${chip(p.tc)}</td>
       <td>${chip(p.sc)}</td>
       <td><span class="badge b${p.d[0]}">${p.d.charAt(0).toUpperCase()+p.d.slice(1)}</span></td>
@@ -2324,6 +2386,9 @@ Object.entries(cats).forEach(([cat, probs]) => {
     </div>`;
   content.appendChild(det);
 });
+if (selReady) restoreSelect();
+}
+renderList();
 
 // ── filters ──
 // ── Company selector ──────────────────────────────────────────────────────
@@ -2793,6 +2858,30 @@ function toggleSelectMode(on) {
 
 document.getElementById('sel-toggle').addEventListener('click', () => toggleSelectMode(!selectMode));
 
+// Re-sorting rebuilds the rows: give the new rows their checkboxes and keep what was ticked.
+function restoreSelect() {
+  if (!selectMode) return;
+  const keep = new Set(selectedNs);
+  toggleSelectMode(true);
+  keep.forEach(n => {
+    selectedNs.add(n);
+    const cb = document.querySelector(`.sel-cb[data-n="${n}"]`);
+    if (cb) cb.checked = true;
+  });
+  updateSelUI();
+}
+selReady = true;
+
+document.querySelectorAll('#sortf .pill').forEach(x => x.classList.toggle('on', x.dataset.sort === sortMode));
+document.getElementById('sortf').addEventListener('click', e => {
+  const b = e.target.closest('.pill'); if (!b) return;
+  sortMode = b.dataset.sort;   // clicking Random again reshuffles
+  try { localStorage.setItem(SORT_KEY, sortMode); } catch {}
+  document.querySelectorAll('#sortf .pill').forEach(x => x.classList.toggle('on', x === b));
+  renderList();
+  refilter();
+});
+
 document.addEventListener('change', e => {
   const cb = e.target.closest('.sel-cb');
   if (!cb) return;
@@ -2855,4 +2944,171 @@ document.getElementById('sel-pdf').addEventListener('click', async () => {
   window.print();
   printSec.innerHTML = '';
 });
+
+// ── Cherry blossoms ──────────────────────────────────────────────────────────
+// A tree drawn once (seeded, so it's the same tree every visit) on a fixed
+// canvas behind the page, and a few petals drifting down on a canvas above
+// it. Moving the mouse stirs a breeze; clicking empty space near the tree
+// shakes petals loose. The 🌸 button turns the petals off (remembered).
+(() => {
+  const treeCv = document.getElementById('blossom-tree');
+  const petalCv = document.getElementById('petals');
+  const toggle = document.getElementById('petal-toggle');
+  if (!treeCv || !petalCv || !treeCv.getContext) return;
+  const tctx = treeCv.getContext('2d'), pctx = petalCv.getContext('2d');
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const PINKS = ['#f9c9d6', '#f5aec2', '#fbdbe4', '#ef93ae', '#f7bccb'];
+  const css = (name) => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+
+  function rng(seed) {          // mulberry32: same numbers every load
+    return () => {
+      seed |= 0; seed = seed + 0x6D2B79F5 | 0;
+      let t = Math.imul(seed ^ seed >>> 15, 1 | seed);
+      t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+      return ((t ^ t >>> 14) >>> 0) / 4294967296;
+    };
+  }
+
+  let canopy = [];              // blossom cluster centres (CSS px), petals start from here
+  function drawTree() {
+    const dpr = Math.min(2, window.devicePixelRatio || 1);
+    const w = treeCv.clientWidth, h = treeCv.clientHeight;
+    treeCv.width = Math.round(w * dpr); treeCv.height = Math.round(h * dpr);
+    tctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    tctx.clearRect(0, 0, w, h);
+    canopy = [];
+    const r = rng(20260105);
+    const trunk = css('--trunk') || '#7a5444';
+    const scale = Math.min(1, h / 820) * (w / 340);
+    const blossoms = [];
+
+    function branch(x, y, len, ang, width, depth) {
+      const bend = (r() - 0.5) * 0.5;
+      const x2 = x + Math.cos(ang) * len, y2 = y + Math.sin(ang) * len;
+      const cx = x + Math.cos(ang + bend) * len * 0.5, cy = y + Math.sin(ang + bend) * len * 0.5;
+      tctx.strokeStyle = trunk; tctx.lineWidth = width; tctx.lineCap = 'round';
+      tctx.beginPath(); tctx.moveTo(x, y); tctx.quadraticCurveTo(cx, cy, x2, y2); tctx.stroke();
+      if (depth >= 3) blossoms.push([x2, y2, depth]);
+      if (depth >= 6 || len < 9) return;
+      const kids = depth < 2 ? 2 : 2 + (r() < 0.45 ? 1 : 0);
+      for (let k = 0; k < kids; k++) {
+        const spread = (k - (kids - 1) / 2) * (0.5 + r() * 0.35);
+        branch(x2, y2, len * (0.68 + r() * 0.14), ang + spread - 0.08 + (r() - 0.5) * 0.3,
+               Math.max(1, width * 0.66), depth + 1);
+      }
+    }
+    // The trunk comes in from beyond the left edge, leaning up and to the right.
+    branch(-60 * scale, h + 20, h * 0.30, -1.02, 26 * scale, 0);
+
+    blossoms.forEach(([x, y, depth]) => {
+      const n = depth >= 5 ? 6 : 4;
+      for (let i = 0; i < n; i++) {
+        const bx = x + (r() - 0.5) * 34 * scale, by = y + (r() - 0.5) * 26 * scale;
+        tctx.globalAlpha = 0.45 + r() * 0.4;
+        tctx.fillStyle = PINKS[Math.floor(r() * PINKS.length)];
+        tctx.beginPath(); tctx.arc(bx, by, (6 + r() * 10) * scale, 0, Math.PI * 2); tctx.fill();
+        if (bx > 0 && bx < w && by > 0) canopy.push([bx, by]);
+      }
+    });
+    tctx.globalAlpha = 1;
+  }
+
+  // ── petals ──
+  const petals = [];
+  let on = !reduced, last = 0, raf = 0;
+  try { const saved = localStorage.getItem('lc_petals'); if (saved) on = saved === 'on'; } catch {}
+  const wind = { x: 0, y: 0 };
+  let mouse = null;
+
+  function sizeCanvas() {
+    const dpr = Math.min(2, window.devicePixelRatio || 1);
+    petalCv.width = Math.round(innerWidth * dpr); petalCv.height = Math.round(innerHeight * dpr);
+    pctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  function spawn(p, fromTree, at) {
+    const treeRect = treeCv.getBoundingClientRect();
+    if (at) { p.x = at[0]; p.y = at[1]; }
+    else if (fromTree && canopy.length) {
+      const c = canopy[Math.floor(Math.random() * canopy.length)];
+      p.x = treeRect.left + c[0]; p.y = treeRect.top + c[1];
+    } else { p.x = Math.random() * innerWidth; p.y = -20 - Math.random() * innerHeight * 0.5; }
+    p.s = 7 + Math.random() * 7;
+    p.vy = 0.35 + Math.random() * 0.45;
+    p.vx = 0.15 + Math.random() * 0.35;          // a light breeze to the right
+    p.sway = Math.random() * Math.PI * 2; p.swaySpeed = 0.012 + Math.random() * 0.018;
+    p.rot = Math.random() * Math.PI * 2; p.spin = (Math.random() - 0.5) * 0.04;
+    p.flip = Math.random() * Math.PI * 2; p.flipSpeed = 0.02 + Math.random() * 0.04;
+    p.color = PINKS[Math.floor(Math.random() * PINKS.length)];
+    return p;
+  }
+  function target() { return Math.round(Math.max(8, Math.min(24, innerWidth / 65))); }
+  function drawPetal(p) {
+    const s = p.s;
+    pctx.save();
+    pctx.translate(p.x, p.y); pctx.rotate(p.rot); pctx.scale(Math.cos(p.flip), 1);
+    pctx.fillStyle = p.color;
+    pctx.beginPath();
+    pctx.moveTo(0, s * 0.5);
+    pctx.bezierCurveTo(s * 0.55, s * 0.2, s * 0.45, -s * 0.45, s * 0.1, -s * 0.5);
+    pctx.lineTo(0, -s * 0.36);                       // the little notch at the tip
+    pctx.lineTo(-s * 0.1, -s * 0.5);
+    pctx.bezierCurveTo(-s * 0.45, -s * 0.45, -s * 0.55, s * 0.2, 0, s * 0.5);
+    pctx.fill();
+    pctx.restore();
+  }
+  function frame(t) {
+    const dt = Math.min(3, last ? (t - last) / 16.7 : 1); last = t;
+    pctx.clearRect(0, 0, innerWidth, innerHeight);
+    while (petals.length < target()) petals.push(spawn({}, Math.random() < 0.55));
+    wind.x *= 0.96; wind.y *= 0.96;
+    for (const p of petals) {
+      p.sway += p.swaySpeed * dt; p.flip += p.flipSpeed * dt; p.rot += p.spin * dt;
+      let ax = 0, ay = 0;
+      if (mouse) {                                   // the cursor pushes nearby petals aside
+        const dx = p.x - mouse.x, dy = p.y - mouse.y, d2 = dx * dx + dy * dy;
+        if (d2 < 120 * 120 && d2 > 1) { const f = (1 - Math.sqrt(d2) / 120) * 0.6; ax = dx / Math.sqrt(d2) * f; ay = dy / Math.sqrt(d2) * f; }
+      }
+      p.x += (p.vx + Math.sin(p.sway) * 0.6 + wind.x + ax) * dt;
+      p.y += (p.vy + wind.y * 0.3 + ay) * dt;
+      if (p.y > innerHeight + 20 || p.x > innerWidth + 20 || p.x < -40) spawn(p, Math.random() < 0.55);
+      drawPetal(p);
+    }
+    if (petals.length > target() + 16) petals.splice(0, petals.length - target() - 16);
+    raf = requestAnimationFrame(frame);
+  }
+  function start() { if (!raf) { last = 0; raf = requestAnimationFrame(frame); } }
+  function stop() { cancelAnimationFrame(raf); raf = 0; pctx.clearRect(0, 0, innerWidth, innerHeight); }
+  function setOn(v) {
+    on = v;
+    toggle.setAttribute('aria-pressed', String(on));
+    try { localStorage.setItem('lc_petals', on ? 'on' : 'off'); } catch {}
+    petalCv.style.display = on ? '' : 'none';
+    on ? start() : stop();
+  }
+
+  toggle.addEventListener('click', () => setOn(!on));
+  document.addEventListener('pointermove', e => {
+    if (mouse) { wind.x += (e.clientX - mouse.x) * 0.004; wind.y += (e.clientY - mouse.y) * 0.004; }
+    wind.x = Math.max(-2, Math.min(2, wind.x)); wind.y = Math.max(-2, Math.min(2, wind.y));
+    mouse = { x: e.clientX, y: e.clientY };
+  }, { passive: true });
+  document.addEventListener('pointerleave', () => { mouse = null; });
+  // Clicking empty space beside the tree shakes a handful of petals loose.
+  document.addEventListener('click', e => {
+    if (!on) return;
+    const t = e.target;
+    if (!(t === document.body || t === document.documentElement || t.id === 'content')) return;
+    if (e.clientX > treeCv.getBoundingClientRect().right) return;
+    for (let i = 0; i < 10; i++) petals.push(spawn({}, false, [e.clientX + (Math.random() - 0.5) * 60, e.clientY + (Math.random() - 0.5) * 40]));
+  });
+
+  let rz = 0;
+  window.addEventListener('resize', () => { clearTimeout(rz); rz = setTimeout(() => { drawTree(); sizeCanvas(); }, 150); });
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change', drawTree);
+  new MutationObserver(drawTree).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+
+  drawTree(); sizeCanvas();
+  toggle.setAttribute('aria-pressed', String(on));
+  if (on) start(); else petalCv.style.display = 'none';
+})();
 </script>

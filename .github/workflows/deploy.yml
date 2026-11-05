@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - tracker.html
+      - walkthroughs/**
       - .github/workflows/deploy.yml
 
   # Allow manual trigger from the Actions tab
@@ -32,8 +33,12 @@ jobs:
         run: |
           mkdir -p _site
 
-          # Serve tracker as the root index
+          # Serve tracker as the root index (and at tracker.html, for old links)
           cp tracker.html _site/index.html
+          cp tracker.html _site/tracker.html
+
+          # Interactive walkthrough pages (scripts/motion_build.py)
+          cp -R walkthroughs _site/walkthroughs
 
           # robots.txt
           printf "User-agent: *\nAllow: /\n" > _site/robots.txt

@@ -12,6 +12,16 @@ from anim_lib import *  # noqa: E402,F403
 
 NUMS = [1, 2, 3]   # LeetCode example 1
 
+# Hard example 1: recursing with start + 1 instead of i + 1. The next pick may
+# then repeat a number or go back to an earlier one, so [2,2] and [3,2] appear:
+# 65 lists instead of 16.
+HARD1 = [1, 2, 3, 4]
+HARD1_COUNT, HARD1_WRONG_COUNT = 16, 65
+
+# Hard example 2: recording `path` itself instead of a copy. Every entry in the
+# answer is then the same list object, and the pops leave it empty: eight [ ]s.
+HARD2 = [0, -5, 9]
+
 
 class Row(View):
     """Two views side by side (nums on the left, the working list on the right)."""
@@ -25,6 +35,56 @@ class Row(View):
         self.left.draw(p, (x0, y0, mid - 10, y1))
         self.right.draw(p, (mid + 10, y0, x1, y1))
         self.used = max(self.left.used, self.right.used)
+
+
+def notebook_subsets(nums):
+    """The notebook's solution, unchanged (used to check the answers)."""
+    result = []
+
+    def backtrack(start, path):
+        result.append(list(path))
+        for i in range(start, len(nums)):
+            path.append(nums[i])
+            backtrack(i + 1, path)
+            path.pop()
+
+    backtrack(0, [])
+    return result
+
+
+def wrong_start(nums):
+    """First attempt: recurse with start + 1 instead of i + 1."""
+    result = []
+
+    def backtrack(start, path):
+        result.append(list(path))
+        for i in range(start, len(nums)):
+            path.append(nums[i])
+            backtrack(start + 1, path)
+            path.pop()
+
+    backtrack(0, [])
+    return result
+
+
+def wrong_no_copy(nums):
+    """First attempt: append `path` itself instead of a copy."""
+    result = []
+
+    def backtrack(start, path):
+        result.append(path)
+        for i in range(start, len(nums)):
+            path.append(nums[i])
+            backtrack(i + 1, path)
+            path.pop()
+
+    backtrack(0, [])
+    return result
+
+
+assert len(notebook_subsets(HARD1)) == HARD1_COUNT and len(wrong_start(HARD1)) == HARD1_WRONG_COUNT
+assert [2, 2] in wrong_start(HARD1) and [3, 2] in wrong_start(HARD1)
+assert len({tuple(r) for r in notebook_subsets(HARD2)}) == 8 and wrong_no_copy(HARD2) == [[]] * 8
 
 
 def trace(nums):
@@ -92,9 +152,17 @@ def tree_layout(nums):
     return pos, edges
 
 
-def words(e):
+def words(e, nums, notes=None):
+    """notes=None is LeetCode's example (the GIF). Otherwise notes = {(kind, path tuple) or kind: text},
+    which replaces that frame's second line and holds it as KEY."""
     k = e['kind']
     p = key(e['path'])
+    if notes is not None:
+        cap, sub, hold = words_hard(e, nums)
+        for kk in ((k, tuple(e['path'])), k):
+            if kk in notes:
+                return cap, notes[kk], max(hold, KEY)
+        return cap, sub, hold
     if k == 'record':
         if not e['path']:
             return ("Record a COPY of the working list: [ ] is a subset too.",
@@ -104,7 +172,7 @@ def words(e):
                     "So the only number it can add is 3. [2,1] is never built, because [1,2] already was.", KEY)
         return (f"Record a copy: {p}.", "Every state the working list passes through is a subset.", STEP)
     if k == 'choose':
-        v = NUMS[e['i']]
+        v = nums[e['i']]
         return (f"Add {v}: the working list is now {p}. Recurse from the next index.", "", QUICK * 2.2)
     if k == 'undo':
         if e['removed'] == 3 and e['path'] == [1, 2]:
@@ -117,13 +185,28 @@ def words(e):
             "One call per subset, each copying at most n numbers: O(n · 2^n), the size of the answer.", END)
 
 
-def main():
-    args = cli()
-    sc = Scene('#78 Subsets: record, add a later number, recurse, undo',
-               'Each node is one call and the subset it records. Orange: the chain of calls running now.')
+def words_hard(e, nums):
+    """Plain captions for the hard examples (the GIF's special cases are about [1,2,3])."""
+    k, p = e['kind'], key(e['path'])
+    if k == 'record':
+        if not e['path']:
+            return ("Record a copy of the working list: [ ] is a subset too.", "", KEY)
+        return (f"Record a copy: {p}. The next pick may only come after index {e['start'] - 1}.", "", STEP)
+    if k == 'choose':
+        return (f"Add {nums[e['i']]}: the working list is now {p}. Recurse from index {e['i'] + 1}.", "", QUICK * 2.2)
+    if k == 'undo':
+        return (f"Pop {e['removed']} (undo): the working list is back to {p}.", "", QUICK * 2)
+    if k == 'return':
+        return (f"No numbers left to try after {p if e['path'] else '[ ]'}: return.", "", QUICK * 1.5)
+    n = len(nums)
+    return (f"All {2 ** n} subsets recorded, each exactly once.", f"One call per subset: 2^{n} = {2 ** n} calls.", END)
+
+
+def build(nums, subtitle, notes=None):
+    sc = Scene('#78 Subsets: record, add a later number, recurse, undo', subtitle)
     legend = [(ACTIVE, 'current call'), (style('window')[1], 'waiting for a child call'), (style('good')[1], 'recorded')]
-    pos_all, edges_all = tree_layout(NUMS)
-    for e in trace(NUMS):
+    pos_all, edges_all = tree_layout(nums)
+    for e in trace(nums):
         recorded = {key(r) for r in e['result']}
         pos = {n: xy for n, xy in pos_all.items() if n in recorded or n == key(e['path'])}
         edges = [(a, b) for a, b in edges_all if a in pos and b in pos]
@@ -142,19 +225,41 @@ def main():
                       text={n: (n if n != '[]' else '[ ]') for n in pos})
         nst, ptr, win = {}, {}, None
         if 'start' in e:
-            win = (e['start'], len(NUMS) - 1)
+            win = (e['start'], len(nums) - 1)
             if 'i' in e:
                 ptr = {'i': e['i']}
                 nst[e['i']] = 'active'
-        arr = ArrayView(NUMS, styles=nst, pointers=ptr, window=win, title='nums', cell=46)
+        arr = ArrayView(nums, styles=nst, pointers=ptr, window=win, title='nums', cell=46)
         pth = ArrayView(e['path'] or [''], styles={j: 'window' for j in range(len(e['path']))}, title='path',
                         cell=46)
         stack = [f'backtrack(start={s}, {key(p)})' for s, p in e['calls']]
-        cap, sub, hold = words(e)
+        cap, sub, hold = words(e, nums, notes)
         side = MapView([(str(j + 1), key(r), 'good') for j, r in enumerate(e['result'])], 'Recorded so far',
                        headers=('#', 'subset'), empty='(nothing yet)')
         sc.frame([g, Row(arr, pth)], cap, sub, hold, side=side,
                  counters={'subsets': len(e['result'])}, legend=legend)
+    return sc
+
+
+def hard():
+    """Harder inputs for the interactive page (scripts/motion_build.py)."""
+    sc1 = build(HARD1, 'nums = [1, 2, 3, 4]: 16 subsets. Each call only looks at indexes after its last pick.',
+                {('choose', (2,)): "From [ ], the loop is at 2 and recurses from index 2. Recursing from start + 1 = 1 would allow [2,2].",
+                 ('record', (3,)): "This call starts at index 3, so 3 can only be followed by 4. With start + 1 it could go back to 2: [3,2].",
+                 'done': "Recursing with start + 1 instead of i + 1 makes 65 lists here, with repeats like [2,2] and [3,2]."})
+    sc2 = build(HARD2, 'nums = [0, -5, 9]. Unsorted, with a zero and a negative: none of that matters.',
+                {('record', ()): "Record a COPY. Appending path itself would put the same list in the answer eight times.",
+                 ('undo', (0, -5)): "If the answer held path itself, this pop would change every 'recorded' entry at once.",
+                 'done': "Store path instead of list(path) and all eight entries are one list, which the last pop leaves empty."})
+    return [(sc1, "nums = [1, 2, 3, 4]. Recursing with start + 1 instead of i + 1 lets a number repeat or come "
+                  "back, so [2,2] and [3,2] appear: 65 lists instead of 16."),
+            (sc2, "nums = [0, -5, 9]. Recording path itself instead of a copy stores one list eight times, and the "
+                  "pops leave it empty: [[], [], [], [], [], [], [], []].")]
+
+
+def main():
+    args = cli()
+    sc = build(NUMS, 'Each node is one call and the subset it records. Orange: the chain of calls running now.')
     finish(sc, 78, "Watch the step back from [1,2,3]: popping 3 is the undo that lets the same working list "
                    "become [1,3], and copying it at each record is why the answer isn't eight empty lists.",
            embed=not args.no_embed, preview_dir=args.preview, preview=args.frames)
